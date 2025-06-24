@@ -1,13 +1,28 @@
 .top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 23px 40px;
+  gap: 10px;
+  height: 96px;
   background: #fff;
-  padding: 0 32px;
-  height: 72px;
-  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
-
+.top-navbar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  height: 49px;
+  align-self: stretch;
+}
 .navbar-left {
   display: flex;
   align-items: center;
@@ -17,26 +32,14 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #18213a;
-  height: 80px;
-  width: 80px
-}
-
-.navbar-logo::before {
-  content: "TCG";
-  font-weight: 800;
-}
-
-.navbar-logo::after {
-  content: "PurposeLab";
-  font-weight: 500;
-  color: #1ed6a3;
-  margin-left: 4px;
+  height: 72px;
+  width: 72px
 }
 
 .navbar-center {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .model-label {

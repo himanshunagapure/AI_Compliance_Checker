@@ -121,10 +121,26 @@
           </p>
         </div>
         <ul class="regulation-links">
-          <li><a href="#">MAS Notice 314 (AML/CFT)</a></li>
-          <li><a href="#">MAS Notice 123 (Data Protection)</a></li>
-          <li><a href="#">MAS Guidelines on Risk Management</a></li>
-          <li><a href="#">All Applicable Regulations</a></li>
+          <li>
+            <a (click)="setText($event, myInput)" href="#"
+              >MAS Notice 314 (AML/CFT)</a
+            >
+          </li>
+          <li>
+            <a href="#" (click)="setText($event, myInput)"
+              >MAS Notice 123 (Data Protection)</a
+            >
+          </li>
+          <li>
+            <a href="#" (click)="setText($event, myInput)"
+              >MAS Guidelines on Risk Management</a
+            >
+          </li>
+          <li>
+            <a href="#" (click)="setText($event, myInput)"
+              >All Applicable Regulations</a
+            >
+          </li>
         </ul>
       </div>
     </div>
@@ -160,7 +176,7 @@
     </div>
 
     <!-- Text Input -->
-    <input type="text" class="chat-input" placeholder="Ask Anything" />
+    <input type="text" class="chat-input" placeholder="Ask Anything" #myInput />
 
     <!-- Bottom Actions + Send Button -->
     <div class="footer-actions-row">

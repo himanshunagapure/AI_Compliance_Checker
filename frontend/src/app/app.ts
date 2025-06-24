@@ -4,7 +4,7 @@ import { Chatbot } from './chatbot/chatbot';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Chatbot],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

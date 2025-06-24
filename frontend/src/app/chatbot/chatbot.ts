@@ -12,6 +12,12 @@ export class Chatbot {
   @ViewChild('fileInput') fileInputRef!: ElementRef<HTMLInputElement>;
   selectedFileName: string | null = null;
 
+  setText(event: MouseEvent, input: HTMLInputElement): void {
+    event.preventDefault(); // stop anchor default behavior
+    const clickedText = (event.target as HTMLElement).innerText;
+    input.value = clickedText;
+  }
+
   triggerFileInput(): void {
     this.fileInputRef.nativeElement.click();
   }

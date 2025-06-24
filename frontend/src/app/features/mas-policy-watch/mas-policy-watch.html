@@ -1,17 +1,26 @@
-<div class="mas-policy-container">
-    <h2 class="transaction-heading">New Transaction</h2>
-    <div class="mas-policy-content">
-        <div class="mas-policy-center">
-            <h3>MAS Policy Watch</h3>
-            <p>
-                Tracks and highlights regulatory updates from the Monetary Authority of Singapore (MAS) in real-time,
-                helping you stay informed and compliant without the noise.
-            </p>
-            <button class="initiate-btn">Initiate MAS Policy Watch</button>
-        </div>
-        <div class="chatbot-icon">
-            <img src="https://github.com/TanushreeMadaan/TCG-assets/blob/main/chat-bot-img.png?raw=true"
-                alt="TCG Chatbot" class="animated-chatbot">
-        </div>
+<div *ngIf="!showChatbot" class="mas-policy-container">
+  <h2 class="transaction-heading">New Transaction</h2>
+  <div class="mas-policy-content">
+    <div class="mas-policy-center">
+      <h3>MAS Policy Watch</h3>
+      <p>
+        Tracks and highlights regulatory updates from the Monetary Authority of
+        Singapore (MAS) in real-time, helping you stay informed and compliant
+        without the noise.
+      </p>
+      <button class="initiate-btn" (click)="startChatbot()">
+        Initiate MAS Policy Watch
+      </button>
     </div>
+    <div class="chatbot-icon">
+      <img
+        src="https://github.com/TanushreeMadaan/TCG-assets/blob/main/chat-bot-img.png?raw=true"
+        alt="TCG Chatbot"
+        class="animated-chatbot"
+      />
+    </div>
+  </div>
 </div>
+
+<!-- ✅ Chatbot shown conditionally -->
+<app-chatbot *ngIf="showChatbot"></app-chatbot>

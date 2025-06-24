@@ -31,4 +31,5 @@
   flex: 1;
   background: #f8fafc;
   overflow-y: auto;
+  position: relative;
 }

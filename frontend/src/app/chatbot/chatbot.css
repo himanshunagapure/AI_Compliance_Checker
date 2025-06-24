@@ -1,13 +1,16 @@
 .chatbot-wrapper {
-  width: 100%;
+  width: calc(100% - 120px);
   max-width: 1717px;
   padding: 24px;
-  padding-right: 64px;
+  padding-right: 32px 48;
   background-color: #f2f2f2;
   margin: 0 auto;
-  min-height: 100vh;
+  margin-top: 12px; /* Space below navbar */
+  margin-left: 100px;
+  min-height: calc(100vh - 72px);
   font-family: "Montserrat", sans-serif;
   padding-bottom: 248px; /* ✅ leave space for floating footer */
+  box-sizing: border-box;
 }
 
 .transaction-title {
@@ -101,8 +104,8 @@
 .footer-wrapper {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 120px;
+  width: calc(100% - 120px);
   height: 232px;
   display: flex;
   justify-content: center;

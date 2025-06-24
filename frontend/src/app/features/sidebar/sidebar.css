@@ -36,6 +36,6 @@
 .sidebar li.active,
 .sidebar li:hover {
   background: #16335b;
-  color: #1ed6a3;
-  border-left: 6px solid #1ed6a3;
+  color: #039884;
+  border-left: 6px solid #039884;
 }

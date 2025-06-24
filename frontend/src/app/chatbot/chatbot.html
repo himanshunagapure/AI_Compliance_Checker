@@ -122,28 +122,36 @@
         </div>
         <ul class="regulation-links">
           <li>
-            <a (click)="setText($event, myInput)" href="#"
+            <a (click)="setText($event, 'MAS Notice 314 (AML/CFT)')" href="#"
               >MAS Notice 314 (AML/CFT)</a
             >
           </li>
           <li>
-            <a href="#" (click)="setText($event, myInput)"
+            <a
+              href="#"
+              (click)="setText($event, 'MAS Notice 123 (Data Protection)')"
               >MAS Notice 123 (Data Protection)</a
             >
           </li>
           <li>
-            <a href="#" (click)="setText($event, myInput)"
+            <a
+              href="#"
+              (click)="setText($event, 'MAS Guidelines on Risk Management')"
               >MAS Guidelines on Risk Management</a
             >
           </li>
           <li>
-            <a href="#" (click)="setText($event, myInput)"
+            <a href="#" (click)="setText($event, 'All Applicable Regulations')"
               >All Applicable Regulations</a
             >
           </li>
         </ul>
       </div>
     </div>
+  </div>
+
+  <div class="chat-container" #chatContainer>
+    <!-- Messages will be appended here -->
   </div>
 </div>
 
@@ -234,7 +242,7 @@
         </button>
       </div>
       <div class="send-button-container">
-        <button class="send-button-icon">
+        <button class="send-button-icon" (click)="sendFileMessage()">
           <svg
             width="16"
             height="16"

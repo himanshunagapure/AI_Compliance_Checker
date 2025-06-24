@@ -100,6 +100,42 @@
   font-weight: 400;
 }
 
+.chatbot-message-row {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.chatbot-message-row.user {
+  display: flex;
+  justify-content: flex-end; /* align entire message to the right */
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.chatbot-logo {
+  width: 57px;
+  height: 57px;
+  margin: 0 8px;
+  flex-shrink: 0;
+}
+
+.chatbot-user-message {
+  width: calc(100% - 160px); /* Adjusted for logo width */
+  height: 56px;
+  border-radius: 10px;
+  padding: 10px 24px;
+  background-color: #c9ffe8; /* or your preferred color */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 /* ✅ Upload floating footer */
 .footer-wrapper {
   position: fixed;

@@ -1,0 +1,14 @@
+<div class="app-layout">
+  <!-- Header spans full width across everything -->
+  <app-top-navbar [showModelDropdown]="true" class="full-width-header"></app-top-navbar>
+  
+  <!-- Content below header with sidebar + main area -->
+  <div class="content-below-header">
+    <app-sidebar></app-sidebar>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+

@@ -1,15 +1,26 @@
 import { Routes } from '@angular/router';
 import { Login } from './features/auth/login/login';
+import { Shell } from './features/shell/shell';
+import { MasPolicyWatch } from './features/mas-policy-watch/mas-policy-watch';
+
 
 // Add 'export' before const routes
 export const routes: Routes = [
-  { 
-    path: 'login', 
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
     component: Login
   },
-  { 
-    path: '', 
-    redirectTo: 'login', 
-    pathMatch: 'full' 
+  {
+    path: '',
+    component: Shell,
+    children: [
+      { path: 'mas-policy-watch', component: MasPolicyWatch },
+      // add other protected routes here
+    ]
   }
 ];

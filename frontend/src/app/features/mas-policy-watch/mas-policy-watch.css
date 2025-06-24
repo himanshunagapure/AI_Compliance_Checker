@@ -1,0 +1,103 @@
+.mas-policy-container {
+  background: #f8fafc;
+  min-height: calc(100vh - 72px); /* subtract navbar height */
+  padding: 32px 48px;
+  position: relative;
+}
+
+.transaction-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.mas-policy-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  position: relative;
+}
+
+.mas-policy-center {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.mas-policy-center h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.mas-policy-center p {
+  color: #555;
+  margin-bottom: 32px;
+}
+
+.initiate-btn {
+  background: #1ed6a3;
+  color: #fff;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.initiate-btn:hover {
+  background: #17b48e;
+}
+
+.mas-bot-img {
+  position: fixed;
+  right: 40px;
+  bottom: 32px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #0a2342;
+  padding: 12px;
+}
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #18213a;
+}
+
+.navbar-logo::before {
+  content: "TCG";
+  font-weight: 800;
+}
+
+.navbar-logo::after {
+  content: "PurposeLab";
+  font-weight: 500;
+  color: #1ed6a3;
+  margin-left: 4px;
+}
+.chatbot-icon {
+  position: fixed;
+  right: 40px;
+  bottom: 32px;
+  z-index: 100;
+}
+
+.animated-chatbot {
+  width: 80px;
+  height: 80px;
+  animation: float 3s ease-in-out infinite;
+  border-radius: 50%;
+  background: #0a2342;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}

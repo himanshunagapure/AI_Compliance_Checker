@@ -13,3 +13,17 @@ html, body {
   padding: 0;
   font-family: "Inter", sans-serif;
 }
+
+:root {
+  --sidebar-dark: #0a2342;
+  --content-light: #f8fafc;
+  --cta-green: #1ed6a3;
+  --text-dark: #18213a;
+  --font-family: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--content-light);
+  color: var(--text-dark);
+}

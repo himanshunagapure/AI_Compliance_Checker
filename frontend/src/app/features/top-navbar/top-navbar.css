@@ -85,8 +85,7 @@
 /* Tablet styles */
 @media (max-width: 1024px) {
   .top-navbar {
-    height: 56px;
-    padding: 0 12px;
+    height: 64px;
   }
   .navbar-logo {
     height: 24px;
@@ -112,7 +111,7 @@
 /* Mobile styles */
 @media (max-width: 600px) {
   .top-navbar {
-    height: auto;
+    height: 56px;
     padding: 6px 4px;
   }
   .top-navbar-content {

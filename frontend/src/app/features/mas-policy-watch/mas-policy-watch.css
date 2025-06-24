@@ -1,12 +1,13 @@
 .mas-policy-container {
   background: var(--content-light);
   min-height: calc(100vh - 72px); 
-  margin-top: 12px; 
-  margin-left: 100px; 
-  width: calc(100% - 100px); 
-  padding: 32px 48px;
+  margin-top: 0; /* Removed to prevent gap */
+  margin-left: 70px; 
+  width: calc(100% - 70px); 
+  padding: 32px 32px;
   position: relative;
   font-family: var(--font-family);
+ 
   color: var(--text-dark);
 }
 
@@ -33,7 +34,7 @@
   margin-top: 80px;
   width: 60%;
   line-height: 30px;
-  letter-spacing: -1.5%;
+  letter-spacing: -0.015em;
   font-family: var(--font-family);
   color: var(--text-dark);
 }
@@ -48,7 +49,7 @@
 }
 
 .mas-policy-center p {
-  color: #555; /* Consider adding a --text-secondary variable if you want to theme this */
+  color: #555;
   margin-bottom: 32px;
   font-size: 18px;
   font-family: var(--font-family);
@@ -91,4 +92,66 @@
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .mas-policy-container {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+    padding: 24px 32px;
+  }
+  
+  .mas-policy-center {
+    width: 80%;
+    margin-top: 60px;
+  }
+  
+  .animated-chatbot {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .initiate-btn {
+    padding: 14px 35px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .mas-policy-container {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+  
+  .mas-policy-center {
+    width: 90%;
+    margin-top: 40px;
+  }
+  
+  .mas-policy-center h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .mas-policy-center p {
+    font-size: 16px;
+  }
+  
+  .initiate-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  
+  .chatbot-icon {
+    right: 20px;
+    bottom: 20px;
+  }
+  
+  .animated-chatbot {
+    width: 120px;
+    height: 120px;
+  }
 }

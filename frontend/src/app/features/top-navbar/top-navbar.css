@@ -7,24 +7,21 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 23px 40px;
-  gap: 10px;
-  height: 96px;
+  padding: 0;
+  height: 72px;
   background: #fff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.10);
   font-family: var(--font-family);
 }
 
 .top-navbar-content {
   display: flex;
+  padding: 0 24px;
   flex-direction: row;
-  justify-content:  space-between;
+  justify-content: space-between;
   align-items: center;
-  padding: 0;
   width: 100%;
-  height: 49px;
-  align-self: stretch;
-  font-family: var(--font-family);
+  height: 100%;
 }
 
 .navbar-left {
@@ -33,54 +30,139 @@
 }
 
 .navbar-logo {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-dark);
-  height: 72px;
-  width: 72px;
-  font-family: var(--font-family);
+  height: 32px;
+  width: 32px;
+  margin-right: 12px;
 }
 
 .navbar-center {
   display: flex;
   align-items: center;
-  gap: 16px;
-  width: 483px; /* from your Figma spec, optional */
-  height: 44px;  /* from your Figma spec, optional */
-  font-family: var(--font-family);
+  gap: 20px;
+  min-width: 280px;
+  max-width: 400px;
+  height: 40px;
 }
 
 .model-label {
   font-weight: 500;
   margin-right: 8px;
   color: var(--text-dark);
-  font-family: var(--font-family);
+  font-size: 1rem;
 }
 
 .model-dropdown {
   padding: 6px 12px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  font-family: var(--font-family);
+  font-size: 1rem;
 }
 
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 24px;
-  font-family: var(--font-family);
+  gap: 20px;
 }
 
 .last-updated {
   font-size: 0.9rem;
   color: #888;
   text-align: right;
-  margin-right: 16px;
-  font-family: var(--font-family);
+  margin-right: 8px;
 }
 
 .navbar-icon {
   font-size: 1.5rem;
   color: var(--text-dark);
   cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .top-navbar {
+    height: 56px;
+    padding: 0 12px;
+  }
+  .navbar-logo {
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+  }
+  .navbar-center {
+    min-width: 180px;
+    max-width: 240px;
+    gap: 12px;
+    height: 32px;
+  }
+  .navbar-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 1.2rem;
+  }
+  .navbar-right {
+    gap: 12px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .top-navbar {
+    height: auto;
+    padding: 6px 4px;
+  }
+  .top-navbar-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    gap: 0;
+    width: 100%;
+  }
+  .navbar-left {
+    min-width: 32px;
+    margin-right: 6px;
+  }
+  .navbar-logo {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 0;
+  }
+  .navbar-center {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    gap: 4px;
+    height: 32px;
+    justify-content: center;
+  }
+  .model-label {
+    font-size: 0.85rem;
+    margin-right: 2px;
+  }
+  .model-dropdown {
+    width: 120px;
+    min-width: 0;
+    font-size: 0.95rem;
+    padding: 2px 6px;
+    height: 28px;
+  }
+  .navbar-right {
+    min-width: 32px;
+    gap: 0;
+    justify-content: flex-end;
+  }
+  .navbar-right svg,
+  .navbar-right img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .last-updated,
+  .navbar-home {
+    display: none !important;
+  }
 }

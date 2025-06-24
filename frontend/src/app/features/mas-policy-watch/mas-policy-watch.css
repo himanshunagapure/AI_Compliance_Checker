@@ -3,7 +3,7 @@
   min-height: calc(100vh - 72px); 
   margin-top: 12px; 
   margin-left: 100px; 
-  width: calc(100% - 120px); 
+  width: calc(100% - 100px); 
   padding: 32px 48px;
   position: relative;
   font-family: var(--font-family);

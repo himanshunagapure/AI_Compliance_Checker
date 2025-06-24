@@ -28,8 +28,8 @@ export class Login {
       // Simulate login by storing a flag in localStorage
       localStorage.setItem('isLoggedIn', 'true');
       // Redirect to dashboard or admin page
-      // this.router.navigate(['https://www.google.com']);
-      window.location.href = 'https://www.google.com';
+       this.router.navigate(['/mas-policy-watch']);
+      // window.location.href = 'https://www.google.com';
     } else {
       this.errorMessage = 'Invalid username or password';
     }

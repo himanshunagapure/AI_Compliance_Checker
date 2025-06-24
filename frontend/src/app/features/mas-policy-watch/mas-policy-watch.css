@@ -1,17 +1,21 @@
 .mas-policy-container {
-  background: #f8fafc;
+  background: var(--content-light);
   min-height: calc(100vh - 72px); 
   margin-top: 12px; 
   margin-left: 100px; 
   width: calc(100% - 120px); 
   padding: 32px 48px;
   position: relative;
+  font-family: var(--font-family);
+  color: var(--text-dark);
 }
 
 .transaction-heading {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 40px;
+  color: var(--text-dark);
+  font-family: var(--font-family);
 }
 
 .mas-policy-content {
@@ -21,6 +25,7 @@
   justify-content: center;
   min-height: 60vh;
   position: relative;
+  font-family: var(--font-family);
 }
 
 .mas-policy-center {
@@ -29,6 +34,8 @@
   width: 60%;
   line-height: 30px;
   letter-spacing: -1.5%;
+  font-family: var(--font-family);
+  color: var(--text-dark);
 }
 
 .mas-policy-center h3 {
@@ -36,17 +43,19 @@
   line-height: 36px;
   font-weight: 700;
   margin-bottom: 16px;
-
+  color: var(--text-dark);
+  font-family: var(--font-family);
 }
 
 .mas-policy-center p {
-  color: #555;
+  color: #555; /* Consider adding a --text-secondary variable if you want to theme this */
   margin-bottom: 32px;
   font-size: 18px;
+  font-family: var(--font-family);
 }
 
 .initiate-btn {
-  background: #03BCA3;
+  background: var(--cta-green);
   color: #fff;
   border: none;
   padding: 16px 40px;
@@ -55,10 +64,11 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
+  font-family: var(--font-family);
 }
 
 .initiate-btn:hover {
-  background: #039884;
+  background: var(--cta-green-dark);
 }
 
 .chatbot-icon {

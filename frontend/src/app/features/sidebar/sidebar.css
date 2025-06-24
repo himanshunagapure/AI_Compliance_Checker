@@ -4,7 +4,7 @@
   left: 0;
   width: 120px;
   height: calc(100vh - 72px);
-  background: #011735;
+  background:  var(--sidebar-dark);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -28,14 +28,10 @@
   font-size: 1.05rem;
 }
 
-/* .sidebar li .icon {
-  margin-right: 16px;
-  font-size: 1.3rem;
-} */
 
 .sidebar li.active,
 .sidebar li:hover {
-  background: #16335b;
+  background: #072a57;
   color: #039884;
-  border-left: 6px solid #039884;
+  border-left: 6px solid var(--cta-green);
 }

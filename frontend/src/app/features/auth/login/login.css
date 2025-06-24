@@ -2,13 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
 }
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: var(--font-family);
+  background: var(--content-light);
+  color: var(--text-dark);
 }
 .login-root {
   display: flex;
@@ -41,10 +44,10 @@ body {
 }
 .logo-tcg {
   font-weight: bold;
-  color: #18213a;
+  color: var(--text-dark);
 }
 .logo-purposelab {
-  color: #1ed6a3;
+  color: var(--cta-green);
   font-weight: 400;
   margin-left: 4px;
 }
@@ -52,18 +55,21 @@ body {
 .back-btn {
   background: none;
   border: none;
-  color: #222;
+  color: var(--text-dark);
   font-size: 1rem;
   cursor: pointer;
   margin-bottom: 24px;
   text-align: left;
   padding: 0;
+  font-family: var(--font-family);
 }
 
 .login-title {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 30px;
+  color: var(--text-dark);
+  font-family: var(--font-family);
 }
 
 .login-form {
@@ -80,6 +86,9 @@ body {
   border-radius: 6px;
   font-size: 1rem;
   box-sizing: border-box;
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background: #fff;
 }
 
 .password-wrapper {
@@ -106,7 +115,7 @@ body {
 }
 
 .login-continue {
-  background: #00bca3;
+  background: var(--cta-green);
   color: #fff;
   border: none;
   padding: 10px 0;
@@ -116,24 +125,28 @@ body {
   width: 120px; 
   align-self: flex-start; 
   margin-top: 20px;
+  font-family: var(--font-family);
 }
-
+.login-continue:hover {
+  background: var(--cta-green-dark);
+}
 .login-footer {
   margin-top: auto; 
   font-size: 0.70rem;
   color: #888;
-  padding: 48px 0 60px 140px;; 
+  padding: 48px 0 60px 140px; 
   width: 70%;
+  font-family: var(--font-family);
 }
 
 .login-footer a {
-  color: #1ed6a3;
+  color: var(--cta-green);
   text-decoration: underline;
 }
 
 .login-right {
   flex: 1 1 0;
-  background: #0a2342;
+  background: var(--sidebar-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,6 +166,7 @@ body {
 }
 h2 {
   margin: 0;
+  font-family: var(--font-family);
 }
 
 .left-content {
@@ -161,6 +175,7 @@ h2 {
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-family);
 }
 
 .toggle-password svg{

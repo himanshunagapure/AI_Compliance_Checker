@@ -17,7 +17,8 @@ html, body {
 :root {
   --sidebar-dark: #0a2342;
   --content-light: #f8fafc;
-  --cta-green: #1ed6a3;
+  --cta-green: #03BCA3;
+  --cta-green-dark: #039884;
   --text-dark: #18213a;
   --font-family: 'Montserrat', sans-serif;
 }

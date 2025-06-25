@@ -2,6 +2,8 @@
   background: #f8fafc;
   min-height: calc(100vh - 72px); /* subtract navbar height */
   padding: 32px 48px;
+  margin-left: 100px;
+  width: calc(100% - 120px);
   position: relative;
 }
 
@@ -93,11 +95,17 @@
   border-radius: 50%;
   background: #0a2342;
   padding: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

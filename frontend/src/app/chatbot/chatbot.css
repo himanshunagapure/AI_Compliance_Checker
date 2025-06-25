@@ -1,7 +1,7 @@
 .chatbot-wrapper {
   width: calc(100% - 120px);
   max-width: 1717px;
-  padding: 24px;
+  padding: 24px 48px;
   padding-right: 32px 48;
   background-color: #f2f2f2;
   margin: 0 auto;

@@ -6,6 +6,7 @@ import {
   AfterViewInit,
   Renderer2,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chatbot',
@@ -21,7 +22,7 @@ export class Chatbot implements AfterViewInit {
   selectedFileName: string | null = null;
   selectedFocus: string | null = null;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private router: Router) {}
 
   ngAfterViewInit(): void {}
 
@@ -76,6 +77,10 @@ export class Chatbot implements AfterViewInit {
     this.selectedFileName = null;
     this.fileInputRef.nativeElement.value = '';
     this.selectedFocus = null;
+
+    setTimeout(() => {
+      this.router.navigate(['/analysis-results']);
+    }, 5000);
   }
 
   private appendMessage(content: string, isFile: boolean): void {
@@ -103,7 +108,7 @@ export class Chatbot implements AfterViewInit {
     this.renderer.appendChild(container, messageRow);
 
     setTimeout(() => {
-      container.scrollTop = container.scrollHeight;
+      messageRow.scrollIntoView({ behavior: 'smooth', block: 'end' });
     });
   }
   logoSvg: string = `

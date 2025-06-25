@@ -1,0 +1,29 @@
+<div class="compliance-overview">
+  <div class="analysis-header">
+    <h2 class="analysis-title">Analysis Results</h2>
+    <p class="document-name">{{ documentName }}</p>
+  </div>
+  
+  <div class="compliance-cards">
+    <div class="compliance-card score-card">
+      <h3 class="card-title">Compliance Score</h3>
+      <div class="card-value score-value">{{ complianceScore }}%</div>
+    </div>
+    
+    <div class="compliance-card severity-card high-severity">
+      <h3 class="card-title">High Severity</h3>
+      <div class="card-value">{{ highSeverity }}</div>
+    </div>
+    
+    <div class="compliance-card severity-card medium-severity">
+      <h3 class="card-title">Medium Severity</h3>
+      <div class="card-value">{{ mediumSeverity }}</div>
+    </div>
+    
+    <div class="compliance-card severity-card low-severity">
+      <h3 class="card-title">Low Severity</h3>
+      <div class="card-value">{{ lowSeverity }}</div>
+    </div>
+  </div>
+</div>
+

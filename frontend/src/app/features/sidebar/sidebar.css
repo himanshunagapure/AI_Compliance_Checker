@@ -1,41 +1,103 @@
 .sidebar {
   position: fixed;
-  top: 72px;          
+  top: 72px;
   left: 0;
-  width: 120px;
+  width: 70px; /* Standard for icon sidebar */
   height: calc(100vh - 72px);
-  background: #011735;
+  background: var(--sidebar-dark, #0e2342);
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
   z-index: 999;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  transition: width 0.2s;
 }
-
 
 .sidebar ul {
   padding-top: 32px;
-  list-style: none;;
+  list-style: none;
+  margin: 0;
+ 
 }
 
 .sidebar li {
-  display: flex;
+  display: flex; ;
   align-items: center;
-  padding: 20px 40px;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  padding: 0;
   cursor: pointer;
-  transition: background 0.2s;
-  font-size: 1.05rem;
-}
+  transition: color 0.2s;
+  box-sizing: border-box;
+  position: relative;
 
-/* .sidebar li .icon {
-  margin-right: 16px;
-  font-size: 1.3rem;
-} */
+}
 
 .sidebar li.active,
 .sidebar li:hover {
-  background: #16335b;
-  color: #1ed6a3;
-  border-left: 6px solid #1ed6a3;
+  background: none; /* Remove background highlight */
+  color: #039884;
+  position: relative;
+}
+
+/* .sidebar li.active::before,
+.sidebar li:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--cta-green, #03BCA3);
+  transition: background 0.2s;
+} */
+
+.sidebar li.active svg path,
+.sidebar li:hover svg path {
+  stroke: #03BCA3;
+  fill: #03BCA3; /* If your SVG uses fill */
+}
+
+
+.sidebar li svg,
+.sidebar li i {
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 56px;
+    top: 64px;
+    height: calc(100vh - 64px);
+  }
+  .sidebar li {
+    height: 48px;
+  }
+  .sidebar li svg,
+  .sidebar li i {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .sidebar {
+    width: 0;
+    min-width: 0;
+    overflow: hidden;
+    padding: 0;
+    top: 56px; /* Match mobile navbar height */
+    height: calc(100vh - 56px);
+  }
+  .sidebar.open {
+    width: 48px;
+  }
 }

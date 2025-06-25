@@ -26,23 +26,12 @@ export class Chatbot implements AfterViewInit {
   ngAfterViewInit(): void {}
 
   triggerFileInput(): void {
-    if (!this.selectedFocus) {
-      console.warn('Please select a regulation focus before uploading a file.');
-      return;
-    }
-
     this.fileInputRef.nativeElement.click();
   }
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     const file = input.files?.[0];
-
-    if (!this.selectedFocus) {
-      console.warn('Cannot select a file without selecting a focus.');
-      input.value = '';
-      return;
-    }
 
     if (this.selectedFileName) {
       console.warn('Only one file can be selected at a time.');
@@ -62,30 +51,31 @@ export class Chatbot implements AfterViewInit {
 
   setText(event: MouseEvent, clickedText: string): void {
     event.preventDefault();
-    this.selectedFocus = clickedText;
 
-    this.appendMessage(clickedText, false);
-  }
-
-  sendFileMessage(): void {
-    if (!this.selectedFocus) {
-      console.warn('Please select a regulation focus first.');
+    if (!this.selectedFileName) {
+      console.warn('Please upload a file before selecting a regulation focus.');
       return;
     }
 
-    if (this.selectedFileName) {
-      this.appendMessage(this.selectedFileName, true);
-      this.selectedFileName = null;
-      this.fileInputRef.nativeElement.value = '';
-    } else {
-      const text = this.myInputRef.nativeElement.value.trim();
-      if (text.length === 0) {
-        console.warn('Empty message not sent.');
-        return;
-      }
-      this.appendMessage(text, false);
-      this.myInputRef.nativeElement.value = '';
+    this.selectedFocus = clickedText;
+    this.myInputRef.nativeElement.value = clickedText;
+  }
+
+  sendFileMessage(): void {
+    // Check if file and focus are both selected
+    if (!this.selectedFileName || !this.selectedFocus) {
+      console.warn('Please upload a file and select a regulation focus first.');
+      return;
     }
+
+    // Append only the regulation focus as the message
+    this.appendMessage(this.selectedFocus, false);
+
+    // Clear input field and file
+    this.myInputRef.nativeElement.value = '';
+    this.selectedFileName = null;
+    this.fileInputRef.nativeElement.value = '';
+    this.selectedFocus = null;
   }
 
   private appendMessage(content: string, isFile: boolean): void {

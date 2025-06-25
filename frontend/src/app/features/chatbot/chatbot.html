@@ -1,7 +1,5 @@
 <div class="chatbot-wrapper">
-  <!-- New Transaction Section (Frame 270) -->
-  <h2 class="transaction-title">New Transaction</h2>
-
+  <h2 class="transaction-heading">New Transaction</h2>
   <div class="chatbot-row">
     <div class="chatbot-image">
       <svg
@@ -242,7 +240,11 @@
         </button>
       </div>
       <div class="send-button-container">
-        <button class="send-button-icon" (click)="sendFileMessage()">
+        <button
+          class="send-button-icon"
+          (click)="sendFileMessage()"
+          [disabled]="!selectedFileName || !selectedFocus"
+        >
           <svg
             width="16"
             height="16"

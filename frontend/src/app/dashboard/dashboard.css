@@ -1,0 +1,303 @@
+.dashboard-container {
+  background: var(--content-light);
+  min-height: calc(100vh - 72px);
+  margin-top: 0; /* Removed to prevent gap */
+  margin-left: 70px;
+  width: calc(100% - 70px);
+  padding: 32px 32px;
+  position: relative;
+  font-family: var(--font-family);
+  background: linear-gradient(
+    180deg,
+    rgba(86, 86, 86, 0.1) 0%,
+    rgba(86, 86, 86, 0.1) 100%
+  );
+  color: var(--text-dark);
+}
+
+.dashboard-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  font-family: var(--font-family);
+}
+
+.dashboard-grid {
+  display: flex;
+  gap: 8px; /* tighter horizontal spacing */
+  justify-content: space-between;
+}
+
+/* Tabs: smaller, same width */
+.dashboard-tab {
+  flex: 1;
+  max-width: 25%;
+  height: 275px; /* ↓ reduced height */
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* Split tab layout (4th tab) */
+.split-tab {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 8px;
+  background: rgba(86, 86, 86, 0);
+  border: none;
+}
+
+/* Top and bottom halves inside 4th tab */
+.split-tab .split-top,
+.split-tab .split-bottom {
+  flex: 1;
+  height: calc(50% - 6px); /* half with spacing */
+  padding: 10px 14px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+/* Dashboard tab card container */
+.activity-card {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0; /* Padding is managed in children */
+}
+
+/* Top 35% - left-aligned content */
+.activity-top {
+  flex: 0 0 35%;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.activity-header {
+  color: #00bfae;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.activity-subheader {
+  color: #888;
+  font-size: 0.88rem;
+  margin-bottom: 0;
+}
+
+/* Bottom 65% - centered metrics */
+.activity-bottom {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+/* Metric section */
+.activity-metrics {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0; /* prevent overflow */
+}
+
+.metric:not(:last-child) {
+  border-right: 1px solid #eee;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.metric-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.metric-icon svg {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00bfae;
+  margin-bottom: 2px;
+}
+
+.metric-label {
+  color: #777;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.echart-container {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  flex: 1; /* this ensures chart fills remaining space */
+  min-height: 0; /* prevent it from growing too much */
+  justify-content: center;
+  align-items: center;
+}
+
+.bar-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 12px 12px 4px 12px;
+  background: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.bar-title {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #00bfae;
+  text-align: left;
+}
+
+.echart-inner {
+  width: 100%;
+  height: 200px;
+}
+
+.analytics-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.analytics-tab-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #3bbaa1;
+}
+
+.analytics-tab-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3bbaa1;
+}
+
+.analytics-tab-note {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 4px;
+}
+
+.rm-table-container {
+  background-color: #fff;
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  border-color: #fff;
+}
+
+.rm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  text-align: left;
+  table-layout: fixed;
+}
+
+.rm-table th,
+.rm-table td {
+  border-bottom: 1px solid #e0e0e0;
+
+  padding: 12px;
+  text-align: left;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* allow wrapping */
+  word-break: break-word;
+}
+
+.rm-table th {
+  border-right: 1px solid white;
+}
+
+.rm-table th:last-child {
+  border-right: none; /* remove border on last column */
+}
+
+.rm-table thead {
+  background-color: #0d1a2d;
+  color: #fff;
+}
+
+.rm-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.rm-table-wrapper {
+  margin-top: 24px;
+}
+
+/* 1. Responsive dashboard grid */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dashboard-tab {
+    max-width: 100%;
+    width: 100%;
+    height: 360px; /* increased height for mobile chart clarity */
+  }
+
+  .split-tab {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .echart-inner {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-heading {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+}

@@ -3,6 +3,7 @@ import { Login } from './features/auth/login/login';
 import { Shell } from './features/shell/shell';
 import { MasPolicyWatch } from './features/mas-policy-watch/mas-policy-watch';
 import { AnalysisResultsComponent } from './analysis-results/analysis-results';
+import { Dashboard } from './dashboard/dashboard';
 
 // Add 'export' before const routes
 export const routes: Routes = [
@@ -21,6 +22,7 @@ export const routes: Routes = [
     children: [
       { path: 'mas-policy-watch', component: MasPolicyWatch },
       { path: 'analysis-results', component: AnalysisResultsComponent },
+      { path: 'dashboard', component: Dashboard },
       // add other protected routes here
     ],
   },

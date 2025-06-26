@@ -152,6 +152,10 @@
   z-index: 1000;
 }
 
+.footer-wrapper.with-file {
+  height: 232px; /* Increased when file is present */
+}
+
 .footer-upload-box {
   width: 100%;
   max-width: 1750px;

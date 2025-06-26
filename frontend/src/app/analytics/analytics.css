@@ -196,81 +196,102 @@
   font-size: 14px;
 }
 
+/* Tablet: Stack panels, shrink padding and font sizes */
 @media (max-width: 1024px) {
   .analytics-container {
     flex-direction: column;
+    gap: 16px;
   }
-
   .analytics-left-panel,
   .analytics-right-panel {
-    flex: 1 1 100%;
     width: 100%;
-  }
-
-  .violation-header,
-  .violation-row,
-  .scanned-header,
-  .scanned-row {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    font-size: 13px;
-    padding: 10px 6px;
-  }
-
-  .analytics-tab {
-    min-height: 140px;
-    padding: 16px;
-  }
-
-  .analytics-tab-value {
-    font-size: 28px;
-  }
-
-  .analytics-tab-title {
-    font-size: 20px;
-  }
-
-  .analytics-tab-note {
-    font-size: 14px;
-  }
-
-  .violation-title {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .violation-header,
-  .violation-row,
-  .scanned-header,
-  .scanned-row {
-    grid-template-columns: 1fr;
-    row-gap: 4px;
-  }
-
-  .violation-header span,
-  .violation-row span,
-  .scanned-header span,
-  .scanned-row span {
-    text-align: left !important;
-  }
-
-  .violation-tab {
+    min-width: 0;
     padding: 12px;
   }
-
   .analytics-tab {
+    min-height: 110px;
     padding: 12px;
   }
-
-  .analytics-tab-value {
-    font-size: 24px;
-  }
-
   .analytics-tab-title {
     font-size: 18px;
   }
+  .analytics-tab-value {
+    font-size: 24px;
+  }
+  .violation-title {
+    font-size: 18px;
+  }
+}
 
-  .analytics-tab-note {
+/* Add this container if not present in your HTML */
+.scanned-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+/* Keep grid layout for table rows and headers */
+.scanned-header,
+.scanned-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 12px 8px;
+  min-width: 600px; /* Ensures table doesn't shrink too much */
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.scanned-header {
+  background-color: #001f4d;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+}
+
+.scanned-row {
+  border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 600px) {
+  .scanned-table-container {
+    overflow-x: auto;
+  }
+  .scanned-header,
+  .scanned-row {
+    min-width: 500px; /* or 600px, adjust for your columns */
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+}
+/* Make text field smaller everywhere */
+.analytics-tab-value {
+  font-size: 28px;
+}
+@media (max-width: 600px) {
+  .analytics-tab-value {
+    font-size: 16px;
+  }
+  .analytics-tab-title {
     font-size: 13px;
+  }
+  .analytics-tab-note {
+    font-size: 9px;
+  }
+}
+/* Extra small screens */
+@media (max-width: 400px) {
+  .analytics-tab-title,
+  .violation-title {
+    font-size: 13px;
+  }
+  .analytics-tab-value {
+    font-size: 14px;
+  }
+  .analytics-tab-note {
+    font-size: 9px;
   }
 }

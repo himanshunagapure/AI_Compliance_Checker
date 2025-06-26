@@ -1,3 +1,8 @@
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .dashboard-container {
   background: var(--content-light);
   min-height: calc(100vh - 72px);
@@ -269,35 +274,97 @@
 .rm-table-wrapper {
   margin-top: 24px;
 }
+/* ...existing code... */
 
-/* 1. Responsive dashboard grid */
+/* 1. Responsive dashboard grid for tablets and below */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    margin-left: 56px; /* If sidebar shrinks on tablet */
+    width: calc(100% - 56px);
+    padding: 20px 8px;
+  }
+  .dashboard-grid {
+    gap: 12px;
+  }
+  .dashboard-tab {
+    height: 320px;
+    padding: 12px;
+  }
+}
+
+/* 2. Responsive dashboard grid for mobile */
 @media (max-width: 768px) {
+  .dashboard-container {
+    margin-left: 0;
+    width: 100%;
+    padding: 12px 4px;
+  }
+  .dashboard-heading {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
   .dashboard-grid {
     flex-direction: column;
     gap: 16px;
   }
-
-  .dashboard-tab {
-    max-width: 100%;
-    width: 100%;
-    height: 360px; /* increased height for mobile chart clarity */
-  }
-
+  .dashboard-tab,
   .split-tab {
     max-width: 100%;
     width: 100%;
-    flex-direction: column;
+    height: auto;
+    min-height: 260px;
+    padding: 10px;
   }
-
   .echart-inner {
-    height: 300px;
+    height: 180px;
   }
+  .activity-top,
+  .activity-bottom {
+    padding: 10px 8px;
+  }
+  .bar-card {
+    padding: 8px 4px 2px 4px;
+  }
+  .rm-table th,
+  .rm-table td {
+    padding: 8px;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+  }
+   .dashboard-grid,
+.dashboard-tab {
+  min-width: 0;
+}
 }
 
-@media (max-width: 768px) {
+/* 3. Make table scrollable on small screens */
+@media (max-width: 600px) {
+  .rm-table-container {
+    overflow-x: auto;
+  }
+  .rm-table {
+    min-width: 600px;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+  }
   .dashboard-heading {
-    text-align: center;
+    font-size: 1rem;
+  }
+ 
+}
+
+/* 4. Misc: shrink icons and metrics for mobile */
+@media (max-width: 480px) {
+  .metric-icon svg {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 6px;
+  }
+  .metric-value {
+    font-size: 1.1rem;
+  }
+  .analytics-tab-value {
     font-size: 1.2rem;
-    margin-bottom: 16px;
   }
 }

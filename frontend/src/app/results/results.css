@@ -5,10 +5,6 @@
   margin-left: 70px;
   width: calc(100% - 70px);
   padding: 32px 48px;
-<<<<<<< HEAD
-=======
-  padding-bottom: 400px;
->>>>>>> origin/aj-branch
   position: relative;
   font-family: var(--font-family);
   color: var(--text-dark);
@@ -52,21 +48,11 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 16px;
-<<<<<<< HEAD
-  color: var(--text-dark);
-=======
   color: #33baa1;
->>>>>>> origin/aj-branch
   font-family: var(--font-family);
 }
 
 /* Issues Table */
-<<<<<<< HEAD
-.issues-table {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-=======
 
 .content-left {
   background: #fff;
@@ -78,7 +64,6 @@
   background: #fff;
   border: none;
   border-radius: 8px;
->>>>>>> origin/aj-branch
   overflow: hidden;
   margin-bottom: 24px;
 }
@@ -264,20 +249,12 @@
     width: calc(100% - 56px);
     padding: 24px 32px;
   }
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> origin/aj-branch
   .analysis-content {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> origin/aj-branch
   .table-header,
   .table-row {
     grid-template-columns: 60px 100px 1fr 80px 100px;
@@ -291,17 +268,6 @@
     width: 100%;
     padding: 16px;
   }
-<<<<<<< HEAD
-  
-  .action-buttons {
-    flex-direction: column;
-  }
-  
-  .regulation-buttons {
-    flex-direction: column;
-  }
-  
-=======
 
   .action-buttons {
     flex-direction: column;
@@ -311,233 +277,9 @@
     flex-direction: column;
   }
 
->>>>>>> origin/aj-branch
   .table-header,
   .table-row {
     grid-template-columns: 1fr;
     text-align: left;
   }
 }
-<<<<<<< HEAD
-=======
-
-/* ✅ Upload floating footer */
-.footer-wrapper {
-  position: fixed;
-  bottom: 0;
-  left: 120px;
-  width: calc(100% - 120px);
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  padding: 16px 24px;
-  box-sizing: border-box;
-  z-index: 1000;
-}
-
-.footer-upload-box {
-  width: 100%;
-  max-width: 1750px;
-  border: 4px solid #013172; /* ✅ Updated border */
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 16px 24px 12px 24px; /* ✅ Reduced bottom padding */
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  box-sizing: border-box;
-}
-
-/* File tag styles — unchanged */
-.file-tag {
-  width: 473px;
-  height: 44px;
-  display: flex; /* hidden by default */
-  align-items: center;
-  gap: 8px;
-  padding: 4px 16px;
-  border-radius: 4px;
-  border: 1px solid #aeaeae;
-  box-sizing: border-box;
-  background-color: #f9f9f9; /* optional for contrast */
-  font-family: sans-serif;
-  font-size: 14px;
-  color: #333;
-}
-
-.file-icon img {
-  width: 24px;
-  height: 24px;
-}
-
-.file-name {
-  font-size: 16px;
-  color: #333;
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.remove-file {
-  width: 22px;
-  height: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ccc;
-  border-radius: 3px;
-  font-size: 16px;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-/* Chat input */
-.chat-input {
-  height: 36px;
-  padding: 0 12px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 36px;
-  letter-spacing: -0.015em;
-  border: none;
-  margin-top: 10px;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-/* Footer action buttons and send button row */
-.footer-actions-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
-
-/* Upload buttons */
-.upload-buttons {
-  display: flex;
-  gap: 12px;
-}
-
-.upload-buttons button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border: 1px solid #aeaeae;
-  border-radius: 6px;
-  background-color: #fff;
-  color: #000;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.upload-buttons svg {
-  width: 24px;
-  height: 24px;
-  fill: #353535;
-}
-
-.chat-container {
-  gap: 18px;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 36px;
-  letter-spacing: -1.5%;
-  text-align: right;
-}
-
-/* Send button */
-.send-button-container {
-  width: 44px;
-  height: 44px;
-  padding: 0 4px;
-  border-radius: 4px;
-  background-color: #011735;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.send-button-icon {
-  width: 24px;
-  height: 24px;
-  border: none;
-  background: transparent;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .footer-wrapper {
-    left: 0;
-    width: 97%;
-    height: auto;
-    padding: 8px; /* smaller padding */
-  }
-
-  .footer-upload-box {
-    max-width: 100%;
-    padding: 8px;
-    border-width: 1px; /* thinner border */
-  }
-
-  .file-tag {
-    width: 100%;
-    font-size: 12px; /* smaller file name text */
-    padding: 4px 6px;
-  }
-
-  .footer-actions-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px; /* reduced gap */
-  }
-
-  .upload-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 6px;
-  }
-
-  .upload-buttons button {
-    flex: 1;
-    padding: 6px;
-    height: 36px; /* reduced height */
-    font-size: 0; /* hide text */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .upload-buttons button svg {
-    width: 18px;
-    height: 18px;
-    font-size: 14px;
-  }
-
-  .send-button-container {
-    width: 100%;
-    height: 36px; /* reduced height */
-    border-radius: 4px;
-  }
-
-  .send-button-icon {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .chat-input {
-    font-size: 16px;
-    padding: 6px;
-    height: 24px; /* reduced height */
-  }
-}
->>>>>>> origin/aj-branch

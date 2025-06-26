@@ -1,0 +1,224 @@
+<div class="analytics-container">
+  <!-- Left Panel -->
+  <div class="analytics-left-panel">
+    <h2 class="analytics-left-title">Compliance Analytics Dashboard</h2>
+    <p class="analytics-left-description">
+      Track compliance performance across your organization
+    </p>
+    <div class="analytics-tab" style="background-color: #fff; color: #3bbaa1">
+      <div class="analytics-tab-title">Overall Compliance Score</div>
+      <div class="analytics-tab-value">94%</div>
+      <div class="analytics-tab-note">+3% from previous period</div>
+    </div>
+    <div class="analytics-tab" style="background-color: #eee; color: #161616">
+      <div class="analytics-tab-title">Documents Scanned</div>
+      <div class="analytics-tab-value">142</div>
+      <div class="analytics-tab-note">+28 from previous period</div>
+    </div>
+    <div
+      class="analytics-tab"
+      style="background-color: #ffcfcf; color: #a50000"
+    >
+      <div class="analytics-tab-title">Total Violations</div>
+      <div class="analytics-tab-value">87</div>
+      <div class="analytics-tab-note">-12% from previous period</div>
+    </div>
+    <div
+      class="analytics-tab"
+      style="background-color: #daffde; color: #007e66"
+    >
+      <div class="analytics-tab-title">Remediation Rate</div>
+      <div class="analytics-tab-value">89%</div>
+      <div class="analytics-tab-note">+5% from previous period</div>
+    </div>
+  </div>
+
+  <!-- Right Panel -->
+  <!-- Right Panel -->
+  <div class="analytics-right-panel">
+    <div class="right-row-tabs">
+      <div class="violation-tab">
+        <h3 class="violation-title">Compliance Analytics Dashboard</h3>
+
+        <div class="violation-table-wrapper">
+          <div class="violation-header">
+            <span class="header-col">Trend Indicators</span>
+            <span class="header-col">Date Range</span>
+            <span class="header-col align-right">Dropdown</span>
+          </div>
+
+          <div class="trend-placeholder">
+            <p>WIP</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="violation-tab">
+        <h3 class="violation-title">Top Violation Type</h3>
+
+        <div class="violation-table-wrapper">
+          <div class="violation-header">
+            <span>Violation Type</span>
+            <span>Count</span>
+            <span>Percentage</span>
+            <span>Distribution</span>
+          </div>
+
+          <div class="violation-row">
+            <span> Data Retention Policy </span>
+            <span> 24</span>
+            <span> 24%</span>
+            <div class="distribution-bar-wrapper">
+              <div class="distribution-bar-bg">
+                <div class="distribution-bar-fill" [style.width.%]="24"></div>
+              </div>
+            </div>
+          </div>
+          <div class="violation-row">
+            <span> Customer Due Diligence </span>
+            <span> 18</span>
+            <span> 18%</span>
+            <div class="distribution-bar-wrapper">
+              <div class="distribution-bar-bg">
+                <div class="distribution-bar-fill" [style.width.%]="18"></div>
+              </div>
+            </div>
+          </div>
+          <div class="violation-row">
+            <span> Authentication Requirements </span>
+            <span> 15</span>
+            <span> 15%</span>
+            <div class="distribution-bar-wrapper">
+              <div class="distribution-bar-bg">
+                <div class="distribution-bar-fill" [style.width.%]="15"></div>
+              </div>
+            </div>
+          </div>
+          <div class="violation-row">
+            <span> Transaction Monitoring </span>
+            <span> 12</span>
+            <span> 12%</span>
+            <div class="distribution-bar-wrapper">
+              <div class="distribution-bar-bg">
+                <div class="distribution-bar-fill" [style.width.%]="12"></div>
+              </div>
+            </div>
+          </div>
+          <div class="violation-row">
+            <span> Risk Assessment Documentation </span>
+            <span> 10</span>
+            <span> 10%</span>
+            <div class="distribution-bar-wrapper">
+              <div class="distribution-bar-bg">
+                <div class="distribution-bar-fill" [style.width.%]="10"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="violation-tab">
+        <h3 class="violation-title">Recently Scanned Documents</h3>
+
+        <div class="violation-table-wrapper">
+          <div class="scanned-header violation-header">
+            <span>Document Name</span>
+            <span>Date Scanned</span>
+            <span>Compliance Score</span>
+            <span>Violations</span>
+            <span>Actions</span>
+          </div>
+
+          <div class="scanned-row">
+            <span>Data Retention Policy</span>
+            <span>2025-05-17</span>
+            <span>
+              <span
+                style="
+                  background-color: #d4f4e0;
+                  padding: 2px 8px;
+                  border-radius: 6px;
+                  font-weight: 600;
+                "
+                >97%</span
+              >
+            </span>
+            <span>2</span>
+            <span>View Report</span>
+          </div>
+
+          <div class="scanned-row">
+            <span>Customer Due Diligence</span>
+            <span>2025-05-15</span>
+            <span>
+              <span
+                style="
+                  background-color: #fff3cd;
+                  padding: 2px 8px;
+                  border-radius: 6px;
+                  font-weight: 600;
+                "
+                >88%</span
+              >
+            </span>
+            <span>7</span>
+            <span>View Report</span>
+          </div>
+
+          <div class="scanned-row">
+            <span>Authentication Requirements</span>
+            <span>2025-05-10</span>
+            <span>
+              <span
+                style="
+                  background-color: #d1ecf1;
+                  padding: 2px 8px;
+                  border-radius: 6px;
+                  font-weight: 600;
+                "
+                >94%</span
+              >
+            </span>
+            <span>3</span>
+            <span>View Report</span>
+          </div>
+
+          <div class="scanned-row">
+            <span>Transaction Monitoring</span>
+            <span>2025-05-05</span>
+            <span>
+              <span
+                style="
+                  background-color: #cce5ff;
+                  padding: 2px 8px;
+                  border-radius: 6px;
+                  font-weight: 600;
+                "
+                >92%</span
+              >
+            </span>
+            <span>5</span>
+            <span>View Report</span>
+          </div>
+
+          <div class="scanned-row">
+            <span>Risk Assessment Documentation</span>
+            <span>2025-05-01</span>
+            <span>
+              <span
+                style="
+                  background-color: #d4edda;
+                  padding: 2px 8px;
+                  border-radius: 6px;
+                  font-weight: 600;
+                "
+                >98%</span
+              >
+            </span>
+            <span>1</span>
+            <span>View Report</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

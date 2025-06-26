@@ -122,8 +122,8 @@ body {
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  width: 120px; 
-  align-self: flex-start; 
+  width: 120px;
+  align-self: flex-start;
   margin-top: 20px;
   font-family: var(--font-family);
 }
@@ -131,10 +131,14 @@ body {
   background: var(--cta-green-dark);
 }
 .login-footer {
-  margin-top: auto; 
-  font-size: 0.70rem;
+  margin-top: auto;
+  font-size: 0.7rem;
   color: #888;
+<<<<<<< HEAD
   padding: 48px 0 60px 140px; 
+=======
+  padding: 48px 0 60px 140px;
+>>>>>>> origin/aj-branch
   width: 70%;
   font-family: var(--font-family);
 }
@@ -178,7 +182,7 @@ h2 {
   font-family: var(--font-family);
 }
 
-.toggle-password svg{
+.toggle-password svg {
   display: block;
   width: 20px;
   height: 20px;
@@ -190,3 +194,40 @@ h2 {
   overflow: visible;
 }
 
+<<<<<<< HEAD
+=======
+@media (max-width: 768px) {
+  .login-root {
+    flex-direction: column; /* Stack vertically */
+  }
+
+  .login-right {
+    display: none; /* Hide illustration on mobile */
+  }
+
+  .left-content {
+    padding: 24px; /* Reduce side padding for mobile */
+    width: 100%;
+  }
+
+  .login-logo {
+    justify-content: center; /* Center logo on mobile */
+    padding-left: 0;
+  }
+
+  .login-form {
+    width: 100%; /* Let form take full width on mobile */
+  }
+
+  .login-footer {
+    padding: 24px 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .login-continue {
+    width: 100%; /* Full-width button on mobile */
+    align-self: stretch;
+  }
+}
+>>>>>>> origin/aj-branch

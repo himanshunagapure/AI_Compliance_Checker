@@ -154,7 +154,7 @@
 </div>
 
 <!-- Floating Upload Panel (Frame 276) -->
-<div class="footer-wrapper">
+<div class="footer-wrapper" [class.with-file]="selectedFileName">
   <div class="footer-upload-box">
     <!-- File Tag Row -->
     <div class="file-tag" *ngIf="selectedFileName">

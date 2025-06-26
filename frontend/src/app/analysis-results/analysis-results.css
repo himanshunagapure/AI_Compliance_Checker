@@ -5,10 +5,7 @@
   margin-left: 70px;
   width: calc(100% - 70px);
   padding: 32px 48px;
-<<<<<<< HEAD
-=======
   padding-bottom: 400px;
->>>>>>> origin/aj-branch
   position: relative;
   font-family: var(--font-family);
   color: var(--text-dark);
@@ -52,21 +49,9 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 16px;
-<<<<<<< HEAD
-  color: var(--text-dark);
-=======
   color: #33baa1;
->>>>>>> origin/aj-branch
   font-family: var(--font-family);
 }
-
-/* Issues Table */
-<<<<<<< HEAD
-.issues-table {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-=======
 
 .content-left {
   background: #fff;
@@ -78,7 +63,6 @@
   background: #fff;
   border: none;
   border-radius: 8px;
->>>>>>> origin/aj-branch
   overflow: hidden;
   margin-bottom: 24px;
 }
@@ -120,18 +104,18 @@
 }
 
 .severity-badge.high {
-  background: #fef2f2;
-  color: #dc2626;
+  background: #FFCFCF;
+  color: #A50000;
 }
 
 .severity-badge.medium {
-  background: #fffbeb;
-  color: #d97706;
+  background: #FFFBC9;
+  color: #746B00;
 }
 
 .severity-badge.low {
-  background: #f0fdf4;
-  color: #16a34a;
+  background: #DAFFDE;
+  color: #007E66;
 }
 
 .view-details-btn {
@@ -264,20 +248,10 @@
     width: calc(100% - 56px);
     padding: 24px 32px;
   }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> origin/aj-branch
   .analysis-content {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> origin/aj-branch
   .table-header,
   .table-row {
     grid-template-columns: 60px 100px 1fr 80px 100px;
@@ -291,17 +265,6 @@
     width: 100%;
     padding: 16px;
   }
-<<<<<<< HEAD
-  
-  .action-buttons {
-    flex-direction: column;
-  }
-  
-  .regulation-buttons {
-    flex-direction: column;
-  }
-  
-=======
 
   .action-buttons {
     flex-direction: column;
@@ -311,15 +274,12 @@
     flex-direction: column;
   }
 
->>>>>>> origin/aj-branch
   .table-header,
   .table-row {
     grid-template-columns: 1fr;
     text-align: left;
   }
 }
-<<<<<<< HEAD
-=======
 
 /* ✅ Upload floating footer */
 .footer-wrapper {
@@ -540,4 +500,3 @@
     height: 24px; /* reduced height */
   }
 }
->>>>>>> origin/aj-branch

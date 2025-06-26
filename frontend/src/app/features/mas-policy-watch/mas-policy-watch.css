@@ -1,15 +1,5 @@
 .mas-policy-container {
   background: var(--content-light);
-<<<<<<< HEAD
-  min-height: calc(100vh - 72px); 
-  margin-top: 0; /* Removed to prevent gap */
-  margin-left: 70px; 
-  width: calc(100% - 70px); 
-  padding: 32px 32px;
-  position: relative;
-  font-family: var(--font-family);
- 
-=======
   min-height: calc(100vh - 72px);
   margin-top: 0; /* Removed to prevent gap */
   margin-left: 70px;
@@ -22,7 +12,6 @@
     rgba(86, 86, 86, 0.1) 0%,
     rgba(86, 86, 86, 0.1) 100%
   );
->>>>>>> origin/aj-branch
   color: var(--text-dark);
 }
 
@@ -100,15 +89,6 @@
   animation: float 3s ease-in-out infinite;
   border-radius: 50%;
   padding: 0px;
-<<<<<<< HEAD
-  box-shadow: 0 4px 12px rgba(0,0,0,0.30);
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-=======
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -122,7 +102,6 @@
   100% {
     transform: translateY(0);
   }
->>>>>>> origin/aj-branch
 }
 
 /* Tablet styles */
@@ -132,29 +111,14 @@
     width: calc(100% - 70px);
     padding: 24px 32px;
   }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> origin/aj-branch
   .mas-policy-center {
     width: 80%;
     margin-top: 60px;
   }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> origin/aj-branch
   .animated-chatbot {
     width: 150px;
     height: 150px;
   }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> origin/aj-branch
   .initiate-btn {
     padding: 14px 35px;
     font-size: 16px;
@@ -168,55 +132,27 @@
     width: 100%;
     padding: 16px;
   }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> origin/aj-branch
   .mas-policy-center {
     width: 90%;
     margin-top: 40px;
   }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> origin/aj-branch
   .mas-policy-center h3 {
     font-size: 20px;
     line-height: 30px;
   }
-<<<<<<< HEAD
-  
-  .mas-policy-center p {
-    font-size: 16px;
-  }
-  
-=======
 
   .mas-policy-center p {
     font-size: 16px;
   }
 
->>>>>>> origin/aj-branch
   .initiate-btn {
     padding: 12px 30px;
     font-size: 16px;
   }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> origin/aj-branch
   .chatbot-icon {
     right: 20px;
     bottom: 20px;
   }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> origin/aj-branch
   .animated-chatbot {
     width: 120px;
     height: 120px;

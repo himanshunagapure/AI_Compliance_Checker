@@ -44,10 +44,10 @@
 }
 
 .card-title {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
   margin-bottom: 12px;
-  color: #666;
+  color: #33BAA1;
   font-family: var(--font-family);
 }
 
@@ -62,30 +62,44 @@
 }
 
 .high-severity {
-  background: #fef2f2;
-  border-color: #fca5a5;
+  background: #FFCFCF;
+  border-color: #FFCFCF;
 }
 
 .high-severity .card-value {
-  color: #dc2626;
+  color: #A50000;
+  margin-top: 10px;
 }
-
+.high-severity .card-title {
+  color: #A50000;
+  font-weight: 700;
+  font-size: 24px;
+}
 .medium-severity {
-  background: #fffbeb;
-  border-color: #fbbf24;
+  background: #FFFBC9;
+  border-color: #FFFBC9;
 }
 
 .medium-severity .card-value {
-  color: #d97706;
+  color: #746B00;
 }
-
+.medium-severity .card-title{
+    color: #746B00;
+    font-weight: 700;
+    font-size: 24px;
+}
 .low-severity {
-  background: #f0fdf4;
-  border-color: #86efac;
+  background: #DAFFDE;
+  border-color: #DAFFDE;
 }
 
 .low-severity .card-value {
-  color: #16a34a;
+  color: #007E66;
+}
+.low-severity .card-title{
+    color: #007E66;
+    font-weight: 700;
+    font-size: 24px;
 }
 
 /* Responsive */

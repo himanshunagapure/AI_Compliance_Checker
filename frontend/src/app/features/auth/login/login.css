@@ -134,11 +134,7 @@ body {
   margin-top: auto;
   font-size: 0.7rem;
   color: #888;
-<<<<<<< HEAD
-  padding: 48px 0 60px 140px; 
-=======
   padding: 48px 0 60px 140px;
->>>>>>> origin/aj-branch
   width: 70%;
   font-family: var(--font-family);
 }
@@ -194,8 +190,6 @@ h2 {
   overflow: visible;
 }
 
-<<<<<<< HEAD
-=======
 @media (max-width: 768px) {
   .login-root {
     flex-direction: column; /* Stack vertically */
@@ -230,4 +224,3 @@ h2 {
     align-self: stretch;
   }
 }
->>>>>>> origin/aj-branch

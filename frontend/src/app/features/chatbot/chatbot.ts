@@ -23,8 +23,8 @@ export class Chatbot implements AfterViewInit {
 
   selectedFileName: string | null = null;
   selectedFocus: string | null = null;
-  
   loading = false;
+  
   private focusQueryMap: { [key: string]: string } = {
     'All Applicable Regulations': 'check all compliance documents',
     'AML Compliance': 'check for AML compliance',

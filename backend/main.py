@@ -899,7 +899,7 @@ app.add_middleware(
 '''
 # Global compliance checker instance
 load_dotenv()
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDUW3qtlNYSezBgI7NkaecSCkQK3OjG7Sg")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 if not GEMINI_API_KEY:
     raise ValueError("Error: Gemini API key required")

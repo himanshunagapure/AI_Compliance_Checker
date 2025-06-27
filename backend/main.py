@@ -12,7 +12,6 @@ import logging
 import PyPDF2
 import fitz  # PyMuPDF for better PDF text extraction
 from pdf2image import convert_from_path
-import pytesseract
 import docx2txt
 
 # AI/ML libraries

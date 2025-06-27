@@ -104,7 +104,7 @@ export class Chatbot implements AfterViewInit {
     this.loading = true;
 
     this.http
-      .post('http://localhost:8000/check-compliance', formData)
+      .post('https://tcg-45s9.onrender.com/check-compliance', formData)
       .subscribe({
         next: (response) => {
           this.loading = false;

@@ -19,9 +19,11 @@ import { Router } from '@angular/router';
 export class Chatbot implements AfterViewInit {
   @ViewChild('fileInput') fileInputRef!: ElementRef<HTMLInputElement>;
   @ViewChild('chatContainer') chatContainerRef!: ElementRef<HTMLDivElement>;
-  @ViewChild('myInput') myInputRef!: ElementRef<HTMLInputElement>;
+  @ViewChild('myInput') myInputRef!: ElementRef;
+
   selectedFileName: string | null = null;
   selectedFocus: string | null = null;
+  loading = false;
 
   private focusQueryMap: { [key: string]: string } = {
     'All Applicable Regulations': 'check all compliance documents',
@@ -75,18 +77,18 @@ export class Chatbot implements AfterViewInit {
   }
 
   sendFileMessage(): void {
-    if (!this.selectedFileName || !this.selectedFocus) {
-      console.warn('Please upload a file and select a regulation focus first.');
+    console.log(this.selectedFileName);
+
+    const inputText = this.myInputRef.nativeElement.value.trim();
+
+    if (!this.selectedFileName || !inputText) {
+      console.warn('Please upload a file and enter a query.');
       return;
     }
 
-    const query = this.focusQueryMap[this.selectedFocus];
-    if (!query) {
-      console.warn('No backend query mapped for selected focus.');
-      return;
-    }
+    const query = this.focusQueryMap[inputText] ?? inputText;
 
-    this.appendMessage(this.selectedFocus, false);
+    this.appendMessage(inputText, false);
 
     const input = this.fileInputRef.nativeElement;
     const file = input.files?.[0];
@@ -99,15 +101,19 @@ export class Chatbot implements AfterViewInit {
     formData.append('file', file);
     formData.append('query', query);
 
+    this.loading = true;
+
     this.http
       .post('http://localhost:8000/check-compliance', formData)
       .subscribe({
         next: (response) => {
+          this.loading = false;
           this.router.navigate(['/analysis-results'], {
             state: { resultData: response },
           });
         },
         error: (error) => {
+          this.loading = false;
           console.error('Error from backend:', error);
         },
       });
@@ -142,8 +148,8 @@ export class Chatbot implements AfterViewInit {
     this.renderer.appendChild(messageRow, svgWrapper);
     this.renderer.appendChild(container, messageRow);
 
-    setTimeout(() => {
-      messageRow.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    requestAnimationFrame(() => {
+      container.scrollTop = container.scrollHeight;
     });
   }
   logoSvg: string = `

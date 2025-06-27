@@ -151,6 +151,9 @@
   <div class="chat-container" #chatContainer>
     <!-- Messages will be appended here -->
   </div>
+  <div *ngIf="loading" class="loading-spinner">
+    <span>Loading...</span>
+  </div>
 </div>
 
 <!-- Floating Upload Panel (Frame 276) -->
@@ -182,7 +185,13 @@
     </div>
 
     <!-- Text Input -->
-    <input type="text" class="chat-input" placeholder="Ask Anything" #myInput />
+    <input
+      type="text"
+      class="chat-input"
+      placeholder="Ask Anything"
+      #myInput
+      [disabled]="!selectedFileName"
+    />
 
     <!-- Bottom Actions + Send Button -->
     <div class="footer-actions-row">
@@ -243,7 +252,7 @@
         <button
           class="send-button-icon"
           (click)="sendFileMessage()"
-          [disabled]="!selectedFileName || !selectedFocus"
+          [disabled]="!selectedFileName || !myInput.value.trim()"
         >
           <svg
             width="16"

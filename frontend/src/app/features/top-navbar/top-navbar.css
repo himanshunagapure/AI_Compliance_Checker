@@ -41,15 +41,19 @@
 .navbar-center {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   min-width: 280px;
   max-width: 400px;
   height: 40px;
 }
-
+.navbar-center svg{
+  padding: 0;
+  margin-right: 0px;
+}
 .model-label {
   font-weight: 500;
   margin-right: 8px;
+
   color: var(--text-dark);
   font-size: 1rem;
 }

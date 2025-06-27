@@ -33,7 +33,21 @@ export class AnalysisResultsComponent {
   @ViewChild('chatContainer') chatContainerRef!: ElementRef<HTMLDivElement>;
   @ViewChild('myInput') myInputRef!: ElementRef<HTMLInputElement>;
 
-  constructor(private renderer: Renderer2, private router: Router) {}
+  resultData: any;
+
+  constructor(private renderer: Renderer2, private router: Router) {
+    const nav = this.router.getCurrentNavigation();
+    this.resultData = nav?.extras.state?.['resultData'];
+
+    if (this.resultData && this.resultData.input_document) {
+      this.documentName =
+        this.resultData.input_document ?? 'Unnamed_Document.docx';
+      this.complianceScore = this.resultData.compliance_score ?? 0 + '%';
+      this.highSeverity = this.resultData.issue_counts?.High ?? 0;
+      this.mediumSeverity = this.resultData.issue_counts?.Medium ?? 0;
+      this.lowSeverity = this.resultData.issue_counts?.Low ?? 0;
+    }
+  }
 
   setActiveTab(tab: string) {
     this.activeTab = tab;

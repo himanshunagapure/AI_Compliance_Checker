@@ -1,59 +1,72 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-results',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './results.html',
   styleUrl: './results.css',
 })
-export class Results {
+export class Results implements OnInit {
+  @Input() resultData: any;
   selectedIssue: any = null;
+  nonComplianceIssues: any[] = [];
 
-  nonComplianceIssues = [
-    {
-      page: 232,
-      severity: 'High',
-      regulation: 'MAS Notice 123 Section 4.2',
-      confidence: 94,
-      pageSection: 'Page 232, Section 4.2.1',
-      regulatoryRef: 'MAS Notice 123 Section 4.2',
-      nonCompliantText:
-        'Customer verification processes may be completed within 30 business days of account opening.',
-      explanation:
-        'MAS Notice 123 requires verification to be completed within 15 business days for standard risk customers.',
-      remediation:
-        'Revise to: "Customer verification processes must be completed within 15 business days of account opening."',
-    },
-    {
-      page: 147,
-      severity: 'Medium',
-      regulation:
-        'MAS Guidelines on Risk Management Practices - Technology Risk',
-      confidence: 87,
-      pageSection: 'Page 147, Section 8.3.2',
-      regulatoryRef: 'MAS Guidelines on Risk Management Practices',
-      nonCompliantText: 'System backups should be performed regularly.',
-      explanation:
-        'The regulation requires specific backup frequency and testing protocols.',
-      remediation:
-        'Specify backup frequency (e.g., daily) and include testing requirements.',
-    },
-    {
-      page: 289,
-      severity: 'Low',
-      regulation: 'MAS Notice 314 on Prevention of Money Laundering',
-      confidence: 91,
-      pageSection: 'Page 289, Section 12.1.5',
-      regulatoryRef: 'MAS Notice 314',
-      nonCompliantText:
-        'Enhanced due diligence may be applied for high-risk customers.',
-      explanation:
-        'MAS Notice 314 requires enhanced due diligence to be applied (mandatory, not optional) for high-risk customers.',
-      remediation:
-        'Change "may be applied" to "must be applied" to reflect the mandatory requirement.',
-    },
-  ];
+  ngOnInit(): void {
+    const tableData = this.resultData?.non_compliance_table ?? [];
+    const detailedResults = this.resultData?.detailed_results ?? [];
+
+    const mergedIssues: any[] = [];
+
+    // 1. Extract detailed violations from detailed_results
+    detailedResults.forEach((result: any) => {
+      if (Array.isArray(result.violations) && result.violations.length) {
+        result.violations.forEach((violation: any) => {
+          mergedIssues.push({
+            page: violation.page_number ?? -1,
+            severity: violation.severity_level ?? 'Unknown',
+            regulation: violation.reference_document ?? 'Unknown Regulation',
+            confidence: violation.confidence ?? 0,
+            pageSection: `Page ${violation.page_number ?? '?'}, Section ${
+              violation.section ?? 'N/A'
+            }`,
+            regulatoryRef: violation.reference_document ?? 'N/A',
+            nonCompliantText:
+              violation.non_compliant_text ?? 'No text available.',
+            explanation: violation.explanation ?? 'No explanation provided.',
+            remediation:
+              violation.remedy_recommendation ?? 'No remediation suggested.',
+          });
+        });
+      }
+    });
+
+    // 2. Add basic items from non_compliance_table if not already covered
+    tableData.forEach((item: any) => {
+      const alreadyExists = mergedIssues.some(
+        (issue) =>
+          issue.page === (item.page_number ?? -1) &&
+          issue.regulation === (item.regulation ?? 'Unknown Regulation')
+      );
+
+      if (!alreadyExists) {
+        mergedIssues.push({
+          page: item.page_number ?? -1,
+          severity: item.severity_level ?? 'Unknown',
+          regulation: item.regulation ?? 'Unknown Regulation',
+          confidence: item.confidence_percentage ?? 0,
+          pageSection: `Page ${item.page_number ?? '?'}`,
+          regulatoryRef: item.regulation ?? 'N/A',
+          nonCompliantText: '—',
+          explanation: '—',
+          remediation: '—',
+        });
+      }
+    });
+
+    this.nonComplianceIssues = mergedIssues;
+  }
 
   selectIssue(issue: any) {
     this.selectedIssue = issue;

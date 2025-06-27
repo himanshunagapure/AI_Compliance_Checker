@@ -541,7 +541,7 @@ class AIComplianceChecker:
 class ComplianceDocumentManager:
     """Manage compliance documents storage and retrieval"""
     
-    def __init__(self, compliance_docs_path: str = "backend/compliance_documents"):
+    def __init__(self, compliance_docs_path: str = "compliance_documents"):
         self.compliance_docs_path = Path(compliance_docs_path)
         self.compliance_docs_path.mkdir(exist_ok=True)
         self.document_processor = DocumentProcessor()
@@ -899,7 +899,7 @@ app.add_middleware(
 '''
 # Global compliance checker instance
 load_dotenv()
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "your-gemini-api-key-here")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDUW3qtlNYSezBgI7NkaecSCkQK3OjG7Sg")
 
 if not GEMINI_API_KEY:
     raise ValueError("Error: Gemini API key required")

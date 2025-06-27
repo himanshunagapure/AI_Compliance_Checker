@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import {
   Component,
   ViewChild,
@@ -22,7 +23,18 @@ export class Chatbot implements AfterViewInit {
   selectedFileName: string | null = null;
   selectedFocus: string | null = null;
 
-  constructor(private renderer: Renderer2, private router: Router) {}
+  private focusQueryMap: { [key: string]: string } = {
+    'All Applicable Regulations': 'check all compliance documents',
+    'AML Compliance': 'check for AML compliance',
+    'KYC Regulations': 'check for KYC compliance',
+    'Data Privacy': 'check for data privacy issues',
+  };
+
+  constructor(
+    private renderer: Renderer2,
+    private router: Router,
+    private http: HttpClient
+  ) {}
 
   ngAfterViewInit(): void {}
 
@@ -63,24 +75,47 @@ export class Chatbot implements AfterViewInit {
   }
 
   sendFileMessage(): void {
-    // Check if file and focus are both selected
     if (!this.selectedFileName || !this.selectedFocus) {
       console.warn('Please upload a file and select a regulation focus first.');
       return;
     }
 
-    // Append only the regulation focus as the message
+    const query = this.focusQueryMap[this.selectedFocus];
+    if (!query) {
+      console.warn('No backend query mapped for selected focus.');
+      return;
+    }
+
     this.appendMessage(this.selectedFocus, false);
 
-    // Clear input field and file
+    const input = this.fileInputRef.nativeElement;
+    const file = input.files?.[0];
+    if (!file) {
+      console.warn('No file found.');
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('query', query);
+
+    this.http
+      .post('http://localhost:8000/check-compliance', formData)
+      .subscribe({
+        next: (response) => {
+          this.router.navigate(['/analysis-results'], {
+            state: { resultData: response },
+          });
+        },
+        error: (error) => {
+          console.error('Error from backend:', error);
+        },
+      });
+
     this.myInputRef.nativeElement.value = '';
     this.selectedFileName = null;
     this.fileInputRef.nativeElement.value = '';
     this.selectedFocus = null;
-
-    setTimeout(() => {
-      this.router.navigate(['/analysis-results']);
-    }, 5000);
   }
 
   private appendMessage(content: string, isFile: boolean): void {

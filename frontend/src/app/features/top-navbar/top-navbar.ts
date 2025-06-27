@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class TopNavbar {
   @Input() showModelDropdown = true;
+  showProfileMenu = false;
   constructor(private router: Router) {}
 
   handlePolicyRoute(event: Event): void {
@@ -21,5 +22,16 @@ export class TopNavbar {
       console.log('Navigating to MAS Policy Watch');
       this.router.navigate(['/mas-policy-watch']);
     }
+  }
+
+  toggleProfileMenu() {
+    this.showProfileMenu = !this.showProfileMenu;
+  }
+
+  logout() {
+    localStorage.clear();
+    sessionStorage.clear();
+    // Optionally clear any in-memory state here
+    this.router.navigate(['/login']);
   }
 }

@@ -762,10 +762,23 @@ class ComplianceChecker:
             total_checks = len(results)
 
             if total_checks == 0:
+                logger.warning("No compliance checks performed")
                 compliance_score = 0.0
+            elif not results or all(not hasattr(r, 'result') or not r.result for r in results):
+                logger.warning("All compliance results are empty or invalid")
+                compliance_score = 10.0  # Minimum score for incomplete analysis
             else:
                 weighted_score = 0.0
+                valid_results = 0
+                
                 for result in results:
+                    # Skip invalid results but log them
+                    if not hasattr(result, 'result') or not result.result:
+                        logger.warning(f"Invalid result found for document: {getattr(result, 'document_name', 'unknown')}")
+                        continue
+                        
+                    valid_results += 1
+                                
                     doc_result = result.result.strip().lower()
                     if doc_result == "compliant":
                         doc_score = 100.0
@@ -775,30 +788,45 @@ class ComplianceChecker:
                             high_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "high")
                             medium_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "medium")
                             low_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "low")
+                            
                             severity_reduction = (high_count * 15) + (medium_count * 8) + (low_count * 3)
                             doc_score = max(30.0, doc_score - severity_reduction)  # Floor at 30%
-                    else:  # violation or unknown
-                        doc_score = 20.0  # Base score for documents with violations
+                    elif doc_result == "violation":  # violation or unknown
+                        doc_score = 30.0  # Base score for documents with violations
                         if result.violations:
                             high_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "high")
                             medium_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "medium")
+                            
                             if high_count > 0:
                                 doc_score = max(0.0, doc_score - (high_count * 10))
                             else:
                                 doc_score = max(10.0, doc_score - (medium_count * 5))
+                    else:
+                        # Handle unknown/error states more gracefully
+                        logger.warning(f"Unknown compliance result: {doc_result}")
+                        doc_score = 25.0  # Conservative score for unknown states
+                    
                     weighted_score += doc_score
-                compliance_score = weighted_score / total_checks
+                
+                if valid_results == 0:
+                    logger.error("No valid compliance results found")
+                    compliance_score = 5.0  # Emergency minimum score
+                else:
+                    compliance_score = weighted_score / valid_results    
+                
                 # Summary logging
                 compliant_count = sum(1 for r in results if r.result.strip().lower() == "compliant")
                 partial_count = sum(1 for r in results if r.result.strip().lower() == "partial") 
                 violation_count = sum(1 for r in results if r.result.strip().lower() == "violation")
                 total_violations = sum(len(r.violations) for r in results)
-                print(f"⭐Document Results - Compliant: {compliant_count}, Partial: {partial_count}, Violations: {violation_count}")
-                print(f"⭐Total Individual Violations: {total_violations}")
-                print(f"⭐Final Compliance Score: {compliance_score:.2f}%")
+                logger.info(f"⭐Document Results - Compliant: {compliant_count}, Partial: {partial_count}, Violations: {violation_count}")
+                logger.info(f"⭐Total Individual Violations: {total_violations}")
+                logger.info(f"⭐Final Compliance Score: {compliance_score:.2f}%")
+            
             # Count issues by severity
             issue_counts = {"High": 0, "Medium": 0, "Low": 0}
             all_violations = []
+            
             # Calculate total token usage
             total_input_tokens = sum(r.input_token_count for r in results)
             total_output_tokens = sum(r.output_token_count for r in results)
@@ -807,6 +835,7 @@ class ComplianceChecker:
             print(f"   Total Input Tokens: {total_input_tokens}")
             print(f"   Total Output Tokens: {total_output_tokens}")
             print(f"   Total Tokens Used: {total_tokens_used}")
+            
             for result in results:
                 for violation in result.violations:
                     sev = str(violation.severity_level).strip().capitalize()
@@ -815,6 +844,7 @@ class ComplianceChecker:
                     else:
                         issue_counts[sev] = 1  # catch any unexpected severity
                     all_violations.append(violation)
+                    
             # Create non-compliance table
             non_compliance_table = []
             for violation in all_violations:

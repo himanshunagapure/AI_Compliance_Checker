@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { format } from 'echarts/types/src/util/time.js';
 import { NgxEchartsDirective } from 'ngx-echarts';
 
 @Component({
@@ -39,11 +40,23 @@ export class Dashboard {
     },
     xAxis: {
       type: 'category',
-      data: ['Entity A', 'Entity B', 'Entity C'],
+      data: ['Funds\nTransfer', 'FX', 'Investment'],
       axisTick: { alignWithLabel: true },
+      axisLabel: {
+        interval: 0,
+        rotate: 0,
+        fontSize: 12, // reduced from 12
+      },
     },
     yAxis: {
       type: 'value',
+      axisLabel: {
+        formatter: (value: number, index: number) => {
+          let step = 0;
+          const upper = value + step;
+          return `$${upper.toLocaleString()}`;
+        },
+      },
     },
     series: [
       {
@@ -51,29 +64,29 @@ export class Dashboard {
         type: 'bar',
         stack: 'total',
         label: { show: false },
-        color: '#1cc9c3',
-        data: [1000, 800, null],
+        color: '#61b33b',
+        data: [2000, 5000, 11000],
       },
       {
         name: 'High Risk',
         type: 'bar',
         stack: 'total',
-        color: '#e74c3c',
-        data: [500, null, 300],
+        color: '#ffcc00',
+        data: [2000, 4000, 2000],
       },
       {
         name: 'Acceptable Risk',
         type: 'bar',
         stack: 'total',
-        color: '#ffb74d',
-        data: [700, 400, 200],
+        color: '#ff751a',
+        data: [3000, null, null],
       },
       {
         name: 'Evaluated Risk',
         type: 'bar',
         stack: 'total',
-        color: '#f8e71c',
-        data: [300, null, null],
+        color: '#cc0000',
+        data: [7000, null, null],
       },
     ],
   };
@@ -112,12 +125,12 @@ export class Dashboard {
           length2: 10,
         },
         data: [
-          { value: 22783, name: 'Low Risk' },
-          { value: 10883, name: 'High Risk' },
+          { value: 10821, name: 'Low Risk' },
+          { value: 3250, name: 'Evaluated Risk' },
           { value: 6900, name: 'Acceptable Risk' },
-          { value: 3710, name: 'Evaluated Risk' },
+          { value: 22783, name: 'High Risk' },
         ],
-        color: ['#1cc9c3', '#e74c3c', '#ffb74d', '#f8e71c'],
+        color: ['#e74c3c', '#ffb74d', '#f8e71c', '#1cc9c3'],
       },
     ],
   };

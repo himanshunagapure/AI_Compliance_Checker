@@ -41,7 +41,6 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 32px;
-  min-height: 60vh;
 }
 
 .section-title {
@@ -58,6 +57,8 @@
   background: #fff;
   border-radius: 8px;
   padding: 16px;
+  align-self: flex-start;
+  height: auto;
 }
 
 .issues-table {
@@ -101,7 +102,7 @@
   border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .severity-badge.high {
@@ -140,15 +141,17 @@
   display: flex;
   gap: 16px;
   margin-bottom: 32px;
+  justify-content: space-between;
 }
 
 .upload-btn {
-  background: var(--cta-green);
-  color: #fff;
-  border: none;
+  background: #fff;
+  color: var(--cta-green);
+  border: 2px solid var(--cta-green);
   padding: 12px 20px;
   border-radius: 6px;
   font-family: var(--font-family);
+  font-weight: 550;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -157,7 +160,7 @@
 }
 
 .upload-btn:hover {
-  background: var(--cta-green-dark);
+  background: #e9f7f4;
 }
 
 .export-btn {

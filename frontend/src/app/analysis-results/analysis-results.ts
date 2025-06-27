@@ -10,11 +10,12 @@ import { ComplianceOverview } from '../compliance-overview/compliance-overview';
 import { Results } from '../results/results';
 import { Analytics } from '../analytics/analytics';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-analysis-results',
   standalone: true,
-  imports: [CommonModule, ComplianceOverview, Results, Analytics],
+  imports: [CommonModule, ComplianceOverview, Results, Analytics, RouterModule],
   templateUrl: './analysis-results.html',
   styleUrl: './analysis-results.css',
 })

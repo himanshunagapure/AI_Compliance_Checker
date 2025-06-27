@@ -18,6 +18,9 @@
   font-size: 1rem;
   color: #666;
   margin: 0;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 7px;
   font-family: var(--font-family);
 }
 

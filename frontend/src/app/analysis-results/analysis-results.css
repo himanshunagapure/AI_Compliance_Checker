@@ -1,5 +1,9 @@
 .analysis-container {
-  background: var(--content-light);
+  background: linear-gradient(
+    180deg,
+    rgba(86, 86, 86, 0.1) 0%,
+    rgba(86, 86, 86, 0.1) 100%
+  );
   min-height: calc(100vh - 72px);
   margin-top: 0;
   margin-left: 70px;
@@ -17,6 +21,34 @@
   margin-bottom: 24px;
   border-bottom: 1px solid #e5e7eb;
 }
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: none;
+  border: none;
+  color: #353535;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+  margin-bottom: 30px;
+}
+
+.back-btn svg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+/* .back-btn:hover,
+.back-btn:focus {
+  color: #17b3a6;
+  outline: none;
+} */
 
 .tab-button {
   background: none;

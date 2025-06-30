@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Input } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { Router } from '@angular/router';
@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class TopNavbar {
   @Input() showModelDropdown = true;
   showProfileMenu = false;
+  @ViewChild('modelSelect') modelSelect!: ElementRef<HTMLSelectElement>;
   constructor(private router: Router) {}
 
   handlePolicyRoute(event: Event): void {
@@ -22,6 +23,8 @@ export class TopNavbar {
       console.log('Navigating to MAS Policy Watch');
       this.router.navigate(['/mas-policy-watch']);
     }
+
+    this.modelSelect.nativeElement.value = '';
   }
 
   toggleProfileMenu() {

@@ -1,16 +1,11 @@
-import {
-  Component,
-  ElementRef,
-  Input,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComplianceOverview } from '../compliance-overview/compliance-overview';
 import { Results } from '../results/results';
 import { Analytics } from '../analytics/analytics';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-analysis-results',
@@ -28,58 +23,34 @@ export class AnalysisResultsComponent {
 
   activeTab = 'results';
   selectedFileName: string | null = null;
-  selectedFocus: string | null = null;
   @ViewChild('fileInput') fileInputRef!: ElementRef<HTMLInputElement>;
   @ViewChild('chatContainer') chatContainerRef!: ElementRef<HTMLDivElement>;
   @ViewChild('myInput') myInputRef!: ElementRef<HTMLInputElement>;
 
   resultData: any;
 
-  constructor(private renderer: Renderer2, private router: Router) {
+  constructor(
+    private renderer: Renderer2,
+    private router: Router,
+    private http: HttpClient
+  ) {
     const nav = this.router.getCurrentNavigation();
     this.resultData = nav?.extras.state?.['resultData'];
-
-    if (this.resultData && this.resultData.input_document) {
-      this.documentName =
-        this.resultData.input_document ?? 'Unnamed_Document.docx';
-      this.complianceScore = this.resultData.compliance_score ?? 0 + '%';
-      this.highSeverity = this.resultData.issue_counts?.High ?? 0;
-      this.mediumSeverity = this.resultData.issue_counts?.Medium ?? 0;
-      this.lowSeverity = this.resultData.issue_counts?.Low ?? 0;
+    if (this.resultData) {
+      this.updateComplianceStats(this.resultData);
     }
   }
 
-  setActiveTab(tab: string) {
+  private updateComplianceStats(data: any): void {
+    this.documentName = data.input_document ?? 'Unnamed_Document.docx';
+    this.complianceScore = data.compliance_score ?? 0 + '%';
+    this.highSeverity = data.issue_counts?.High ?? 0;
+    this.mediumSeverity = data.issue_counts?.Medium ?? 0;
+    this.lowSeverity = data.issue_counts?.Low ?? 0;
+  }
+
+  setActiveTab(tab: string): void {
     this.activeTab = tab;
-  }
-
-  private appendMessage(content: string, isFile: boolean): void {
-    const container = this.chatContainerRef.nativeElement;
-
-    const messageRow = this.renderer.createElement('div');
-    this.renderer.addClass(messageRow, 'chatbot-message-row');
-    this.renderer.addClass(messageRow, 'user');
-
-    const messageDiv = this.renderer.createElement('div');
-    this.renderer.addClass(messageDiv, 'chatbot-user-message');
-    if (isFile) this.renderer.addClass(messageDiv, 'file-message');
-
-    const contentNode = this.renderer.createElement('span');
-    this.renderer.addClass(contentNode, isFile ? 'file-tag' : 'text-tag');
-    this.renderer.setProperty(contentNode, 'innerText', content);
-    this.renderer.appendChild(messageDiv, contentNode);
-
-    this.renderer.appendChild(messageRow, messageDiv);
-    this.renderer.appendChild(container, messageRow);
-
-    setTimeout(() => {
-      messageRow.scrollIntoView({ behavior: 'smooth', block: 'end' });
-    });
-  }
-
-  removeFile(): void {
-    this.selectedFileName = null;
-    this.fileInputRef.nativeElement.value = '';
   }
 
   triggerFileInput(): void {
@@ -101,24 +72,44 @@ export class AnalysisResultsComponent {
     }
   }
 
+  removeFile(): void {
+    this.selectedFileName = null;
+    this.fileInputRef.nativeElement.value = '';
+  }
+
   sendFileMessage(): void {
-    // Check if file and focus are both selected
-    if (!this.selectedFileName || !this.selectedFocus) {
-      console.warn('Please upload a file and select a regulation focus first.');
+    const inputText = this.myInputRef.nativeElement.value.trim();
+
+    if (!this.selectedFileName || !inputText) {
+      console.warn('Please upload a file and enter a query.');
       return;
     }
 
-    // Append only the regulation focus as the message
-    this.appendMessage(this.selectedFocus, false);
+    const file = this.fileInputRef.nativeElement.files?.[0];
+    if (!file) {
+      console.warn('No file found.');
+      return;
+    }
 
-    // Clear input field and file
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('query', inputText);
+
+    this.http
+      .post('https://tcg-45s9.onrender.com/check-compliance', formData)
+      .subscribe({
+        next: (response) => {
+          this.resultData = response;
+          this.updateComplianceStats(response);
+        },
+        error: (error) => {
+          console.error('Error from backend:', error);
+        },
+      });
+
+    // Clear input and file
     this.myInputRef.nativeElement.value = '';
     this.selectedFileName = null;
     this.fileInputRef.nativeElement.value = '';
-    this.selectedFocus = null;
-
-    setTimeout(() => {
-      this.router.navigate(['/analysis-results']);
-    }, 5000);
   }
 }

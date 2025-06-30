@@ -1,3 +1,4 @@
+'''
 import os
 from dotenv import load_dotenv
 import json
@@ -7,8 +8,6 @@ from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass, asdict
 from pathlib import Path
 import logging
-import asyncio
-from concurrent.futures import ThreadPoolExecutor
 
 # Document processing libraries
 import PyPDF2
@@ -212,6 +211,9 @@ class AIComplianceChecker:
         try:
             # Extract text from response properly
             response_text = self._extract_response_text(response)
+            print("🚀🚀🚀🚀")
+            print("\nResponse text = ", response_text)
+            print("🚀🚀🚀🚀")
             if not response_text:
                 raise ValueError("Empty response text")
             
@@ -241,7 +243,10 @@ class AIComplianceChecker:
             return self._parse_text_response(str(e))
     
     def _clean_response_text(self, response_text: str) -> str:
-        """Clean response text to extract JSON content"""        
+        """Clean response text to extract JSON content"""
+        # # Remove BOM and invisible characters
+        # response_text = response_text.encode('utf-8').decode('utf-8-sig').strip()
+        
         # Remove markdown code blocks
         if response_text.startswith('```json'):
             response_text = response_text[7:]
@@ -252,9 +257,10 @@ class AIComplianceChecker:
             response_text = response_text[:-3]
             
         response_text = response_text.strip()
+        
         return response_text
 
-    async def check_compliance(self, input_text: str, compliance_text: str, 
+    def check_compliance(self, input_text: str, compliance_text: str, 
                         compliance_doc_name: str) -> ComplianceResult:
         """Check compliance of input document against a compliance document"""
         
@@ -311,21 +317,28 @@ class AIComplianceChecker:
         """
         
         try:
-            response = await self.model.generate_content_async(
+            response = self.model.generate_content(
                 prompt,
                 generation_config=self.generation_config
             )
             
+            # print("⭐⭐⭐⭐⭐⭐")
+            # print("\nLLM response = ",response)
+            # print("⭐⭐⭐⭐⭐⭐")
+            
             # Debug: Log response structure
             if hasattr(response, 'candidates') and response.candidates:
-                logger.debug(f"Number of candidates: {len(response.candidates)}")
+                #logger.info(f"Number of candidates: {len(response.candidates)}")
+                print(f"Number of candidates: {len(response.candidates)}")
                 candidate = response.candidates[0]
                 if hasattr(candidate, 'content') and candidate.content:
                     if hasattr(candidate.content, 'parts') and candidate.content.parts:
-                        logger.debug(f"Number of parts in response: {len(candidate.content.parts)}")
+                        #logger.info(f"Number of parts in response: {len(candidate.content.parts)}")
+                        print(f"Number of parts in response: {len(candidate.content.parts)}")
                         for i, part in enumerate(candidate.content.parts):
                             if hasattr(part, 'text'):
-                                logger.debug(f"Part {i} text length: {len(part.text) if part.text else 0}")
+                                #logger.info(f"Part {i} text length: {len(part.text) if part.text else 0}")
+                                print(f"Part {i} text length: {len(part.text) if part.text else 0}")
                                 
             # Extract token usage information
             input_tokens = 0
@@ -338,7 +351,10 @@ class AIComplianceChecker:
                 total_tokens = getattr(response.usage_metadata, 'total_token_count', 0)
                 
                 # Print token usage information
-                logger.info(f"Token Usage for {compliance_doc_name}: Input={input_tokens}, Output={output_tokens}, Total={total_tokens}")
+                print(f"\n🔢 Token Usage:")
+                print(f"   Input tokens: {input_tokens}")
+                print(f"   Output tokens: {output_tokens}")
+                print(f"   Total tokens: {total_tokens}")
             
             analysis = self._process_ai_response(response)
             
@@ -374,7 +390,7 @@ class AIComplianceChecker:
             )
             
         except Exception as e:
-            logger.error(f"AI analysis failed for {compliance_doc_name}: {e}")
+            logger.error(f"AI analysis failed: {e}")
             return ComplianceResult(
                 document_name=compliance_doc_name,
                 result="Error",
@@ -424,6 +440,7 @@ class AIComplianceChecker:
     
     def _deduplicate_violations(self, violations: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Deduplicate violations based on explanation similarity."""
+        #print("\n🚀Violations before cleaning = ",violations)
         if not violations:
             return []
 
@@ -434,6 +451,7 @@ class AIComplianceChecker:
             for j in range(len(unique_violations)):
                 # Using a simple substring check for similarity.
                 # If one explanation is a substring of another, they are likely related.
+                # We can improve this with more sophisticated text similarity if needed.
                 if (violations[i]['explanation'] in unique_violations[j]['explanation'] or 
                     unique_violations[j]['explanation'] in violations[i]['explanation']):
                     
@@ -456,12 +474,13 @@ class AIComplianceChecker:
 
         if len(final_violations) < len(violations):
             logger.info(f"Deduplicated {len(violations) - len(final_violations)} violations.")
+        #print("\n🚀Violations after cleaning = ",final_violations)
         return final_violations
 
     def _parse_text_response(self, text: str) -> Dict:
         """Fallback text parsing if JSON extraction fails"""
         
-        logger.warning("JSON extraction failed. Fallback text parsing used")
+        print("❌JSON extraction failed. Fallback text parsing used")
         result = {
             "overall_result": "Violation",
             "overall_explanation": "Failed to parse AI response properly",
@@ -495,75 +514,28 @@ class AIComplianceChecker:
         return result
 
 class ComplianceDocumentManager:
-    """Manage compliance documents storage and retrieval with in-memory caching."""
+    """Manage compliance documents storage and retrieval"""
     
-    def __init__(self, compliance_docs_path: str = None): 
-        base_dir = Path(__file__).resolve().parent
-        if compliance_docs_path is None:
-            self.compliance_docs_path = base_dir / "compliance_documents"
-        else:
-            self.compliance_docs_path = Path(compliance_docs_path).resolve()
-
-        self.compliance_docs_path.mkdir(parents=True, exist_ok=True)
-
+    def __init__(self, compliance_docs_path: str = "compliance_documents"):
+        self.compliance_docs_path = Path(compliance_docs_path)
+        self.compliance_docs_path.mkdir(exist_ok=True)
         self.document_processor = DocumentProcessor()
-        self.doc_cache: Dict[str, Tuple[datetime, str]] = {}
-        self.available_docs: List[str] = []
-        self._initial_load()
-
-    def _load_doc_content(self, doc_name: str) -> Tuple[str, Tuple[datetime, str]]:
-        """Helper to load single doc content for parallel execution."""
-        doc_path = self.compliance_docs_path / doc_name
-        try:
-            mod_time = datetime.fromtimestamp(doc_path.stat().st_mtime)
-            if doc_path.suffix.lower() == '.pdf':
-                pages_text = self.document_processor.extract_text_from_pdf(str(doc_path))
-                content = '\n\n'.join(pages_text.values())
-            else:
-                with open(doc_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-            return doc_name, (mod_time, content)
-        except Exception as e:
-            logger.error(f"Failed to load document {doc_name}: {e}")
-            return doc_name, (datetime.min, "")
-
-    def _initial_load(self):
-        """Load and cache all compliance documents at startup in parallel."""
-        logger.info("Performing initial load of compliance documents...")
-        self.available_docs = [f.name for f in self.compliance_docs_path.glob("*.pdf")]
-        
-        with ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
-            results = executor.map(self._load_doc_content, self.available_docs)
-            for doc_name, content_tuple in results:
-                if content_tuple[1]: # Only cache if content is not empty
-                    self.doc_cache[doc_name] = content_tuple
-        
-        logger.info(f"Cached {len(self.doc_cache)} compliance documents.")
-
 
     def get_available_documents(self) -> List[str]:
-        """Get list of available compliance documents from cache"""
-        return self.available_docs
+        """Get list of available compliance documents"""
+        return [f.name for f in self.compliance_docs_path.glob("*.pdf")]
 
     def get_document_content(self, doc_name: str) -> str:
-        """Get content of a compliance document, using cache if available"""
+        """Get content of a compliance document"""
         doc_path = self.compliance_docs_path / doc_name
         if not doc_path.exists():
             raise FileNotFoundError(f"Compliance document '{doc_name}' not found.")
-
-        mod_time = datetime.fromtimestamp(doc_path.stat().st_mtime)
-
-        if doc_name in self.doc_cache:
-            cached_mod_time, content = self.doc_cache[doc_name]
-            if mod_time <= cached_mod_time:
-                logger.debug(f"Cache hit for {doc_name}")
-                return content
-
-        logger.info(f"Cache miss or file updated for {doc_name}. Reloading.")
-        _, (new_mod_time, new_content) = self._load_doc_content(doc_name)
-        if new_content:
-            self.doc_cache[doc_name] = (new_mod_time, new_content)
-        return new_content
+        if doc_path.suffix.lower() == '.pdf':
+            pages_text = self.document_processor.extract_text_from_pdf(str(doc_path))
+            return '\n\n'.join(pages_text.values())
+        else:
+            with open(doc_path, 'r', encoding='utf-8') as f:
+                return f.read()
 
     def select_documents_by_query(self, query: str) -> List[str]:
         """Select compliance documents based on user query by matching file names or keywords"""
@@ -571,7 +543,7 @@ class ComplianceDocumentManager:
         available_docs = self.get_available_documents()
         
         if not available_docs:
-            logger.warning("Compliance Documents are not available")
+            print("Compliance Documents are not available")
             return []
         
         # Pattern 1: Check for "all documents" patterns
@@ -704,24 +676,20 @@ class ComplianceChecker:
         self.ai_checker = AIComplianceChecker(gemini_api_key)
         self.document_processor = DocumentProcessor()
     
-    async def process_compliance_check(self, input_file_path: str, query: str) -> ComplianceReport:
+    def process_compliance_check(self, input_file_path: str, query: str) -> ComplianceReport:
         """Process complete compliance check"""
         
-        # Extract text from input document asynchronously
+        # Extract text from input document
         logger.info("Extracting text from input document...")
-        
-        def _extract_text():
-            ext = os.path.splitext(input_file_path)[1].lower()
-            if ext == '.pdf':
-                return self.document_processor.extract_text_from_pdf(input_file_path)
-            elif ext == '.docx':
-                return self.document_processor.extract_text_from_docx(input_file_path)
-            elif ext == '.txt':
-                return self.document_processor.extract_text_from_txt(input_file_path)
-            else:
-                raise ValueError("Unsupported file type for input document")
-
-        input_pages = await asyncio.to_thread(_extract_text)
+        ext = os.path.splitext(input_file_path)[1].lower()
+        if ext == '.pdf':
+            input_pages = self.document_processor.extract_text_from_pdf(input_file_path)
+        elif ext == '.docx':
+            input_pages = self.document_processor.extract_text_from_docx(input_file_path)
+        elif ext == '.txt':
+            input_pages = self.document_processor.extract_text_from_txt(input_file_path)
+        else:
+            raise ValueError("Unsupported file type for input document")
         input_text = '\n\n'.join(input_pages.values())
         
         if not input_text.strip():
@@ -740,21 +708,20 @@ class ComplianceChecker:
             raise ValueError("No compliance documents available")
         logger.info(f"Selected {len(selected_docs)} compliance documents: {selected_docs}")
 
-        # Perform compliance checks in parallel
-        tasks = []
+        # Perform compliance checks
+        results = []
         for doc_name in selected_docs:
-            logger.info(f"Creating compliance check task for {doc_name}...")
+            logger.info(f"Checking compliance against {doc_name}...")
             
             compliance_text = self.document_manager.get_document_content(doc_name)
-            task = self.ai_checker.check_compliance(
+            result = self.ai_checker.check_compliance(
                 input_text, compliance_text, doc_name
             )
-            tasks.append(task)
-        
-        results = await asyncio.gather(*tasks)
+            results.append(result)
         
         # Generate comprehensive report
         logger.info("Generating compliance report...")
+        print(" -------Generating compliance report-------- ")
         report = self._generate_report(
             os.path.basename(input_file_path), 
             results
@@ -839,7 +806,10 @@ class ComplianceChecker:
             total_input_tokens = sum(r.input_token_count for r in results)
             total_output_tokens = sum(r.output_token_count for r in results)
             total_tokens_used = total_input_tokens + total_output_tokens
-            logger.info(f"📊 Total Token Usage Summary: Input={total_input_tokens}, Output={total_output_tokens}, Total={total_tokens_used}")
+            print(f"\n📊 Total Token Usage Summary:")
+            print(f"   Total Input Tokens: {total_input_tokens}")
+            print(f"   Total Output Tokens: {total_output_tokens}")
+            print(f"   Total Tokens Used: {total_tokens_used}")
             
             for result in results:
                 for violation in result.violations:
@@ -887,22 +857,12 @@ app = FastAPI(title="AI Document Compliance Checker", version="1.0.0")
 #change this once deployed to vercel
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://tcg-five.vercel.app"],  # your frontend
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-''' 
-#uncomment this
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["https://your-frontend-name.vercel.app"],  # ✅ 
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-'''
 # Global compliance checker instance
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -958,7 +918,7 @@ async def check_compliance(
             shutil.copyfileobj(file.file, buffer)
         
         # Process compliance check
-        report = await compliance_checker.process_compliance_check(temp_file_path, query)
+        report = compliance_checker.process_compliance_check(temp_file_path, query)
         
         # Clean up
         shutil.rmtree(temp_dir)
@@ -1012,29 +972,30 @@ def main():
     
     checker = ComplianceChecker(api_key)
     
-    async def run_check():
-        try:
-            # Process compliance check
-            report = await checker.process_compliance_check(args.input, args.query)
-            
-            # Output results
-            report_dict = asdict(report)
-            
-            if args.output:
-                with open(args.output, 'w') as f:
-                    json.dump(report_dict, f, indent=2)
-                print(f"Report saved to {args.output}")
-            else:
-                print(json.dumps(report_dict, indent=2))
+    try:
+        # Process compliance check
+        report = checker.process_compliance_check(args.input, args.query)
         
-        except Exception as e:
-            print(f"Error: {e}")
-
-    asyncio.run(run_check())
+        # Output results
+        report_dict = asdict(report)
+        
+        if args.output:
+            with open(args.output, 'w') as f:
+                json.dump(report_dict, f, indent=2)
+            print(f"Report saved to {args.output}")
+        else:
+            print(json.dumps(report_dict, indent=2))
+    
+    except Exception as e:
+        print(f"Error: {e}")
         
 if __name__ == "__main__":
     if len(os.sys.argv) > 1:
         main()
     else:
         # Start web server
-        uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+        uvicorn.run(app, host="0.0.0.0", port=8000)
+        
+        
+        
+''' 

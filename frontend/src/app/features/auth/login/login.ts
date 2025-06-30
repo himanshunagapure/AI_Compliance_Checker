@@ -25,7 +25,7 @@ export class Login implements OnInit {
   ngOnInit(): void {
     const loggedIn = localStorage.getItem('isLoggedIn');
     if (loggedIn === 'true') {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/mas-policy-watch']);
     }
   }
 

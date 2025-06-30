@@ -66,7 +66,7 @@
   <app-analytics *ngIf="activeTab === 'analytics'"></app-analytics>
 </div>
 
-<div class="footer-wrapper">
+<div class="footer-wrapper" [class.with-file]="selectedFileName">
   <div class="footer-upload-box">
     <!-- File Tag Row -->
     <div class="file-tag" *ngIf="selectedFileName">
@@ -155,7 +155,7 @@
         <button
           class="send-button-icon"
           (click)="sendFileMessage()"
-          [disabled]="!selectedFileName || !selectedFocus"
+          [disabled]="!selectedFileName"
         >
           <svg
             width="16"

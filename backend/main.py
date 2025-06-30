@@ -887,11 +887,12 @@ app = FastAPI(title="AI Document Compliance Checker", version="1.0.0")
 #change this once deployed to vercel
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://tcg-five.vercel.app"],  # your frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 ''' 
 #uncomment this
 app.add_middleware(

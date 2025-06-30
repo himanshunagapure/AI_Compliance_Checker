@@ -31,7 +31,7 @@ body {
   padding: 0px;
 }
 .login-logo {
-  margin-bottom: 32px;
+  margin-bottom: 58px;
   display: flex;
   width: 100%;
   padding-left: 150px;
@@ -50,18 +50,7 @@ body {
   color: var(--cta-green);
   font-weight: 400;
   margin-left: 4px;
-}
-
-.back-btn {
-  background: none;
-  border: none;
-  color: var(--text-dark);
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 24px;
-  text-align: left;
-  padding: 0;
-  font-family: var(--font-family);
+  margin-bottom: 30px;
 }
 
 .login-title {

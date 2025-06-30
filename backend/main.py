@@ -497,9 +497,15 @@ class AIComplianceChecker:
 class ComplianceDocumentManager:
     """Manage compliance documents storage and retrieval with in-memory caching."""
     
-    def __init__(self, compliance_docs_path: str = "backend/compliance_documents"):
-        self.compliance_docs_path = Path(compliance_docs_path)
-        self.compliance_docs_path.mkdir(exist_ok=True)
+    def __init__(self, compliance_docs_path: str = None):
+        base_dir = Path(__file__).resolve().parent  # path to backend/
+        if compliance_docs_path is None:
+            self.compliance_docs_path = base_dir / "compliance_documents"
+        else:
+            self.compliance_docs_path = Path(compliance_docs_path).resolve()
+
+        self.compliance_docs_path.mkdir(parents=True, exist_ok=True)
+
         self.document_processor = DocumentProcessor()
         self.doc_cache: Dict[str, Tuple[datetime, str]] = {}
         self.available_docs: List[str] = []
@@ -1030,4 +1036,4 @@ if __name__ == "__main__":
         main()
     else:
         # Start web server
-        uvicorn.run("main3:app", host="0.0.0.0", port=8000, reload=True)
+        uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

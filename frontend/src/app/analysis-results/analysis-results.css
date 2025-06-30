@@ -136,18 +136,18 @@
 }
 
 .severity-badge.high {
-  background: #FFCFCF;
-  color: #A50000;
+  background: #ffcfcf;
+  color: #a50000;
 }
 
 .severity-badge.medium {
-  background: #FFFBC9;
-  color: #746B00;
+  background: #fffbc9;
+  color: #746b00;
 }
 
 .severity-badge.low {
-  background: #DAFFDE;
-  color: #007E66;
+  background: #daffde;
+  color: #007e66;
 }
 
 .view-details-btn {
@@ -531,4 +531,7 @@
     padding: 6px;
     height: 24px; /* reduced height */
   }
+}
+.footer-wrapper.with-file {
+  height: 232px; /* Increased when file is present */
 }

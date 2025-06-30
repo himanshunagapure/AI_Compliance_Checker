@@ -15,6 +15,7 @@ export class TopNavbar {
   @ViewChild('modelSelect') modelSelect!: ElementRef<HTMLSelectElement>;
   constructor(private router: Router) {}
 
+  //fixed dropdown
   handlePolicyRoute(event: Event): void {
     const selectedValue = (event.target as HTMLSelectElement).value;
     console.log(selectedValue);

@@ -157,7 +157,6 @@ export class Results implements OnInit {
 
     this.nonComplianceIssues = mergedIssues;
   }
-
   selectIssue(issue: any) {
     this.selectedIssue = issue;
   }

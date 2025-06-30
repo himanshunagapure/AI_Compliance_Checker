@@ -497,8 +497,8 @@ class AIComplianceChecker:
 class ComplianceDocumentManager:
     """Manage compliance documents storage and retrieval with in-memory caching."""
     
-    def __init__(self, compliance_docs_path: str = None):
-        base_dir = Path(__file__).resolve().parent  # path to backend/
+    def __init__(self, compliance_docs_path: str = None): 
+        base_dir = Path(__file__).resolve().parent
         if compliance_docs_path is None:
             self.compliance_docs_path = base_dir / "compliance_documents"
         else:

@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Document Name</th>
+      <th>Date Scanned</th>
+      <th>Compliance Score</th>
+      <th>Violations</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tx of transactions">
+      <td>{{ tx.documentName }}</td>
+      <td>{{ tx.dateScanned }}</td>
+      <td>{{ tx.complianceScore }}</td>
+      <td>{{ tx.violations }}</td>
+      <td>
+        <button (click)="viewDetails(tx)">View Details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

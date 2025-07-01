@@ -22,6 +22,7 @@ export const routes: Routes = [
     component: Shell,
     children: [
       { path: 'mas-policy-watch', component: MasPolicyWatch },
+      { path: 'analysis-results/:id', component: AnalysisResultsComponent},
       { path: 'analysis-results', component: AnalysisResultsComponent },
       { path: 'dashboard', component: Dashboard },
       { path: 'mas-history', component: MasHistoryComponent },

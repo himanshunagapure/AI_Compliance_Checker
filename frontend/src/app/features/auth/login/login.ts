@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HttpClientModule],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
@@ -17,10 +18,7 @@ export class Login implements OnInit {
   password: string = '';
   errorMessage: string = '';
 
-  private readonly ADMIN_USERNAME = 'admin';
-  private readonly ADMIN_PASSWORD = '1234';
-
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit(): void {
     const loggedIn = localStorage.getItem('isLoggedIn');
@@ -30,16 +28,23 @@ export class Login implements OnInit {
   }
 
   login() {
-    if (
-      this.username === this.ADMIN_USERNAME &&
-      this.password === this.ADMIN_PASSWORD
-    ) {
-      localStorage.setItem('isLoggedIn', 'true');
-      this.router.navigate(['/mas-policy-watch']);
-    } else {
-      this.errorMessage = 'Invalid username or password';
-    }
+    const loginData = {
+      user_name: this.username,
+      password: this.password,
+    };
+
+    this.http
+      .post<any>('http://localhost:8080/api/users/login', loginData)
+      .subscribe({
+        next: (res) => {
+          localStorage.setItem('isLoggedIn', 'true');
+          localStorage.setItem('user_name', res.user.user_name);
+          localStorage.setItem('role', res.user.role);
+          this.router.navigate(['/mas-policy-watch']);
+        },
+        error: (err) => {
+          this.errorMessage = err.error?.error || 'Login failed. Try again.';
+        },
+      });
   }
 }
-
-

@@ -9,7 +9,9 @@ from pathlib import Path
 import logging
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
-
+import time
+import pickle
+from contextlib import asynccontextmanager
 # Document processing libraries
 import PyPDF2
 import fitz  # PyMuPDF for better PDF text extraction
@@ -34,6 +36,11 @@ from io import BytesIO
 # Setup logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Added for semantic similarity
+from sentence_transformers import SentenceTransformer
+import numpy as np
+from rapidfuzz import fuzz
 
 @dataclass
 class ViolationDetail:
@@ -258,6 +265,8 @@ class AIComplianceChecker:
                         compliance_doc_name: str) -> ComplianceResult:
         """Check compliance of input document against a compliance document"""
         
+        logger.info(f"AI check started for {compliance_doc_name} at {datetime.now().isoformat()}")
+        
         prompt = f"""
         You are an expert regulatory compliance analyst. Compare the INPUT DOCUMENT against the COMPLIANCE DOCUMENT and provide a detailed analysis.
 
@@ -373,6 +382,8 @@ class AIComplianceChecker:
                 )
                 violations.append(violation)
             
+            logger.info(f"AI check finished for {compliance_doc_name} at {datetime.now().isoformat()}")
+            
             return ComplianceResult(
                 document_name=compliance_doc_name,
                 result=analysis.get('overall_result', 'Violation'),
@@ -386,6 +397,7 @@ class AIComplianceChecker:
             
         except Exception as e:
             logger.error(f"AI analysis failed for {compliance_doc_name}: {e}")
+            logger.info(f"AI check finished for {compliance_doc_name} at {datetime.now().isoformat()}")
             return ComplianceResult(
                 document_name=compliance_doc_name,
                 result="Error",
@@ -508,72 +520,20 @@ class AIComplianceChecker:
 class ComplianceDocumentManager:
     """Manage compliance documents storage and retrieval with in-memory caching."""
     
-    def __init__(self, compliance_docs_path: str = None): 
-        base_dir = Path(__file__).resolve().parent
-        if compliance_docs_path is None:
-            self.compliance_docs_path = base_dir / "compliance_documents"
-        else:
-            self.compliance_docs_path = Path(compliance_docs_path).resolve()
-
-        self.compliance_docs_path.mkdir(parents=True, exist_ok=True)
-        self.document_processor = DocumentProcessor()
-        self.doc_cache: Dict[str, Tuple[datetime, str]] = {}
-        self.available_docs: List[str] = []
-        self._initial_load()
-
-    def _load_doc_content(self, doc_name: str) -> Tuple[str, Tuple[datetime, str]]:
-        """Helper to load single doc content for parallel execution."""
-        doc_path = self.compliance_docs_path / doc_name
-        try:
-            mod_time = datetime.fromtimestamp(doc_path.stat().st_mtime)
-            if doc_path.suffix.lower() == '.pdf':
-                pages_text = self.document_processor.extract_text_from_pdf(str(doc_path))
-                content = '\n\n'.join(pages_text.values())
-            else:
-                with open(doc_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-            return doc_name, (mod_time, content)
-        except Exception as e:
-            logger.error(f"Failed to load document {doc_name}: {e}")
-            return doc_name, (datetime.min, "")
-
-    def _initial_load(self):
-        """Load and cache all compliance documents at startup in parallel."""
-        logger.info("Performing initial load of compliance documents...")
-        self.available_docs = [f.name for f in self.compliance_docs_path.glob("*.pdf")]
-        
-        with ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
-            results = executor.map(self._load_doc_content, self.available_docs)
-            for doc_name, content_tuple in results:
-                if content_tuple[1]: # Only cache if content is not empty
-                    self.doc_cache[doc_name] = content_tuple
-        
-        logger.info(f"Cached {len(self.doc_cache)} compliance documents.")
-
+    def __init__(self, cache_path="compliance_text_cache"):
+        self.cache_path = Path(cache_path)
+        self.cache_path.mkdir(exist_ok=True)
+        self.available_docs = [f.name.replace('.txt', '.pdf') for f in self.cache_path.glob("*.txt")]
 
     def get_available_documents(self) -> List[str]:
-        """Get list of available compliance documents from cache"""
         return self.available_docs
 
     def get_document_content(self, doc_name: str) -> str:
-        """Get content of a compliance document, using cache if available"""
-        doc_path = self.compliance_docs_path / doc_name
-        if not doc_path.exists():
-            raise FileNotFoundError(f"Compliance document '{doc_name}' not found.")
-
-        mod_time = datetime.fromtimestamp(doc_path.stat().st_mtime)
-
-        if doc_name in self.doc_cache:
-            cached_mod_time, content = self.doc_cache[doc_name]
-            if mod_time <= cached_mod_time:
-                logger.debug(f"Cache hit for {doc_name}")
-                return content
-
-        logger.info(f"Cache miss or file updated for {doc_name}. Reloading.")
-        _, (new_mod_time, new_content) = self._load_doc_content(doc_name)
-        if new_content:
-            self.doc_cache[doc_name] = (new_mod_time, new_content)
-        return new_content
+        cache_file = self.cache_path / (Path(doc_name).stem + ".txt")
+        if not cache_file.exists():
+            raise FileNotFoundError(f"Cached text for '{doc_name}' not found in {self.cache_path}. Please run the extraction script.")
+        with open(cache_file, "r", encoding="utf-8") as f:
+            return f.read()
 
     def select_documents_by_query(self, query: str) -> List[str]:
         """Select compliance documents based on user query by matching file names or keywords"""
@@ -709,17 +669,75 @@ class ComplianceDocumentManager:
 class ComplianceChecker:
     """Main compliance checker orchestrator"""
     
+    TOP_N_RELEVANT_PAGES = 3
+    EMBEDDING_CACHE_DIR = 'compliance_embeddings'
+
     def __init__(self, gemini_api_key: str):
         self.document_manager = ComplianceDocumentManager()
         self.ai_checker = AIComplianceChecker(gemini_api_key)
         self.document_processor = DocumentProcessor()
-    
+        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        os.makedirs(self.EMBEDDING_CACHE_DIR, exist_ok=True)
+
+    def _embedding_similarity(self, page_texts, compliance_embedding):
+        texts = list(page_texts.values())
+        page_embeddings = self.embedding_model.encode(texts, convert_to_numpy=True)
+        similarities = np.dot(page_embeddings, compliance_embedding) / (
+            np.linalg.norm(page_embeddings, axis=1) * np.linalg.norm(compliance_embedding) + 1e-8
+        )
+        return similarities
+
+    def _get_compliance_embedding_path(self, doc_name):
+        safe_name = doc_name.replace('/', '_').replace(' ', '_')
+        return os.path.join(self.EMBEDDING_CACHE_DIR, f"{safe_name}.pkl")
+
+    def precompute_compliance_embeddings(self):
+        """
+        Precompute and cache embeddings for all compliance documents.
+        Run this function locally when compliance documents are updated.
+        """
+        docs = self.document_manager.get_available_documents()
+        for doc_name in docs:
+            embedding_path = self._get_compliance_embedding_path(doc_name)
+            if os.path.exists(embedding_path):
+                print(f"Embedding already exists for {doc_name}, skipping.")
+                continue
+            print(f"Computing embedding for {doc_name}...")
+            compliance_text = self.document_manager.get_document_content(doc_name)
+            embedding = self.embedding_model.encode([compliance_text], convert_to_numpy=True)[0]
+            with open(embedding_path, 'wb') as f:
+                pickle.dump(embedding, f)
+            print(f"Saved embedding for {doc_name} to {embedding_path}")
+
+    def _load_compliance_embedding(self, doc_name):
+        embedding_path = self._get_compliance_embedding_path(doc_name)
+        if not os.path.exists(embedding_path):
+            raise FileNotFoundError(f"Embedding for {doc_name} not found. Please run precompute_compliance_embeddings().")
+        with open(embedding_path, 'rb') as f:
+            embedding = pickle.load(f)
+        return embedding
+
+    async def _process_single_compliance_doc(self, doc_name, input_pages):
+        logger.info(f"Scoring semantic relevance of pages for {doc_name} using cached embeddings...")
+        compliance_embedding = self._load_compliance_embedding(doc_name)
+        non_empty_pages = {p: t for p, t in input_pages.items() if t.strip()}
+        if not non_empty_pages:
+            return None
+        # Run embedding similarity in a thread to avoid blocking event loop
+        similarities = await asyncio.to_thread(self._embedding_similarity, non_empty_pages, compliance_embedding)
+        sorted_indices = np.argsort(similarities)[::-1][:self.TOP_N_RELEVANT_PAGES]
+        top_pages = [list(non_empty_pages.keys())[i] for i in sorted_indices]
+        top_scores = [float(similarities[i]) for i in sorted_indices]
+        logger.info(f"Top {self.TOP_N_RELEVANT_PAGES} semantically relevant pages for {doc_name}: {list(zip(top_pages, top_scores))}")
+        input_text = '\n\n'.join([non_empty_pages[p] for p in top_pages])
+        if not input_text.strip():
+            input_text = next(iter(input_pages.values()))
+        compliance_text = self.document_manager.get_document_content(doc_name)
+        return await self.ai_checker.check_compliance(input_text, compliance_text, doc_name)
+
     async def process_compliance_check(self, input_file_path: str, query: str) -> ComplianceReport:
-        """Process complete compliance check"""
-        
-        # Extract text from input document asynchronously
+  
         logger.info("Extracting text from input document...")
-        
         def _extract_text():
             ext = os.path.splitext(input_file_path)[1].lower()
             if ext == '.pdf':
@@ -732,84 +750,35 @@ class ComplianceChecker:
                 raise ValueError("Unsupported file type for input document")
 
         input_pages = await asyncio.to_thread(_extract_text)
-        input_text = '\n\n'.join(input_pages.values())
-        
-        if not input_text.strip():
+        if not input_pages:
             raise ValueError("Could not extract text from input document")
-        
-        # Select compliance documents based on query
+
         logger.info("Selecting compliance documents...")
         selected_docs = self.document_manager.select_documents_by_query(query)
-        
         if not selected_docs:
-            # Fallback to all documents if no selection could be made
             logger.warning("No documents selected by query, using all available documents")
             selected_docs = self.document_manager.get_available_documents()
-            
         if not selected_docs:
             raise ValueError("No compliance documents available")
         logger.info(f"Selected {len(selected_docs)} compliance documents: {selected_docs}")
 
-        # Perform compliance checks in parallel
-        tasks = []
-        for doc_name in selected_docs:
-            logger.info(f"Creating compliance check task for {doc_name}...")
-            
-            compliance_text = self.document_manager.get_document_content(doc_name)
-            task = self.ai_checker.check_compliance(
-                input_text, compliance_text, doc_name
-            )
-            tasks.append(task)
-        
+        # Parallelize per-compliance-document processing
+        tasks = [
+            self._process_single_compliance_doc(doc_name, input_pages)
+            for doc_name in selected_docs
+        ]
+        #start_time = time.time()
+        logger.info(f"Starting {len(tasks)} compliance checks in parallel...")
         results = await asyncio.gather(*tasks)
-
-        # --- PAGE NUMBER CORRECTION STEP ---
-        import difflib
-
-        def find_page_for_text(non_compliant_text, input_pages):
-            text = non_compliant_text.strip()
-            if not text:
-                return None
-            # Try exact match first
-            for page_num, page_text in input_pages.items():
-                if text in page_text:
-                    return page_num
-            # Fuzzy match: look for high similarity
-            for page_num, page_text in input_pages.items():
-                lines = page_text.splitlines()
-                for line in lines:
-                    if len(text) > 20 and difflib.SequenceMatcher(None, text, line).ratio() > 0.85:
-                        return page_num
-            return None
-
-        # Only perform page number correction if input document is PDF
-        input_ext = os.path.splitext(input_file_path)[1].lower()
-        if input_ext == '.pdf':
-            # For each violation, update its page_number based on where non_compliant_text is found in input_pages
-            # Parallelize this step for speed
-            async def update_violation_page(violation):
-                nct = violation.non_compliant_text.strip()
-                if nct and nct.upper() != 'N/A':
-                    detected_page = await asyncio.to_thread(find_page_for_text, nct, input_pages)
-                    if detected_page is not None:
-                        violation.page_number = detected_page
-                return violation
-
-            # Gather all update tasks in parallel
-            update_tasks = []
-            for result in results:
-                for violation in result.violations:
-                    update_tasks.append(update_violation_page(violation))
-            await asyncio.gather(*update_tasks)
-        # For DOCX and TXT, keep the page number as is (estimated or 1)
-
-        # Generate comprehensive report
+        # Remove any None results (if a doc had no non-empty pages)
+        results = [r for r in results if r is not None]
+        #end_time = time.time()
+        #logger.info(f"All compliance checks completed in {end_time - start_time:.2f} seconds")
         logger.info("Generating compliance report...")
         report = self._generate_report(
             os.path.basename(input_file_path), 
             results
         )
-        
         return report
     
     def _generate_report(self, input_doc_name: str, 
@@ -906,18 +875,44 @@ class ComplianceChecker:
             
             # Filter and deduplicate violations for the final report
             filtered_all_violations = []
-            seen_violation_keys = set()
+            section_threshold = 85
+            text_threshold = 85
+            severity_rank = {'high': 3, 'medium': 2, 'low': 1}
+            grouped = {}
             for result in results:
                 for violation in result.violations:
-                    # Filter out violations with non_compliant_text == 'N/A' (case-insensitive, strip spaces)
                     if violation.non_compliant_text.strip().upper() == 'N/A':
                         continue
-                    # Create a unique key for deduplication (section, non_compliant_text)
-                    vkey = (violation.section.strip().lower(), violation.non_compliant_text.strip().lower())
-                    if vkey in seen_violation_keys:
+                    # Filter out violations where page_number is not a single integer
+                    if not isinstance(violation.page_number, int):
                         continue
-                    seen_violation_keys.add(vkey)
-                    
+                    # Also filter if page_number is a string containing a comma or not digit
+                    if isinstance(violation.page_number, str):
+                        if ',' in violation.page_number or not violation.page_number.strip().isdigit():
+                            continue
+                    page = violation.page_number
+                    if page not in grouped:
+                        grouped[page] = []
+                    grouped[page].append(violation)
+            # For each page, deduplicate by fuzzy section/text
+            for page, violations in grouped.items():
+                kept = []
+                for v in violations:
+                    found_similar = False
+                    for i, existing in enumerate(kept):
+                        sec_sim = fuzz.token_set_ratio(v.section.strip().lower(), existing.section.strip().lower())
+                        nct_sim = fuzz.token_set_ratio(v.non_compliant_text.strip().lower(), existing.non_compliant_text.strip().lower())
+                        if sec_sim >= section_threshold and nct_sim >= text_threshold:
+                            # Choose the better one (higher severity, then confidence)
+                            v_sev = severity_rank.get(str(v.severity_level).strip().lower(), 0)
+                            e_sev = severity_rank.get(str(existing.severity_level).strip().lower(), 0)
+                            if v_sev > e_sev or (v_sev == e_sev and v.confidence > existing.confidence):
+                                kept[i] = v
+                            found_similar = True
+                            break
+                    if not found_similar:
+                        kept.append(v)
+                for violation in kept:
                     sev = str(violation.severity_level).strip().capitalize()
                     if sev in issue_counts:
                         issue_counts[sev] += 1
@@ -958,7 +953,15 @@ class ComplianceChecker:
             )
 
 # FastAPI Application
-app = FastAPI(title="AI Document Compliance Checker", version="1.0.0")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logging.info("Preloading sentence-transformers embedding model at startup…")
+    _ = compliance_checker.embedding_model
+    logging.info("Embedding model loaded and ready.")
+    yield
+    # you can add shutdown code after this yield
+    
+app = FastAPI(title="AI Document Compliance Checker", version="1.0.0", lifespan=lifespan)
 
 #change this once deployed to vercel
 app.add_middleware(
@@ -981,10 +984,11 @@ compliance_checker = ComplianceChecker(GEMINI_API_KEY)
 @app.post("/upload-document")
 async def upload_document(file: UploadFile = File(...)):
     """Upload and store input document"""
-    allowed_exts = ['.pdf', '.docx', '.txt']
+    #allowed_exts = ['.pdf', '.docx', '.txt']
+    allowed_exts = ['.pdf']
     ext = os.path.splitext(file.filename)[1].lower()
     if ext not in allowed_exts:
-        raise HTTPException(status_code=400, detail="Only PDF, DOCX, and TXT files are supported")
+        raise HTTPException(status_code=400, detail="Only PDF are supported")
     
     # Create temporary file
     temp_dir = tempfile.mkdtemp()
@@ -1009,10 +1013,10 @@ async def check_compliance(
     query: str = Form(..., description="Compliance check query")
 ):
     """Perform compliance check on uploaded document"""
-    allowed_exts = ['.pdf', '.docx', '.txt']
+    allowed_exts = ['.pdf']
     ext = os.path.splitext(file.filename)[1].lower()
     if ext not in allowed_exts:
-        raise HTTPException(status_code=400, detail="Only PDF, DOCX, and TXT files are supported")
+        raise HTTPException(status_code=400, detail="Only PDF files are supported")
     
     # Create temporary file
     temp_dir = tempfile.mkdtemp()
@@ -1103,4 +1107,4 @@ if __name__ == "__main__":
         main()
     else:
         # Start web server
-        uvicorn.run("main3:app", host="0.0.0.0", port=8000, reload=True)
+        uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

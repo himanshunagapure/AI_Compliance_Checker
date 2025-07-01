@@ -1,0 +1,1201 @@
+ 
+ 
+Guidelines for MAS Notice 610 and Notice 1003 
+ 
+S/N Category 
+Guideline   
+Application 
+1 
+Assets Pledged 
+“Assets Pledged” is a booking concept. As such, only pledged assets 
+booked in Singapore should be reported for foreign banks. Pledged 
+assets booked outside of Singapore would not fall within the reporting 
+scope. For the Overseas Bank Subsidiaries and Overseas Branches of 
+local banks, assets which are booked and pledged in the respective 
+entities are reportable. 
+ 
+Assets pledged in Intra-group (head office, other branches of head 
+office, subsidiaries) entities that are used for centralized collateral 
+pledging should not be reported. 
+Appendix B3 
+Annex 6 
+2 
+Assets Under 
+Management 
+("AUM") 
+The assets listed in the Instructions are non-exhaustive. Banks or 
+Merchant Banks should also report any other assets that are counted as 
+part of assets under management. 
+ 
+AUM of unit trust should be determined by multiplying the latest NAV 
+(Net Assets Value) of the unit trust fund with the number of units as of 
+the reporting date. 
+Appendix B3 
+Annex 5 
+3 
+Borrower 
+The "Immediate Borrowers" concept is applicable throughout the 
+reporting forms except for Appendix D1. 
+All reporting 
+forms 
+except 
+Appendix D1 
+4 
+Business Lines 
+Banks or Merchant Banks should first map their business functions into 
+the 7 categories of Business Lines.  If one product is marketed by two or 
+more business lines, the classification should be based on the business 
+line where the activity took place.  Banks or Merchant Banks are 
+discouraged from categorising revenue-generating functions in "Others" 
+as much as possible. 
+Appendix J 
+5 
+Business Lines 
+Part I Description of Business Activities: The business activities are not 
+limited to those recorded in the local book, i.e. it should include all the 
+activities performed by Banks or Merchant Banks including those carried 
+out for their related corporations or head office etc.   
+  
+For items VI, VII and VIII in Selected Statistics, the “Outstanding 
+Amounts” refer to the amounts booked by Banks or Merchant Banks in 
+their Singapore accounting records. 
+ 
+For items II, III, IV and V, Banks or Merchant Banks should report so long 
+as there is a Singapore nexus. 
+ 
+For example: 
+ - “Operational losses and number of incidents” include scenarios where 
+operational losses were incurred and booked in the Banks or Merchant 
+Banks; operational losses took place in Hong Kong branch but booked in 
+the Banks or Merchant Banks; and operational incidents that took place 
+in Singapore but were booked outside of Singapore. 
+ - “Customer complaints” include complaints against Singapore 
+relationship managers by customers of the Banks or Merchant Banks, 
+and complaints against relationship managers of the Banks or Merchant 
+Banks by overseas branch's customers. 
+Appendix J  
+
+
+ 
+ 
+6 
+Business Lines - 
+Retail Banking  
+Complaints relating to corporate actions, bonds custodian charges, 
+alleged mis-selling or product mis-representation of investment 
+advisory services related to FAA related products, online securities 
+trading and funds transfers should be reported under Retail Banking 
+Business activity. 
+Appendix J 
+7 
+Capital Markets 
+Services Licence 
+Entities 
+For the purpose of Appendix C1 Annex 3 reporting, Capital Markets 
+Services Licence entities should not be included in "Banking Group". 
+Appendix C1 
+Annex 3 
+8 
+Classified Assets 
+The outstanding amounts comprise principal and accrued interest 
+receivable for revolving credit facilities where the interest is capitalised.  
+For credit facilities where the interest accruals are separately accounted 
+for such as term loans, the outstanding amount is just the principal 
+amount.  
+Appendix F 
+9 
+Collateral 
+For the purpose of reporting, in determining the secured portion of 
+credit facilities, only tangible assets should be considered.  As such, the 
+fixed and floating charges on assets are considered “unsecured” for the 
+purpose of reporting, unless the said assets are held under the custody 
+of the Banks or Merchant Banks. 
+All relevant 
+reporting 
+forms 
+10 
+Contingent 
+Liabilities 
+Bills for collection should not be reported as part of “Contingent 
+Liabilities”. 
+Appendix B3 
+Annex 1 
+11 
+Corporate 
+Finance  
+Pure lending or leasing transactions and pure advisory services are not 
+required to be reported, i.e. no need to report under “Corporate 
+Finance - Others".  Supporting activities such as making available the 
+ATMs for public application, researching and sourcing acquisition 
+targets are not to be included. 
+Appendix B3 
+Annex 3 
+12 
+Counterparty 
+Classification - 
+International 
+Organisation 
+For a list of international organisations, refer to “Guidelines for 
+reporting the BIS international banking statistics” which is available on 
+the BIS website (http://www.bis.org).  For Appendices D1, D2, D4 and 
+F3, refer to the same Guidelines for the list of "International 
+Organisations - Non-Bank Financial Institutions" and "International 
+Organisations - Non-Financial sector".  An example of an international 
+organisation that falls under non-financial sector - "other sectors" is 
+UNICEF.  Another example of an international organisation that falls 
+under non-financial sector - "non-bank financial institutions" is Asian 
+Development Bank. 
+All relevant 
+reporting 
+forms 
+13 
+Counterparty 
+Classification – 
+Non-profit 
+institutions 
+serving 
+individuals and 
+families 
+“Non-profit institutions serving individuals and families” include clubs, 
+associations and trade unions.  Please keep this category and 
+“Unincorporated Enterprises held by Natural Persons” as distinct 
+categories. 
+All relevant 
+reporting 
+forms 
+14 
+Counterparty 
+Classification - 
+Official 
+Monetary 
+Authority 
+For a list of official monetary authorities, refer to Part IV of the 
+“Guidelines to the International Locational Banking Statistics” which is 
+available on the BIS website (http://www.bis.org). 
+All relevant 
+reporting 
+forms 
+
+
+ 
+ 
+15 
+Counterparty 
+Classification - 
+Non-bank 
+Financial 
+Institution 
+Export credit agencies should be reported as “Non-bank Financial 
+Institution” if they do not meet the definition of "Banks" as stated in 
+Appendix A1 Annex 1’s instruction note 3. This is because BIS’ guidance 
+recognises such entities as public non-bank financial institutions. 
+All reporting 
+forms 
+16 
+Counterparty 
+Classification – 
+Corporates 
+Limited Liability Partnerships are to be classified under corporates. 
+All relevant 
+reporting 
+forms 
+17 
+Counterparty 
+Classification - 
+Public Sector 
+Entity 
+The definition of Public Sector Entities (PSE) for reporting purpose 
+mirrors the definition of PSE in MAS Notice 637.  Companies owned by 
+Statutory Boards or the Singapore Government would be PSEs only if 
+they are administrative bodies or non-commercial undertakings which 
+perform regulatory or non-commercial functions.   
+All relevant 
+reporting 
+forms 
+18 
+Country or 
+Jurisdiction of 
+Residence 
+Country or jurisdiction of residence in Appendix C1 Annex 3 should be 
+based on the banking group's head office even if Banks or Merchant 
+Banks do not have any balances with the head office.  
+Appendix C1 
+Annex 3 
+19 
+Credit Facilities 
+Please refer to “Illustrations” below for examples on how Banks or 
+Merchant Banks should report new credit facilities and credit facilities 
+limits. 
+All relevant 
+reporting 
+forms 
+20 
+Credit Reviews 
+The “borrowers” in instruction note 5 do not include bank 
+counterparties. 
+Appendix J 
+21 
+Defaulted Loans 
+Defaulted loans with interests being placed in suspense are to be 
+reported under the “Non Interest Rate Sensitive” column. 
+Appendix G 
+22 
+Industry 
+Classification 
+Please follow the mapping of SSIC codes in "SSIC Codes" Tab for 
+populating the appropriate reporting forms. 
+All relevant 
+reporting 
+forms 
+23 
+Industry 
+Classification 
+Personal investment holding companies generally include trusts, funds 
+and similar financial entities. Please refer to the latest version of the 
+Singapore Standard Industrial Classification (SSIC) available at 
+www.singstat.gov.sg 
+All relevant 
+reporting 
+forms 
+24 
+Interbank 
+Lending 
+Interbank lending should generally be treated as placements. In cases 
+where the lending bank is aware that the borrowing bank requires the 
+monies for purposes other than general interbank takings, the lending 
+bank should reclassify the transaction appropriately, e.g. loans and 
+advances, for reporting purpose. 
+All relevant 
+reporting 
+forms 
+25 
+Items with No 
+Interest 
+Cashflows 
+Items with no interest cashflows could still be sensitive to interest rate 
+movements. For items with no interest cashflows that are sensitive to 
+interest rate movements, these items should not be reported under the 
+category of "Non Interest Rate Sensitive".  Where applicable, Banks or 
+Merchant Banks are to provide details of the assumptions used in the 
+Notes to Reporting Forms. 
+Appendix G 
+26 
+Litigation Cases 
+Provisions for legal costs are not required to be reported under 
+"Provisions".  
+ 
+Banks or Merchant Banks should report all such claims where it has to 
+bear all or part of the claims, irrespective of whether the litigation case 
+is filed inside or outside of Singapore.  
+Appendix J 
+27 
+New credit 
+facilities 
+New credit facilities granted for the month refer to new or increased 
+facility limits irrespective of whether there has been disbursement.  
+Facility for contingent items should also be reported under "New Credit 
+Facilities". 
+All relevant 
+reporting 
+forms 
+
+
+ 
+ 
+28 
+New credit 
+facilities 
+The credit limit for credit cards and other revolving credit facilities 
+should be reported under "New Credit Facilities" upon approval.  For 
+avoidance of doubt, additional or replacement credit cards issued to an 
+existing borrower which does not result in an increase in the aggregate 
+credit limit of the borrower is not considered "New Credit Facilities".  
+For temporary credit limit increases, including temporary overdrafts 
+which exceed the approved credit limits, the excesses are not to be 
+reported as "New Credit Facilities". 
+All relevant 
+reporting 
+forms 
+29 
+New credit 
+facilities 
+Banks or Merchant Banks should report the approved and accepted 
+amount, instead of the activated amount, under “New Credit Facilities”. 
+All relevant 
+reporting 
+forms 
+30 
+New credit 
+facilities 
+If an uncommitted revolving credit facility limit (with no specific 
+maturity date) has been reported in prior month (upon approval and 
+acceptance), Banks or Merchant Banks should only report the 
+incremental amount under “New Credit Facilities” for subsequent 
+month when there is an increase in credit facility limit. 
+All relevant 
+reporting 
+forms 
+31 
+Operational Risk  Operational risk events without financial impact are not required to be 
+reported. 
+Appendix J 
+32 
+Product - 
+Covered Bonds 
+For covered bonds held by the Bank, all bank issuers should be listed 
+regardless of whether they are inside or outside Singapore. Bank should 
+report the aggregated outstanding amount per bank issuer. 
+ 
+For banks incorporated in Singapore (other than foreign-owned banks 
+incorporated in Singapore), the reporting of covered bond holdings 
+should be done at the Group level (i.e. subsidiaries' covered bond 
+holdings are to be included). The SWIFT code should be provided for 
+proper referencing to each bank issuer.     
+Appendix L  
+Annex 1 
+(MAS 610) 
+33 
+Product - Debt 
+Securities 
+Debt securities which have become past due should not be reclassified 
+as “Other assets”.  They should be included under "Debt Securities" in 
+Appendix E Annex 3. 
+Appendix E 
+Annex 3 
+34 
+Product - Debt 
+Securities 
+Where Banks or Merchant Banks hold a debt security where interest is 
+late and the debt issuer is in a financial distress during the reporting 
+period, Banks or Merchant Banks should report this debt security in the 
+reporting form accordingly. 
+Appendix E 
+Annex 3 
+35 
+Product - 
+Deposits held 
+under trust 
+Counterparty type and the country or jurisdiction of residence of the 
+deposits held under trust accounts should be reported based on the 
+underlying holders of the deposits.  Deposits can be classified under the 
+trustee if the underlying depositors are not made known to the Banks or 
+Merchant Banks by the trustee.   
+All relevant 
+reporting 
+forms 
+36 
+Product - 
+fiduciary 
+placements 
+Please see “Example of fiduciary placements” below. 
+Appendix B2 
+Annex 2 Part 
+I 
+37 
+Product - 
+Forward Value 
+Loans or 
+Deposits 
+Forward value loans or deposits should be reported under the "Others" 
+category under "Contingent Liabilities, Commitments, Derivatives and 
+Other Items".  Each forward value loan or forward value deposit should 
+be reported as a long and a short position.   
+ 
+A forward value loan with fixed rate should be reported as a long 
+position in the time bucket which reflects the maturity of the loan, and 
+a short position in the time bucket which reflects the time when the 
+loan is to be drawn.  The reverse applies to a forward value deposit. 
+Appendix G 
+
+
+ 
+ 
+38 
+Product - 
+Interest Rate 
+Swaps 
+When Banks or Merchant Banks enter into a 5-year IRS to pay fix rate 
+against a 3-month interest rate index on a quarterly basis, the notional 
+of the IRS should be reported as a positive amount under the “> 1 up to 
+3 months” bucket and a negative amount under the “> 3 up to 5 years” 
+bucket, under the item of “Financial Derivatives (non-trading)". 
+Appendix G 
+39 
+Product - Loans 
+Joint loan should be attributed to the main borrower.  The basis of 
+determining the main borrower in joint loans can be based on the 
+higher source of income or source of repayment. 
+All relevant 
+reporting 
+forms 
+40 
+Product - Loans 
+Loans should be reported as restructured loans at the point when the 
+Banks or Merchant Banks have obtained internal approval to grant 
+concessions. At this stage, there is already indication that the loan is not 
+doing well and a restructuring may take place in future. 
+Appendix D3 
+Annex 1 
+41 
+Product - Loans 
+Accounts Receivables or Bills should not be considered tangible assets 
+for the purpose of determining whether a loan is secured. 
+All relevant 
+reporting 
+forms 
+42 
+Product - 
+Medium Term 
+Notes 
+Medium Term Notes should be reported under "Debt Securities – 
+Others", regardless of programme length, in Appendix B2. 
+Appendix B2 
+43 
+Product - 
+Perpetual Bonds 
+Banks or Merchant Banks should report perpetual bonds in accordance 
+with the relevant accounting practices.  
+Appendix G 
+44 
+Product - 
+Standby 
+Facilities to 
+banks 
+Standby credit facilities comprise facilities that can only be utilised when 
+an event specified in the agreement takes place and not facilities that 
+Banks or Merchant Banks use in business-as-usual circumstance. 
+All relevant 
+reporting 
+forms 
+45 
+Product - Trade 
+Financing 
+Trade financing under “Loans & Advances” includes (but is not limited 
+to) trust receipts, forfaiting and invoice financing.  
+All relevant 
+reporting 
+forms 
+46 
+Product - Trade 
+Financing 
+Trade financing under “Contingent Items” includes (but is not limited to) 
+unfunded credit facilities granted to customers for trade purposes such 
+as letters of credit and acceptances. 
+All relevant 
+reporting 
+forms 
+47 
+Reporting 
+Forms 
+In addition to reporting interest rate positions in the non-trading book 
+on an aggregated basis in Appendix G Annex 1, Banks or Merchant 
+Banks should complete a separate form for each material currency 
+(defined as 5% or more of non-trading book assets or liabilities).  If SGD 
+is not a material currency, Banks or Merchant Banks should include SGD 
+positions for reporting on an aggregated basis, and need not submit a 
+separate form.  For determining material currencies, off-balance sheet 
+positions are excluded from the numerator and denominator.   
+Appendix G 
+48 
+Reserves - Audit 
+Adjustments 
+Only disclosure of audit adjustments is required. If Banks or Merchant 
+Banks have late adjustments (e.g. loss allowance for credit-impaired 
+exposures or tax provisions amounts) which are only identified post-
+submission, Banks or Merchant Banks should re-submit the affected 
+returns. 
+Appendix B2 
+Annex 4 
+49 
+Residency 
+Sole proprietors, partnerships, non-profit institutions serving individuals 
+and families, corporates fall under the “Companies and Other Bodies” 
+residency definition. 
+All relevant 
+reporting 
+forms 
+
+
+ 
+ 
+50 
+Residency 
+When determining the residency of natural persons (via centre of 
+economic interest), the “country or jurisdiction where the person lives 
+in” should take precedence, followed by “place of work”. If the above 
+information is not available, then “main source of income” can be used. 
+ 
+An example is as follows: 
+ 
+Citizenship 
+Living in 
+Place of 
+Work 
+Main Source 
+of Income  
+Residency 
+to be Used 
+Singaporean  
+New York 
+New York 
+New York 
+US 
+Singaporean 
+New York 
+- 
+Singapore 
+US 
+Singaporean 
+PR 
+Malaysia 
+Singapore 
+Singapore 
+Malaysia 
+Singaporean 
+PR 
+Singapore 
+- 
+China 
+Singapore 
+Thai 
+Singapore 
+Singapore 
+Singapore 
+Singapore 
+Thai 
+Thailand 
+- 
+Singapore 
+Thailand 
+Malaysian 
+- 
+Singapore 
+Hong Kong 
+Singapore 
+Malaysian 
+- 
+- 
+Hong Kong 
+Hong Kong 
+All relevant 
+reporting 
+forms 
+51 
+Small Medium 
+Enterprise 
+("SME") 
+Financing 
+SME's annual sales turnover of not more than S$100m should be 
+computed on a consolidated group basis. Personal investment 
+corporations would not be classified as SMEs as they do not have any 
+sales turnover. 
+Appendix D3 
+Annex 1 
+52 
+Small Medium 
+Enterprise 
+("SME") 
+Financing 
+SMEs are defined as businesses with annual sales turnover of not more 
+than S$100 million. To identify an SME, the prevailing exchange rate 
+corresponding to the SME’s financial statements' year-end date should 
+be applied to convert non-SGD sales turnover to its SGD equivalent.  
+Appendix D3 
+Annex 1 
+53 
+Statement of 
+Financial 
+Position - 
+Capital  
+For Singapore branches of banks incorporated outside Singapore, as 
+well as overseas branches of banks incorporated in Singapore, capital 
+contributions from Head Office should be reported under “Deposits and 
+Balances”. 
+Appendix B2 
+Annex 1 
+54 
+Statement of 
+Financial 
+Position - Cash 
+and Balances 
+Money market transactions should be reported as "Cash and Balances" 
+in general. 
+All relevant 
+reporting 
+forms 
+55 
+Statement of 
+Financial 
+Position - Other 
+Equity 
+Instruments 
+“Other equity instruments” include (but are not limited to) non-
+cumulative non-convertible perpetual capital securities.   
+Appendix B2 
+56 
+Statement of 
+Financial 
+Position - 
+Retained Profits 
+Retained profits should be reported under "Equity" in Appendix B2.  
+Retained profits should not be reported in Appendix C1 Annex 6. 
+Appendix B2 
+57 
+Statement of 
+Financial 
+Position - 
+Suspense 
+Account 
+“Suspense account” in Appendix B1 and Appendix B2 refers to all 
+outstanding unreconciled amounts that are kept in suspense.  These 
+should not include balances in clearing accounts that are pending 
+clearance or reversal due to timing differences. 
+Appendix 
+B1, B2 
+58 
+Undrawn Credit 
+Commitments 
+Unadvised lines should be excluded from the “Undrawn credit 
+commitments”. 
+All relevant 
+reporting 
+forms 
+ 
+
+
+ 
+ 
+Example of fiduciary placements 
+ 
+Product - fiduciary placements 
+ 
+(a) Customer A deposits $100 with Bank X. 
+(b) Customer A’s deposits increase to $200,000 and Bank X advises Customer A to invest $100,000 in 
+gold-linked deposits with Bank X. 
+(c) Customer A’s deposits increase to $1,000,000, gold-linked deposits increase to $200,000.  Bank X 
+convinces Customer A to sign the investment mandate to manage Customer A’s account.  
+(d) Bank X advises Customer A to put money with Bank Y as it offers good interest yield.  Customer A 
+agrees and $900,000 is transferred to Bank Y.  
+ 
+The above scenarios are reported in Bank X’s and Bank Y’s books as follows: 
+  
+Bank X’s books 
+Bank Y’s books 
+  
+Deposits 
+Other liabilities 
+AUM 
+Deposits 
+(a) 
+$100 
+ 
+ 
+ 
+(b) 
+$100,000 
+$100,000 
+ 
+ 
+(c) 
+$1,000,000 
+$200,000 
+$1,200,000 
+ 
+(d) 
+$100,000 
+$200,000 
+$1,200,000 
+$900,000 
+ 
+ 
+ 
+
+
+ 
+ 
+Mapping of MAS 610/1003 Industry Classification to SSIC Code 
+ 
+Please note that there are exceptions to the mapping, as documented in "Clarifications" 
+ 
+S/N Industry Classification in MAS 
+610/1003 
+SSIC 2020  
+Clarifications  
+1 
+Agriculture and Fishing 
+01, 02, 03 
+  
+2 
+Mining and Quarrying  
+08, 09 
+  
+3 
+Manufacturing 
+10 to 32 
+  
+4 
+Electricity, Gas and Water Supply 
+35 to 38 
+  
+5 
+Construction 
+41 to 43 
+  
+6 
+Wholesale Trade 
+46 
+  
+7 
+Retail Trade 
+47 
+  
+8 
+Transport and Storage 
+49 to 53 
+  
+  
+     of which: Aviation 
+51 
+  
+  
+     of which: Shipping Lines 
+50021, 50023 
+  
+ 
+     of which: Chartering and 
+Operators of Vessels 
+50022 
+ 
+9 
+Accommodation and Food Services 
+Activities 
+55 to 56 
+  
+10 
+Information and Communications 
+58 to 63 
+  
+11 
+Financial and Insurance Activities 
+64-66, excl 6411 
+to 6414 
+Please do not include central banks (and official 
+monetary authorities), banks and merchant 
+banks categorised under Section K 
+ 
+     of which: Finance Companies 
+6415 
+ 
+  
+     of which: Financial Holding 
+Companies  
+64201 
+Include Insurance Holding Companies  
+  
+     of which: Other Holding 
+Companies 
+64202 
+  
+  
+     of which: Trusts and Funds 
+643 
+Include Money Market Funds and Hedge Funds 
+  
+     of which: Insurance Companies, 
+Provident and Pension Funds 
+65 
+Include Reinsurance Companies 
+ 
+     of which: Exchanges 
+6611 
+Include Securities, Commodities and Futures 
+Exchanges 
+  
+     of which: Trustee, Fiduciary and 
+Custody Services Firms 
+66191 
+  
+  
+     of which: Securities and Futures 
+Companies  
+6612 
+ Include Commodity Contracts Brokerage 
+ 
+ 
+ 
+ 
+  
+     of which: Fund Management 
+Companies 
+663 
+Include Companies that manage Hedge Funds  
+12 
+Real Property and Development of 
+Land 
+68 
+ 
+  
+     of which: Real Estate Developers 
+68101 
+ 
+  
+     of which: Real Estate Investment 
+Trusts with rental income  
+68105 
+ 
+13 
+Professional, Scientific, Technical, 
+Administrative, Support Service 
+Activities 
+69 to 82 
+ 
+14 
+Other industries 
+84-99 
+ 
+  
+     of which: Public Administration 
+84 
+  
+
+
+ 
+ 
+ 
+
+
+ 
+ 
+Illustrations (examples provided by respondents) 
+ 
+Credit facility limits 
+ 
+Illustration 1 
+ 
+ Facility type 
+Approved limit established 
+in the system and ready for 
+customers’ draw down 
+Cumulative 
+disbursements of 
+loan principal 
+Outstanding principal 
+Undrawn 
+Limit 
+Credit facility 
+limit to be 
+reported 
+Committed 
+Revolving 
+$100,000,000 
+n/a 
+$20,000,000 
+$80,000,000 
+$100,000,000 
+Non-Revolving (progressive 
+disbursements) 
+$100,000,000 
+$80,000,000 
+$78,520,000 
+$20,000,000 
+$98,520,000 
+Non-Revolving  (lump sum 
+disbursement, fully disbursed) 
+$100,000,000 
+$100,000,000 
+$88,250,000 
+$0 
+$88,250,000 
+Uncommitted 
+Revolving 
+$100,000,000 
+n/a 
+$20,000,000 
+$80,000,000 
+$20,000,000 
+Non-Revolving (progressive 
+disbursements) 
+$100,000,000 
+$80,000,000 
+$78,520,000 
+$20,000,000 
+$78,520,000 
+Non-Revolving (Lump sum 
+disbursement, fully disbursed) 
+$100,000,000 
+$100,000,000 
+$88,250,000 
+$0 
+$88,250,000 
+ 
+ 
+ 
+
+
+ 
+ 
+Illustration 2 - Non-revolving credit facility 
+ 
+Description of activities in the 
+reporting period 
+Approved limit 
+established in the 
+system and ready for 
+customer’s drawdown 
+Outstanding 
+principal 
+Reporting period 
+Credit facility limit to be reported 
+Committed 
+  
+Letter of Offer is accepted by 
+customer and full limit is 
+established in the system and 
+available for customer drawdown. 
+Customer drawdown $1m. 
+$3,000,000 
+$1,000,000 
+Jun 17 
+$3,000,000 
+Customer drawdown additional 
+$500,000. 
+$3,000,000 
+$1,500,000 
+Jul 17 
+$3,000,000 
+Customer made payment of 
+$1,500,000. 
+$3,000,000 
+$0 
+Aug 17 
+If the remaining $1,500,000 of the initial 
+credit facility limit is no longer available, then 
+the amount of credit facility limited to be 
+reported is $0 as the facility is non-revolving. 
+ 
+ 
+Illustration 3 - Credit facility with sub-facilities 
+Description of activities 
+Outstanding principal 
+Credit facility limit to be reported 
+Customer was granted one main facility of $100,000 with 
+several sub-facilities: 
+1. Sub limit $50,000 (committed) 
+ 
+ 
+Nil 
+Credit facility limit of $100,000 should be reported as the borrower 
+is not allowed to draw beyond the facility limit. 
+1. Sub limit $40,000 (committed) 
+Nil 
+2. Sub limit $30,000 (uncommitted) 
+$30,000 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+New Credit Facilities 
+ 
+Illustration 4 
+Credit facility 
+Committed? 
+Facility limit 
+Limit utilized 
+Limits granted 
+during month 
+Amount of credit  facility 
+limit to be reported  
+Amount of new credit facility 
+to be reported  
+Term loan 
+Y 
+$2,000,000 
+$1,500,000 
+No 
+$2,000,000 
+- 
+Revolving  
+Y 
+$2,000,000 
+- 
+Yes 
+$2,000,000 
+$2,000,000 
+Revolving 
+N 
+$2,000,000 
+- 
+Yes 
+- 
+$2,000,000 
+Revolving 
+N 
+$2,000,000 
+$1,000,000 
+No 
+$1,000,000 
+- 
+Letter of 
+Credit 
+Y 
+$500,000 
+$300,000 
+No 
+$500,000 
+- 
+Letter of 
+Credit 
+N 
+$1,000,000 
+$500,000 
+No 
+$500,000 
+- 
+Guarantee 
+Y 
+$500,000 
+$400,000 
+Yes 
+$500,000 
+$500,000 
+Guarantee 
+N 
+$500,000 
+$400,000 
+Yes 
+$400,000 
+$500,000 
+ 
+ 
+Illustration 5 - Conditionally cancellable housing loan 
+ 
+Description of activities in the reporting 
+period 
+Available 
+limit 
+Outstanding 
+principal 
+Reporting 
+Period 
+Amount of credit  facility 
+limit to be reported  
+Amount of new credit 
+facility to be reported  
+Committed 
+Letter of Offer for a conditionally 
+cancellable housing loan of $300,000 
+accepted by customer. Pending invoice to 
+be presented for progressive drawdown. 
+$0 
+$0 
+Dec-15 
+$300,000 
+$300,000 
+Customer presented invoice for first 
+drawdown of $100,000. 
+$100,000 
+$100,000 
+Feb-16 
+$300,000 
+$0 
+Customer presented invoice for further 
+drawdown of $100,000. 
+$200,000 
+$200,000 
+Mar-16 
+$300,000 
+$0 
+Customer presented invoice for final 
+drawdown of $100,000. 
+$300,000 
+$300,000 
+Apr-16 
+$300,000 
+$0 
+Customer made payment of $50,000. 
+$250,000 
+$250,000 
+May-16 
+$250,000 
+$0 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+Illustration 6 
+ 
+Credit facility type 
+Credit limit 
+Outstanding 
+Reporting 
+period 
+Amount of credit  facility 
+limit to be reported 
+Amount of new credit facility 
+to be reported 
+Committed 
+Revolving 
+$100 
+$0 
+Jan 
+$100 
+$100 
+$100 
+$50 
+Feb 
+$100 
+$0 
+$100 
+$70 
+Mar 
+$100 
+$0 
+$100 
+$80 
+Apr 
+$100 
+$0 
+Uncommitted 
+Revolving 
+$100 
+$0 
+Jan 
+$0 
+$100 
+$100 
+$50 
+Feb 
+$50 
+$0 
+$120 (increase due 
+to restructure) 
+$70 
+Mar 
+$70 
+$20 
+$120 (extension, 
+increased tenure) 
+$80 
+Apr 
+$80 
+$0 
+ 
+ 
+ 
+ 
+ 
+ 

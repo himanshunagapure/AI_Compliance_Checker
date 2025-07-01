@@ -1,0 +1,4543 @@
+1 
+ 
+MAS NOTICE 649 (AMENDMENT) 2024 
+ 
+Issued on: 16 May 2024 
+ 
+MINIMUM LIQUID ASSETS (“MLA”) AND LIQUIDITY COVERAGE RATIO (“LCR”) 
+ 
+Introduction 
+ 
+1 
+This document reflects:  
+ 
+(a) 
+consequential amendments made to MAS Notice 649 (the “Notice”) as a result 
+of the cancellation of MAS Notice 637 on 1 July 2024, and re-issuance on 
+20 September 2023 of MAS Notice 637 which takes effect on 1 July 2024; and 
+ 
+(b) 
+amendments made to the Notice to implement various other technical 
+revisions. 
+ 
+2 
+For presentational purposes, the amendments in this document are compared with 
+the version of MAS Notice 649 issued on 24 June 2022. 
+ 
+3 
+This document shall be interpreted as follows:  
+ 
+(a) 
+Text which is coloured and struck through represent deletions, and will not 
+appear in the untracked version of MAS Notice 649 revised on 16 May 2024 
+(“Published Version”);  
+ 
+(b) 
+Text which is coloured and underlined represent insertions. 
+ 
+4 
+The amendments reflected in this document shall take effect on 1 July 2024. 
+ 
+5 
+In the event of discrepancies between the amendments in this document and the 
+Published Version, the Published Version shall prevail. This document is to be used for 
+reference only. 
+ 
+ 
+ 
+ 
+
+
+2 
+ 
+MAS NOTICE 649 
+ 
+24 June 2022 
+Last revised on 16 May 2024* 
+ 
+NOTICE TO BANKS 
+BANKING ACT 1970 
+ 
+MINIMUM LIQUID ASSETS (“MLA”) AND LIQUIDITY COVERAGE RATIO (“LCR”) 
+ 
+ 
+Introduction 
+ 
+1 
+This Notice is issued pursuant to sections 38(1) and 65(2) of the Banking Act 1970 (“the 
+Act”) and applies to all Reporting Banks. Except where specifically mentioned in the paragraph, 
+the requirements set out in this Notice are issued under section 38(1) of the Act. 
+ 
+Definitions 
+ 
+2 
+In this Notice – 
+ 
+“Accounting Standards” has the same meaning as in section 4(1) of the Companies Act 
+1967; 
+ 
+“bank” means – 
+ 
+(a) 
+any company which holds a valid licence under section 7 or 79 of the Act; or 
+ 
+(b) 
+any entity established or incorporated in a foreign country or jurisdiction that 
+is approved, licensed, registered or otherwise regulated by a bank regulatory 
+agency of the foreign country or jurisdiction to carry on banking business under 
+the laws of the foreign country or jurisdiction; 
+ 
+“bank regulatory agency”, in relation to a foreign country or jurisdiction, means an 
+authority in the foreign country or jurisdiction exercising any function that 
+corresponds to a regulatory function of the Authority under the Act; 
+ 
+“banking group”, in relation to a Reporting Bank, means the Reporting Bank and its 
+banking group entities; 
+ 
+“banking group entity”, in relation to a Reporting Bank, means its subsidiary or any 
+other entity that is treated as part of the Reporting Bank’s group of entities according 
+to Accounting Standards; 
+
+
+3 
+ 
+ 
+“country-level group”, in relation to a Reporting Bank, means a group comprising any 
+combination of the Reporting Bank and any other bank in Singapore or any merchant 
+bank in Singapore that is a related corporation of the Reporting Bank approved by the 
+Authority to be part of the group; 
+ 
+“Current Account” has the same meaning as in MAS Notice 758; 
+ 
+“Custody Cash Account” has the same meaning as in MAS Notice 758; 
+ 
+“holding company” has the same meaning as in section 5 of the Companies Act 1967; 
+ 
+“internationally active bank” means a Reporting Bank that – 
+ 
+(a) 
+is incorporated in Singapore; and 
+ 
+(b) 
+has been notified by the Authority that the Authority considers it to be 
+internationally active, taking into consideration whether the Reporting Bank 
+has one or more banking group entity established or incorporated in a foreign 
+country or jurisdiction that is approved, licensed, registered or otherwise 
+regulated by a bank regulatory agency in a foreign country or jurisdiction to 
+carry on banking business under the laws of the foreign country or jurisdiction, 
+and whether the banking group entity’s operations are significant in that 
+foreign country or jurisdiction; 
+ 
+“public sector entity” or “PSE” means – 
+ 
+(a) 
+a regional government or local authority that is able to exercise one or more 
+functions of the central government at the regional or local level; 
+ 
+(b) 
+an administrative body or non-commercial undertaking responsible to, or 
+owned by, a central government, regional government or local authority, 
+which performs regulatory or non-commercial functions; 
+ 
+(c) 
+a statutory board in Singapore (other than the Authority); or 
+ 
+(d) 
+a town council in Singapore established pursuant to the Town Councils Act 
+1988; 
+ 
+“Reporting Bank” means a bank in Singapore; 
+ 
+
+
+4 
+ 
+“significant currency”, in relation to a Reporting Bank, means a currency where the 
+aggregate liabilities of the Reporting Bank denominated in that currency as at the end 
+of the month amounts to 5% or more of the Reporting Bank’s total liabilities; 
+ 
+“sovereign” means a central government of a country or jurisdiction; 
+ 
+“unencumbered”, in relation to an asset of a Reporting Bank, means that the asset can 
+be liquidated, sold, transferred, or assigned by the Reporting Bank without any legal, 
+regulatory, contractual or other restrictions. 
+ 
+3 
+The expressions used in this Notice, except where expressly defined in this Notice or 
+where the context otherwise requires, have the same meanings as in the Act. 
+ 
+4 
+A Reporting Bank only needs to comply with Part II – LCR if it is an internationally active 
+bank or it has been notified by the Authority that it is a domestic systemically important bank1 
+(“D-SIB”). 
+ 
+5 
+A Reporting Bank that does not fall within paragraph 4 may, upon giving prior written 
+notice of at least one month to the Authority, choose to comply with either Part I – MLA or 
+Part II – LCR, and the requirements in the relevant part would apply accordingly. While a 
+Reporting Bank that has chosen to comply with Part I – MLA may choose to comply with Part 
+II – LCR subsequently upon giving the requisite notice to the Authority, a Reporting Bank that 
+has chosen to comply with Part II – LCR must obtain the Authority’s prior written approval to 
+comply with Part I – MLA subsequently.2 
+ 
+6 
+A Reporting Bank complying with Part II – LCR may, with the Authority’s approval, 
+comply with Part II – LCR on a country-level group basis. The Authority will subject the 
+Reporting Bank and the entities which are in the country-level group to an assessment before 
+granting any approval for the Reporting Bank to comply with Part II – LCR on a country-level 
+group basis. 
+ 
+ 
+1 
+More information on the D-SIB framework can be found at https://www.mas.gov.sg/-/media/MAS/News-
+and-Publications/Monographs-and-Information-Papers/Monograph--MAS-Framework-for-Impact-and-
+Risk-Assessment.pdf. 
+2 
+The Authority will not ordinarily grant such an approval except in exceptional circumstances. 
+
+
+5 
+ 
+PART I – MLA 
+ 
+Definitions 
+ 
+7 
+In Part I – MLA – 
+ 
+“associate” has the same meaning as in the Fifth Schedule to the Act, with each 
+reference in that Fifth Schedule to a “substantial shareholder” replaced with a 
+reference to a “corporation”; 
+ 
+“bills of exchange” has the same meaning as in section 3 of the Bills of Exchange Act 
+1949; 
+ 
+“computation day” means the business day on which a Reporting Bank computes the 
+minimum amount of Liquid Assets that the Reporting Bank has to maintain on the 
+relevant maintenance day; 
+ 
+“counterparty related to a Reporting Bank” means – 
+ 
+(a) 
+a related corporation of the Reporting Bank; 
+ 
+(b) 
+an associate of the Reporting Bank; 
+ 
+(c) 
+a banking group entity of the Reporting Bank; and 
+ 
+(d) 
+a subsidiary or associate of any holding company of the Reporting Bank; 
+ 
+“limited purpose e-money” has the same meaning as given by Part 3 of the First 
+Schedule to the Payment Services Act 2019; 
+ 
+“Liquid Assets” means any Tier-1 Liquid Assets or Tier-2 Liquid Assets; 
+ 
+“maintenance day”, in relation to any computation day, means the day occurring 2 
+business days from that computation day; 
+ 
+“MAS Bills” means any debt securities issued by the Monetary Authority of Singapore 
+under the Monetary Authority of Singapore Act 1970; 
+ 
+“Qualifying Liabilities”, in relation to a Reporting Bank, means the Qualifying Liabilities 
+as computed by the Reporting Bank in accordance with paragraph 12; 
+ 
+
+
+6 
+ 
+“Relevant Entity”, in relation to a Reporting Bank, means any of the following: 
+ 
+(a) 
+where the Reporting Bank is incorporated in Singapore, any bank other than 
+the Reporting Bank; 
+ 
+(b) 
+where the Reporting Bank is a branch or office of a bank incorporated outside 
+Singapore, that is located within Singapore, any bank other than the Reporting 
+Bank, including the head office of the Reporting Bank or any other branch or 
+office of the bank incorporated outside Singapore, that is located outside 
+Singapore; 
+ 
+(c) 
+any merchant bank in Singapore; 
+ 
+“Singapore Dollar Qualifying Liabilities” means Qualifying Liabilities denominated in 
+Singapore dollars; 
+ 
+“Singapore Government Securities” or “SGS” means any debt securities issued by the 
+Singapore Government under any written law; 
+ 
+“Tier-1 Liquid Assets” means the following liquid assets: 
+ 
+(a) 
+for the purposes of the Singapore Dollar MLA requirement, any liquid asset 
+listed in paragraph 8(a), (b), (c), (d) or (e), other than cash balances maintained 
+by a Reporting Bank for the purposes of section 39 of the Act and assets 
+maintained and held by a Reporting Bank for the purposes of section 40 of the 
+Act; 
+ 
+(b) 
+for the purposes of the all currency MLA requirement, any liquid asset listed in 
+paragraph 8(a), (b), (c), (d), (e) or (f), other than cash balances maintained by 
+a Reporting Bank for the purposes of section 39 of the Act and assets 
+maintained and held by a Reporting Bank for the purposes of section 40 of the 
+Act; 
+ 
+“Tier-2 Liquid Assets” means any liquid asset listed in paragraph 8(g) or (h), other than 
+assets maintained and held by a Reporting Bank for the purposes of section 40 of the 
+Act; 
+ 
+“undrawn commitment”, in relation to a Reporting Bank, means any arrangement of 
+the Reporting Bank with any counterparty 3 , that will pose liquidity risk to the 
+ 
+3 
+To avoid doubt, in the case where a Reporting Bank is a branch or office of a bank incorporated outside 
+Singapore, that is located within Singapore, any counterparty includes the head office of the Reporting Bank 
+and other branches and offices of the bank incorporated outside Singapore, that are located outside 
+Singapore. 
+
+
+7 
+ 
+Reporting Bank in the event the counterparty, or a third party in whose favour the 
+arrangement is made, as the case may be, utilises or calls upon the commitment4, but 
+does not include any arrangement where the drawdown or utilisation is subject to the 
+approval of the Reporting Bank at the point of drawdown, and the Reporting Bank has 
+the unconditional right to refuse drawdown. 
+ 
+Liquid Assets 
+ 
+8 
+For the purposes of section 38(9) of the Act, the following assets are “liquid assets”: 
+ 
+(a) 
+currency notes and coins of Singapore which are legal tender in Singapore, or 
+foreign currency; 
+ 
+(b) 
+cash balances in a Reporting Bank’s Current Account and Custody Cash 
+Account maintained with the Authority5; 
+ 
+(c) 
+any SGS and any SGS held under a reverse repurchase agreement; 
+ 
+(d) 
+any sukuk issued by Singapore Sukuk Pte Ltd; 
+ 
+(e) 
+any MAS Bills and any MAS Bills held under a reverse repurchase agreement; 
+ 
+(f) 
+any debt securities or sukuk 6  denominated in the relevant currency or 
+currencies, as the case may be, other than a sukuk which is a liquid asset by 
+virtue of sub-paragraph (d), that are issued by a sovereign or a central bank 
+and assigned a credit rating of at least AA- by Fitch Ratings or Standard and 
+Poor’s Ratings Services or a credit rating of at least Aa3 by Moody’s Investor 
+Services, and include any such debt securities or sukuk held under a reverse 
+repurchase agreement; 
+ 
+(g) 
+any debt securities or sukuk denominated in the relevant currency or 
+currencies, as the case may be, other than a sukuk which is a liquid asset by 
+virtue of sub-paragraph (d) or a debt security or sukuk defined in sub-
+paragraph (f), that – 
+ 
+(i) 
+are issued by a statutory board in Singapore, and have a minimum issue 
+size of S$200 million; 
+ 
+4 
+For example, any unutilised portion of a guarantee, any standby letter of credit, any warranty, any standby 
+credit facility, any forward asset purchase, any underwriting arrangements, any credit protection sold by 
+the Reporting Bank and any liquidity facilities granted by the Reporting Bank. 
+5 
+To avoid doubt, this does not include overnight deposits or term deposits placed with the Authority. 
+6 
+To avoid doubt, only sukuk that demonstrate characteristics similar to a debt security are eligible as Liquid 
+Assets. 
+
+
+8 
+ 
+ 
+(ii) 
+are assigned a credit rating that satisfies the long-term issue or short-
+term issue credit ratings set out in Appendix 3, and have a minimum 
+issue size of S$200 million; 
+ 
+(iii) 
+are issued by a sovereign, the Bank for International Settlements, the 
+International Monetary Fund, the European Union, the European 
+Stability Mechanism, the European Financial Stability Facility, a 
+multilateral development bank, or a sovereign-guaranteed company 
+(where the sovereign or government is not the Singapore Government), 
+and are assigned a credit rating of AAA by Fitch Ratings or Standard and 
+Poor’s Ratings Services or a credit rating of Aaa by Moody’s Investor 
+Services; or 
+ 
+(iv) 
+are issued by a PSE that is assigned a credit rating of AAA by Fitch 
+Ratings or Standard and Poor’s Ratings Services or a credit rating of Aaa 
+by Moody’s Investor Services, and assigned a risk weight of 0% under 
+paragraph 7.3.177.3.48 of MAS Notice 637, 
+ 
+and include any such debt securities or sukuk held under a reverse repurchase 
+agreement7; 
+ 
+(h) 
+any bill of exchange which satisfies the requirements set out in Appendix 2; 
+ 
+provided always that – 
+ 
+(i) 
+the asset is unencumbered; 
+ 
+(j) 
+where the asset is a debt security or sukuk, it is not a convertible debt security 
+or sukuk; and 
+ 
+(k) 
+the asset does not arise or result from any contractual or other arrangements 
+with, or investments in, a counterparty related to the Reporting Bank. 
+ 
+[MAS Notice 649 (Amendment) 2024] 
+ 
+9 
+For the purposes of paragraph 8(f), (g)(ii) and (g)(iii), where the debt security or sukuk 
+is issued by a sovereign or central bank, and the debt security or sukuk does not have any 
+ 
+7 
+To avoid doubt, where an issue of such debt securities or sukuk is partially redeemed such that the 
+outstanding issue size falls below S$200 million, those debt securities or sukuk would no longer be eligible 
+as Liquid Assets under paragraph 8(g)(i) and (ii). 
+
+
+9 
+ 
+credit rating assigned to it by Fitch Ratings, Standard & Poor’s Ratings Services or Moody’s 
+Investor Services, the Reporting Bank may – 
+ 
+(a) 
+treat the credit rating of the issuing sovereign or central bank assigned by Fitch 
+Ratings, Standard & Poor’s Ratings Services or Moody’s Investor Services as 
+that assigned to the debt security or sukuk; and 
+ 
+(b) 
+where the issuing central bank does not have any credit rating assigned to it 
+by Fitch Ratings, Standard & Poor’s Ratings Services or Moody’s Investor 
+Services, treat the credit rating of the sovereign of the country or jurisdiction 
+of the central bank assigned by Fitch Ratings, Standard & Poor’s Ratings 
+Services or Moody’s Investor Services as that assigned to the debt security or 
+sukuk. 
+ 
+Valuation of Liquid Assets 
+ 
+10 
+When computing the amount of Liquid Assets held by a Reporting Bank on any 
+maintenance day, the Reporting Bank must use – 
+ 
+(a) 
+in the case of its bills of exchange, the book value of those bills of exchange; 
+and 
+ 
+(b) 
+in the case of its Liquid Assets other than bills of exchange, the marked-to-
+market value of those Liquid Assets as of the computation day to which that 
+maintenance day relates, multiplied by the following relevant percentage: 
+ 
+(i) 
+where the Liquid Asset is a debt security or sukuk set out in paragraph 
+8(g)(i) to (iv), and the Reporting Bank holds more than 20% of the total 
+market of the particular issue of the debt security or sukuk (including 
+issues from different tranches), 50%; 
+ 
+(ii) 
+where the Liquid Asset is a debt security or sukuk set out in paragraph 
+8(g)(i), and the Reporting Bank does not hold more than 20% of the 
+total market of the particular issue of the debt security or sukuk 
+(including issues from different tranches), 90%; 
+ 
+(iii) 
+where the Liquid Asset is a debt security or sukuk set out in paragraph 
+8(g)(ii), and the Reporting Bank does not hold more than 20% of the 
+total market of the particular issue of the debt security or sukuk 
+(including issues from different tranches), the percentage determined 
+in accordance with Appendix 3; 
+ 
+
+
+10 
+ 
+(iv) 
+for all other Liquid Assets not set out in sub-paragraphs (b)(i) to (b)(iii), 
+100%. 
+ 
+11 
+Despite paragraph 10(b), a Reporting Bank may, upon giving prior written notice of at 
+least one month to the Authority, use the marked-to-market value of its Liquid Assets other 
+than bills of exchange as of a maintenance day when computing the amount of Liquid Assets 
+held by the Reporting Bank on the maintenance day. A Reporting Bank that has adopted the 
+treatment in this paragraph must obtain the Authority’s prior written approval to adopt the 
+treatment in paragraph 10(b) subsequently.8 
+ 
+Computation of Qualifying Liabilities 
+ 
+12 
+A Reporting Bank must compute its Qualifying Liabilities as the sum of9 – 
+ 
+(a) 
+all liabilities of the Reporting Bank denominated in the relevant currency or 
+currencies, as the case may be, due to non-bank customers other than the 
+Authority and merchant banks in Singapore, computed on a gross basis; 
+ 
+(b) 
+all liabilities of the Reporting Bank denominated in the relevant currency or 
+currencies, as the case may be, due to the Authority, that – 
+ 
+(i) 
+are due within one month from the computation day; and 
+ 
+(ii) 
+are computed on a net basis after the deduction of all claims 
+denominated in the relevant currency or currencies, as the case may 
+be, by the Reporting Bank on the Authority, that – 
+ 
+(A) 
+are maturing within one month from the computation day; 
+ 
+(B) 
+are not Liquid Assets10; and 
+ 
+(C) 
+are not cash receivables from the Authority arising from reverse 
+repurchase agreements of Liquid Assets transacted with the 
+Authority, 
+ 
+and where this is a net asset, the Reporting Bank may deduct the net asset 
+amount from Qualifying Liabilities; 
+ 
+ 
+8 
+The Authority will not ordinarily grant such an approval except in exceptional circumstances. 
+9 
+To avoid doubt, this excludes any contingent liability of the Reporting Bank. 
+10 
+To avoid doubt, as MAS Bills held by the Reporting Bank, including those held under a reverse repurchase 
+agreement, are Liquid Assets, cash receivables from MAS Bills cannot be deducted when computing the 
+liabilities of the Reporting Bank due to the Authority on a net basis under paragraph 12(b)(ii). 
+
+
+11 
+ 
+(c) 
+all liabilities of the Reporting Bank denominated in the relevant currency or 
+currencies, as the case may be, due to Relevant Entities, that – 
+ 
+(i) 
+are due within one month from the computation day; and 
+ 
+(ii) 
+are computed on a net basis after the deduction of all claims 
+denominated in the relevant currency or currencies, as the case may 
+be, by the Reporting Bank on Relevant Entities, that – 
+ 
+(A) 
+are maturing within one month from the computation day; 
+ 
+(B) 
+are not Liquid Assets11; 
+ 
+(C) 
+are not cash receivables from convertible debt securities or 
+sukuk, issued by Relevant Entities; and 
+ 
+(D) 
+are not cash receivables from Relevant Entities arising from 
+reverse repurchase agreements of Liquid Assets transacted 
+with Relevant Entities, 
+ 
+and where this is a net asset, the Reporting Bank must not deduct the net asset 
+amount from Qualifying Liabilities and must treat the net asset amount as zero; 
+ 
+(d) 
+15% of all undrawn commitments of the Reporting Bank denominated in the 
+relevant currency or currencies, as the case may be. For the purposes of the 
+Singapore Dollar MLA requirement, where the undrawn commitment is a 
+multi-currency facility involving the Singapore dollars as a component currency, 
+the Reporting Bank must include the entire facility amount as its undrawn 
+commitment for its computation of its Singapore Dollar Qualifying Liabilities. 
+However, if there is a sub-limit for the Singapore dollars in the facility, the 
+Reporting Bank may use the sub-limit amount for its computation of its 
+Singapore Dollar Qualifying Liabilities; 
+ 
+ 
+11 
+Claims on Relevant Entities that are not Liquid Assets include – 
+(a) deposits placed with any Relevant Entity; 
+(b) certificates of deposit issued by any Relevant Entity; 
+(c) loans extended to any Relevant Entity; 
+(d) cash receivables from debt securities or sukuk which are not Liquid Assets and are issued by any 
+Relevant Entity (“Relevant Debt Securities or Sukuk”). To avoid doubt, claims on Relevant Entities that 
+are not Liquid Assets include cash receivables from Relevant Debt Securities or Sukuk that are posted 
+as collateral by the Reporting Bank in a repurchase agreement but does not include cash receivables 
+from Relevant Debt Securities or Sukuk that are held by the Reporting Bank under a reverse repurchase 
+agreement; and 
+(e) cash receivables from any Relevant Entity, other than arising from (a) to (d) above. 
+
+
+12 
+ 
+(e) 
+all liabilities of the Reporting Bank denominated in the relevant currency or 
+currencies, as the case may be, arising from the issue of bills of exchange, other 
+than a bill of exchange which satisfies the requirements set out in Appendix 1; 
+and 
+ 
+(f) 
+all liabilities of the Reporting Bank denominated in the relevant currency or 
+currencies, as the case may be, arising from – 
+ 
+(i) 
+the provision of any e-money issuance service as defined in section 2(1) 
+of the Payment Services Act 2019; and 
+ 
+(ii) 
+the issuance of any limited purpose e-money; 
+ 
+but does not include any liability of the Reporting Bank arising from – 
+ 
+(g) 
+any funds received through repurchase agreements of Liquid Assets; 
+ 
+(h) 
+any funds received through currency, interest rate and foreign exchange swaps; 
+ 
+(i) 
+any issue of subordinated debt, the terms of which comply with the criteria for 
+the treatment of the liabilities as capital in its computation of its capital 
+adequacy ratio under section 10(2) of the Act, whether or not the entire 
+amount of such liabilities is in fact treated in such computation as capital; and 
+ 
+(j) 
+any funds raised through the discounting of any bill of exchange which satisfies 
+the requirements set out in Appendix 1, with other banks, merchant banks in 
+Singapore or finance companies (as defined in section 2 of the Finance 
+Companies Act 1967). 
+ 
+MLA Framework 
+ 
+13 
+A Reporting Bank must hold, at all times12 – 
+ 
+(a) 
+Liquid Assets denominated in any currency amounting to no less than 16% of 
+the value of its Qualifying Liabilities denominated in any currency (“all currency 
+MLA requirement”); and 
+ 
+(b) 
+Liquid Assets denominated in Singapore dollars amounting to no less than 16% 
+of the value of its Singapore Dollar Qualifying Liabilities (“Singapore Dollar MLA 
+requirement”). 
+ 
+12 
+A Reporting Bank should ensure its liquidity risk management is sound and commensurate with the size, 
+nature and complexity of its activities, and observe the guidelines in Appendix 8. 
+
+
+13 
+ 
+ 
+14 
+A Reporting Bank must treat every business day as a computation day. On a 
+maintenance day, a Reporting Bank must hold the Singapore Dollar MLA requirement and the 
+all currency MLA requirement, respectively, that was computed on the relevant computation 
+day. Where a day is not a business day, a Reporting Bank must hold for that day, the Singapore 
+Dollar MLA requirement and the all currency MLA requirement of the immediately preceding 
+maintenance day which is a business day. Appendix 4 sets out the computation and 
+maintenance schedules for a Reporting Bank determining its Singapore Dollar MLA 
+requirement and all currency MLA requirement. 
+ 
+Minimum Amount of Tier-1 Liquid Assets 
+ 
+15 
+A Reporting Bank must hold, at all times – 
+ 
+(a) 
+Tier-1 Liquid Assets denominated in any currency amounting to no less than 8% 
+of the value of its Qualifying Liabilities denominated in any currency; and 
+ 
+(b) 
+Tier-1 Liquid Assets denominated in Singapore dollars amounting to no less 
+than 8% of the value of its Singapore Dollar Qualifying Liabilities. 
+ 
+Utilisation of Liquid Assets 
+ 
+16 
+A Reporting Bank must – 
+ 
+(a) 
+give prior written notification to the Authority of its intent to utilise its Liquid 
+Assets in a liquidity stress situation, where such utilisation will cause the 
+Reporting Bank’s MLA to fall below the prevailing minimum requirements as 
+described in paragraphs 13 and 15; and 
+ 
+(b) 
+ensure that the notification is signed by its chief executive, chief financial 
+officer or any equivalent senior management. 
+ 
+17 
+A Reporting Bank must – 
+ 
+(a) 
+provide its justification for the utilisation of Liquid Assets; 
+ 
+(b) 
+set out the cause of the liquidity stress situation and provide supporting 
+documents, where available; and 
+ 
+(c) 
+detail the steps which it has taken and is going to take to resolve the liquidity 
+stress situation, 
+ 
+to the Authority within one business day after the utilisation of its Liquid Assets. 
+
+
+14 
+ 
+ 
+18 
+A Reporting Bank must keep the Authority informed of material developments during 
+the liquidity stress situation. 
+ 
+Submission of liquidity returns 
+ 
+19 
+A Reporting Bank must prepare the appropriate liquidity returns set out at Appendix 
+5 as at the last day of each month. 
+ 
+20 
+A Reporting Bank must submit all returns prepared in accordance with paragraph 19 
+to the Authority electronically through MASNET not later than 14 days after the last day of 
+each month. 
+ 
+21 
+Despite paragraph 20, if the day on which a Reporting Bank has to submit any return 
+is not a business day, the Reporting Bank may submit the return on the next business day. 
+
+
+15 
+ 
+PART II – LCR 
+ 
+Definitions 
+ 
+22 
+In Part II – LCR – 
+ 
+“30-day LCR horizon” means the 30-day period following the day on which the LCR is 
+computed; 
+ 
+“Alternative Liquidity Approaches” means the alternative liquidity approaches 
+available in a country or jurisdiction with an insufficient supply of Level 1 HQLA in its 
+domestic currency, as described in the “Liquidity Coverage Ratio LCR31 Alternative 
+liquidity approaches” issued by the Basel Committee on Banking Supervision on 15 
+December 2019; 
+ 
+“cash management service”, in relation to a Reporting Bank, means one or more of 
+the following: 
+ 
+(a) 
+the remittance of payments; 
+ 
+(b) 
+collection and aggregation of funds; 
+ 
+(c) 
+payroll administration; 
+ 
+(d) 
+control over the disbursement of funds, 
+ 
+in the context of a relationship where the Reporting Bank provides products and 
+services to a customer to manage his or its cash flows, assets and liabilities, and 
+conducts financial transactions necessary to the customer’s affairs or operations; 
+ 
+“clearing service”, in relation to a Reporting Bank, means one or more of the following: 
+ 
+(a) 
+the transmission, reconciliation and confirmation of payment orders; 
+ 
+(b) 
+daylight overdraft, overnight financing and maintenance of post-settlement 
+balances; 
+ 
+(c) 
+determination of intra-day and final settlement positions, 
+ 
+in the context of a relationship where the Reporting Bank provides a service that 
+enables customers to transfer funds or securities through direct participants in 
+domestic settlement systems to the final recipient; 
+ 
+
+
+16 
+ 
+“committed facility” has the same meaning as in paragraph 102; 
+ 
+“correspondent banking” has the same meaning as in paragraph 69; 
+ 
+“custody service”, in relation to a Reporting Bank, means one or more of the following: 
+ 
+(a) 
+the settlement of securities transactions; 
+ 
+(b) 
+the transfer of contractual payments; 
+ 
+(c) 
+the processing of collateral; 
+ 
+(d) 
+the provision of custody related cash management services; 
+ 
+(e) 
+the receipt of dividends and other income; 
+ 
+(f) 
+customer subscriptions and redemptions; 
+ 
+(g) 
+asset and corporate trust servicing; 
+ 
+(h) 
+treasury, escrow, funds transfer, stock transfer and agency services, including 
+payment and settlement services (excluding correspondent banking), and 
+depository receipts, 
+ 
+in the context of a relationship where the Reporting Bank provides the above services 
+to a customer in connection with the customer’s transactions in and holdings of 
+financial assets; 
+ 
+“financial institution” has the same meaning as in Annex 2A of MAS Notice 637; 
+ 
+“high quality liquid assets” or “HQLA” means any liquid asset that – 
+ 
+(a) 
+is listed in paragraph 28; 
+ 
+(b) 
+satisfies the requirements set out in paragraph 31; and 
+ 
+(c) 
+is available on a Reporting Bank’s balance sheet as at the end of the day 
+immediately preceding the 30-day LCR horizon; 
+ 
+“institutional network of cooperative banks” has the same meaning as in paragraph 
+71; 
+ 
+
+
+17 
+ 
+“insurance subsidiary” means – 
+ 
+(a) 
+a subsidiary that carries on insurance business as an insurer; 
+ 
+(b) 
+a subsidiary that is – 
+ 
+(i) 
+a holding company of the subsidiary referred to in sub-paragraph (a); 
+and 
+ 
+(ii) 
+subject to capital adequacy requirements set out in any direction 
+issued by the Authority under section 36(1) of the Financial Holding 
+Companies Act 2013 (“FHC Act”); or 
+ 
+(c) 
+a subsidiary of the holding company referred to in sub-paragraph (b) that is 
+included by the holding company in its computation of capital adequacy 
+requirements set out in any direction issued by the Authority under section 
+36(1) of the FHC Act; 
+ 
+“intragroup banking entity” means – 
+ 
+(a) 
+in the case where a Reporting Bank is incorporated in Singapore, any of the 
+following: 
+ 
+(i) 
+the Reporting Bank’s parent bank13; 
+ 
+(ii) 
+any other subsidiary14 of the Reporting Bank’s holding company, where 
+such subsidiary is a bank, or a merchant bank in Singapore; 
+ 
+(iii) 
+any subsidiary15 of the Reporting Bank, that is a bank, or a merchant 
+bank in Singapore; 
+ 
+(iv) 
+in relation to a Reporting Bank computing the LCR at the Singapore 
+Operations level, any branch or office of the Reporting Bank that is 
+located outside Singapore; or 
+ 
+(b) 
+in the case where a Reporting Bank is a branch or office of a bank incorporated 
+outside Singapore, that is located within Singapore, any of the following: 
+ 
+ 
+13 
+To avoid doubt, this includes branches of the parent bank. 
+14 
+To avoid doubt, this includes branches of the subsidiaries. 
+15 
+To avoid doubt, this includes branches of the subsidiaries. 
+
+
+18 
+ 
+(i) 
+any other branch or office of the bank (including the Reporting Bank’s 
+head office); 
+ 
+(ii) 
+the bank’s parent bank16; 
+ 
+(iii) 
+any subsidiary17 of the bank, that is a bank, or a merchant bank in 
+Singapore; 
+ 
+(iv) 
+any other subsidiary18 of the bank’s holding company, that is a bank, or 
+a merchant bank in Singapore; 
+ 
+[MAS Notice 649 (Amendment) 2024] 
+ 
+“less stable deposit” has the same meaning as in paragraph 52; 
+ 
+“Level 1 HQLA” means any HQLA listed in paragraph 28(a), (b), (c), (d), (g), (h) or (n); 
+ 
+“Level 2 HQLA” means any Level 2A HQLA or Level 2B HQLA; 
+ 
+“Level 2A HQLA” means any HQLA listed in paragraph 28(e), (i) or (o); 
+ 
+“Level 2B HQLA” means any Level 2B(I) HQLA or Level 2B(II) HQLA; 
+ 
+“Level 2B(I) HQLA” means any HQLA listed in paragraph 28(j) or (o); 
+ 
+“Level 2B(II) HQLA” means any HQLA listed in paragraph 28(f), (k), (l), (m) or (o); 
+ 
+“Liquidity Coverage Ratio” or “LCR” means a ratio which is computed at the end of 
+each day as follows: 
+ 
+LCR =
+HQLA
+Total net cash outflows × 100%; 
+ 
+“parent bank” has the same meaning as in paragraph 1 of the Fifth Schedule of the 
+Act; 
+ 
+“prime brokerage service” has the same meaning as in paragraph 70; 
+ 
+“recognised ECAI” has the same meaning as in Annex 2A of MAS Notice 637; 
+ 
+ 
+16 
+To avoid doubt, this includes branches of the parent bank. 
+17 
+To avoid doubt, this includes branches of the subsidiaries. 
+18 
+To avoid doubt, this includes branches of the subsidiaries. 
+
+
+19 
+ 
+“relevant intragroup banking entity” means – 
+ 
+(a) 
+in relation to a Reporting Bank computing the LCR at the Group level, any 
+intragroup banking entity which is not a banking group entity of the Reporting 
+Bank; 
+ 
+(b) 
+in relation to a Reporting Bank computing the LCR at the country-level group, 
+any intragroup banking entity which is not an entity in the Reporting Bank’s 
+country-level group; and 
+ 
+(c) 
+in relation to a Reporting Bank computing the LCR at the Singapore Operations 
+level or the entity level, any intragroup banking entity; 
+ 
+“retail deposit” has the same meaning as in paragraph 44; 
+ 
+“secured funding” has the same meaning as in paragraph 83; 
+ 
+“small business” means any corporation, partnership, limited liability partnership, sole 
+proprietorship, trust, or fund (including a collective investment scheme or closed-end 
+fund), with reported annual revenue of less than or equal to S$100 million; 
+ 
+“small business customer”, in relation to a Reporting Bank, means any customer or 
+group of customers – 
+ 
+(a) 
+that is a small business; 
+ 
+(b) 
+that the Reporting Bank does not have any exposure to, or that the Reporting 
+Bank has exposures of not more than S$2 million; 
+ 
+(c) 
+where the funding provided by the customer or group of customers is not more 
+than S$2 million; and 
+ 
+(d) 
+where the exposures to the customer or group of customers are managed by 
+the Reporting Bank as retail exposures, or where the Reporting Bank does not 
+have any exposure to the customer or group of customers, the funding 
+provided by the customer or group of customers is managed by the Reporting 
+Bank as retail deposits; 
+ 
+“stable deposit” has the same meaning as in paragraph 46; 
+ 
+“unsecured precious metals assets” has the same meaning as in paragraph 138; 
+ 
+“unsecured precious metals liabilities” has the same meaning as in paragraph 80; 
+
+
+20 
+ 
+ 
+“unsecured wholesale funding” has the same meaning as in paragraph 58. 
+ 
+23 
+For the purposes of the definition of “small business customer” in paragraph 22 – 
+ 
+(a) 
+in determining the total exposures to, or total funding provided by, a group of 
+customers, the Reporting Bank must ensure that the basis of aggregation of a 
+group of customers follows the basis of aggregation set out in footnote 124 
+paragraph 7.3.16 of MAS Notice 637; 
+ 
+(b) 
+an exposure is managed by the Reporting Bank as a retail exposure if the 
+exposure is originated in the same manner as other retail exposures, and is 
+managed by the Reporting Bank as part of a pool of similar exposures in its 
+internal risk management systems consistently over time and in the same 
+manner as other retail exposures; and 
+ 
+(c) 
+a funding is managed by the Reporting Bank as retail deposits if the funding is 
+originated in the same manner as other retail deposits, and is managed by the 
+Reporting Bank as part of a pool of similar deposits in its internal risk 
+management systems consistently over time and in the same manner as other 
+retail deposits. 
+ 
+[MAS Notice 649 (Amendment) 2024] 
+ 
+LCR Framework 
+ 
+24 
+A Reporting Bank must maintain at all times19 – 
+ 
+(a) 
+in the case where it is an internationally active bank, or is incorporated in 
+Singapore and whose head office or parent bank is incorporated in Singapore, 
+a Singapore Dollar LCR of at least 100% and an all currency LCR of at least 100%; 
+and 
+ 
+(b) 
+in all other cases, a Singapore Dollar LCR of at least 100% and an all currency 
+LCR of at least 50%. 
+ 
+25 
+Pursuant to section 65(2) of the Act, a Reporting Bank referred to in paragraph 24(a) 
+must comply with the requirements on Singapore Dollar LCR and all currency LCR on a 
+consolidated (“Group”) level, which consolidates the assets and liabilities of all its banking 
+group entities, other than those of the following banking group entities, if any: 
+ 
+19 
+A Reporting Bank should ensure its liquidity risk management is sound and commensurate with the size, 
+nature and complexity of its activities, and observe the guidelines in Appendix 8. 
+
+
+21 
+ 
+ 
+(a) 
+an insurance subsidiary; 
+ 
+(b) 
+any other entity, where such non-consolidation of assets and liabilities of the 
+entity is expressly permitted under the Accounting Standards. To avoid doubt, 
+the exemption for an entity that is a parent from presenting consolidated 
+financial statements in paragraph 4(a) of Singapore Financial Reporting 
+Standards 110 (“SFRS 110”) Consolidated Financial Statements does not apply 
+to the Reporting Bank for the purposes of complying with this paragraph. 
+ 
+26 
+Pursuant to paragraph 25, and for the purposes of the requirements on Singapore 
+Dollar LCR and all currency LCR at the Group level in Part II – LCR (other than paragraph 25), 
+a Reporting Bank must deem – 
+ 
+(a) 
+all assets, liabilities, equity, transactions, exposures, operations or customers 
+of a banking group entity of the Reporting Bank to be that of the Reporting 
+Bank (per the scope of consolidation in paragraph 25); and 
+ 
+(b) 
+all collateral held by a banking group entity of the Reporting Bank to be 
+collateral held by the Reporting Bank (per the scope of consolidation in 
+paragraph 25). 
+ 
+27 
+A Reporting Bank must only use HQLA denominated in Singapore dollars to fulfil the 
+requirements on Singapore Dollar LCR. To avoid doubt, the total net cash outflows for the 
+Singapore Dollar LCR only include total net cash outflows denominated in Singapore dollars. 
+ 
+HQLA 
+ 
+28 
+For the purposes of section 38(9) of the Act, the following assets are “liquid assets”: 
+ 
+(a) 
+currency notes and coins of Singapore which are legal tender in Singapore, or 
+foreign currency; 
+ 
+(b) 
+reserves held with the Authority and other central banks, which include – 
+ 
+(i) 
+cash balances in a Reporting Bank’s Current Account and Custody Cash 
+Account maintained with the Authority; 
+ 
+(ii) 
+a Reporting Bank’s overnight deposits with a central bank; and 
+ 
+
+
+22 
+ 
+(iii) 
+a Reporting Bank’s term deposits with a central bank where20 – 
+ 
+(A) 
+the Reporting Bank has a contractual agreement with the 
+central bank to repay such deposits on notice from the 
+Reporting Bank; or 
+ 
+(B) 
+the deposits constitute a loan against which the Reporting Bank 
+may borrow on a term basis or on an overnight but 
+automatically renewable basis, 
+ 
+to the extent that the Authority’s and the central banks’ policies allow them to 
+be drawn down in times of stress; 
+ 
+(c) 
+any sukuk issued by Singapore Sukuk Pte Ltd; 
+ 
+(d) 
+any marketable security or sukuk representing a claim on, or that is guaranteed 
+by, a sovereign, a central bank, a PSE, the Bank for International Settlements, 
+the International Monetary Fund, the European Central Bank, the European 
+Union, the European Stability Mechanism, the European Financial Stability 
+Facility or a multilateral development bank, which satisfies the following 
+conditions: 
+ 
+(i) 
+it is assigned a 0% risk-weight under Table 7-1 or paragraphs 
+7.3.177.3.46 to 7.3.207.3.51 of MAS Notice 637; 
+ 
+(ii) 
+it is traded in large, deep and active repurchase agreement (“repo”) or 
+cash markets characterised by a low level of concentration; 
+ 
+(iii) 
+it has a proven record as a reliable source of liquidity in the markets 
+(repo or sale) even during stressed market conditions; 
+ 
+(iv) 
+it is not an obligation of a financial institution or any of its related 
+corporations; 
+ 
+(e) 
+any marketable security or sukuk representing a claim on, or that is guaranteed 
+by, a sovereign, a central bank, a PSE or a multilateral development bank, 
+which satisfies the following conditions: 
+ 
+ 
+20 
+To avoid doubt, other term deposits with central banks are not eligible as HQLA. However, if the term 
+deposit matures within the 30-day LCR horizon, the Reporting Bank must treat the term deposit in 
+accordance with paragraph 133. 
+
+
+23 
+ 
+(i) 
+it is assigned a 20% risk weight under paragraphs 7.3.137.3.42 to 
+7.3.207.3.51 of MAS Notice 637; 
+ 
+(ii) 
+it is traded in large, deep and active repo or cash markets characterised 
+by a low level of concentration; 
+ 
+(iii) 
+it has a proven record as a reliable source of liquidity in the markets 
+(repo or sale) even during stressed market conditions, with a maximum 
+price decline or increase in haircut not exceeding 10 percentage points 
+over a 30-day period of significant liquidity stress; 
+ 
+(iv) 
+it is not an obligation of a financial institution or any of its related 
+corporations; 
+ 
+(f) 
+any marketable security or sukuk representing a claim on, or that is guaranteed 
+by, a sovereign, a central bank or a PSE, which satisfies the following conditions: 
+ 
+(i) 
+it – 
+ 
+(A) 
+has a long-term credit rating from a recognised ECAI of at least 
+BBB- or, in the absence of a long-term rating, a short-term 
+rating equivalent in quality to the long-term rating; or 
+ 
+(B) 
+does not have a credit assessment by a recognised ECAI and is 
+internally rated as having a probability of default (“PD”) 
+corresponding to a credit rating of at least BBB-; 
+ 
+(ii) 
+it is traded in large, deep and active repo or cash markets characterised 
+by a low level of concentration; 
+ 
+(iii) 
+it has a proven record as a reliable source of liquidity in the markets 
+(repo or sale) even during stressed market conditions, with a maximum 
+price decline or increase in haircut not exceeding 20 percentage points 
+over a 30-day period of significant liquidity stress; 
+ 
+(iv) 
+it is not an obligation of a financial institution or any of its related 
+corporations; 
+ 
+(g) 
+where a sovereign has a non-0% risk weight as determined in accordance with 
+Table 7-1 of MAS Notice 637, any sovereign or central bank debt security or 
+sukuk issued in domestic currencies by the sovereign or its central bank – 
+ 
+
+
+24 
+ 
+(i) 
+if the sovereign is the Singapore Government or the central bank is the 
+Authority; or 
+ 
+(ii) 
+if the sovereign or central bank is from a foreign country or jurisdiction 
+where a Reporting Bank has a branch or subsidiary21 that is approved, 
+licensed, registered or otherwise regulated by a bank regulatory agency 
+in the foreign country or jurisdiction to carry on banking business under 
+the laws of the foreign country or jurisdiction and the Reporting Bank 
+or its branch or subsidiary takes liquidity risk in that country or 
+jurisdiction; 
+ 
+(h) 
+where the sovereign has a non-0% risk weight as determined in accordance 
+with Table 7-1 of MAS Notice 637, any sovereign or central bank debt security 
+or sukuk issued in foreign currencies by the sovereign or its central bank – 
+ 
+(i) 
+if the sovereign is the Singapore Government or the central bank is the 
+Authority; or 
+ 
+(ii) 
+if the sovereign or central bank is from a foreign country or jurisdiction 
+where a Reporting Bank has a branch or subsidiary22 that is approved, 
+licensed, registered or otherwise regulated by a bank regulatory agency 
+in the foreign country or jurisdiction to carry on banking business under 
+the laws of the foreign country or jurisdiction and the Reporting Bank 
+or its branch or subsidiary takes liquidity risk in that country or 
+jurisdiction, 
+ 
+up to the amount of a Reporting Bank’s total net cash outflows in that specific 
+foreign currency arising from the operations of the Reporting Bank or its 
+branch or subsidiary, in Singapore or that country or jurisdiction, as the case 
+may be; 
+ 
+(i) 
+any corporate debt security, covered bond or sukuk, which satisfies the 
+following conditions: 
+ 
+(i) 
+in the case of a corporate debt security or sukuk, it is not a complex 
+structured product or a subordinated debt security or sukuk and it is 
+not issued by a financial institution or any of its related corporations; 
+ 
+(ii) 
+in the case of a covered bond, it is not issued by the Reporting Bank or 
+any of its related corporations; 
+ 
+21 
+To avoid doubt, this includes a branch of the subsidiary. 
+22 
+To avoid doubt, this includes a branch of the subsidiary. 
+
+
+25 
+ 
+ 
+(iii) 
+it – 
+ 
+(A) 
+has a long-term credit rating from a recognised ECAI of at least 
+AA- or, in the absence of a long-term rating, a short-term rating 
+equivalent in quality to the long-term rating; or 
+ 
+(B) 
+does not have a credit assessment by a recognised ECAI but is 
+internally rated as having a PD corresponding to a credit rating 
+of at least AA-; 
+ 
+(iv) 
+it is traded in large, deep and active repo or cash markets characterised 
+by a low level of concentration; 
+ 
+(v) 
+it has a proven record as a reliable source of liquidity in the markets 
+(repo or sale) even during stressed market conditions, with a maximum 
+price decline or increase in haircut not exceeding 10 percentage points 
+over a 30-day period of significant liquidity stress; 
+ 
+(j) 
+any corporate debt security or sukuk, which satisfies the following conditions: 
+ 
+(i) 
+it is not a complex structured product or a subordinated debt security 
+or sukuk; 
+ 
+(ii) 
+it is not issued by a financial institution or any of its related 
+corporations; 
+ 
+(iii) 
+it – 
+ 
+(A) 
+has a long-term credit rating from a recognised ECAI of at least 
+A- or, in the absence of a long-term rating, a short-term rating 
+equivalent in quality to the long-term rating; or 
+ 
+(B) 
+does not have a credit assessment by a recognised ECAI and is 
+internally rated as having a PD corresponding to a credit rating 
+of at least A-; 
+ 
+(iv) 
+it is traded in large, deep and active repo or cash markets characterised 
+by a low level of concentration; 
+ 
+(v) 
+it has a proven record as a reliable source of liquidity in the markets 
+(repo or sale) even during stressed market conditions, with a maximum 
+
+
+26 
+ 
+price decline or increase in haircut not exceeding 20 percentage points 
+over a 30-day period of significant liquidity stress; 
+ 
+(k) 
+any corporate debt security or sukuk, which satisfies the following conditions: 
+ 
+(i) 
+it is not a complex structured product or a subordinated debt security 
+or sukuk; 
+ 
+(ii) 
+it is not issued by a financial institution or any of its related 
+corporations; 
+ 
+(iii) 
+it – 
+ 
+(A) 
+has a long-term credit rating from a recognised ECAI between 
+BBB+ and BBB- or, in the absence of a long-term rating, a short-
+term rating equivalent in quality to the long-term rating; or 
+ 
+(B) 
+does not have a credit assessment by a recognised ECAI and is 
+internally rated as having a PD corresponding to a credit rating 
+of between BBB+ and BBB-; 
+ 
+(iv) 
+it is traded in large, deep and active repo or cash markets characterised 
+by a low level of concentration; 
+ 
+(v) 
+it has a proven record as a reliable source of liquidity in the markets 
+(repo or sale) even during stressed market conditions, with a maximum 
+price decline or increase in haircut not exceeding 20 percentage points 
+over a 30-day period of significant liquidity stress; 
+ 
+(l) 
+any residential mortgage-backed security or sukuk (“RMBS”), which satisfies 
+the following requirements: 
+ 
+(i) 
+it is not issued by, and the underlying assets have not been originated 
+by, the Reporting Bank or any of its related corporations; 
+ 
+(ii) 
+it has a long-term credit rating from a recognised ECAI of AA or higher 
+or, in the absence of a long-term rating, a short-term rating equivalent 
+in quality to the long-term rating; 
+ 
+(iii) 
+it is traded in large, deep and active repo or cash markets characterised 
+by a low level of concentration; 
+ 
+
+
+27 
+ 
+(iv) 
+it has a proven record as a reliable source of liquidity in the markets 
+(repo or sale) even during stressed market conditions, with a maximum 
+price decline or increase in haircut not exceeding 20 percentage points 
+over a 30-day period of significant liquidity stress; 
+ 
+(v) 
+the underlying asset pool is restricted to residential mortgages and 
+does not contain structured products; 
+ 
+(vi) 
+the underlying residential mortgages are “full recourse” loans (i.e. in 
+the case of foreclosure the mortgage owner remains liable for any 
+shortfall in sales proceeds from the property) and have a maximum 
+weighted average23 loan-to-value ratio (“LTV”) of 80% at the time of 
+issuance of the RMBS; 
+ 
+(vii) 
+the securitisations are subject to risk retention laws and regulations 
+which require issuers to retain an interest in the assets they securitise; 
+ 
+(m) 
+any ordinary shares, excluding preference shares and treasury shares, which 
+satisfy the following requirements: 
+ 
+(i) 
+the shares are not issued by a financial institution or any of its related 
+corporations; 
+ 
+(ii) 
+the shares are exchange traded and centrally cleared; 
+ 
+(iii) 
+the shares are a constituent of – 
+ 
+(A) 
+the FTSE Straits Times Index (“STI”) or the MSCI Singapore Free 
+Index; 
+ 
+(B) 
+where a Reporting Bank has a branch or subsidiary24 that is 
+approved, licensed, registered or otherwise regulated by a bank 
+regulatory agency in a foreign country or jurisdiction to carry on 
+banking business under the laws of the foreign country or 
+jurisdiction and the Reporting Bank or its branch or subsidiary 
+takes liquidity risk in that country or jurisdiction, an index in the 
+foreign country or jurisdiction that the bank regulatory agency 
+ 
+23 
+Weighted average LTV is computed as follows: 
+𝑤𝑒𝑖𝑔ℎ𝑡𝑒𝑑 𝑎𝑣𝑒𝑟𝑎𝑔𝑒 𝐿𝑇𝑉 
+= 𝑚𝑜𝑟𝑡𝑔𝑎𝑔𝑒 𝑎𝑚𝑜𝑢𝑛𝑡1 × 𝐿𝑇𝑉1 + 𝑚𝑜𝑟𝑡𝑔𝑎𝑔𝑒 𝑎𝑚𝑜𝑢𝑛𝑡2 × 𝐿𝑇𝑉2 + ⋯+ 𝑚𝑜𝑟𝑡𝑔𝑎𝑔𝑒 𝑎𝑚𝑜𝑢𝑛𝑡𝑛× 𝐿𝑇𝑉𝑛
+𝑚𝑜𝑟𝑡𝑔𝑎𝑔𝑒 𝑎𝑚𝑜𝑢𝑛𝑡1 + 𝑚𝑜𝑟𝑡𝑔𝑎𝑔𝑒 𝑎𝑚𝑜𝑢𝑛𝑡2 + ⋯+  𝑚𝑜𝑟𝑡𝑔𝑎𝑔𝑒 𝑎𝑚𝑜𝑢𝑛𝑡𝑛
+, 
+where n is the number of residential mortgages in the RMBS. 
+24 
+To avoid doubt, this includes a branch of the subsidiary. 
+
+
+28 
+ 
+of that country or jurisdiction recognises for purposes of 
+including the equities as Level 2B HQLA under the applicable 
+regulatory policy; or 
+ 
+(C) 
+any other index in Singapore for which a Reporting Bank can 
+demonstrate to the satisfaction of the Authority that the stock 
+is as liquid and readily marketable as equities traded on the 
+indices in sub-paragraph (m)(iii)(A); 
+ 
+(iv) 
+denominated in Singapore dollars or in the domestic currency of the 
+foreign country or jurisdiction referred to in sub-paragraph (m)(iii)(B); 
+ 
+(v) 
+traded in large, deep and active repo or cash markets characterised by 
+a low level of concentration; 
+ 
+(vi) 
+have a proven record as a reliable source of liquidity in the markets 
+(repo or sale) even during stressed market conditions, with a maximum 
+price decline or increase in haircut not exceeding 40 percentage points 
+over a 30-day period of significant liquidity stress; 
+ 
+(n) 
+where a Reporting Bank has a branch or subsidiary25 that is approved, licensed, 
+registered or otherwise regulated by a bank regulatory agency in a foreign 
+country or jurisdiction to carry on banking business under the laws of the 
+foreign country or jurisdiction and the foreign country or jurisdiction adopts 
+the Alternative Liquidity Approaches, any liquid assets recognised as 
+alternative liquid assets in the foreign country or jurisdiction and which the 
+bank regulatory agency of that country or jurisdiction recognises for purposes 
+of including the liquid assets as Level 1 HQLA, subject to the requirements 
+specified in paragraph 149; 
+ 
+(o) 
+where a Reporting Bank has a branch or subsidiary26 that is approved, licensed, 
+registered or otherwise regulated by a bank regulatory agency in a foreign 
+country or jurisdiction to carry on banking business under the laws of the 
+foreign country or jurisdiction and the foreign country or jurisdiction adopts 
+the Alternative Liquidity Approaches, any liquid assets recognised as 
+alternative liquid assets in the foreign country or jurisdiction and which the 
+bank regulatory agency of that country or jurisdiction recognises for purposes 
+ 
+25 
+To avoid doubt, this includes a branch of the subsidiary. 
+26 
+To avoid doubt, this includes a branch of the subsidiary. 
+
+
+29 
+ 
+of including the liquid assets as Level 2 HQLA, subject to the requirements 
+specified in paragraph 149. 
+ 
+[MAS Notice 649 (Amendment) 2024] 
+ 
+29 
+For the purposes of determining the eligibility of a security or sukuk as a liquid asset 
+under paragraph 28(f)(i)(A), (i)(iii)(A), (j)(iii)(A), (k)(iii)(A) and (l)(ii), – 
+ 
+(a) 
+where there are 2 credit ratings for a particular issue of the security or sukuk, 
+the Reporting Bank must use the poorer credit rating for that particular issue 
+of the security or sukuk; and 
+ 
+(b) 
+where there are more than 2 credit ratings for a particular issue of the security 
+or sukuk, the Reporting Bank must use the higher of the 2 poorest credit 
+ratings for that particular issue of the security or sukuk. 
+ 
+30 
+Despite paragraph 28(f)(i)(A), (i)(iii)(A), (j)(iii)(A), (k)(iii)(A) and (l)(ii), a Reporting Bank 
+may recognise local rating scales (rather than international ratings) of a recognised ECAI if the 
+corporate debt securities or covered bonds relevant securities, covered bonds or sukuk are 
+held by the Reporting Bank for local currency liquidity needs arising from its operations in that 
+local country or jurisdiction. 
+ 
+[MAS Notice 649 (Amendment) 2024] 
+ 
+Operational requirements 
+ 
+31 
+A Reporting Bank must treat a liquid asset as HQLA only if the liquid asset complies 
+with the following operational requirements27: 
+ 
+(a) 
+the liquid asset is unencumbered28 and is not pledged whether explicitly or 
+implicitly, to secure, collateralise or credit-enhance any transaction, nor be 
+designated to cover operational costs29; 
+ 
+ 
+27 
+A Reporting Bank should periodically monetise a representative proportion of the assets in the stock 
+through repo or outright sale, in order to test its access to the market, the effectiveness of its processes for 
+monetisation, the availability of the assets, and to minimise the risk of negative signalling during a period of 
+actual stress. 
+28 
+To avoid doubt, all assets maintained and held by the Reporting Bank for the purposes of section 40 of the 
+Act are encumbered. For the purposes of Part II – LCR, cash balances maintained by the Reporting Bank for 
+the purposes of section 39 of the Act are considered unencumbered. 
+29 
+For example, rents and salary. 
+
+
+30 
+ 
+(b) 
+the liquid asset is under the control of the function30 charged with managing 
+the liquidity of the Reporting Bank. In this regard, an asset would only be 
+considered to be under the control of the function if the asset is maintained in 
+a separate pool managed by the function with the sole intent for use as a 
+source of contingent funds or if the Reporting Bank is able to demonstrate that 
+the function has the authority and legal and operational capability to monetise 
+the asset at any point in the 30-day LCR horizon and that the proceeds of doing 
+so are available to the function throughout the 30-day LCR horizon without 
+directly conflicting with a stated business or risk management strategy31; 
+ 
+(c) 
+in the case of a liquid asset received in reverse repo and securities financing 
+transactions, the liquid asset has not been rehypothecated and is legally and 
+contractually available for the Reporting Bank to sell or deal with such assets; 
+ 
+(d) 
+in the case of a liquid asset deposited with, or pledged to, a central bank or a 
+PSE, the liquid asset has not been used to generate liquidity; 
+ 
+(e) 
+in the case of a liquid asset held by a banking group entity of the Reporting 
+Bank to meet statutory liquidity requirements imposed on the banking group 
+entity by the laws and regulations of any country or jurisdiction to which the 
+banking group entity is subject to, the Reporting Bank includes the cash 
+outflows and cash inflows of the banking group entity in its computation of its 
+LCR, and the liquid asset in surplus of the statutory liquidity requirements, if 
+any, is freely available to the banking group in times of stress; 
+ 
+(f) 
+in the case of a liquid asset received as collateral for derivatives transactions, 
+the liquid asset is not segregated, has not been rehypothecated and is legally 
+and contractually available for the Reporting Bank to sell or deal with such 
+assets, and the Reporting Bank records an appropriate cash outflow for the 
+associated risks in accordance with paragraph 88; 
+ 
+(g) 
+in the case of a liquid asset received as part of a basket of collateral as security 
+for a transaction, the liquid asset can be monetised separately; 
+ 
+(h) 
+in the case of a liquid asset pledged as collateral, the liquid asset is unused as 
+at the end of the day and is not intended to collateralise derivatives 
+transactions. If the Reporting Bank is unable to determine which assets are 
+unused, it must assume that the assets are encumbered in the following order: 
+ 
+30 
+For example, the treasurer. 
+31 
+For example, a Reporting Bank must exclude an asset which it is impeded from selling, such as an asset, 
+which, if sold at large fire-sale discounts would cause the Reporting Bank to breach minimum solvency 
+requirements, or an asset which the Reporting Bank is required to hold, including, but not limited to, an 
+asset to meet statutory minimum inventory requirements for market making, from the stock of HQLA. 
+
+
+31 
+ 
+ 
+(i) 
+firstly, assets that are not HQLA; 
+ 
+(ii) 
+secondly, Level 2B(II) HQLA; 
+ 
+(iii) 
+thirdly, Level 2B(I) HQLA; 
+ 
+(iv) 
+fourthly, Level 2A HQLA; 
+ 
+(v) 
+fifthly, Level 1 HQLA; 
+ 
+(i) 
+in the case of a liquid asset received as part of a securities borrowing 
+transaction that is not a reverse repo or collateral swap, the liquid asset cannot 
+be returned or recalled within the 30-day LCR horizon. 
+ 
+Composition of HQLA 
+ 
+32 
+A Reporting Bank must measure its Level 1 HQLA at an amount not greater than the 
+current market value. 
+ 
+33 
+A Reporting Bank must ensure that – 
+ 
+(a) 
+its Level 2A HQLA are subject to a 15% haircut on the current market value of 
+each Level 2A HQLA; and 
+ 
+(b) 
+its Level 2B HQLA are subject to – 
+ 
+(i) 
+a 25% haircut on the current market value of RMBS; and 
+ 
+(ii) 
+a 50% haircut on the current market value of corporate debt securities 
+(including commercial papers), sovereign debt securities, PSE debt 
+securities and ordinary shares. 
+ 
+34 
+Where a liquid asset can be categorised into different categories of HQLA, a Reporting 
+Bank must categorise the liquid asset into the HQLA category with the highest haircut, except 
+where expressly provided otherwise or where the Reporting Bank has obtained the approval 
+of the Authority to do otherwise.32 
+ 
+35 
+A Reporting Bank must apply a cap on its Level 2 HQLA, Level 2B HQLA and Level 2B(II) 
+HQLA, to ensure that they do not exceed 40%, 15% and 5% of total HQLA respectively. The 
+ 
+32 
+A Reporting Bank may apply to the Authority for such approval with evidence supporting the less 
+conservative treatment. 
+
+
+32 
+ 
+Reporting Bank must compute the cap on its Level 2 HQLA, Level 2B HQLA and Level 2B(II) 
+HQLA after the application of the required haircuts, and after taking into account the 
+unwinding of short-term securities financing transactions and collateral swap transaction 
+maturing within the 30-day LCR horizon that involve the exchange of HQLA. 
+ 
+36 
+If a liquid asset no longer qualifies as HQLA33, a Reporting Bank is permitted to keep 
+such liquid assets as HQLA for an additional 30 days. This would allow the Reporting Bank 
+additional time to adjust its HQLA as needed or replace the liquid asset. 
+ 
+37 
+A Reporting Bank must compute HQLA in accordance with the formula in Appendix 6. 
+ 
+Total net cash outflows 
+ 
+38 
+Total net cash outflows is defined as total expected cash outflows minus the lower of 
+– 
+ 
+(a) 
+total expected cash inflows; and 
+ 
+(b) 
+75% of total expected cash outflows. 
+ 
+39 
+Except where otherwise stated, a Reporting Bank must compute – 
+ 
+(a) 
+total expected cash outflows as the sum of cash outflows of outflow items; and 
+ 
+(b) 
+total expected cash inflows as the sum of cash inflows of inflow items. 
+ 
+40 
+For the purposes of computing the total net cash outflows in paragraph 38, a 
+Reporting Bank that is complying with Part II – LCR on a country-level group basis must 
+exclude cash outflows and cash inflows arising from transactions between entities in a 
+country-level group. 
+ 
+41 
+Except where otherwise stated, a Reporting Bank must compute cash outflows and 
+cash inflows of outflow and inflow items by multiplying the cash outflow and cash inflow rates 
+respectively to the outstanding balances of the outflow and inflow items due within the 30-
+day LCR horizon. For the purposes of such computation, the Reporting Bank must apply the 
+cash outflow and cash inflow rates in paragraphs 44 to 147 and Appendix 7 to each category 
+of cash outflows and cash inflows. 
+ 
+42 
+A Reporting Bank must not double count assets and liabilities in its computation of its 
+LCR. If a liquid asset is included as part of HQLA, the Reporting Bank cannot count the cash 
+inflows associated with that liquid asset as part of the total expected cash inflows. 
+ 
+33 
+For example, due to a rating downgrade. 
+
+
+33 
+ 
+ 
+43 
+Where transactions can be categorised into multiple categories with different cash 
+inflow or cash outflow rates, a Reporting Bank must apply the higher cash outflow rate or 
+lower cash inflow rate, as the case may be, except where expressly provided otherwise or 
+where the Reporting Bank has obtained the approval of the Authority to do otherwise. 
+ 
+Cash outflows 
+ 
+(A) 
+Retail deposit cash outflows 
+ 
+44 
+Retail deposits are deposits placed by a natural person. Deposits from legal entities, 
+sole proprietorships or partnerships are captured in the wholesale funding categories. A 
+Reporting Bank must include cash outflows from all retail deposits, including demand deposits 
+and term deposits, in its computation of its LCR, unless otherwise excluded under the criteria 
+set out in paragraphs 54 and 56. 
+ 
+45 
+Retail deposits are divided into “stable” and “less stable” as described in paragraphs 
+46 and 52. 
+ 
+(I) 
+Stable deposits 
+ 
+46 
+Stable deposits are those which are fully insured by the Singapore Deposit Insurance 
+Corporation Limited (“SDIC”), or an effective government deposit insurance scheme in a 
+foreign country or jurisdiction, where – 
+ 
+(a) 
+the depositors have established relationships with the Reporting Bank such 
+that the deposits are highly unlikely to be withdrawn (“established 
+relationships”); or 
+ 
+(b) 
+the deposits are in transactional accounts34. 
+ 
+47 
+Fully insured deposits means the amount of deposits that will be fully paid out by an 
+effective deposit insurance scheme. To avoid doubt, in the case of deposits that are in excess 
+of the deposit insurance limit of the effective deposit insurance scheme, a Reporting Bank 
+must treat only the amount of deposits up to the deposit insurance limit as fully insured and 
+must not treat the amount of deposits in excess of the deposit insurance limit as fully insured. 
+ 
+48 
+Effective deposit insurance scheme means a scheme – 
+ 
+(a) 
+that has the ability to make prompt payouts; 
+ 
+ 
+34 
+For example, an account where salaries are automatically credited. 
+
+
+34 
+ 
+(b) 
+that has a clearly defined coverage; 
+ 
+(c) 
+that has high public awareness; and 
+ 
+(d) 
+where the deposit insurer of the insurance scheme has formal legal powers to 
+fulfil its mandate and is operationally independent, transparent and 
+accountable. 
+ 
+49 
+A Reporting Bank may consider an explicit and legally binding sovereign deposit 
+guarantee that effectively functions as deposit insurance as an effective deposit insurance 
+scheme. 
+ 
+50 
+A Reporting Bank must apply a cash outflow rate of 5% to stable deposits that are fully 
+insured by SDIC. 
+ 
+51 
+Where a Reporting Bank has stable deposits that are fully insured by an effective 
+government deposit insurance scheme in a foreign country or jurisdiction, the Reporting Bank 
+must follow the relevant treatment adopted by the bank regulatory agency in the foreign 
+country or jurisdiction. 
+ 
+(II) 
+Less stable deposits 
+ 
+52 
+Less stable deposits are deposits that are not stable deposits. 
+ 
+53 
+A Reporting Bank must apply a cash outflow rate of 10% to less stable deposits. 
+ 
+(III) 
+Retail term deposits 
+ 
+54 
+Subject to paragraphs 55 and 56, a Reporting Bank must exclude the cash outflow 
+from a retail term deposit with a residual maturity or withdrawal notice period of greater than 
+30 days from the total expected cash outflows, if the depositor has no legal right to withdraw 
+the deposit within the 30-day LCR horizon, or if early withdrawal results in a significant penalty 
+that is materially greater than the loss of interest. 
+ 
+55 
+If a Reporting Bank allows a depositor to withdraw a retail term deposit referred to in 
+paragraph 54 within the 30-day LCR horizon without applying any penalty that is materially 
+greater than the loss of interest, or despite a clause that says the depositor has no legal right 
+to withdraw, the Reporting Bank must include the cash outflow from all retail term deposits 
+referred to in paragraph 54 in the total expected cash outflows as computed in accordance 
+with paragraphs 46 to 53. 
+ 
+
+
+35 
+ 
+56 
+Despite paragraph 55, if a Reporting Bank allows a depositor that is undergoing 
+exceptional circumstances that would qualify as hardship35 to withdraw a retail term deposit 
+referred to in paragraph 54 within the 30-day LCR horizon without applying any penalty that 
+is materially greater than the loss of interest, or despite a clause that says the depositor has 
+no legal right to withdraw, the Reporting Bank may continue to exclude the cash outflow from 
+all retail term deposits referred to in paragraph 54 from the total expected cash outflows. 
+ 
+57 
+Where a Reporting Bank has a branch or subsidiary 36 that is approved, licensed, 
+registered or otherwise regulated by a bank regulatory agency in a foreign country or 
+jurisdiction to carry on banking business under the laws of the foreign country or jurisdiction, 
+the Reporting Bank must apply the cash outflow and cash inflow rates outlined in Part II – LCR 
+in its computation of its LCR, except for deposits from retail and small business customers 
+where the Reporting Bank must follow the relevant treatment adopted in that country or 
+jurisdiction, subject to the requirements in paragraph 148. 
+ 
+(B) 
+Unsecured wholesale funding cash outflows 
+ 
+58 
+Unsecured wholesale funding are liabilities and general obligations (excluding 
+liabilities and obligations related to derivative contracts) of persons who are not natural 
+persons and such liabilities and general obligations are not secured by legal rights to 
+specifically designated assets owned by the person in the event of the bankruptcy, insolvency, 
+liquidation or resolution of the person. 
+ 
+59 
+A Reporting Bank must include the cash outflow from an unsecured wholesale funding 
+in the total expected cash outflows, if the funding is callable within the 30-day LCR horizon, 
+has its earliest possible contractual maturity date situated within the 30-day LCR horizon37, 
+has an undetermined maturity, or has options that are exercisable at the discretion of the 
+counterparty to the unsecured wholesale funding transaction within the 30-day LCR horizon. 
+For options exercisable at the Reporting Bank’s discretion, the Reporting Bank must consider 
+reputational factors that may limit its ability not to exercise the option and its impact on 
+unsecured wholesale funding cash outflows. 
+ 
+60 
+A Reporting Bank must not include unsecured wholesale funding that is callable by the 
+counterparty to the unsecured wholesale funding transaction subject to a contractually 
+defined and binding notice period surpassing the 30-day LCR horizon in the total expected 
+cash outflows. 
+ 
+ 
+35 
+For example, loss of employment, entering into a serious accident or illness. 
+36 
+To avoid doubt, this includes a branch of the subsidiary. 
+37 
+For example, maturing term deposits and debt securities. 
+
+
+36 
+ 
+(I) 
+Unsecured wholesale funding provided by small business customers 
+ 
+61 
+A Reporting Bank must treat unsecured wholesale funding provided by small business 
+customers in the same way as retail deposits. 
+ 
+(II) 
+Operational deposits generated by clearing, custody and cash management 
+services 
+ 
+62 
+Subject to paragraphs 63, 64, 65 and 68, a Reporting Bank may, with the Authority’s 
+approval – 
+ 
+(a) 
+apply a cash outflow rate that is the same as the cash outflow rate applied to 
+stable deposits, to the portion of operational deposits from customers 
+receiving qualifying clearing, custody and cash management services from the 
+Reporting Bank (“qualifying operational deposits”) that is fully covered by a 
+deposit insurance scheme; and 
+ 
+(b) 
+apply a cash outflow rate of 25% to other qualifying operational deposits. 
+ 
+63 
+For the purposes of paragraph 62, a Reporting Bank must ensure that qualifying 
+clearing, custody or cash management services meet the following criteria: 
+ 
+(a) 
+the customer is reliant on the Reporting Bank to perform these services as an 
+independent third party intermediary in order to fulfil its normal banking 
+activities over the 30-day LCR horizon38; 
+ 
+(b) 
+the Reporting Bank is providing these services under a legally binding 
+agreement to customers; 
+ 
+(c) 
+the customer may only terminate the agreement referred to in sub-paragraph 
+(b) by giving prior notice of at least 30 days or paying significant switching 
+costs 39  if the operational deposits are withdrawn within the 30-day LCR 
+horizon. 
+ 
+64 
+For the purposes of paragraph 62, a Reporting Bank must ensure that qualifying 
+operational deposits generated from the qualifying clearing, custody and cash management 
+services meet the following criteria: 
+ 
+ 
+38 
+For example, this condition would not be met if the Reporting Bank is aware that the customer has adequate 
+back-up arrangements. 
+39 
+For example, those related to transaction, information technology, early termination or legal costs. 
+
+
+37 
+ 
+(a) 
+the deposits are by-products of the underlying services provided by the 
+Reporting Bank and not sought out in the wholesale market in the sole interest 
+of offering interest income; 
+ 
+(b) 
+the deposits are held in specifically designated accounts and priced without 
+giving an economic incentive to the customer40 to leave any excess balances 
+on these accounts. In the case that interest rates in a country or jurisdiction 
+are close to zero, such accounts are likely to be non-interest bearing.41 
+ 
+65 
+For the purposes of paragraph 62, a Reporting Bank must not treat any excess 
+balances that may be withdrawn while still leaving sufficient funds to fulfil the qualifying 
+clearing, custody and cash management services as qualifying operational deposits. 
+ 
+66 
+For the purposes of paragraph 65, a Reporting Bank must – 
+ 
+(a) 
+determine the methodology for identifying excess balances that are excluded 
+from this category; and 
+ 
+(b) 
+conduct an assessment based on the methodology at a sufficiently granular 
+level to adequately assess the risk of withdrawal in an idiosyncratic stress. 
+ 
+67 
+For the purposes of the methodology referred to in paragraph 66(a), a Reporting Bank 
+must ensure that the methodology takes into account relevant factors 42, and consider 
+appropriate indicators43 to identify those customers that are not actively managing account 
+balances efficiently. 
+ 
+68 
+For the purposes of paragraph 62, a Reporting Bank must not treat any deposit arising 
+out of correspondent banking or from the provision of prime brokerage services as qualifying 
+operational deposits. 
+ 
+69 
+Correspondent banking means any arrangement under which a bank or merchant 
+bank (correspondent) holds deposits owned by another bank or merchant bank (respondent) 
+and provides payment or other services to the respondent in order to settle foreign currency 
+transactions.44 
+ 
+40 
+To avoid doubt, paying market interest rates for the deposits is not sufficient for the Reporting Bank to 
+determine that the deposits are priced without giving an economic incentive to the customer. 
+41 
+The Reporting Bank should be particularly aware that during prolonged periods of low interest rates, excess 
+balances could be significant. 
+42 
+For example, the likelihood that wholesale customers have above average balances in advance of specific 
+payment needs. 
+43 
+For example, ratios of account balances to payment or settlement volumes or to assets under custody. 
+44 
+For example, nostro and vostro accounts used to settle transactions in a currency other than the domestic 
+currency of the respondent bank or merchant bank for the provision of clearing and settlement of payments. 
+
+
+38 
+ 
+ 
+70 
+Prime brokerage services is a package of services45 offered to large active investors46. 
+ 
+(III) 
+Deposits in institutional networks of cooperative banks 
+ 
+71 
+An institutional network of cooperative (or otherwise named) banks is a group of 
+legally autonomous banks with a statutory framework of cooperation with common strategic 
+focus and brand where specific functions are performed by central institutions or specialised 
+service providers. Subject to paragraph 72, a Reporting Bank that is a central institution or a 
+specialised service provider of an institutional network of cooperative banks, may, with the 
+Authority’s approval, apply a cash outflow rate of 25% to the amount of deposits that 
+members of the institutional network have placed with the Reporting Bank arising from 
+statutory minimum deposit requirements or in the context of common task sharing and legal, 
+statutory or contractual arrangements, so long as both the Reporting Bank that has received 
+the deposits and the member of the institutional network that has placed the deposits 
+participate in the same institutional network’s mutual protection scheme against illiquidity 
+and insolvency of its members. 
+ 
+72 
+Despite paragraph 71, a Reporting Bank that is a central institution or a specialised 
+service provider of an institutional network of cooperative banks, must apply a cash outflow 
+rate of 100% to the amount of deposits that members of the institutional network have placed 
+with the Reporting Bank for – 
+ 
+(a) 
+correspondent banking services; and 
+ 
+(b) 
+clearing, custody or cash management services. 
+ 
+(IV) 
+Deposits contractually pledged to a Reporting Bank as collateral to secure 
+other transactions 
+ 
+73 
+Despite paragraphs 44 to 72, if a deposit is contractually pledged to a Reporting Bank 
+as collateral to secure a credit facility or loan granted by the Reporting Bank (“pledged 
+deposit”) that will not mature or settle within the 30-day LCR horizon, the Reporting Bank 
+may exclude the pledged deposit from its computation of its LCR only if the following 
+conditions are met: 
+ 
+(a) 
+the loan or credit facility is not maturing within the 30-day LCR horizon; 
+ 
+ 
+45 For example, clearing, settlement and custody, consolidated reporting, financing (margin, repo or synthetic), 
+securities lending, capital introduction, and risk analytics. 
+46 
+For example, institutional hedge funds. 
+
+
+39 
+ 
+(b) 
+there is a legally enforceable contract disallowing withdrawal of the pledged 
+deposit before the loan is fully settled or repaid; 
+ 
+(c) 
+the amount of deposit that is excluded from its computation of its LCR does 
+not exceed the outstanding balance of the loan or drawn portion of the credit 
+facility. 
+ 
+74 
+Paragraph 73 does not apply to a deposit that is pledged against an undrawn facility, 
+in which case the Reporting Bank must apply the higher of the cash outflow rate applicable 
+to the undrawn facility and the pledged deposit. 
+ 
+(V) 
+Unsecured wholesale funding provided by non-financial corporates and 
+sovereigns, central banks, multilateral development banks and PSEs 
+ 
+75 
+A Reporting Bank must apply a cash outflow rate of 20% to unsecured wholesale 
+funding provided by corporate customers which are not financial institutions, sovereigns, 
+central banks, multilateral development banks, and PSEs, that also do not qualify as 
+operational deposits, if the entire amount of the deposit is fully covered by an effective 
+deposit insurance scheme or by a public guarantee that provides equivalent protection. 
+Otherwise, the Reporting Bank must apply a cash outflow rate of 40% to such unsecured 
+wholesale funding. 
+ 
+(VI) 
+Unsecured wholesale funding provided by other customers that are not 
+natural persons 
+ 
+76 
+A Reporting Bank must apply a cash outflow rate of 100% to all unsecured wholesale 
+funding that are not included in paragraphs 58 to 7547. Subject to paragraph 77, a Reporting 
+Bank may compute cash outflows from unsecured wholesale funding provided by relevant 
+intragroup banking entities on a net basis with cash inflows from unsecured wholesale 
+funding provided to such entities. 
+ 
+77 
+Despite paragraph 76, a Reporting Bank that is an internationally active bank must not, 
+in its computation of its LCR at the Group level, compute cash outflows from unsecured 
+wholesale funding provided by relevant intragroup banking entities on a net basis with cash 
+inflows from unsecured wholesale funding provided to such entities. 
+ 
+78 
+A Reporting Bank must include all notes, bonds and other debt securities issued by the 
+Reporting Bank in this category regardless of the holder, unless the bond is sold exclusively in 
+the retail market and held in retail accounts (including small business customer accounts), in 
+ 
+47 
+For example, deposits and other funding, that are not qualifying operational deposits, from banks, securities 
+firms, insurance companies, fiduciaries, beneficiaries, conduits and special purpose vehicles, affiliated 
+entities of the Reporting Bank and other entities. 
+
+
+40 
+ 
+which case the Reporting Bank may include the notes, bonds or debt securities in the 
+appropriate retail or small business customer deposit category provided that limitations are 
+placed on the instrument by the Reporting Bank such that those instruments cannot be 
+bought and held by parties other than retail or small business customers. 
+ 
+79 
+A Reporting Bank must separate customer cash balances arising from the provision of 
+prime brokerage services, including but not limited to the cash arising from prime brokerage 
+services, from any required segregated balances related to customer protection regimes 
+imposed on the Reporting Bank or its banking group entities by the laws and regulations of 
+any country or jurisdiction to which the Reporting Bank or its banking group entities is subject 
+and the Reporting Bank must not net such cash balances against other customer exposures 
+included in its computation of its LCR. A Reporting Bank must treat segregated balances 
+related to customer protection regimes imposed by the laws and regulations of any country 
+or jurisdiction to which the Reporting Bank or its banking group entities is subject as cash 
+inflows in accordance with paragraph 133 and must exclude these segregated balances from 
+HQLA. 
+ 
+(C) 
+Unsecured precious metals liabilities cash outflows 
+ 
+80 
+Unsecured precious metals liabilities are liabilities and general obligations (excluding 
+liabilities and obligations related to derivative contracts) in precious metals and are not 
+secured funding.48 
+ 
+81 
+A Reporting Bank must treat unsecured precious metals liabilities in the same way as 
+retail deposits and unsecured wholesale funding, and apply the appropriate cash outflow 
+rates in accordance with paragraphs 44 to 79. 
+ 
+82 
+Despite paragraph 81, a Reporting Bank may apply a cash outflow rate of 0% to an 
+unsecured precious metals liability if – 
+ 
+(a) 
+contractual arrangements require the unsecured precious metals liability to be 
+settled by physical delivery and the Reporting Bank is able to supply the 
+precious metals from its own inventories; or 
+ 
+(b) 
+contractual arrangements allow the Reporting Bank to choose cash settlement 
+or physical delivery and there are no market practices or reputational factors 
+that may limit the Reporting Bank’s ability to choose physical delivery if the 
+Reporting Bank is able to supply the precious metals from its own inventories. 
+ 
+ 
+48 
+For example, deposits in precious metals received by a Reporting Bank. 
+
+
+41 
+ 
+(D) 
+Secured funding cash outflows 
+ 
+83 
+Secured funding are liabilities and general obligations that are collateralised by legal 
+rights to specifically designated assets owned by the borrowing institution in the case of 
+bankruptcy, insolvency, liquidation or resolution of the borrowing institution. 
+ 
+84 
+A Reporting Bank must include forward repurchase transactions and collateral swaps 
+that start prior to, but mature within, the 30-day LCR horizon in this category. 
+ 
+85 
+A Reporting Bank must treat collateral swaps and any other transaction which involves 
+an exchange of non-cash assets as a combination of a repurchase and reverse repurchase 
+agreement. The Reporting Bank must compute the cash outflow for collateral swaps based 
+on the net cash outflow that will result from an equivalent repurchase and reverse repurchase 
+transaction, floored at zero. The Reporting Bank must treat any collateral lent to its customers 
+to effect short positions as a form of secured funding. 
+ 
+86 
+If a pool of assets is used as collateral for a secured funding transaction, and a 
+Reporting Bank is unable to determine specifically which assets are used to collateralise the 
+transaction, it must assume that the assets are encumbered in the following order: 
+ 
+(a) 
+firstly, assets which are not HQLA; 
+ 
+(b) 
+secondly, Level 2B(II) HQLA; 
+ 
+(c) 
+thirdly, Level 2B(I) HQLA; 
+ 
+(d) 
+fourthly, Level 2A HQLA; 
+ 
+(e) 
+fifthly, Level 1 HQLA. 
+ 
+87 
+A Reporting Bank must apply the relevant cash outflow rates in “Cash Outflows – C. 
+Secured funding” section of Appendix 7 to the amount of funds raised through an outstanding 
+secured funding transaction that matures within the 30-day LCR horizon or that arises from 
+collateral lent to customers to effect short positions without a specified contractual maturity. 
+ 
+(E) 
+Additional requirements 
+ 
+(I) 
+Cash outflows from derivative contracts 
+ 
+88 
+A Reporting Bank must – 
+ 
+(a) 
+apply a cash outflow rate of 100% to the sum of all cash outflows from 
+derivative contracts; and 
+
+
+42 
+ 
+ 
+(b) 
+compute the amounts of cash outflows from derivative contracts by doing the 
+following: 
+ 
+(i) 
+compute such amounts in accordance with its existing valuation 
+methodologies; 
+ 
+(ii) 
+exclude from such computations those liquidity requirements that 
+would result from increased collateral needs due to market value 
+movements or fall in value of collateral posted by the Reporting Bank; 
+ 
+(iii) 
+assume that options are exercised at the point when they are ‘in the 
+money’ to the option buyer. 
+ 
+89 
+A Reporting Bank may – 
+ 
+(a) 
+where the Reporting Bank has entered into a valid master netting agreement 
+with its counterparty, compute the cash outflows from derivative contracts 
+with that counterparty on a net basis with cash inflows from derivative 
+contracts with the same counterparty; and 
+ 
+(b) 
+for the purposes of its computation of its all currency LCR, compute the cash 
+outflows from a foreign exchange derivative contract not covered by a master 
+netting agreement, where the foreign exchange derivative contract involves a 
+full exchange of principal amounts within the same day, on a net basis with 
+cash inflows from the foreign exchange derivative contract. 
+ 
+90 
+Where derivative contracts are collateralised by HQLA, a Reporting Bank must 
+compute the cash outflows from derivative contracts net of any corresponding cash or 
+collateral inflows that would result, all other things being equal, from contractual obligations 
+for cash or collateral to be provided to the Reporting Bank, if the Reporting Bank is legally 
+entitled to, and is operationally capable of, re-using the collateral in new cash raising 
+transactions once the collateral is received. 
+ 
+91 
+A Reporting Bank must treat options which must be settled by physical delivery as 
+secured borrowing transactions, where the assets to be delivered are treated as collateral in 
+secured transactions or collateral swaps, and apply the appropriate cash outflow rates in 
+accordance with paragraphs 83 to 87. The Reporting Bank may assume cash settlement, if 
+contractual arrangements allow for both physical delivery and cash settlement. Where 
+contractual arrangements require physical delivery as the mode of settlement, the Reporting 
+Bank may assume that the security of lowest value will be delivered, unless the derivative 
+contract provides otherwise. 
+ 
+
+
+43 
+ 
+(II) 
+Increased liquidity needs related to downgrade triggers embedded in 
+financing transactions, derivatives and other contracts 
+ 
+92 
+For each contract in which downgrade triggers exist, a Reporting Bank must include, 
+in its computation of its total expected cash outflows, 100% of the additional collateral or 
+cash outflow as stated in the governing contract to be posted for any downgrade during the 
+30-day LCR horizon up to and including a 3-notch downgrade of the Reporting Bank’s long-
+term credit rating. For the purposes of this paragraph, where a downgrade trigger is linked to 
+the Reporting Bank’s short-term rating, the Reporting Bank must map such short-term rating 
+to the corresponding long-term rating in accordance with published ratings criteria. The 
+Reporting Bank must consider impacts on all types of margin collateral and contractual 
+triggers which change rehypothecation rights for non-segregated collateral for the impact of 
+the downgrade. 
+ 
+93 
+For the purposes of paragraph 92, downgrade triggers are clauses that require the 
+posting of additional collateral, drawdown of contingent facilities, or early repayment of 
+existing liabilities, upon a downgrade of the Reporting Bank’s credit rating by a recognised 
+ECAI. 
+ 
+(III) 
+Increased liquidity needs related to the potential for valuation changes on 
+posted collateral securing derivative and other transactions49 
+ 
+94 
+Where a Reporting Bank posts Level 1 HQLA as collateral in respect of a derivative 
+transaction, the Reporting Bank is not required to maintain additional HQLA for potential 
+valuation changes. If however, the Reporting Bank posts other forms of collateral to cover the 
+potential loss of market value on those securities, the Reporting Bank must include, in its 
+computation of its total expected cash outflows, a cash outflow equivalent to 20% of the value 
+of all such posted collateral, net of collateral received on a counterparty basis (provided that 
+the collateral received is not subject to restrictions on reuse or rehypothecation). The 
+Reporting Bank must compute the 20% based on the notional amount required to be posted 
+as collateral after any other haircuts have been applied that may be applicable to the 
+collateral category. The Reporting Bank must only use collateral that is in a segregated margin 
+account to offset collateral outflows that are associated with payments that are eligible to be 
+offset from that same account. The Reporting Bank must compute the notional amount to be 
+collateralised based on the contractual terms of the transaction. The Reporting Bank must 
+not net collateral inflows and collateral outflows across counterparties. The Reporting Bank 
+must compute the amount of collateral to be posted in accordance with the relevant contract 
+governing the respective transactions. 
+ 
+ 
+49 
+Counterparties in derivatives and other transactions are typically required to post collateral to secure the 
+marked-to-market valuations of their positions. These counterparties are then required to post additional 
+collateral should the value of the posted collateral fall. 
+
+
+44 
+ 
+(IV) 
+Increased liquidity needs related to excess non-segregated collateral held by 
+the Reporting Bank that could contractually be called at any time by the 
+counterparty 
+ 
+95 
+A Reporting Bank must include, in its computation of its total expected cash outflows, 
+a cash outflow equivalent to 100% of the amount of non-segregated collateral that could 
+contractually be recalled by the counterparty because the collateral is in excess of the 
+counterparty’s current collateral requirements, and compute the amount that can be recalled 
+in accordance with the relevant contract governing the transactions. 
+ 
+(V) 
+Increased liquidity needs related to contractually required collateral on 
+transactions for which the counterparty has not yet demanded the collateral 
+be posted 
+ 
+96 
+A Reporting Bank must include, in its computation of its total expected cash outflows, 
+a cash outflow equivalent to 100% of the amount of collateral that is contractually due but 
+where the counterparty has not yet demanded the posting of such collateral, and compute 
+the amount of collateral in accordance with the relevant contract governing the transactions. 
+ 
+(VI) 
+Increased liquidity needs related to contracts that allow collateral 
+substitution to assets that are not HQLA or lower-quality HQLA 
+ 
+97 
+Where a Reporting Bank has received HQLA collateral that is – 
+ 
+(a) 
+not segregated; and 
+ 
+(b) 
+can be substituted with lower-quality HQLA or assets that are not HQLA 
+without the Reporting Bank’s consent in accordance with the relevant contract 
+governing the transactions, including for secured lending transactions 
+maturing beyond the 30-day LCR horizon that allows such collateral 
+substitution, 
+ 
+the Reporting Bank must include, in its computation of its total expected cash outflows, 
+a cash outflow equivalent to the market value of the received HQLA collateral 
+multiplied by the difference in haircuts (as defined in paragraph 33) of the received 
+HQLA collateral and the potential substitute collateral. 
+ 
+
+
+45 
+ 
+(VII) 
+Increased liquidity needs related to market valuation changes on derivative 
+or other transactions50 
+ 
+98 
+A Reporting Bank must include, in its computation of its total expected cash outflows, 
+a cash outflow equivalent to the largest absolute net 30-day collateral flow realised during 
+the preceding 24 months. 
+ 
+99 
+For the purposes of paragraph 98, the Reporting Bank must compute the absolute net 
+30-day collateral flow for a 30-day period by doing the following: 
+ 
+(a) 
+compute the absolute net 30-day collateral flow based on both realised 
+collateral outflows and collateral inflows during the 30-day period, including 
+payments and receipts which are deemed to settle outstanding exposures 
+from exchange-traded and over-the-counter derivatives structured as 
+“settled-to-market”; 
+ 
+(b) 
+assess the absolute net 30-day collateral flow on a portfolio level. 
+ 
+(VIII) Loss of funding on asset-backed securities, covered bonds and other 
+structured financing instruments 
+ 
+100 
+A Reporting Bank must apply a cash outflow rate of 100% to all asset-backed securities, 
+covered bonds and other structured financing instruments issued by the Reporting Bank that 
+are maturing within the 30-day LCR horizon. For the purposes of this computation, the 
+Reporting Bank may offset inflows from Level 1 or Level 2 HQLA used as collateral for these 
+issuances against the redemption payment of these issuances. The Reporting Bank must 
+consider any net inflow as other contractual cash inflows in paragraph 118 146. 
+ 
+[MAS Notice 649 (Amendment) 2024] 
+ 
+(IX) 
+Loss of funding on asset-backed commercial papers, conduits, securities 
+investment vehicles and other such financing facilities 
+ 
+101 
+A Reporting Bank that has structured financing facilities that include the issuance of 
+short-term debt instruments51, must fully consider the potential liquidity risk52 arising from 
+ 
+50 
+As market practice requires collateralisation of marked-to-market exposures on derivative and other 
+transactions, a Reporting Bank faces potentially substantial liquidity risk exposures to these valuation 
+changes. 
+51 
+For example, asset backed commercial papers. 
+52 
+These risks include the inability of the Reporting Bank to refinance maturing debt, and the existence of 
+derivatives or derivative-like components contractually written into the documentation associated with the 
+structure that would allow the “return” of assets in a financing arrangement, or that require the original 
+ 
+
+
+46 
+ 
+these structures. Where the structured financing activities of the Reporting Bank are 
+conducted through a special purpose entity53, the Reporting Bank must look through to the 
+maturity of the debt instruments issued by the entity and any embedded options in financing 
+arrangements that may potentially trigger the “return” of assets or the need for liquidity, 
+irrespective of whether or not the SPV is consolidated. 
+ 
+Table 1: Cash outflow rates from potential risk elements 
+Potential Risk Element 
+Cash outflow rate required 
+Debt maturing within the 30-day LCR 
+horizon 
+A cash outflow rate of 100% to maturing 
+amount 
+Embedded 
+options 
+in 
+financing 
+arrangements that allow for the return 
+of assets or potential liquidity support 
+A cash outflow rate of 100% to the 
+amount of assets that could potentially 
+be returned, or the liquidity required 
+ 
+(X) 
+Drawdowns on committed credit and liquidity facilities 
+ 
+102 
+Committed facilities are defined as explicit contractual agreements or obligations to 
+extend funds at a future date to retail or wholesale counterparties, which are contractually 
+irrevocable or conditionally revocable agreements. 
+ 
+103 
+A Reporting Bank must compute the undrawn portion of the committed facilities net 
+of any HQLA that have already been posted as collateral by the counterparty to secure the 
+facilities or that are contractually obliged to be posted when the counterparty draws down 
+the facility54. This is provided that the Reporting Bank is legally entitled to and operationally 
+capable of, re-using the collateral in new cash raising transactions once the facility is drawn, 
+and there is no undue correlation between the probability of drawing the facility and the 
+market value of the collateral. The Reporting Bank may net the collateral against the 
+outstanding amount of the facility to the extent that this collateral is not already counted in 
+the stock of HQLA. 
+ 
+104 
+A committed liquidity facility is defined as any committed, undrawn back-up facility 
+that would be utilised to refinance the debt obligations of a customer in situations where such 
+a customer is unable to rollover that debt in financial markets55. A Reporting Bank must treat 
+the amount of commitment that backs currently outstanding debt issued by the customer (or 
+proportionate share, if a syndicated facility) maturing within the 30-day LCR horizon as a 
+committed liquidity facility. 
+ 
+ 
+asset transferor to provide liquidity, effectively ending the financing arrangement (“liquidity puts”) within 
+the 30-day LCR horizon. 
+53 
+For example, a special purpose vehicle (“SPV”), conduit or structured investment vehicle (“SIV”). 
+54 
+For example, a liquidity facility structured as a repo facility. 
+55 
+For example, pursuant to commercial paper programmes, secured financing transactions or obligations to 
+redeem units. 
+
+
+47 
+ 
+105 
+Subject to paragraph 106, a Reporting Bank must treat the following as committed 
+credit facilities: 
+ 
+(a) 
+any additional capacity of a committed facility that is not meant to be utilised 
+to refinance the debt obligations of a customer in situations where such a 
+customer is unable to rollover that debt in financial markets; and 
+ 
+(b) 
+general working capital facilities for corporate entities56. 
+ 
+106 
+Despite paragraphs 104 and 105, a Reporting Bank must treat any committed facility 
+provided to hedge funds, money market funds and special purpose funding vehicles or 
+conduits, or other vehicles used to finance the Reporting Bank’s own assets as a committed 
+liquidity facility to other legal entities. 
+ 
+107 
+For the portion of financing programs issued by a Reporting Bank that are captured 
+under paragraphs 100 and 101 (i.e. are maturing or have liquidity puts that may be exercised 
+within the 30-day LCR horizon), the Reporting Bank that is the provider of the associated 
+liquidity facilities does not need to double count the maturing financing instrument and the 
+liquidity facility for consolidated programs. 
+ 
+108 
+A Reporting Bank must apply the following cash outflow rates to any contractual and 
+estimated loan drawdowns from a committed facility within the 30-day LCR horizon, 
+regardless of the maturity of the facility57: 
+ 
+(a) 
+committed credit and liquidity facilities to retail and small business customers: 
+5% of the undrawn portion of these facilities; 
+ 
+(b) 
+committed credit facilities to non-financial corporates, sovereigns and central 
+banks, PSEs and multilateral development banks: 10% of the undrawn portion 
+of these credit facilities; 
+ 
+(c) 
+committed liquidity facilities to non-financial corporates, sovereigns and 
+central banks, PSEs, and multilateral development banks: 30% of the undrawn 
+portion of these liquidity facilities; 
+ 
+ 
+56 
+For example, revolving credit facilities in place for general corporate or working capital purposes. 
+57 
+Committed facilities can have long-term or short-term maturities, with short-term facilities frequently 
+renewing or automatically rolling-over. In a stressed environment, it will likely be difficult for customers 
+drawing on committed facilities of any maturity, even short-term maturities, to be able to quickly pay back 
+the borrowings. Therefore, any contractual and estimated loan drawdowns from a committed facility within 
+the 30-day LCR horizon are assumed to remain outstanding throughout the 30-day LCR horizon without any 
+repayment, regardless of the maturity of the facility. 
+
+
+48 
+ 
+(d) 
+committed credit and liquidity facilities extended to banks, and merchant 
+banks in Singapore, subject to prudential supervision: 40% of the undrawn 
+portion of these facilities; 
+ 
+(e) 
+committed credit facilities to other financial institutions including securities 
+firms, insurance companies, fiduciaries, and beneficiaries: 40% of the undrawn 
+portion of these credit facilities; 
+ 
+(f) 
+committed liquidity facilities to other financial institutions including securities 
+firms, insurance companies, fiduciaries, and beneficiaries: 100% of the 
+undrawn portion of these liquidity facilities; 
+ 
+(g) 
+committed credit and liquidity facilities to other legal entities (including SPEs, 
+conduits and special purpose vehicles, and other entities not included in the 
+prior categories): 100% of the undrawn portion of these facilities. 
+ 
+(XI) 
+Contractual obligations to extend funds within the 30-day LCR horizon 
+ 
+109 
+A Reporting Bank must apply a cash outflow rate of 100% to any contractual lending 
+obligation to financial institutions not captured elsewhere in Part II – LCR. 
+ 
+110 
+If the total of all contractual obligations to extend funds to customers that are not 
+financial institutions within the 30-day LCR horizon not captured elsewhere in Part II – LCR 
+exceeds 50% of the total contractual cash inflows due in the 30-day LCR horizon from these 
+customers, a Reporting Bank must report the difference at a cash outflow rate of 100%. 
+ 
+(XII) 
+Other contingent funding obligations58 
+ 
+111 
+A Reporting Bank must apply a cash outflow rate of 100% to the full amount of the 
+contingent funding obligations that is expected to materialise within the 30-day LCR horizon 
+under stressed conditions. 
+ 
+112 
+A Reporting Bank must treat all of the following as contingent funding obligations:  
+ 
+ 
+58 
+Contingent funding obligations may be either contractual or non-contractual and are not lending 
+commitments. Non-contractual contingent funding obligations include associations with, or sponsorship of, 
+products sold or services provided that may require the support or extension of funds in the future under 
+stressed conditions. Non-contractual obligations may be embedded in financial products and instruments 
+sold, sponsored, or originated by the institution that can give rise to unplanned balance sheet growth arising 
+from support given for reputational risk considerations. These include products and instruments for which 
+the customer or holder has specific expectations regarding the liquidity and marketability of the product or 
+instrument and for which failure to satisfy customer expectations in a commercially reasonable manner 
+would likely cause material reputational damage to the institution or otherwise impair ongoing viability. 
+
+
+49 
+ 
+(a)  
+facilities that are unconditionally revocable by the Reporting Bank (in 
+particular, those without a precondition of a material change in the credit 
+condition of the borrower); 
+ 
+(b) 
+debt instruments issued by the Reporting Bank that mature if a pre-
+determined market-based event occurs at a pre-determined date58A as 
+contingent funding obligations. 
+ 
+[MAS Notice 649 (Amendment) 2024] 
+ 
+113 
+Where a Reporting Bank has identified any contingent funding obligations that are 
+explicitly contingent upon an event that is not related to a liquidity event, including debt 
+instruments issued by the Reporting Bank that mature if a pre-determined market-based 
+event occurs at a pre-determined date58B, the Reporting Bank must inform the Authority not 
+later than the last day of the calendar year in which such contingent funding obligation is 
+identified. 
+ 
+[MAS Notice 649 (Amendment) 2024] 
+ 
+114 
+A Reporting Bank must treat non-contractual contingent funding obligations related 
+to potential liquidity draws from joint ventures or investments in entities, which are not 
+consolidated, as contingent funding obligations where there is the expectation that the 
+Reporting Bank will be the main liquidity provider when the entity is in need of liquidity. The 
+Reporting Bank must seek the Authority’s approval for the methodology for quantifying such 
+potential liquidity draws, in particular, those arising from the need to support investments in 
+times of stress out of reputational concerns. 
+ 
+115 
+For contingent funding obligations stemming from trade finance instruments59 that 
+are not lending commitments, a Reporting Bank must apply a cash outflow rate of 3%. 
+ 
+116 
+For contingent funding obligations stemming from trade finance instruments that are 
+lending commitments60, a Reporting Bank must apply the cash outflow rates specified in 
+paragraph 108 for such commitments. 
+ 
+ 
+58A  For example, autocallable notes. 
+[MAS Notice 649 (Amendment) 2024] 
+58B  For example, autocallable notes. 
+[MAS Notice 649 (Amendment) 2024] 
+59 
+Trade finance instruments consist of trade-related obligations, directly underpinned by the movement of 
+goods or the provision of services, such as – 
+(a) documentary trade letters of credit, documentary and clean collection, import bills and export bills; and 
+(b) guarantees directly related to trade finance obligations, such as shipping guarantees. 
+60 
+For example, direct import or export financing for non-financial corporates. 
+
+
+50 
+ 
+117 
+A Reporting Bank must apply a cash outflow rate of 50% to contingent obligations 
+where the Reporting Bank has covered customers’ short positions using other customers’ 
+collateral which does not qualify as Level 1 or Level 2 HQLA, and the Reporting Bank may be 
+obligated to find additional sources of funding for these positions in the event of customers’ 
+withdrawals. 
+ 
+(F) 
+Other contractual cash outflows 
+ 
+118 
+A Reporting Bank must apply a cash outflow rate of 100% to all other contractual cash 
+outflows within the 30-day LCR horizon, where such cash outflows are not captured 
+elsewhere in Part II – LCR61, except for cash outflows related to operating costs. The Reporting 
+Bank must, if called upon at any time by the Authority, explain to the Authority, what these 
+cash outflows are. 
+ 
+Cash inflows 
+ 
+119 
+When considering its available cash inflows, a Reporting Bank must only include 
+contractual cash inflows (including interest payments) from outstanding exposures that are 
+fully performing and for which the Reporting Bank has no reason to expect a default within 
+the 30-day LCR horizon. The Reporting Bank must not include contingent inflows in total net 
+cash inflows. 
+ 
+(A) 
+Cap on total expected cash inflows 
+ 
+120 
+A Reporting Bank must, in its computation of its total net cash outflows, cap the 
+amount of total expected cash inflows that can offset the amount of total expected cash 
+outflows at 75% of the amount of total expected cash outflows, in accordance with paragraph 
+38. 
+ 
+(B) 
+Secured lending, including reverse repos, securities borrowing and margin loans 
+ 
+121 
+Subject to paragraph 123, for reverse repurchase or securities borrowing agreements 
+that are maturing within the 30-day LCR horizon, a Reporting Bank must apply the following 
+cash inflow rates: 
+ 
+(a) 
+if the agreement is secured by Level 1 HQLA, 0%; 
+ 
+(b) 
+if the agreement is secured by Level 2 HQLA, the relevant haircut for the 
+specific HQLA as set out in paragraph 33; or 
+ 
+ 
+61 
+For example, cash outflows to cover unsecured collateral borrowings, uncovered short positions, dividends 
+or contractual interest payments. 
+
+
+51 
+ 
+(c) 
+if the agreement is secured by assets that are not HQLA, 100%. 
+ 
+122 
+Subject to paragraph 123, a Reporting Bank must treat collateralised loans extended 
+to customers for the purposes of taking leveraged trading positions (“margin loans”) as 
+secured lending, and must apply the cash inflow rates in paragraph 121 to margin loans 
+maturing within the 30-day LCR horizon, except in the case of margin loans secured by assets 
+that are not HQLA, to which the Reporting Bank must apply a cash inflow rate of 50%. 
+ 
+123 
+Despite paragraphs 121 and 122, if the collateral obtained through reverse repurchase, 
+securities borrowing, margin loans or collateral swaps is used to cover short positions that 
+could be extended beyond the 30-day LCR horizon, a Reporting Bank must assume that such 
+reverse repurchase or securities borrowing arrangements will be rolled-over and apply a cash 
+inflow rate of 0%, reflecting the need to continue to cover the short position or to re-purchase 
+the relevant securities. 
+ 
+Table 2: Cash inflow rates for maturing secured lending 
+in accordance with paragraphs 121 to 123 
+ 
+Cash 
+inflow 
+rate 
+(if 
+collateral is not used to 
+cover 
+short 
+positions 
+that could be extended 
+beyond the 30-day LCR 
+horizon) 
+Cash 
+inflow 
+rate 
+(if 
+collateral is used to cover 
+short positions that could 
+be extended beyond the 30-
+day LCR horizon) 
+Maturing 
+secured 
+lending 
+backed by Level 1 HQLA 
+0% 
+0% 
+Maturing 
+secured 
+lending 
+backed by Level 2A HQLA 
+15% 
+0% 
+Maturing 
+secured 
+lending 
+backed by Level 2B HQLA 
+ 
+ 
+• 
+Eligible RMBS 
+25% 
+0% 
+• 
+Other Level 2B HQLA 
+50% 
+0% 
+Maturing margin loans backed 
+by assets that are not HQLA 
+50% 
+0% 
+Maturing reverse repurchase or 
+securities 
+borrowing 
+arrangements backed by assets 
+that are not HQLA 
+100% 
+0% 
+ 
+124 
+Where a Reporting Bank’s short position is being covered by an unsecured security 
+borrowing, the Reporting Bank must assume the unsecured security borrowing of collateral 
+from financial market participants would run-off in full, leading to a 100% outflow of either 
+cash or HQLA to secure the borrowing, or cash to close out the short position by buying back 
+the security, and apply a cash outflow rate of 100% in accordance with paragraph 118 to the 
+
+
+52 
+ 
+short position. Where the Reporting Bank’s short position is being covered by a collateralised 
+securities financing transaction, the Reporting Bank must assume the short position will be 
+maintained throughout the 30-day LCR horizon and apply a cash inflow rate of 0% to the short 
+position. 
+ 
+125 
+If a pool of assets is used as collateral for a secured lending transaction, and a 
+Reporting Bank is unable to determine specifically which assets are used to collateralise the 
+transaction, the Reporting Bank must assume that the assets are encumbered in the following 
+order: 
+ 
+(a) 
+firstly, assets that are not HQLA; 
+ 
+(b) 
+secondly, Level 2B(II) HQLA; 
+ 
+(c) 
+thirdly, Level 2B(I) HQLA; 
+ 
+(d) 
+fourthly, Level 2A HQLA; 
+ 
+(e) 
+fifthly, Level 1 HQLA. 
+ 
+126 
+Despite paragraphs 121 to 123, a Reporting Bank must manage its collateral such that 
+it is able to fulfil obligations to return collateral whenever the counterparty decides not to 
+roll-over any reverse repo or securities lending transaction. 
+ 
+127 
+A Reporting Bank must include forward reverse repurchase transactions and collateral 
+swaps that start prior to, but mature within, the 30-day LCR horizon in this category. 
+ 
+128 
+Paragraphs 121 to 127 do not apply to any transaction where there is a possibility of 
+the cash inflow occurring after the 30-day LCR horizon. 
+ 
+(C) 
+Committed facilities 
+ 
+129 
+A Reporting Bank must apply a cash inflow rate of 0% to credit facilities, liquidity 
+facilities or other contingent funding facilities that the Reporting Bank holds at other 
+institutions for its own purposes. 
+ 
+(D) 
+Other cash inflows by counterparty 
+ 
+130 
+A Reporting Bank must, in relation to loan payments, include, in its computation of its 
+total expected cash inflows, only cash inflows from fully performing loans. A Reporting Bank 
+must include, in its computation of its total expected cash inflows, only cash inflows at the 
+latest possible date based on the contractual rights available to counterparties. A Reporting 
+Bank must, in relation to revolving credit facilities, assume that the existing loan will be rolled 
+
+
+53 
+ 
+over and any remaining balances are treated as a committed facility in accordance with 
+paragraph 108. 
+ 
+131 
+A Reporting Bank must not include, in its computation of its total expected cash 
+inflows, cash inflows from loans that have no specific maturity, except for minimum payments 
+of principal, fee or interest associated with open maturity loans that are contractually due 
+within the 30-day LCR horizon. The Reporting Bank must capture these minimum payment 
+amounts as cash inflows at the cash inflow rates in paragraphs 132 and 133. 
+ 
+(I) 
+Retail and small business customer cash inflows 
+ 
+132 
+A Reporting Bank must – 
+ 
+(a) 
+assume that all payments (including interest payments and instalments) from 
+retail and small business customers that are fully performing and contractually 
+due within the 30-day LCR horizon will be received in full; 
+ 
+(b) 
+assume that it will continue extending loans to retail and small business 
+customers at a rate of 50% of contractual cash inflows; and 
+ 
+(c) 
+apply a cash inflow rate of 50% to the contractual cash inflows from retail and 
+small business customers as a result of sub-paragraphs (a) and (b). 
+ 
+(II) 
+Other wholesale cash inflows 
+ 
+133 
+A Reporting Bank must – 
+ 
+(a) 
+assume that all payments (including interest payments and instalments) 
+received from wholesale customers that are fully performing and contractually 
+due within the 30-day LCR horizon will be received in full; 
+ 
+(b) 
+assume that it will continue extending loans to wholesale customers at a rate 
+of 0% of contractual cash inflows from financial institutions and central banks, 
+and at a rate of 50% of contractual cash inflows from other wholesale 
+customers62; and 
+ 
+(c) 
+apply a cash inflow rate of 100% to the contractual cash inflows from financial 
+institutions and central bank counterparties, and 50% to the contractual cash 
+inflows from other wholesale customers, as a result of sub-paragraphs (a) and 
+(b). 
+ 
+ 
+62 
+This includes non-financial corporates, sovereigns, multilateral development banks, and PSEs. 
+
+
+54 
+ 
+134 
+A Reporting Bank must apply a cash inflow rate of 100% to cash inflows from securities 
+maturing within the 30-day LCR horizon that are not HQLA. 
+ 
+135 
+A Reporting Bank must apply a cash inflow rate of 0% to operational deposits of the 
+Reporting Bank placed with other financial institutions for operational purposes. A Reporting 
+Bank that is a member of an institutional network of cooperative banks must apply a cash 
+inflow rate of 0% to deposits placed with a central institution or a specialised service provider 
+in the institutional network arising from statutory minimum deposit requirements or in the 
+context of common task sharing and legal, statutory or contractual arrangements, so long as 
+both the Reporting Bank that has placed the deposits and the central institution or the 
+specialised service provider of the institutional network that has received the deposits 
+participate in the same institutional network’s mutual protection scheme against illiquidity 
+and insolvency of its members. Where a Reporting Bank has placed a deposit with a bank or 
+financial institution (the “receiving financial institution”), the Reporting Bank must apply the 
+methodology in paragraphs 62 to 70 to determine if these deposits are operational deposits.63 
+ 
+136 
+Subject to paragraph 137, where a Reporting Bank has elected to compute the cash 
+outflows from unsecured wholesale funding provided by relevant intragroup banking entities 
+on a net basis with cash inflows from unsecured wholesale funding provided to such entities 
+in accordance with paragraph 76, the Reporting Bank must compute cash inflows from 
+unsecured wholesale funding provided to the same relevant intragroup banking entities on a 
+net basis with cash outflows from unsecured wholesale funding provided by such entities. 
+ 
+137 
+Despite paragraph 136, a Reporting Bank that is an internationally active bank must 
+not, in its computation of its LCR at the Group level, compute cash inflows from unsecured 
+wholesale funding provided to relevant intragroup banking entities on a net basis with cash 
+outflows from unsecured wholesale funding provided by such entities. 
+ 
+(E) 
+Unsecured precious metals assets cash inflows 
+ 
+138 
+Unsecured precious metals assets are assets (excluding assets related to derivative 
+contracts) in precious metals and are not secured lending.64 
+ 
+139 
+A Reporting Bank must treat cash inflows from unsecured precious metals assets that 
+must be settled by cash settlement in the same way as loans to retail customers and 
+wholesale customers, and apply the appropriate cash inflow rates in accordance with 
+paragraphs 132 and 133. 
+ 
+ 
+63 
+As a general principle, if the deposit has been classified by the receiving financial institution as an 
+operational deposit, the Reporting Bank should also consider the deposit as an operational deposit. 
+64 
+For example, unsecured loans in precious metals extended by a Reporting Bank or deposits in precious 
+metals placed by a Reporting Bank. 
+
+
+55 
+ 
+140 
+A Reporting Bank must apply a cash inflow rate of 0% to unsecured precious metals 
+assets that must be settled by physical delivery or where contractual arrangements allow the 
+Reporting Bank to choose cash settlement or physical delivery. 
+ 
+141 
+Despite paragraph 140, a Reporting Bank may treat cash inflows from an unsecured 
+precious metals asset referred to in paragraph 140 in the same way as loans to retail 
+customers and wholesale customers, and apply the appropriate cash inflow rates in 
+accordance with paragraphs 132 and 133, if – 
+ 
+(a) 
+contractual arrangements allow the Reporting Bank to choose between cash 
+settlement and physical delivery and – 
+ 
+(i) 
+physical delivery results in a significant penalty; or 
+ 
+(ii) 
+both parties expect cash settlement; and 
+ 
+(b) 
+there are no market practices or reputational factors that may limit the 
+Reporting Bank’s ability to choose cash settlement. 
+ 
+(F) 
+Other cash inflows 
+ 
+(I) 
+Cash inflows from derivative contracts 
+ 
+142 
+A Reporting Bank must – 
+ 
+(a) 
+apply a cash inflow rate of 100% to the sum of all cash inflows from derivative 
+contracts; and 
+ 
+(b) 
+compute the amounts of cash inflows from derivative contracts by doing the 
+following: 
+ 
+(i) 
+compute such amounts in accordance with its existing valuation 
+methodologies; 
+ 
+(ii) 
+assume that options are exercised at the point when they are ‘in the 
+money’ to the option buyer. 
+ 
+143 
+Where – 
+ 
+(a) 
+a Reporting Bank has entered into a valid master netting agreement with its 
+counterparty and elected to compute the cash outflows from derivative 
+contracts with that counterparty on a net basis with cash inflows from 
+derivative contracts with the same counterparty in accordance with paragraph 
+
+
+56 
+ 
+89(a), the Reporting Bank must compute the cash inflows from such derivative 
+contracts on a net basis with cash outflows from such derivative contracts; and 
+ 
+(b) 
+a Reporting Bank has, for the purposes of its computation of its all currency 
+LCR, elected to compute the cash outflows from a foreign exchange derivative 
+contract not covered by a master netting agreement, where the foreign 
+exchange derivative contract involves a full exchange of principal amounts 
+within the same day, on a net basis with cash inflows from the foreign 
+exchange derivative contract, in accordance with paragraph 89(b), the 
+Reporting Bank must compute the cash inflows from the foreign exchange 
+derivative contract on a net basis with cash outflows from the foreign 
+exchange derivative contract. 
+ 
+144 
+Where derivative contracts are collateralised by HQLA, a Reporting Bank must 
+compute the cash inflows from the derivative contracts net of any corresponding cash or 
+contractual collateral outflows. 
+ 
+145 
+A Reporting Bank must treat options which must be settled by physical delivery as a 
+secured lending transaction, and apply the appropriate cash inflow rates in accordance with 
+paragraphs 121 to 128. The Reporting Bank may assume cash settlement, if the contractual 
+arrangements allow for both physical delivery and cash settlement. Where contractual 
+arrangements require physical delivery as the mode of settlement, the Reporting Bank may 
+assume that the security of lowest value will be delivered, unless the derivative contract 
+provides otherwise. 
+ 
+(II) 
+Other contractual cash inflows 
+ 
+146 
+A Reporting Bank must apply a cash inflow rate of 0% to all other contractual cash 
+inflows within the 30-day LCR horizon, where such cash inflows are not captured in 
+paragraphs 121 to 145, or excluded in paragraph 147. The Reporting Bank must, if called upon 
+at any time by the Authority, explain to the Authority, what these cash inflows are. 
+ 
+147 
+A Reporting Bank must not include the following items as contractual cash inflows: 
+ 
+(a) 
+any cash inflow related to non-financial revenues; 
+ 
+(b) 
+any forward repurchase agreement, forward reverse repurchase agreement or 
+forward collateral swap that starts and matures within the 30-day LCR horizon; 
+ 
+(c) 
+any forward repurchase agreement, forward reverse repurchase agreement or 
+forward collateral swap that starts prior to and matures after the 30-day LCR 
+horizon; 
+ 
+
+
+57 
+ 
+(d) 
+any forward sale of HQLA. 
+ 
+Scope of Application 
+ 
+148 
+Where a Reporting Bank has a branch or subsidiary 65 that is approved, licensed, 
+registered or otherwise regulated by a bank regulatory agency in a foreign country or 
+jurisdiction to carry on banking business under the laws of the foreign country or jurisdiction 
+and the foreign country or jurisdiction does not apply the Basel Committee on Banking 
+Supervision’s global framework for liquidity risk, the Reporting Bank must apply the 
+parameters outlined in Part II – LCR for its computation of its LCR for deposits from retail and 
+small business customers of that branch or subsidiary. Where a Reporting Bank has a branch 
+or subsidiary 66 that is approved, licensed, registered or otherwise regulated by a bank 
+regulatory agency in a foreign country or jurisdiction to carry on banking business under the 
+laws of the foreign country or jurisdiction and the foreign country or jurisdiction applies the 
+Basel Committee on Banking Supervision’s global framework for liquidity risk, the Reporting 
+Bank must interpret paragraphs 44 to 57 and the definition of “small business customers” in 
+paragraph 22 (read with paragraph 23) in accordance with the foreign country’s or 
+jurisdiction’s equivalent LCR rules for its computation of its LCR for deposits from retail and 
+small business customers of that branch or subsidiary. 
+ 
+149 
+Where a Reporting Bank has a branch or subsidiary 67 that is approved, licensed, 
+registered or otherwise regulated by a bank regulatory agency in a foreign country or 
+jurisdiction to carry on banking business under the laws of the foreign country or jurisdiction 
+and the foreign country or jurisdiction adopts the Alternative Liquidity Approaches, the 
+Reporting Bank may include the HQLA recognised in the foreign country or jurisdiction for its 
+computation of its LCR, up to the amount of the Reporting Bank’s total net cash outflows 
+stemming from the operations of the Reporting Bank or its branch or subsidiary in the foreign 
+country or jurisdiction, and in the domestic currency of the foreign country or jurisdiction. 
+ 
+150 
+The Authority may, by notice in writing to a Reporting Bank, impose stricter 
+parameters than that set out in Part II – LCR, on the Reporting Bank, under section 38(1) read 
+with section 38(2A) of the Act. 
+ 
+Utilisation of HQLA 
+ 
+151 
+A Reporting Bank must – 
+ 
+(a) 
+give prior written notification to the Authority of its intent to utilise its HQLA 
+in a liquidity stress situation, where such utilisation will cause the Reporting 
+ 
+65 
+To avoid doubt, this includes a branch of the subsidiary. 
+66 
+To avoid doubt, this includes a branch of the subsidiary. 
+67 
+To avoid doubt, this includes a branch of the subsidiary. 
+
+
+58 
+ 
+Bank’s LCR to fall below the prevailing minimum requirements as described in 
+paragraph 24; and 
+ 
+(b) 
+ensure that the notification is signed by its chief executive, chief financial 
+officer or any equivalent senior management. 
+ 
+152 
+A Reporting Bank must – 
+ 
+(a) 
+provide its justification for the utilisation of HQLA; 
+ 
+(b) 
+set out the cause of the liquidity stress situation and provide supporting 
+documents, where available; and 
+ 
+(c) 
+detail the steps which it has taken and is going to take to resolve the liquidity 
+stress situation, 
+ 
+to the Authority within one business day after the utilisation of its HQLA. 
+ 
+153 
+A Reporting Bank must also keep the Authority informed of material developments 
+during the liquidity stress situation. 
+ 
+Submission of liquidity returns 
+ 
+154 
+A Reporting Bank must prepare the appropriate liquidity returns set out in Appendix 
+5 as at the last day of each month. 
+ 
+155 
+A Reporting Bank must submit to the Authority electronically through MASNET the 
+liquidity returns prepared in accordance with paragraph 154 and at the following time, as the 
+case may be: 
+ 
+(a) 
+in the case of a Reporting Bank that is – 
+ 
+(i) 
+referred to in paragraph 24(a) – 
+ 
+(A) 
+not later than 14 days after the last day of each month, the 
+Reporting Bank’s Group level returns; and 
+ 
+(B) 
+not later than 20 days after the last day of each month, the 
+Reporting Bank’s Singapore Operations level returns, which 
+excludes the Reporting Bank’s subsidiaries and overseas 
+branches; or 
+ 
+
+
+59 
+ 
+(ii) 
+approved under paragraph 6 to comply with Part II – LCR on a country-
+level group basis – 
+ 
+(A) 
+not later than 14 days after the last day of each month, the 
+Reporting Bank’s country-level group level returns; and 
+ 
+(B) 
+not later than 20 days after the last day of each month, the 
+Reporting Bank’s entity level returns; 
+ 
+(b) 
+in the case of a Reporting Bank which does not fall under sub-paragraph (a), 
+the Reporting Bank’s entity level returns not later than 14 days after the last 
+day of each month. 
+ 
+156 
+Despite paragraph 155, if the day on which a Reporting Bank has to submit any return 
+is not a business day, the Reporting Bank may submit the return on the next business day. 
+ 
+Effective date and savings and transitional provisions 
+ 
+157 
+This Notice takes effect on 1 July 2022 (“effective date”). MAS Notice 649 dated 28 
+November 2014 and last revised on 27 September 2021 is cancelled with effect from the 
+effective date (the “Repealed Notice”). 
+ 
+158 
+Any approval – 
+ 
+(a) 
+granted under paragraphs 4 and 46 of the Repealed Notice (the “Old 
+Approval”); and 
+ 
+(b) 
+in force immediately before the effective date, 
+ 
+is treated as an approval granted under paragraphs 6 and 62 respectively, and is 
+subject to all conditions which the Old Approval was subject to immediately before 
+the effective date, except that – 
+ 
+(c) 
+a reference to “paragraph 4” and “paragraph 46” of the Repealed Notice in the 
+Old Approval shall be read as a reference to “paragraph 6” and “paragraph 62” 
+of this Notice respectively; and 
+ 
+(d) 
+a reference to “paragraphs 46 to 52” of the Repealed Notice in a condition 
+which the Old Approval was subject to immediately before the effective date 
+shall be read as a reference to “paragraphs 62 to 68” of this Notice. 
+ 
+159 
+Despite the Repealed Notice – 
+ 
+
+
+60 
+ 
+(a) 
+in respect of the appropriate liquidity returns prepared as of the last calendar 
+day of the month immediately preceding the effective date in accordance with 
+paragraph 15 of the Repealed Notice, paragraph 20 of this Notice does not 
+apply and a Reporting Bank must submit the appropriate liquidity returns in 
+accordance with paragraph 16 of the Repealed Notice; and 
+ 
+(b) 
+in respect of the appropriate liquidity returns prepared as of the last calendar 
+day of the month immediately preceding the effective date in accordance with 
+paragraph 116 of the Repealed Notice, paragraph 155 of this Notice does not 
+apply and a Reporting Bank must submit the appropriate liquidity returns in 
+accordance with paragraph 117 of the Repealed Notice. 
+ 
+
+
+61 
+ 
+Appendix 1 
+ 
+Exclusion as Qualifying Liabilities 
+ 
+1 
+Subject to paragraph 2 of this Appendix, a Reporting Bank may exclude a bill of 
+exchange as its Qualifying Liabilities if – 
+ 
+(a) 
+the bill of exchange is denominated in Singapore dollars. Where the underlying 
+transaction referred to the bill of exchange is denominated in a foreign 
+currency, the bill must be substituted for the first time into a Singapore dollar 
+usance bill; 
+ 
+(b) 
+the bill of exchange relates to a trade transaction and reference to such a 
+transaction appears on the face of the bill. The trade transaction must be in 
+respect of imports into or exports from, Singapore and includes trade 
+transactions between foreign exporters and foreign importers arranged by 
+companies in Singapore. The Reporting Bank must verify that the first 
+discounting bank or first discounting merchant bank in Singapore has 
+ascertained that the bill of exchange is in fact related to trade transactions by 
+examining the appropriate documents and obtaining written declarations from 
+their customers that they have not sought or obtained other means of 
+financing; and 
+ 
+(c) 
+the outstanding period to maturity of the bill of exchange is 3 months or less. 
+ 
+2 
+Despite paragraph 1 of this Appendix, a Reporting Bank must not exclude the following 
+bills of exchange from its Qualifying Liabilities: 
+ 
+(a) 
+any bill which originates from a “switch transaction” where the transaction is 
+solely between a foreign exporter and a foreign importer and the foreign 
+currency trade bill is “switched” into a Singapore dollar bill and financed here; 
+ 
+(b) 
+any bill which is a bill drawn for a trade transaction in Singapore where all 
+parties are in Singapore; 
+ 
+(c) 
+any bill which is a bill relating to services; 
+ 
+(d) 
+any bill which relates to a trade transaction where the supporting invoice has 
+been paid by the customer prior to presentation of the bill to the first 
+discounting bank or first discounting merchant bank in Singapore for 
+discounting; 
+ 
+
+
+62 
+ 
+(e) 
+any bill which is overdue or been extended beyond the maturity date and a 
+new bill has been drawn to substitute or roll-over the matured bill, regardless 
+of whether the original bill had 3 months or less to maturity at the time it was 
+discounted by the first discounting bank or first discounting merchant bank in 
+Singapore; 
+ 
+(f) 
+any bill which is drawn for imports where the importer is also receiving credit 
+from the seller for the same period, as the imports would effectively be 
+financed by the seller and not from proceeds of the bill. 
+ 
+
+
+63 
+ 
+Appendix 2 
+ 
+Bill of Exchange eligible as Liquid Assets 
+ 
+1 
+A Reporting Bank that purchases a bill of exchange denominated in Singapore dollars 
+from a bank in Singapore or a merchant bank in Singapore may include such a bill as Liquid 
+Assets if – 
+ 
+(a) 
+the bill has been endorsed by one or more banks in Singapore or merchant 
+banks in Singapore; 
+ 
+(b) 
+the Reporting Bank has obtained a written confirmation from the first 
+discounting bank or first discounting merchant bank in Singapore that – 
+ 
+(i) 
+the first discounting bank or first discounting merchant bank in 
+Singapore has taken necessary and sufficient steps to ascertain that the 
+bills are in fact related to trade transactions as evidenced on the bills; 
+ 
+(ii) 
+the bill does not originate from a “switch transaction” where the 
+transaction is solely between a foreign exporter and a foreign importer 
+and the foreign currency trade bill is “switched” into a Singapore dollar 
+bill and financed in Singapore; 
+ 
+(iii) 
+the bill is not drawn for a trade transaction in Singapore where all 
+parties are in Singapore; 
+ 
+(iv) 
+the bill does not relate to services; 
+ 
+(v) 
+the bill does not relate to a trade transaction where the supporting 
+invoice has been paid by the customer prior to presentation of the bill 
+to the first discounting bank or first discounting merchant bank in 
+Singapore for discounting; 
+ 
+(vi) 
+the bill has not become overdue or been extended beyond the maturity 
+date and no new bill has been drawn to substitute or roll-over the 
+matured bill, regardless of whether the original bill had 3 months or 
+less to maturity at the time it was discounted by the first discounting 
+bank or first discounting merchant bank in Singapore; and 
+ 
+(vii) 
+the bill is not drawn for imports where the importer is also receiving 
+credit from the seller for the same period (as the imports would 
+effectively be financed by the seller and not from proceeds of the bills); 
+and 
+
+
+64 
+ 
+ 
+(c) 
+the outstanding period to maturity of the bill is 3 months or less. A bill originally 
+drawn for more than 3 months is only eligible as Liquid Asset when there is 3 
+months or less to maturity. 
+
+
+65 
+ 
+Appendix 3 
+ 
+Credit Ratings and Relevant Values 
+ 
+Description 
+Moody’s 
+Investors 
+Services 
+Standard 
+& 
+Poor’s 
+Ratings 
+Services 
+Fitch 
+Ratings 
+Percentage 
+Long-Term Issue 
+Ratings 
+Aaa 
+Aa1 
+Aa2 
+Aa3 
+AAA 
+AA+ 
+AA 
+AA- 
+AAA 
+AA+ 
+AA 
+AA- 
+90% 
+A1 
+A2 
+A3 
+A+ 
+A 
+A- 
+A+ 
+A 
+A- 
+80% 
+Baa1 
+Baa2 
+BBB+ 
+BBB 
+BBB+ 
+BBB 
+70% 
+ 
+Description 
+Moody’s 
+Investors 
+Services 
+Standard 
+& 
+Poor’s 
+Ratings 
+Services 
+Fitch 
+Ratings 
+Percentage 
+Short-Term 
+Issue Ratings 
+P-1 
+A-1 
+F-1 
+90% 
+P-2 
+A-2 
+F-2 
+80% 
+P-3 
+A-3 
+F-3 
+70% 
+ 
+1 
+For the purposes of determining the eligibility of a debt security or sukuk as a Liquid 
+Asset under paragraph 8(g)(ii) of the Notice and determining the percentage to be applied 
+when computing the amount of Liquid Assets held by a Reporting Bank on a maintenance day 
+under paragraph 10(b)(iii) of the Notice, – 
+ 
+(a) 
+where there are 2 credit ratings for a particular issue of the debt security or 
+sukuk, the Reporting Bank must use the poorer credit rating for that particular 
+issue of the debt security or sukuk; 
+ 
+(b) 
+where there are more than 2 credit ratings for a particular issue of the debt 
+security or sukuk, the Reporting Bank must use either the poorest credit rating 
+or the higher of the 2 poorest credit ratings for that particular issue of the debt 
+security or sukuk; and 
+ 
+(c) 
+where there are both long-term issue ratings and short-term issue ratings for 
+a particular issue of the debt security or sukuk, the Reporting Bank must use 
+
+
+66 
+ 
+the issue rating which map into the lower percentage for that particular issue 
+of the debt security or sukuk. 
+ 
+
+
+67 
+ 
+Appendix 4 
+ 
+Schedules for Computation and Maintenance of MLA Requirements 
+ 
+For a 5-day business week – 
+ 
+Computation Day 
+Maintenance Day 
+Monday 
+Wednesday 
+Tuesday 
+Thursday 
+Wednesday 
+Friday, Saturday and Sunday 
+Thursday 
+next Monday 
+Friday 
+next Tuesday 
+next Monday 
+next Wednesday 
+next Tuesday 
+… … 
+next Thursday 
+… … 
+ 
+ 
+Example 1: If Thursday is a public holiday 
+ 
+Computation Day 
+Maintenance Day 
+Monday 
+Wednesday and Thursday 
+Tuesday 
+Friday, Saturday and Sunday 
+Wednesday 
+next Monday 
+Friday 
+next Tuesday 
+next Monday 
+next Wednesday 
+next Tuesday 
+… … 
+next Thursday 
+… … 
+ 
+ 
+Example 2: If Friday is a public holiday 
+ 
+Computation Day 
+Maintenance Day 
+Monday 
+Wednesday 
+Tuesday 
+Thursday, Friday, Saturday and Sunday 
+Wednesday 
+next Monday 
+Thursday 
+next Tuesday 
+next Monday 
+next Wednesday 
+next Tuesday 
+… … 
+next Thursday 
+… … 
+ 
+ 
+
+
+68 
+ 
+Example 3: If next Monday is a public holiday 
+ 
+Computation Day 
+Maintenance Day 
+Monday 
+Wednesday 
+Tuesday 
+Thursday 
+Wednesday 
+Friday, Saturday, Sunday and next Monday 
+Thursday 
+next Tuesday 
+Friday 
+next Wednesday 
+next Tuesday 
+next Thursday 
+next Wednesday 
+… … 
+next Friday 
+… … 
+ 
+ 
+Example 4: If next Tuesday is a public holiday 
+ 
+Computation Day 
+Maintenance Day 
+Monday 
+Wednesday 
+Tuesday 
+Thursday 
+Wednesday 
+Friday, Saturday and Sunday 
+Thursday 
+next Monday and Tuesday 
+Friday 
+next Wednesday 
+next Monday 
+next Thursday 
+next Wednesday 
+… … 
+next Friday 
+… … 
+ 
+ 
+Example 5: If next Wednesday is a public holiday 
+ 
+Computation Day 
+Maintenance Day 
+Monday 
+Wednesday 
+Tuesday 
+Thursday 
+Wednesday 
+Friday, Saturday and Sunday 
+Thursday 
+next Monday 
+Friday 
+next Tuesday and Wednesday 
+next Monday 
+next Thursday 
+next Tuesday 
+next Friday, Saturday and Sunday 
+next Thursday 
+… … 
+Monday, a fortnight later 
+… … 
+ 
+ 
+
+
+69 
+ 
+Appendix 5 
+ 
+Submission Requirements 
+ 
+Summary of forms 
+ 
+ 
+Title 
+Form 1 Section 1 
+Assets and Liabilities by Currency 
+Form 1 Section 2 
+Top 20 individual depositors 
+Form 1 Section 3 
+Top 20 corporate depositors 
+Form 1 Section 4 
+Top 20 interbank lenders 
+Form 2 Section 1A 
+Liquidity Coverage Ratio 
+Form 2 Section 1B 
+Minimum Liquid Assets 
+Form 2 Section 2 
+Contractual cash flow for on and off-balance sheet items 
+Form 2 Section 3 
+Contractual residual maturity of on and off-balance sheet items 
+Form 2 Section 4 
+Behavioural cash flow of on and off-balance sheet items 
+Form 2 Section 5 
+Available unencumbered liquid assets  
+ 
+1 
+A Reporting Bank must submit a copy of Form 1, and as many copies of Form 2 as there 
+are significant currencies on a Group level, country-level group level, entity level or Singapore 
+Operations level, as the case may be. The Reporting Bank may, with the Authority’s approval, 
+determine an alternate methodology to determine its significant currencies if the default 
+methodology, which is based on whether the aggregate liabilities of the Reporting Bank 
+denominated in the currency as at the end of the month amounts to 5% or more of the 
+Reporting Bank’s total liabilities, does not properly reflect the funding structure of the 
+Reporting Bank. The forms to submit are given in the table below. 
+ 
+Country-level compliance 
+ 
+2 
+In accordance with paragraph 6 of the Notice, a Reporting Bank on the LCR framework 
+may elect to comply with Part II – LCR on a country-level group basis, by consolidating the 
+balance sheets of related corporations of the Reporting Bank that are Reporting Banks or 
+merchant banks in Singapore. Each Reporting Bank within the country-level group must 
+submit the same set of forms as if they were complying with Part II – LCR on an entity level. 
+ 
+3 
+Each Reporting Bank within a country-level group must select an entity to perform the 
+country-level submission, and this choice has to be made known to the Authority. The 
+Reporting Bank must follow the same steps as the entity level submission for the country-
+level submission, except that the Reporting Bank must indicate the details of the entities in 
+the country-level group in Section 1 of both Form 1 and Form 2. 
+ 
+ 
+
+
+70 
+ 
+FI type 
+Forms to submit 
+D-SIB Reporting Bank 
+ 
+Group level / Country-
+level 
+group 
+level 
+submission 
+(where 
+applicable, as the case 
+may be) 
+and 
+Entity level / Singapore 
+Operations 
+level 
+submission (as the case 
+may be) 
+• Form 1 
+o All sections 
+• Form 2 (All Currency) 
+o Section 1A 
+o Section 2 
+o Section 3 
+o Section 4 
+o Section 5 
+• Form 2 (Singapore Dollar) 
+o Section 1A 
+o Section 2 
+o Section 3 
+o Section 4 
+o Section 5 
+D-SIB Reporting Bank 
+(Currency 
+X 
+is 
+a 
+significant currency) 
+ 
+Group level / Country-
+level 
+group 
+level 
+submission 
+(where 
+applicable, as the case 
+may be) 
+and 
+Entity level / Singapore 
+Operations 
+level 
+submission (as the case 
+may be) 
+• Form 1 
+o All sections 
+• Form 2 (All Currency) 
+o Section 1A 
+o Section 2 
+o Section 3 
+o Section 4 
+o Section 5 
+• Form 2 (Singapore Dollar) 
+o Section 1A 
+o Section 2 
+o Section 3 
+o Section 4 
+o Section 5 
+• Form 2 (Currency X) 
+o Section 1A 
+o Section 2 
+o Section 3 
+o Section 4 
+o Section 5 
+ 
+ 
+
+
+71 
+ 
+FI type 
+Forms to submit 
+Non-D-SIB 
+Reporting 
+Bank that must comply 
+with or has chosen to 
+comply with Part II – 
+LCR 
+ 
+Group level / Country-
+level 
+group 
+level 
+submission 
+(where 
+applicable, as the case 
+may be) 
+and 
+Entity level / Singapore 
+Operations 
+level 
+submission (as the case 
+may be) 
+• Form 1 
+o All sections 
+• Form 2 (All Currency) 
+o Section 1A 
+o Section 2 
+o Section 3 
+o Section 5 
+• Form 2 (Singapore Dollar) 
+o Section 1A 
+o Section 2 
+o Section 3 
+o Section 5 
+Non-D-SIB 
+Reporting 
+Bank that must comply 
+with or has chosen to 
+comply with Part II – 
+LCR (Currency X is a 
+significant currency) 
+ 
+Group level / Country-
+level 
+group 
+level 
+submission 
+(where 
+applicable, as the case 
+may be) 
+and 
+Entity level / Singapore 
+Operations 
+level 
+submission (as the case 
+may be) 
+• Form 1 
+o All sections 
+• Form 2 (All Currency) 
+o Section 1A 
+o Section 2 
+o Section 3 
+o Section 5 
+• Form 2 (Singapore Dollar) 
+o Section 1A 
+o Section 2 
+o Section 3 
+o Section 5 
+• Form 2 (Currency X) 
+o Section 1A 
+o Section 2 
+o Section 3 
+o Section 5 
+ 
+ 
+
+
+72 
+ 
+FI type 
+Forms to submit 
+Non-D-SIB 
+Reporting 
+Bank that has chosen to 
+comply with Part I – 
+MLA 
+ 
+Entity level submission 
+• Form 1 
+o All sections 
+• Form 2 (All Currency) 
+o Section 1B (All Currency section for Part 3) 
+o Section 2 
+o Section 3 
+o Section 5 
+• Form 2 (Singapore Dollar) 
+o Section 1B (Singapore Dollar section for Part 3) 
+o Section 2 
+o Section 3 
+o Section 5 
+Non-D-SIB 
+Reporting 
+Bank that has chosen to 
+comply with Part I – 
+MLA (Currency X is a 
+significant currency) 
+ 
+Entity level submission 
+• Form 1 
+o All sections 
+• Form 2 (All Currency) 
+o Section 1B (All Currency section for Part 3) 
+o Section 2 
+o Section 3 
+o Section 5 
+• Form 2 (Singapore Dollar) 
+o Section 1B (Singapore Dollar section for Part 3) 
+o Section 2 
+o Section 3 
+o Section 5 
+• Form 2 (Currency X) 
+o Section 2 
+o Section 3 
+o Section 5 
+
+
+73 
+ 
+Appendix 6 
+ 
+Computation of the cap on Level 2 HQLA with regard to short-term securities financing 
+transactions 
+ 
+1 
+A Reporting Bank must apply the method described in this Appendix for its 
+computation of the cap on Level 2A, Level 2B and Level 2B(II) HQLA with regard to short-term 
+securities financing transactions. 
+ 
+2 
+As stated in paragraph 35 of the Notice, a Reporting Bank must, in its computation of 
+the 40% cap on Level 2 HQLA, take into account the impact on the stock of HQLA of the 
+amounts of Level 1 and Level 2 HQLA involved in secured funding, secured lending and 
+collateral swap transactions maturing within the 30-day LCR horizon. The Reporting Bank 
+must ensure that the maximum amount of adjusted Level 2 HQLA in the stock of HQLA is equal 
+to two-thirds of the adjusted amount of Level 1 HQLA after haircuts have been applied. The 
+Reporting Bank must ensure that its computation of the 40% cap on Level 2 HQLA takes into 
+account any reduction in eligible Level 2B HQLA on account of the 15% cap on Level 2B HQLA. 
+ 
+3 
+A Reporting Bank must, in its computation of the 15% cap on Level 2B HQLA, take into 
+account the impact on the stock of HQLA of the amounts of HQLA involved in secured funding, 
+secured lending and collateral swap transactions maturing within the 30-day LCR horizon. The 
+Reporting Bank must ensure that the maximum amount of adjusted Level 2B HQLA in the 
+stock of HQLA is equal to 15/85 of the sum of the adjusted amounts of Level 1 and Level 2A 
+HQLA, or, in cases where the 40% cap is binding, up to a maximum of 1/4 of the adjusted 
+amount of Level 1 HQLA, both after haircuts have been applied. 
+ 
+4 
+A Reporting Bank must, in its computation of the 5% cap on Level 2B(II) HQLA, take 
+into account the impact on the stock of HQLA of the amounts of HQLA involved in secured 
+funding, secured lending and collateral swap transactions maturing within the 30-day LCR 
+horizon. The Reporting Bank must ensure that the maximum amount of adjusted Level 2B(II) 
+HQLA in the stock of HQLA is equal to 5/95 of the sum of the adjusted amounts of Level 1, 
+Level 2A and Level 2B(I) HQLA, or in cases where the 15% cap is binding, up to a maximum of 
+5/85 of the adjusted amount of Level 1 and Level 2A HQLA, or in cases where the 40% cap is 
+binding, up to a maximum of 5/60 of the adjusted amount of Level 1 and, after haircuts have 
+been applied. 
+ 
+5 
+The adjusted amount of Level 1, Level 2A, Level 2B(I) and Level 2B(II) HQLA is defined 
+as the amount of Level 1, Level 2A, Level 2B(I) and Level 2B(II) HQLA that would result after 
+unwinding secured funding, secured lending and collateral swap transactions maturing within 
+the 30-day LCR horizon involving the exchange of any HQLA for any Level 1, Level 2A, Level 
+2B(I) and Level 2B(II) HQLA (including cash) that meet, or would meet if held unencumbered, 
+the operational requirements for HQLA set out in paragraph 31 of the Notice. Relevant 
+
+
+74 
+ 
+haircuts would be applied prior to the computation of the caps on Level 2 HQLA, Level 2B 
+HQLA and Level 2B(II) HQLA set out in paragraphs 2 to 4 of this Appendix respectively. 
+ 
+6 
+A reference to “unadjusted” in this Appendix refers to the value of the relevant 
+category of HQLA, after accounting for the haircuts as specified in paragraph 33 of the Notice 
+and before accounting for the exchange of assets in secured funding, secured lending and 
+collateral swap transactions maturing within the 30-day LCR horizon. 
+ 
+7 
+A reference to “adjusted” in this Appendix refers to the value of the relevant category 
+of HQLA, after accounting for the haircuts as specified in paragraph 33 of the Notice and the 
+exchange of assets in secured funding, secured lending and collateral swap transactions 
+maturing within the 30-day LCR horizon. 
+ 
+8 
+The formula for the computation of HQLA is as follows: 
+ 
+HQLA = Unadjusted Level 1 HQLA + Unadjusted Level 2A HQLA + Unadjusted Level 2B(I) 
+HQLA + Unadjusted Level 2B(II) HQLA – Adjustment for 5% Level 2B(II) HQLA cap – 
+Adjustment for 15% Level 2B HQLA cap – Adjustment for 40% Level 2 HQLA cap, 
+ 
+where – 
+ 
+(a) 
+Adjustment for 5% Level 2B(II) HQLA cap = MAX (Adjusted Level 2B(II) HQLA – 
+(5/95)*(Adjusted Level 1 HQLA + Adjusted Level 2A HQLA + Adjusted Level 2B(I) 
+HQLA), Adjusted Level 2B(II) HQLA – (5/85)*(Adjusted Level 1 HQLA + Adjusted 
+Level 2A HQLA), Adjusted Level 2B(II) HQLA – (5/60)*Adjusted Level 1 HQLA,0); 
+ 
+(b) 
+Adjustment for 15% Level 2B HQLA cap = MAX ((Adjusted Level 2B(I) HQLA+ 
+Adjusted Level 2B(II) HQLA – Adjustment for 5% Level 2B(II) HQLA cap) – 
+(15/85)*(Adjusted Level 1 HQLA + Adjusted Level 2A HQLA), Adjusted Level 
+2B(I) HQLA+ Adjusted Level 2B(II) HQLA – Adjustment for 5% Level 2B(II) HQLA 
+cap – (15/60)*Adjusted Level 1 HQLA,0); and 
+ 
+(c) 
+Adjustment for 40% Level 2 HQLA cap = MAX ((Adjusted Level 2A HQLA + 
+Adjusted Level 2B(I) HQLA + Adjusted Level 2B(II) HQLA – Adjustment for 5% 
+Level 2B(II) HQLA cap – Adjustment for 15% Level 2B(I) HQLA cap) – 
+(2/3)*Adjusted Level 1 HQLA,0). 
+
+
+75 
+ 
+Appendix 7 
+ 
+HQLA haircuts, cash outflow and cash inflow rates 
+ 
+Item 
+Rate 
+HQLA 
+ 
+A. Level 1 HQLA: 
+ 
+- 
+Notes and coins 
+- 
+Qualifying marketable securities from sovereigns, central banks, 
+PSEs, and multilateral development banks 
+- 
+Qualifying central bank reserves 
+- 
+Domestic sovereign or central bank debt for non-0% risk-
+weighted sovereigns 
+100% 
+B. Level 2 HQLA (maximum of 40% of HQLA): 
+ 
+Level 2A HQLA 
+ 
+- 
+Sovereign, central bank, multilateral development banks, and 
+PSE assets qualifying for a 20% risk weight 
+- 
+Qualifying corporate debt securities rated AA- or higher 
+- 
+Qualifying covered bonds rated AA- or higher 
+85% 
+Level 2B HQLA (maximum of 15% of HQLA) 
+ 
+Level 2B(I) HQLA 
+ 
+- 
+Qualifying corporate debt securities rated at least A- 
+50% 
+Level 2B(II) HQLA (maximum of 5% of HQLA) 
+ 
+- 
+Qualifying corporate debt securities rated between BBB+ and 
+BBB- 
+- 
+Qualifying sovereign, central bank and PSE debt securities rated 
+at least BBB- 
+- 
+Qualifying Ordinary shares, excluding preference shares and 
+treasury shares 
+- 
+Qualifying RMBS 
+50% 
+ 
+50% 
+ 
+50% 
+ 
+75% 
+Total value of HQLA 
+ 
+ 
+ 
+
+
+76 
+ 
+Item 
+Rate 
+Cash Outflows 
+ 
+A. Retail deposits: 
+ 
+Demand deposits and term deposits (less than 30 days maturity) 
+- 
+Stable deposits (fully insured by SDIC) 
+- 
+Stable deposits (fully insured by effective government deposit 
+insurance schemes in foreign countries or jurisdictions) 
+ 
+- 
+Less stable deposits 
+ 
+5% 
+To follow foreign 
+country’s 
+or 
+jurisdiction’s rate 
+10% 
+Term deposits with residual maturity greater than 30 days 
+0% 
+B. Unsecured wholesale funding: 
+ 
+Demand and term deposits (less than 30 days maturity) provided by 
+small business customers: 
+- 
+Stable deposits 
+- 
+Less stable deposits 
+ 
+ 
+3%/5% 
+10% 
+Operational deposits generated by clearing, custody and cash 
+management services: 
+- 
+Portion covered by deposit insurance 
+25% 
+ 
+3%/5% 
+Qualifying deposits provided by members of an institutional network 
+of cooperative banks 
+25% 
+Non-financial corporates, sovereigns, central banks, multilateral 
+development banks, and PSEs 
+- 
+If the entire amount fully covered by deposit insurance scheme 
+40% 
+ 
+20% 
+Other legal entity customers not included above 
+100% 
+Retail and small business customer deposits in foreign countries or 
+jurisdictions 
+To follow foreign 
+country’s 
+or 
+jurisdiction’s rate 
+C. Secured funding: 
+ 
+- 
+Secured funding transactions with central bank counterparty or 
+backed by Level 1 HQLA with any counterparty 
+- 
+Secured funding transactions backed by Level 2A HQLA, with any 
+counterparty 
+- 
+Secured funding transactions backed by assets other than Level 1 
+or Level 2A HQLA, with domestic sovereigns, multilateral 
+development banks, or domestic PSEs with a risk weight of 20% 
+or lower under paragraphs 7.3.167.3.47 and 7.3.177.3.48 of MAS 
+Notice 637 
+- 
+Backed by RMBS eligible for inclusion in Level 2B HQLA 
+- 
+Backed by other Level 2B HQLA 
+- 
+All other secured funding transactions 
+0% 
+ 
+15% 
+ 
+25% 
+ 
+ 
+ 
+ 
+25% 
+50% 
+100% 
+ 
+ 
+
+
+77 
+ 
+Item 
+Rate 
+D. Additional requirements: 
+ 
+Liquidity needs (e.g. collateral calls) related to financing transactions, 
+derivatives and other contracts 
+3 
+notch 
+downgrade 
+Market valuation changes on derivatives transactions (largest absolute 
+net 30-day collateral flows realised during the preceding 24 months) 
+Look 
+back 
+approach 
+Valuation changes on posted collateral that are not Level 1 HQLA 
+securing derivatives 
+20% 
+Excess collateral held by a Reporting Bank related to derivative 
+transactions that could contractually be called at any time by its 
+counterparty 
+100% 
+Liquidity needs related to collateral contractually due from the 
+Reporting Bank on derivatives transactions 
+100% 
+Increased liquidity needs related to derivative transactions that allow 
+collateral substitution to assets that are not HQLA 
+100% 
+ABCP, SIVs, conduits, SPVs, etc.: 
+ 
+- 
+Liabilities from maturing ABCP, SIVs, SPVs, etc. (applied to 
+maturing amounts and returnable assets) 
+100% 
+- 
+Asset Backed Securities (including covered bonds) applied to 
+maturing amounts 
+100% 
+Undrawn committed credit and liquidity facilities provided to: 
+ 
+- 
+Retail and small business customers 
+- 
+Non-financial corporates, sovereigns and central banks, 
+multilateral development banks, and PSEs 
+- 
+Banks, and merchant banks in Singapore, subject to prudential 
+supervision 
+- 
+Other financial institutions (include securities firms, insurance 
+companies) 
+- 
+Other legal entity customers, credit and liquidity facilities 
+5% 
+10% for credit, 
+30% for liquidity 
+40% 
+ 
+40% for credit, 
+100% for liquidity 
+100% 
+Other contingent funding liabilities (such as guarantees, letters of 
+credit, revocable credit and liquidity facilities, etc.) 
+- 
+Trade finance 
+- 
+Customers’ short positions covered by other customers’ 
+collateral 
+- 
+Others 
+ 
+ 
+3% 
+50% 
+ 
+100% of expected 
+amount 
+unless 
+otherwise stated 
+Any additional contractual outflows 
+100% 
+Net derivatives cash outflows 
+100% 
+Any other contractual cash outflows 
+100% 
+Total expected cash outflows 
+ 
+ 
+ 
+
+
+78 
+ 
+Item 
+Rate 
+Cash Inflows 
+ 
+Maturing secured lending transactions backed by the following 
+collateral: 
+ 
+- 
+Level 1 HQLA 
+- 
+Level 2A HQLA 
+- 
+Level 2B HQLA (eligible RMBS) 
+- 
+Level 2B HQLA (Others) 
+0% 
+15% 
+25% 
+50% 
+Margin loans backed by assets that are not HQLA 
+50% 
+Maturing reverse repurchase or securities borrowing arrangements 
+backed by assets that are not HQLA 
+100% 
+Credit or liquidity facilities provided to the Reporting Bank 
+0% 
+Operational deposits held at other financial institutions (include 
+deposits held at a central institution or a specialised service provider of 
+an institutional network of cooperative banks) 
+0% 
+Other cash inflows by counterparty: 
+- 
+Amount to be received from retail customers 
+- 
+Amount to be received from wholesale customers other than 
+financial institutions and central banks, from transactions other 
+than those listed in above inflow categories 
+- 
+Amount to be received from financial institutions and central 
+banks, from transactions others than those listed in above inflow 
+categories 
+ 
+50% 
+50% 
+ 
+ 
+100% 
+Net derivatives cash inflows 
+100% 
+Other contractual cash inflows not included above 
+0% 
+Total expected cash inflows 
+ 
+Total net cash outflows = Total expected cash outflows minus min 
+[total expected cash inflows, 75% of total expected cash outflows] 
+ 
+LCR = HQLA / Total net cash outflows 
+ 
+ 
+[MAS Notice 649 (Amendment) 2024] 
+ 
+ 
+
+
+79 
+ 
+Appendix 8 
+ 
+Principles for Sound Liquidity Risk Management 
+ 
+1 
+The guidelines referred to in footnotes 12 and 19 of the Notice are as follows: 
+ 
+(a) 
+a Reporting Bank should actively monitor and control liquidity risk exposures 
+and funding needs at the level of individual legal entities, foreign branches and 
+subsidiaries, and the banking group as a whole, taking into account legal, 
+regulatory and operational limitations to the transferability of liquidity; 
+ 
+(b) 
+where a Reporting Bank has a branch or subsidiary68 in a foreign country or 
+jurisdiction, the Reporting Bank should have processes in place to capture all 
+existing liquidity transfer restrictions to the extent practicable, and to monitor 
+the rules and regulations in the foreign countries or jurisdictions and assess 
+their liquidity implications for the banking group as a whole; 
+ 
+(c) 
+a Reporting Bank should conduct their own stress tests to assess the level of 
+liquidity they should hold, and construct their own scenarios that could cause 
+difficulties for their specific business activities. Such internal stress tests should 
+incorporate time horizons longer than 30 days. A Reporting Bank that is an 
+internationally active bank or that has been notified by the Authority that it is 
+a D-SIB should share the results of these additional stress tests with the 
+Authority; 
+ 
+(d) 
+a Reporting Bank should monitor the legal entity and physical location where 
+collateral is held and how it may be mobilised in a timely manner. Specifically, 
+it should have a policy in place that identifies legal entities, geographical 
+locations, currencies and specific custodial or bank accounts where liquid 
+assets are held; 
+ 
+(e) 
+a Reporting Bank should actively manage its intraday liquidity positions and 
+risks to meet payment and settlement obligations on a timely basis under both 
+normal and stressed conditions and thus contribute to the smooth functioning 
+of payment and settlement systems; 
+ 
+(f) 
+a Reporting Bank should meet their liquidity needs in each currency and 
+maintain liquid assets consistent with the distribution of their liquidity needs 
+by currency. The Reporting Bank should be able to use the liquid assets to 
+generate liquidity in the currency and in the country or jurisdiction in which 
+the net cash outflows arise. In managing foreign exchange liquidity risk, the 
+ 
+68 
+To avoid doubt, this includes a branch of the subsidiary. 
+
+
+80 
+ 
+Reporting Bank should take into account the risk that its ability to swap 
+currencies and access the relevant foreign exchange markets may erode 
+rapidly under stressed conditions. The Reporting Bank should be aware that 
+sudden, adverse exchange rate movements could sharply widen existing 
+mismatched positions and alter the effectiveness of any foreign exchange 
+hedges in place; 
+ 
+(g) 
+a Reporting Bank should ensure that liquid assets held are well diversified 
+within the asset classes themselves (except for sovereign debt from Singapore 
+or from a foreign country or jurisdiction where the Reporting Bank has a 
+branch or subsidiary 69 that is approved, licensed, registered or otherwise 
+regulated by a bank regulatory agency in the foreign country or jurisdiction to 
+carry on banking business under the laws of the foreign country or jurisdiction, 
+central bank reserves, central bank debt securities, and cash). The Reporting 
+Bank should have policies and limits in place in order to avoid concentration 
+with respect to asset types, issue and issuer types, and currency (consistent 
+with the distribution of net cash outflows by currency) within asset classes; 
+ 
+(h) 
+a Reporting Bank should monitor the concentration of cash inflows across 
+wholesale customers in the context of the Reporting Bank’s liquidity 
+management in order to limit overreliance on the arrival of cash inflows from 
+one or a limited number of wholesale customers. 
+ 
+2 
+In this Appendix, “liquid assets” means – 
+ 
+(a) 
+in relation to a Reporting Bank that has chosen to comply with Part I – MLA of 
+the Notice, any Liquid Asset as defined in paragraph 7 of the Notice; and 
+ 
+(b) 
+in relation to a Reporting Bank that must comply with or has chosen to comply 
+with Part II – LCR of the Notice, any high quality liquid asset or HQLA as defined 
+in paragraph 22 of the Notice. 
+ 
+ 
+ 
+69 
+To avoid doubt, this includes a branch of the subsidiary. 
+
+
+81 
+ 
+* Notes on History of Amendments 
+ 
+1. MAS Notice 649 (Amendment) 2024 dated 16 May 2024 with effect from 1 July 2024. 
+ 

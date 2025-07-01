@@ -1,0 +1,1402 @@
+ 
+01 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+Guidelines 
+ JULY 2024 
+INTERNAL CONTROLS 
+ 
+ 
+
+
+ 
+ 
+2 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+CONTENTS 
+1 
+INTRODUCTION 
+4 
+1.1 
+Overview 
+4 
+1.2 
+Application of Guidelines 
+4 
+2 
+CONTROL ENVIRONMENT 
+4 
+2.1 
+Policies and Procedures 
+4 
+2.2 
+Code of Conduct 
+5 
+2.3 
+Delegation of Authority 
+6 
+2.4 
+Segregation of Duties 
+6 
+2.5 
+Competency and Resources 
+7 
+2.6 
+Audit 
+7 
+2.7 
+Compliance 
+9 
+2.8 
+Mandatory Leave 
+10 
+2.9 
+Handling of Complaints 
+10 
+2.10   Staff Compensation 
+11 
+2.11   Recruitment 
+11 
+2.12  Staff Training and Education 
+11 
+3 
+BUSINESS PROCESS CONTROLS 
+12 
+3.1 
+Dealings with Customers 
+12 
+3.2 
+Customer Due Diligence 
+13 
+3.3 
+Legal Documentation 
+14 
+3.4 
+Accounting and Record Keeping 
+14 
+3.5 
+Management Information Systems 
+14 
+3.6 
+Physical Controls 
+16 
+3.7 
+Off-Premises and After Hours Trading 
+16 
+3.8 
+New Products/Business Lines/Activities 
+16 
+3.9 
+Valuation of Assets 
+17 
+3.10   Verification and Reconciliation 
+18 
+3.11   Confirmation 
+19 
+3.12   Settlement 
+20 
+
+
+ 
+ 
+3 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+3.13 
+ Securitisation 
+20 
+CHECKLIST OF SOUND PRACTICES TO ADOPT 
+22 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+4 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+1 
+INTRODUCTION  
+ 
+1.1 OVERVIEW  
+1.1.1 
+A system of effective internal controls is fundamental to the safe and sound management of 
+institutions. Effective internal controls help an institution protect and enhance shareholders’ value and 
+reduce the possibility of unexpected losses or damage to its reputation.   
+  
+1.1.2 
+Internal controls are the policies, procedures and processes established by the Board of 
+Directors (Board) and senior management to provide reasonable assurance on the safety, effectiveness 
+and efficiency of the institution’s operations, the reliability of financial and managerial reporting and 
+compliance with regulatory requirements.   
+  
+1.2 APPLICATION OF GUIDELINES  
+1.2.1 
+This chapter provides guidance on sound and prudent internal controls.1 The guidelines are 
+not intended to be exhaustive nor do they prescribe a uniform set of requirements on internal controls 
+for all institutions. The extent and degree to which an institution adopts these guidelines should be 
+commensurate with the institution’s risk and business profile.   
+  
+1.2.2 
+This chapter is divided into two sections: control environment and business process controls. 
+The first section outlines the key elements of the control environment which set the tone for the control 
+culture of an institution and influence the control consciousness of its staff. The second section focuses 
+on the internal controls in specific areas or activities within an institution.   
+ 
+2 
+CONTROL ENVIRONMENT  
+2.1 POLICIES AND PROCEDURES  
+2.1.1 
+An institution should institute adequate internal control systems and reporting to assist its 
+Board, or its delegated authority, in the fulfilment of its responsibilities for oversight over the institution’s 
+risk management framework. The authority and responsibilities of each control function should be 
+ 
+1 Institutions should also take into account applicable industry standards such as the Basel Committee on 
+Banking Supervision “The Internal Audit Function in Banks” (June 2012) and “Implementation of the 
+Compliance Principles” (August 2008), where appropriate, and subsequent or other relevant publications 
+that may be issued from time to time. 
+
+
+ 
+ 
+5 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+properly documented. The head of each control function should periodically review such document and 
+submit suggestions for any changes to senior management and the Board for approval.   
+  
+2.1.2 
+An institution should have comprehensive and sound policies approved by the Board for 
+prudent management of significant risks arising from its business activities and operations. The approved 
+policies should be consistent with the nature, complexity and materiality of the institution’s activities. 
+There should be a clear delineation of roles, responsibilities and accountability for the implementation 
+of consistent policies across the institution.   
+  
+2.1.3 
+An institution should establish appropriate procedures and processes to implement its 
+policies. These should be documented in procedural manuals. The manuals should be periodically 
+reviewed to ensure that they reflect current practices. There should also be adequate systems to monitor 
+compliance with established policies and procedures. Deviations from such policies and procedures 
+should be independently investigated, reported and addressed by the relevant parties.   
+  
+2.2 CODE OF CONDUCT  
+2.2.1 
+It is in the interest of an institution to conduct its activities with prudence and integrity. In this 
+regard, the institution should establish a code of conduct that is commensurate with its structure and 
+complexity of operations.   
+  
+2.2.2 
+The code of conduct should state the ethical values of the institution and prescribe guidelines 
+for employees to observe when discharging their duties. The code should cover areas such as acceptance 
+of gifts and entertainment, conflicts of interest, safeguarding of confidentiality of information, and 
+disclosure of and restrictions on personal investments.   
+  
+2.2.3 
+In addition to general guidelines, an institution should prescribe specific guidelines for 
+operations in functional areas such as investment banking, private banking and treasury. For instance, 
+with regard to treasury and financial derivatives activities, institution should take into consideration the 
+good market practices outlined in “The Singapore Guide to Conduct and Market Practices for Treasury 
+Activities” when coming up with specific guidelines for this area. Additionally, there should be 
+independent and close supervision over the conduct of dealers and their relationship with brokers. The 
+institution should monitor the reason for using particular brokers and ensure that trades are only 
+conducted with approved brokers. There should be clear guidelines on the acceptance of entertainment 
+and gifts from brokers. Broker statements should be reviewed by staff independent of the trading 
+function and proper records should be maintained on benefits received from brokers. Unusual trends in 
+benefits or consideration received from brokers should be highlighted. The guidelines should also apply 
+to dealings with customers who have frequent and sizeable transactions with the institution.   
+
+
+ 
+ 
+6 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+  
+2.2.4 
+An institution should have adequate policies, procedures and controls to address conflict of 
+interest situations. It should require employees to disclose such conflicts on a timely basis. These cases 
+should be escalated to either the Board or senior management, and disclosed to customers where 
+relevant. Dealers should not be trading for their personal accounts.   
+  
+2.2.5 
+An institution should ensure that all personnel understand and adhere to the code of conduct. 
+The code should come under the purview of a senior staff or an appropriate unit. Employees should be 
+required to acknowledge in writing that they have read, understood and will observe the code. 
+Disciplinary actions should be taken against those who breach the requirements.   
+  
+2.2.6 
+The Board or senior management should periodically review the code of conduct in the light 
+of changes in the internal and external environment.   
+  
+2.3 DELEGATION OF AUTHORITY  
+2.3.1 
+An institution should clearly define the responsibilities and levels of authority required for the 
+various types of activities and exposures. Approving limits assigned to personnel should be commensurate 
+with their seniority and responsibilities.   
+  
+2.3.2 
+Any delegation of authority should be clearly documented and should specify, among other 
+things, the exact authority being delegated, the authority of recipients to further delegate authority and 
+the restrictions placed on the exercise of delegated authority. The institution should also have adequate 
+monitoring systems to ensure that activities are properly authorised. Departures from the approval limit 
+structure should be promptly reported to the Board and senior management.   
+  
+2.4 SEGREGATION OF DUTIES  
+2.4.1 
+An institution should ensure that there is adequate segregation of duties to guard against the 
+risk of unauthorised transactions, fraudulent activities and manipulation of data for personal gain or for 
+concealment of irregularities or financial losses. It should have processes that restrict any one staff from 
+being able to handle an entire transactional flow.   
+  
+2.4.2 
+A control function should be sufficiently independent from senior management and other 
+functions to ensure proper checks and balances, provide an objective perspective on strategies, issues 
+and potential violations related to their areas of responsibility, as well as implement or oversee the 
+implementation of corrective measures where necessary.   
+  
+
+
+ 
+ 
+7 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+2.4.3 
+An institution should conduct periodic reviews of the responsibilities of key personnel to 
+minimise areas of potential conflict of interest and ensure that there are independent checks for proper 
+segregation of duties. Inadequate segregation of duties could occur in, but are not limited to, the following 
+instances where an individual has responsibility for:   
+  
+(a) 
+front office and risk management functions (e.g. credit marketing and credit 
+administration);   
+ 
+(b) 
+trade execution and operations functions (e.g. trade confirmation, trade settlement, 
+reconciliation of front office and back office data on trades, reconciliation and 
+accounting);   
+ 
+(c) 
+approval for funds disbursement and the actual disbursement; and  
+ 
+(d) 
+initiating and releasing payment instructions.   
+  
+2.5 COMPETENCY AND RESOURCES  
+An institution should ensure that there is an appropriate balance in the skills and resources of 
+the back office, control functions and operational management relative to the business origination units. 
+Staff of back office and control functions should have sufficient expertise and authority within the 
+organisation (and where appropriate, in the case of control functions, sufficient access to the institution’s 
+Board or senior management) to provide an effective check and balance to the business origination units.    
+2.6 AUDIT  
+2.6.1 
+An institution should have in place an adequately staffed, independent and permanent 
+internal audit function responsible for assessing whether existing policies, processes and internal controls 
+(including risk management, compliance and corporate governance processes) are independent, 
+effective, appropriate, and remain sufficient for the institution’s business.     
+  
+2.6.2 
+The institution should appoint senior personnel who are fit and proper to oversee the internal 
+audit function. The internal audit function should also have appropriate independence with reporting 
+lines to the institution’s Board or to an audit committee of the Board (the “Audit Committee”). The Board 
+should ensure that the members of the Audit Committee are suitably qualified to discharge their 
+responsibilities. The terms of reference, composition, quorum and frequency of meeting of the Audit 
+Committee should also be formalised and clearly documented.   
+  
+
+
+ 
+ 
+8 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+2.6.3 
+The Audit Committee should carry out its duties in an objective and impartial manner. It 
+should be empowered to review internal audit plans, evaluate the performance of auditors, decide on 
+remuneration of auditors and assess whether senior management has promptly rectified audit findings. 
+The Audit Committee should also ensure that auditors possess the necessary experience and expertise 
+and are competent and independent of the areas under review.   
+  
+2.6.4 
+The internal audit function should have sufficient stature within the institution to ensure that 
+senior management reacts to and acts upon its recommendations. Internal auditors should be 
+empowered to initiate a review of any area or any function consistent with its terms of reference. The 
+internal auditor function should be suitably trained and have relevant experience to understand and 
+evaluate the business they are auditing.  
+  
+2.6.5 
+The internal audit function should employ a methodology that identifies the material risks run 
+by the institution. In addition, the internal audit function should prepare an audit plan which is reviewed 
+regularly based on its own risk assessment, and allocate audit resources accordingly. Internal auditors 
+should vary the audit frequency according to the level of risk. The scope and frequency of internal audits 
+should be increased if significant weaknesses are found or if there are significant changes to the risk 
+oversight process, product lines, modelling methodologies, internal controls or risk profile. To facilitate 
+the development of sound controls, auditors should be allowed to comment on the product and system 
+development process at an early stage, though the level of their involvement should not compromise 
+their independence or their ability to objectively review the new product or system subsequently.   
+  
+2.6.6 
+The internal audit function should be kept informed in a timely manner of any material 
+changes made to the institution’s risk management strategy, policies or processes. They should also have 
+full access to and communication with any member of staff as well as full access to records, files or data 
+of the institution and its affiliates, whenever relevant to the performance of their duties. Internal auditors 
+should also have the authority to assess any outsourced functions.   
+  
+2.6.7 
+Internal auditors are expected to ensure that policies and processes are complied with. This 
+includes assessing compliance with risk limits and the reliability and timeliness of reports submitted to 
+the Board and senior management. In addition, the internal auditors should check for proper and 
+adequate segregation of duties and reporting lines for front office and risk management personnel, and 
+whether there is adequate oversight by competent managers.   
+  
+2.6.8 
+Internal audit reports should be timely and distributed to senior management who have the 
+responsibility and authority to implement corrective measures. Internal auditors of an institution with its 
+head office located overseas should report their findings directly to the head office. Internal auditors 
+should perform follow-up activities to ensure that findings have been satisfactorily addressed. The Audit 
+
+
+ 
+ 
+9 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+Committee should receive reports of material audit findings. It should monitor and track the actions taken 
+to address audit findings and ensure effective and timely response by senior management.   
+  
+2.6.9 
+Internal auditors should be empowered to decline doing an audit or review, or taking on any 
+other responsibilities requested by management, if this is believed to be inconsistent with their terms of 
+reference or with the strategy and audit plan approved by the Board.  In any case, they should inform the 
+Board and seek its guidance.  
+  
+2.7 COMPLIANCE  
+2.7.1 
+An institution should have in place an adequately staffed, permanent and independent 
+compliance function to assist senior management in managing effectively the compliance risks faced by 
+the institution. The head of the compliance function should be fit and proper. The compliance function 
+should have access to, and report to the Board or its delegated authority on matters such as:  
+  
+(a) 
+an assessment of the key compliance risks the institution faces and the steps being 
+taken to address them;   
+  
+(b) 
+an assessment of how the various parts of the institution are performing against 
+compliance standards and goals; and  
+  
+(c) 
+any compliance issues involving management or persons in positions of major 
+responsibility within the institution and the status of any associated investigations or 
+other actions being taken; material compliance violations or concerns involving any 
+other person or unit of the institution and the status of any associated investigations 
+or other actions being taken.  
+  
+2.7.2 
+The Compliance officers should be suitably trained, equipped with the relevant experience 
+and vested with sufficient authority within the institution to perform their role effectively. They should 
+also have the authority to communicate directly with any personnel and have unrestricted access to such 
+information as they need to carry out their responsibilities.   
+  
+2.7.3 
+The compliance function should address compliance shortcomings and violations, including 
+ensuring that adequate disciplinary actions are taken where appropriate and requisite reports are 
+promptly made to the institution’s supervisor or other authorities. The Compliance function should also 
+provide advice and training on regulatory requirements and standards of professional conduct to staff, 
+conduct periodic reviews to assess compliance with policies, procedures and regulatory requirements, 
+and facilitate a whistle-blowing process.   
+  
+
+
+ 
+ 
+10 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+2.7.4 
+The Head of Compliance should have the authority and obligation to promptly inform the 
+Chair of the Board directly in the event of any major noncompliance by a member of management or a 
+material non-compliance by the institution with an external obligation if in either case he or she believes 
+that senior management or other persons in authority at the institution are not taking the necessary 
+corrective actions and a delay would be detrimental to the institution or its stakeholders.  
+ 
+2.8 MANDATORY LEAVE  
+2.8.1 
+An institution should have personnel policies requiring staff in risk-taking, risk management 
+and risk control positions to take mandatory block leave of at least 5 consecutive business days each year. 
+Departures from this policy should be allowed only under exceptional circumstances and should be 
+formally approved.   
+  
+2.8.2 
+Staff on mandatory leave should not be allowed to transact, execute instructions or perform 
+their assigned duties during their leave of absence. Supervisors on such leave should refrain from giving 
+operational instructions to their staff during this period. The duties, responsibilities and the corresponding 
+authority of the staff should be fully delegated to a covering officer during his or her absence.   
+  
+2.9 HANDLING OF COMPLAINTS  
+2.9.1 
+A high frequency of complaints can be symptomatic of inadequate controls or non-compliance 
+with existing procedures. Hence, an institution should have adequate procedures for recording, 
+investigating and monitoring complaints from customers. Steps should be taken to ensure that complaints 
+are handled fairly, consistently and promptly. Staff responsible for dealing with complaints should be 
+independent of the subjects of the complaints. The institution should also take prompt action to rectify 
+system and control weaknesses highlighted by the complaints.   
+  
+2.9.2 
+Senior management should ensure that customer complaints are adequately addressed. In 
+this regard, periodic reports on complaints should be submitted to senior management. Reports could 
+include information such as the source of complaints, volume and type of complaints, how complaints 
+were addressed, and whether disciplinary action was taken against staff who breached internal guidelines 
+or failed to uphold the requisite standard of professionalism in discharging their duties.   
+  
+2.9.3 
+The Board or an appropriate Board committee should receive periodic summary reports on 
+complaints and complaint handling.   
+   
+  
+
+
+ 
+ 
+11 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+2.10  STAFF COMPENSATION  
+An institution should ensure that its compensation policies can attract and retain competent 
+and experienced personnel but do not inadvertently provide incentives for inappropriate activities. 
+Compensation policies for risk management, control and valuation functions should be sufficiently 
+independent of the performance of trading activities or sales and revenue targets. This is to avoid 
+providing incentives for such staff to condone excessive risk-taking in the institution. Even in deciding on 
+compensation for its revenue generating and management positions, the institution should take into 
+account the individual’s consistency of performance, adherence to the code of conduct, internal 
+guidelines and regulatory requirements and longer term performance measures, rather than just short-
+term results. An institution should maintain proper documentation of staff appraisals for future 
+reference.   
+2.11  RECRUITMENT  
+  
+An institution should ensure that individuals considered for employment are adequately screened 
+for experience, professional capabilities, honesty and integrity. Screening should include background 
+employment checks to assess character, integrity and track record.   
+  
+2.12  STAFF TRAINING AND EDUCATION  
+2.12.1 
+An institution should ensure that its staff are equipped with knowledge of new products as 
+well as changes in legislation and regulations, and adequately trained to enhance their efficiency and 
+effectiveness. It should identify skill gaps and assess training needs regularly.  Training records should be 
+maintained. Training should be regular and appropriately structured to enable staff to understand and 
+manage the complexities of the functional areas concerned.   
+  
+2.12.2 
+An institution should, where practicable and appropriate, implement periodic job rotation to 
+help staff broaden their skill sets. This may assist in providing continuity in areas affected by staff 
+turnover. The institution should also be conscious that high staff turnover can undermine the 
+effectiveness of its internal control systems. This could be mitigated to some extent by ensuring that 
+every staff within the function is familiar with the institution’s policies, procedures and processes.   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+12 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+3 
+BUSINESS PROCESS CONTROLS  
+ 
+3.1 DEALINGS WITH CUSTOMERS  
+3.1.1 
+An institution should have clear written policies, approved by the Board or senior 
+management, on issues relating to dealings with customers and risk disclosures. Such policies are aimed 
+at reducing the risk of misunderstandings and contractual disputes with customers.   
+  
+3.1.2 
+Dealings with customers should be conducted in good faith and in a manner that promotes 
+public confidence in the integrity of the market. In this regard, an institution should provide proper 
+training and closely supervise staff who deal with customers in more complex products such as structured 
+investment products, financial derivatives and treasury instruments. The institution should also 
+periodically review written agreements and other documents for such transactions to incorporate 
+changes in market practices and laws.   
+  
+3.1.3 
+An institution should implement procedures to assess the financial sophistication, risk 
+tolerance and needs of its customers. Where appropriate, the institution should provide risk disclosure 
+information, taking into account the sophistication of the customer and complexity of the transaction. 
+This will enable the customer to better understand the risks as well as the nature and material terms and 
+conditions of the transaction.   
+  
+3.1.4 
+When an institution is instructed by a customer to proceed with a transaction against its 
+advice, the decision should be documented together with the institution’s analysis and risk disclosure 
+information provided to the customer. This will safeguard the institution’s interest if the customer were 
+to file a claim against the institution for losses incurred. In addition, such transactions should be reviewed 
+by an appropriately independent and competent department or personnel and brought to the attention 
+of senior management of the institution.   
+  
+3.1.5 
+An institution should clarify with customers the nature of its relationship with them to 
+minimise the possibility of customers incorrectly presuming that the institution has acted in an advisory 
+or similar role in the transaction.   
+  
+3.1.6 
+An institution should promptly resolve disputed transactions with customers. It should 
+maintain records of telephone calls of trades and discussions with customers on proposed transactions 
+to facilitate expeditious resolution of discrepancies and disputes. The institution should prohibit the use 
+of mobile phones or phones outside the trading room for trading except in exceptional circumstances 
+and only where adequate mitigating controls are in place (See paragraph 3.7 on “Off-Premises and After 
+Hours Trading”).   
+
+
+ 
+ 
+13 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+3.1.7 
+Disputes with customers should be independently investigated. The investigations should be 
+properly documented. Reports on disputes should be submitted to management for review. While it 
+attempts to resolve the dispute, the institution should consider the appropriateness of taking measures 
+to mitigate further losses arising from the disputed transaction. Significant disputes with customers 
+should also be escalated to the Board and senior management.   
+  
+3.2 CUSTOMER DUE DILIGENCE2  
+3.2.1 
+Sound customer due diligence (CDD) policies and procedures will reduce the risk of an 
+institution being used as an intermediary for money laundering or other illegal activities. Therefore, CDD 
+policies and procedures should be reviewed and updated periodically. Customer identification is an 
+integral part of the CDD process. An institution should thus obtain satisfactory evidence of the identity 
+and legal existence of potential customers before establishing a business relationship with them. The 
+institution should not open accounts or conduct business with customers who insist on anonymity or use 
+fictitious names. It should apply enhanced due diligence for higher risk customers.   
+ 
+3.2.2 
+An institution should verify the identity of customers through inspection of passports, identity 
+cards or other official documents. It should also ensure that they have up-to-date customer profiles.   
+  
+3.2.3 
+An institution should establish policies on the minimum information required for different 
+types of account holders (e.g. personal, corporate, beneficial, trustee, nominee and intermediary) to guide 
+staff during the account opening process. Outstanding account opening documents should be monitored 
+by staff independent of those with front-line responsibilities. Exception reports on long outstanding 
+account opening documents should be generated for periodic review by management.   
+  
+3.2.4 
+An institution should be cognisant of risks associated with inactive and dormant accounts and 
+ensure that there are appropriate controls in place. These could include, among others, policies on the 
+definition of inactive and dormant accounts, periodic review of such accounts and conditions under which 
+a dormant account could be reinstated. In addition, the institution should have appropriate procedures 
+for reactivating accounts, including authenticating the identity of the customer that is reactivating the 
+account.   
+ 
+3.2.5 
+An institution should have controls in place to ensure that opening and closure of accounts 
+are properly authorised, with the basis and approval clearly documented.   
+  
+ 
+2 This section should be read in conjunction with MAS Notices and Guidelines on Prevention of Money Laundering & 
+Countering the Financing of Terrorism.  
+
+
+ 
+ 
+14 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+3.3 LEGAL DOCUMENTATION  
+An institution should have written agreements with customers and counterparties, where 
+appropriate and in line with market practice, specifying the duties and responsibilities of each party. It 
+should have clear guidelines and policies to ensure that a counterparty has proper authority to enter into 
+a transaction. The institution should verify that contracts or agreements governing transactions are legally 
+sound and enforceable in all relevant jurisdictions. It should also institute proper controls to ensure that 
+legal documentation is properly executed, confirmed, maintained and safeguarded.   
+3.4 ACCOUNTING AND RECORD KEEPING  
+3.4.1 
+An institution should maintain adequate controls over its accounting and other record-
+keeping processes for all business activities. The accounting and financial reporting systems should be 
+able to produce timely and accurate data on an institution’s financial condition, performance and risks, 
+on demand and at regular intervals, for effective management and control of all its operations as well as 
+for financial and regulatory reporting.   
+  
+3.4.2 
+An effective accounting system has to, among other things, be able to identify and record all 
+valid transactions and describe the transactions in sufficient detail to permit proper classification of 
+transactions for financial and regulatory reporting. There should also be adequate documentation and 
+records of transactions for audit trail purposes.  
+  
+3.4.3 
+An institution should also ensure that staff responsible for accounting and record-keeping 
+functions are independent of front office activities.  
+   
+3.4.4 
+An institution should also establish the minimum retention period for taped telephone 
+conversations and documents, taking into account the relevant laws, rules and regulations. Financial 
+transaction documents may be retained as originals, copies, on microfilm or in electronic form, taking into 
+account whether such forms are admissible in court or in compliance with regulatory requirements. Such 
+records should be properly kept and stored in a manner that is reasonably practicable to retrieve.   
+  
+3.5 MANAGEMENT INFORMATION SYSTEMS  
+3.5.1 An institution should have adequate management information systems (MIS) for effective 
+management and control of all aspects of its operations. The sophistication of the MIS should be 
+commensurate with the complexity and diversity of the institution’s operations. The institution should 
+consider key elements such as timeliness, accuracy, consistency, completeness and relevance when 
+developing its MIS. The MIS should also be sufficiently flexible to cope with various contingencies and 
+have the capability to monitor compliance with the institution’s established policies, procedures and 
+limits.   
+  
+
+
+ 
+ 
+15 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+3.5.2 An accurate, informative and timely MIS is essential to an institution’s risk management process. 
+The institution’s risk exposures should be reported to the Board and senior management using a common 
+framework for measuring and limiting risks. Exposures and profit and loss positions for trading positions 
+should be reported at least daily to managers who supervise but do not themselves engage in position-
+taking activities, and to risk managers who report independently and regularly to the Board and senior 
+management on the risk-taking activities of the institution. When market conditions dictate, more 
+frequent reports should be made to update the Board and senior management on the changes in the 
+institution’s risk profile. It is essential that the Board and senior management are promptly informed of 
+unanticipated changes, progressively deteriorating positions or other significant issues arising from the 
+institution’s positions, even when limits are not exceeded. Additionally, management reports should be 
+prepared by a party independent of the position-taking units.   
+  
+3.5.3 An institution using different information systems for various transactions entered into by 
+customers should ensure that all transactions of an individual customer are captured and consolidated in 
+the MIS reports. Processes should be in place to ensure data integrity, especially if the reports generated 
+are based on information from different source systems.   
+  
+3.5.4 An institution should ensure that systems support and operational capabilities can accommodate 
+the various treasury and financial derivatives activities the institution engages in. These capabilities should 
+enable the institution to process and settle transactions efficiently, accurately monitor risks on a timely 
+basis and provide a snapshot of the risks inherent in all on-and off-balance sheet activities. Where an 
+institution engages in leveraged treasury or financial derivatives transactions, its systems should be able 
+to reliably track collateral values.   
+  
+3.5.5 An institution should deploy the necessary resources to develop and maintain the operations and 
+systems supporting its activities. Operations personnel should be knowledgeable, competent and 
+experienced in the activities the institution engages in. The sophistication of the systems support and the 
+operational capacity should be commensurate with the size and complexity of these operations.   
+  
+3.5.6 An effective MIS should facilitate an institution’s monitoring of compliance with internal controls 
+and regulatory requirements, and provide reasonable assurance that these are being complied with. For 
+instance, an institution could use its MIS to establish profiles on the expected type and volume of 
+transactions of its customers. Transactions that are inconsistent with a customer’s profile should be 
+investigated.   
+  
+3.5.7 Reports on transactions should be sent to management with oversight responsibility of business 
+and operations. The frequency and the amount of detail in these reports should be varied according to 
+the level of senior management reviewing the reports. Follow-up actions should be properly documented 
+and reported to senior management, and suspicious transactions reported to the relevant authorities.   
+
+
+ 
+ 
+16 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+3.6 PHYSICAL CONTROLS  
+3.6.1 
+An institution should ensure that there is adequate physical security for its place of business 
+and cash-in-transit. Access to sensitive areas such as the dealing room, computer room and funds transfer 
+area should also be granted strictly on a need-to basis to minimise the risk of unauthorised transactions, 
+fraud or disruption to operations.   
+  
+3.6.2 
+Items such as test keys, master IDs for SWIFT, cash and securities, should be subject to dual 
+control. Their access should be restricted to authorised personnel and recorded for proper accountability. 
+Fireproof safes and safe deposit vaults should be used for the storage and safe custody of assets such as 
+cash and securities.   
+   
+  
+3.7 OFF-PREMISES AND AFTER HOURS TRADING  
+  
+An institution should state in its policies and procedures whether off-premises and after hours 
+trading are permissible. If such transactions are allowed, adequate controls should be in place to ensure 
+that transactions are executed by authorised personnel and within the approved limits. These 
+transactions must be captured in the institution’s systems for processing and reporting as soon as they 
+are executed. Confirmations must be sent to customers within a reasonable period of time.   
+  
+3.8 NEW PRODUCTS/BUSINESS LINES/ACTIVITIES  
+3.8.1 An institution should have a new product policy to ensure that the risks inherent in new business 
+lines or activities are properly assessed. Proposals on new products, business lines or activities should be 
+accompanied, where appropriate, by a product programme document that includes:   
+  
+(a) 
+an analysis of legal and regulatory requirements and whether the activities are 
+permissible;   
+  
+(b) 
+a description of the relevant financial product and markets and the underlying 
+objectives of the transactions (e.g. customer service, risk management or trading);   
+  
+(c) 
+an analysis of the risks that may arise from these activities and details of any risk 
+management procedures and systems established, including procedures for identifying, 
+measuring, monitoring and controlling risks;   
+  
+(d) 
+an evaluation of the impact of the proposed activities on the institution's overall 
+financial condition and capital level, where applicable;   
+  
+
+
+ 
+ 
+17 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+(e) 
+a description of the relevant accounting guidelines and tax treatment; and   
+  
+(f) 
+a recommendation on the appropriate structure and staffing for trading and the key 
+risk control functions.   
+ 
+3.8.2 The new product policy should contain a definition of the term “new product”, and provide for the 
+proper review and authorisation of variations to existing products. The policy may require such variations 
+to be approved by the Board or appropriate level of management. The policy should be updated when 
+market conditions warrant it, when major assumptions have changed, or when there are regulatory 
+changes.   
+  
+3.8.3 As new products frequently require different pricing, processing, accounting and risk 
+measurement systems, an institution should ensure that it has the necessary resources to support these 
+activities. The new product approval process should include a sign-off by all relevant authorised personnel 
+in areas such as risk control, operations, accounting, legal and compliance, and by senior management.   
+ 
+3.8.4 Depending on the nature and complexity of a new product, a post-implementation review of the 
+new product should also be conducted at an appropriate period after its introduction, accompanied by 
+proper documentation of the issues raised. Such a review will enable all the parties concerned to discuss 
+the issues encountered during implementation and to ensure that no risk remains unidentified.   
+  
+3.9 VALUATION OF ASSETS  
+3.9.1 There should be clear policies and procedures for independent, fair and proper valuation of assets. 
+Prices, interest rates, exchange rates and volatility factors used in the revaluation process for the financial 
+accounting of treasury and financial derivatives transactions should be obtained from independent 
+sources or be independently verified. They should not be decided by the institution’s dealers. If the 
+institution uses live data feeds from vendors, it should exercise proper care and control to ensure the 
+usefulness, quality and integrity of the data.   
+  
+3.9.2 An institution should have policies and controls to manage the risks arising from illiquid positions. 
+These should address the methodologies used for valuing illiquid positions, identification and reporting 
+of illiquid positions to the Board and senior management and audit frequency.   
+  
+3.9.3 The prices and valuation methodologies used should be documented for audit trail purposes. 
+Periodic reports on the valuation of assets should be submitted to the Board and senior management for 
+review.   
+ 
+
+
+ 
+ 
+18 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+3.10  VERIFICATION AND RECONCILIATION  
+3.10.1 An institution should have verification and reconciliation procedures for ascertaining the accuracy 
+of transaction details and activities. Staff performing verification should be independent of those 
+responsible for originating the transaction or preparing the data. For instance, reconciliation of front office 
+and back office data should be performed by staff independent of the dealing function. Reconciliation 
+should be performed regularly, even daily, for an institution active in dealing. The reconciliation should 
+be reviewed to verify the institution’s exposures, profit and loss positions and transaction details. 
+Discrepancies should be promptly investigated and rectified, with established procedures in place for 
+reporting them to the Board and senior management. Examples of reconciliation to be performed include:   
+  
+(a) 
+subsidiary ledgers to general ledger;   
+  
+(b) 
+trade details against confirmations received from counterparties;   
+  
+(c) 
+records to tangible assets and key documents;   
+  
+(d) 
+securities holdings to custodian statements; and   
+  
+(e) 
+nostro reconciliation.   
+  
+3.10.2 An institution should, as far as possible, require customers to indemnify it against losses for 
+accepting instructions given verbally, via facsimile or via electronic mail. Where practicable, all telephone 
+conversations relating to transaction-related instructions should be tape recorded.   
+  
+3.10.3 An institution should have policies to control the creation of accounts in the general and subsidiary 
+ledgers to minimise the risk of fictitious accounts being set up. It should also ensure that all customer 
+transactions are processed through the customers’ own accounts with the institution, and not through 
+other accounts such as suspense or sundry accounts, without proper authorisation.   
+  
+3.10.4 Passing of entries through suspense and sundry accounts should be properly authorised and 
+monitored to detect unusual transactions. In this regard, an institution should establish policies and 
+procedures for areas such as the purpose of suspense accounts, controls over posting entries, length of 
+time that an item has remained outstanding, frequency of reconciliation and follow-up actions required. 
+It should also ensure that suspense items are cleared promptly. Reports on outstanding suspense items 
+should also be periodically reviewed by senior management.   
+  
+
+
+ 
+ 
+19 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+3.11  CONFIRMATION  
+3.11.1 An institution should have in place processes and procedures to ensure prompt confirmation of 
+transactions to facilitate deal authentication and timely detection of transaction errors or unauthorised 
+transactions.   
+  
+3.11.2 Customer orders should be promptly processed in accordance with instructions given and on the 
+best available terms. An institution should have in place controls to ensure that trade matching and 
+confirmations are performed as soon as possible after execution. This will facilitate early detection of 
+errors in recording trades and unauthorised transactions, both of which could result in increased risks and 
+costs.   
+  
+3.11.3 Where documented confirmations are required for trades done, an institution should send these 
+to customers promptly. The institution is also encouraged to have a two-way confirmation process. 
+Controls should be in place to prevent unauthorised amendments to the confirmation documents. Where 
+possible, the confirmation process should be automated. Where there exists an automated process, 
+manual preparation of confirmation documents should only be permitted on an exceptional basis.  All 
+manual confirmation processes should be subject to stringent controls.   
+  
+3.11.4 Confirmation of trades with customers should be performed independently of the dealing 
+function. Incoming confirmation slips should be received by a department that is independent of the 
+dealing function, and disputes or unconfirmed trades immediately investigated. Where a customer is not 
+an individual, outgoing confirmations should be sent to the appropriate group that is independent of 
+trading. Interim updates or ad hoc statements requested by customers should also be checked and 
+properly authorised before transmission to customers.   
+  
+3.11.5 Where an institution keeps statements and records of customers' holdings and transactions under 
+safe custody or hold mail facility, it should have procedures for independent verification of customer 
+activities. The institution should also ensure that only customers or authorised persons collect such 
+statements and records. Proper acknowledgement and confirmation of receipt of these statements or 
+records should be obtained.   
+  
+3.11.6 An institution should, as far as possible, discourage the practice of handing customer statements 
+and records to staff holding front-line responsibilities, e.g. relationship managers, for onward 
+transmission to customers. If this is not practicable, controls should be implemented to mitigate the risk 
+of staff impropriety.   
+ 
+
+
+ 
+ 
+20 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+3.12  SETTLEMENT  
+3.12.1 An institution should establish standard settlement instructions in its systems. Changes to these 
+instructions should be reviewed to ensure that they have been properly authorised by the customers or 
+counterparties. Procedures should also be in place for validating funds transfer requests, which could 
+include, among other things, telex testing, call-back and signature verification. Third party payments 
+should be discouraged or, if allowed, be subject to more stringent controls.   
+  
+3.12.2 An institution should perform periodic reconciliation of funds transfer records to correspondent 
+banks’ statements and ensure that any outstanding items are promptly investigated and reviewed. Non-
+receipt or non-payment of funds should also be identified and rectified within a reasonable period of time.   
+ 
+3.13  SECURITISATION  
+3.13.1 
+An institution should have appropriate systems, policies and procedures (including incentive 
+alignment measures) in place to address risks arising from its involvement in securitisation3, where it 
+acts as an investor or securitiser4 (i.e.  an originator5 or issuer). These policies, procedures and measures 
+include, but are not limited to, the following: 
+ 
+(a) 
+Assigning clear responsibility within the institution, for the management and monitoring 
+of securitisations. The board and senior management of the institution should be aware 
+of, and understand the effect of securitisation on its risk profile as well as the legal, 
+accounting and potential reputational impact of this activity. Senior management is 
+responsible for the participation of the institution in securitisations and should provide 
+direction on the strategy of the institution, as well as its development of policies and 
+procedures for managing, monitoring and controlling risks arising from securitisation 
+activities; and  
+ 
+3 The term “securitisation” means any transaction or scheme involving the tranching of risk associated with an exposure or a 
+pool of exposures, and which has the following characteristics: (a) payments in the transaction or scheme depend on the 
+performance of the exposure or pool of exposures; (b) the subordination of tranches determines the distribution of losses 
+during the ongoing life of the transaction or scheme; and (c) junior tranches can absorb losses without interrupting contractual 
+payments to more senior tranches. The term “tranche” means a contractually established segment of the risk associated with 
+an underlying exposure or pool of exposures, where a position in the segment entails a risk of loss greater than, or less than a 
+position of, the same amount in each other such segment, without taking account of credit protection provided by third parties 
+directly to the holders of positions in the segment or in other segments.  
+4 The term “securitiser” does not include a reinsurer licensed as a Special Purpose Reinsurance Vehicle, which has the meaning 
+given by the Insurance (General Provisions and Exemptions for Special Purpose Reinsurance Vehicles) Regulations 2018.  
+5 The term “originator” means: (a) an entity which, either itself or through related entities, directly or indirectly, creates the 
+exposure being securitised; or (b) any entity which sponsors a securitisation, i.e. purchases or advises or causes a special 
+purpose entity (SPE) to purchase the exposures of a third party, which are then used in a securitisation (for avoidance of doubt, 
+selling credit protection such that the entity or the SPE has a long position in the credit risk of the obligor is equivalent to 
+purchasing exposures). 
+
+
+ 
+ 
+21 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+ 
+(b) 
+Satisfying itself that it is not subject to reputational risk due to its role in a securitisation, 
+and where appropriate, to disclose its obligations in order to mitigate that risk.  
+ 
+3.13.2 Where an institution is an investor in a securitisation, the institution should conduct necessary 
+due diligence, including: 
+ 
+(a) 
+Assessing its securitisation exposures, taking into account risks arising from the 
+underlying exposures in determining its overall exposures to any particular obligor, 
+industry or geographic area for the purpose of managing concentration risks; and 
+ 
+(b) 
+Prior to investing in the securitisation, satisfying itself that there is adequate incentive 
+alignment between investors and the securitiser (i.e. originator or issuer) of the 
+securitisation, taking into account the level of risk retention by the securitiser. 
+ 
+3.13.3 Where an institution is a securitiser (i.e. originator or issuer) of a securitisation, the institution 
+should disclose the information necessary for investors to make informed investment decisions, including 
+information on the extent and manner of risk retention, and other incentive alignment measures.   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+22 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+Appendix  
+CHECKLIST OF SOUND PRACTICES TO ADOPT  
+[The checklist summarises the key practices only and is not meant to be exhaustive. For details, 
+institutions should refer to the guidelines.]   
+ 
+Ref 
+Sound Practice 
+Yes/No 
+A 
+Control Environment   
+ 
+ 
+1 
+Policies and Procedures  
+ 
+Is there a set of comprehensive policies, approved by the Board for 
+prudent management of significant risks arising from the institution’s 
+activities and operations?   
+  
+Are there appropriate procedures and processes to implement the 
+policies? Are the procedural manuals reviewed and updated 
+regularly?       
+ 
+ 
+2 
+Code of Conduct   
+  
+Is there a comprehensive code of conduct for staff and is the code 
+periodically reviewed in light of changes in the internal and external 
+environment?   
+ 
+ 
+3 
+Delegation of Authority   
+  
+Are the responsibilities and levels of authority required in relation to 
+various types of activities and exposures clearly defined?  
+  
+Are there adequate monitoring systems to ensure that activities are 
+properly authorised and that departures from the approved limit 
+structure are promptly reported to the Board and senior 
+management?  
+ 
+ 
+4 
+Segregation of Duties   
+  
+Is there proper and adequate segregation of duties?   
+  
+Is the control function sufficiently independent from senior 
+management and other functions? 
+ 
+
+
+ 
+ 
+23 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+Ref 
+Sound Practice 
+Yes/No 
+ 
+ 
+ 
+5 
+Internal Audit   
+  
+Does the internal audit function:  
+  
+• have sufficient resources that are suitably trained and have 
+relevant experience to understand and evaluate the business 
+they are auditing?  
+ 
+• have appropriate independence with reporting lines to the 
+institution’s Board or to an audit committee of the Board, and 
+has status within the institution to ensure that senior 
+management reacts to and acts upon its recommendations?  
+ 
+• have full access to and communication with any member of 
+staff as well as full access to records, files or data of the 
+institution and its affiliates, whenever relevant to the 
+performance of its duties?  
+ 
+• employ a methodology that identifies the material risks run by 
+the institution?  
+ 
+• prepare an audit plan, which is reviewed regularly, based on its 
+own assessment and allocates its resources accordingly?  
+ 
+• have the authority to access any outsourced function? 
+  
+• have the power to initiate a review of any area or any function 
+consistent with its terms of reference?  
+  
+  
+Are the internal auditors kept informed in a timely manner of any 
+material change made to the institution’s risk management strategy, 
+policies or processes?   
+  
+Are audit reports timely and distributed to the appropriate senior 
+management? 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+24 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+Ref 
+Sound Practice 
+Yes/No 
+6 
+Compliance   
+  
+Is there a senior person or an appropriate unit appointed to oversee 
+compliance issues?   
+  
+Are compliance shortcomings and violations addressed accordingly?  
+  
+Are compliance officers suitably trained, equipped with the relevant 
+experience and vested with sufficient authority within the institution 
+to perform their role effectively?   
+  
+Does the Board or its delegated authority exercise oversight of the 
+management of the compliance function?  
+  
+Are compliance officers empowered to communicate directly with any 
+personnel and have access to all information necessary to discharge 
+their responsibilities?   
+  
+Does the compliance function have access to the Board? 
+ 
+ 
+7 
+Mandatory Leave   
+  
+Are there policies on mandatory leave for staff in risk-taking, risk 
+management and risk control positions?   
+ 
+ 
+8 
+Handling of Complaints   
+  
+Are there adequate procedures for recording, investigating, 
+monitoring and reporting complaints from customers?  
+ 
+ 
+9 
+Staff Compensation   
+  
+Are reward and compensation policies, especially for the risk 
+management, control and senior management functions, sufficiently 
+independent of the performance of trading activities or revenue 
+targets?   
+ 
+ 
+10 
+Recruitment   
+  
+Is an adequate screening process in place for recruiting staff with the 
+necessary experience and professional capabilities?   
+ 
+ 
+
+
+ 
+ 
+25 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+Ref 
+Sound Practice 
+Yes/No 
+11 
+Staff Training and Education   
+  
+Are staff provided with adequate training and do they possess the 
+necessary experience and expertise? 
+ 
+ 
+B 
+Business Process Controls   
+ 
+ 
+1 
+Dealing with Customers   
+  
+Are there policies on suitability and risk disclosure of products to 
+customers?   
+ 
+ 
+2 
+Customer Due Diligence  
+  
+Are there sound customer due diligence policies and procedures?   
+  
+Are there appropriate controls for inactive and dormant accounts, 
+opening and closure of accounts? 
+ 
+ 
+3 
+Legal Documentation   
+  
+Have the Board and senior management instituted policies and 
+proper and adequate controls to ensure that transaction 
+documentation is properly executed, confirmed, maintained and 
+safeguarded?  
+ 
+ 
+4 
+Accounting and Record Keeping   
+  
+Are there adequate controls over the accounting and record-keeping 
+process?   
+  
+Are the staffs responsible for accounting and recordkeeping functions 
+independent of front-office activities?  
+ 
+ 
+5 
+Management Information Systems   
+  
+Is an adequate management information system in place for effective 
+management and control of all aspects of operations, including 
+monitoring of compliance with internal controls and regulatory 
+ 
+
+
+ 
+ 
+26 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+Ref 
+Sound Practice 
+Yes/No 
+requirements, and providing reasonable assurance that these are 
+being complied with?   
+   
+Have the Board and senior management ensured that systems 
+support and operational capacity are adequate to accommodate the 
+different types of activities the institution engages in?   
+  
+Are risk exposures independently and regularly reported to the Board 
+and senior management?  Is there a process to promptly inform the 
+Board and senior management of unanticipated changes, 
+progressively deteriorating positions or other significant positions 
+arising from the institution’s positions, even when limits are not 
+exceeded?   
+ 
+6 
+Physical Controls   
+  
+Is access to sensitive areas such as the dealing room, computer room 
+and funds transfer area strictly granted on a need-to basis?   
+  
+Are items such as test keys, master IDs for SWIFT, cash and securities 
+subjected to dual control and their access restricted to authorised 
+personnel and recorded for proper accountability?   
+ 
+ 
+7 
+Off-Premises and After Hours Trading   
+  
+Are adequate controls in place for off-premises and after hours 
+trading?   
+ 
+ 
+8 
+New Products/ Business Lines/ Activities   
+  
+Is there a new product policy to ensure that risks inherent in new 
+business lines or activities are properly assessed?   
+ 
+Is there a process for the proper review and authorisation of 
+variations to existing products?  
+ 
+ 
+Are the parameters used to govern products kept updated?  
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+27 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+Ref 
+Sound Practice 
+Yes/No 
+9 
+Valuation of Assets   
+  
+Are prices, interest rates, exchange rates and volatility factors used in 
+revaluation obtained from independent sources or independently 
+verified?   
+  
+Are compensating policies and controls in place for managing the risks 
+arising from illiquid positions?   
+ 
+ 
+10 
+Verification and Reconciliation  
+  
+Are verification and reconciliation processes for ascertaining the 
+accuracy of transaction details and activities adequate?   
+ 
+ 
+11 
+Confirmation   
+  
+Is confirmation of trades with customers performed independently of 
+the dealing function and as soon as possible after trade execution?   
+  
+Are enhanced verification procedures established and applied to 
+those statements and records of customers’ holdings and 
+transactions held under safe custody or hold mail facility?   
+ 
+ 
+12 
+Settlement   
+  
+Are there procedures for validating funds transfer requests? 
+ 
+Is periodic reconciliation of funds transfer records to correspondent 
+banks’ statements performed and are outstanding items promptly 
+investigated and reviewed? 
+ 
+ 
+ 
+ 
+13 
+Securitisation 
+ 
+Are there appropriate systems, policies and procedures (including 
+incentive alignment measures) in place to address risks arising from 
+the institution’s involvement in securitisation where it acts as an 
+investor or securitiser (i.e. originator or issuer)?  
+ 
+ 
+
+
+ 
+ 
+28 
+ 
+Guidelines on Risk Management Practices – Internal Controls  
+Ref 
+Sound Practice 
+Yes/No 
+Are the board and senior management of the institution aware of, 
+and understand the effect of securitisation on the institution’s risk 
+profile as well as the legal, accounting and potential reputational 
+impact of this activity? Is the senior management responsible for the 
+participation of the institution in securitisations, and do the senior 
+management provide direction on the strategy of the institution, as 
+well as its development of policies and procedures for managing, 
+monitoring and controlling risks arising from securitisation activities? 
+ 
+Before investing in a securitisation, has the institution conducted the 
+necessary due diligence taking into account risks from the underlying 
+exposures, and whether the institution is satisfied that there is 
+adequate incentive alignment between the institution (as an investor) 
+and the securitiser (i.e. originator or issuer) of the securitisation, 
+taking into account the level of risk retention by the securitiser? 
+ 
+Where an institution is acting as a securitiser (i.e. originator or issuer) 
+of a securitisation, has it disclosed the necessary information 
+(including the extent and manner of risk retention and other incentive 
+alignment measures) to investors necessary for them to make 
+informed investment decisions?  
+ 
+ 
+ 
+ 

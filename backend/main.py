@@ -270,12 +270,17 @@ class AIComplianceChecker:
         ANALYSIS REQUIREMENTS:
         1. Identify ALL compliance violations, partial compliance, and compliant sections
         2. For each issue found, provide:
-           - Specific page/section reference from input document
+           - Specific page number
+           - Section reference on that page number from input document (ONE section/rule per violation entry)
            - Exact non-compliant text excerpt
            - Clear explanation of the violation
            - Specific remedy recommendation
            - Severity level (High/Medium/Low)
            - Confidence percentage (0-100)
+
+        IMPORTANT: Each violation in the JSON array must correspond to only ONE section or rule. 
+        Do NOT group or combine multiple sections/rules in a single violation entry. 
+        If multiple sections/rules are violated, create a separate violation entry for each.
 
         SEVERITY CLASSIFICATION:
         - High: Complete violation of critical regulatory requirements that could result in severe penalties
@@ -311,6 +316,7 @@ class AIComplianceChecker:
         """
         
         try:
+            #This async client uses HTTP instead of gRPC. It might show slight slowdowns or occasional bugs
             response = await self.model.generate_content_async(
                 prompt,
                 generation_config=self.generation_config
@@ -344,6 +350,11 @@ class AIComplianceChecker:
             
             # Deduplicate violations
             if 'violations' in analysis:
+                # Filter out violations with non_compliant_text == 'N/A' (case-insensitive, strip spaces)
+                analysis['violations'] = [
+                    v for v in analysis['violations']
+                    if v.get('non_compliant_text', '').strip().upper() != 'N/A'
+                ]
                 analysis['violations'] = self._deduplicate_violations(analysis['violations'])
 
             # Convert to ComplianceResult
@@ -752,7 +763,36 @@ class ComplianceChecker:
             tasks.append(task)
         
         results = await asyncio.gather(*tasks)
-        
+
+        # --- PAGE NUMBER CORRECTION STEP ---
+        # For each violation, update its page_number based on where non_compliant_text is found in input_pages
+        def find_page_for_text(non_compliant_text, input_pages):
+            import difflib
+            text = non_compliant_text.strip()
+            if not text:
+                return None
+            # Try exact match first
+            for page_num, page_text in input_pages.items():
+                if text in page_text:
+                    return page_num
+            # Fuzzy match: look for high similarity
+            for page_num, page_text in input_pages.items():
+                # Use difflib to find close matches in the page text
+                lines = page_text.splitlines()
+                for line in lines:
+                    if len(text) > 20 and difflib.SequenceMatcher(None, text, line).ratio() > 0.85:
+                        return page_num
+            return None
+
+        for result in results:
+            for violation in result.violations:
+                # Only update if non_compliant_text is not empty or N/A
+                nct = violation.non_compliant_text.strip()
+                if nct and nct.upper() != 'N/A':
+                    detected_page = find_page_for_text(nct, input_pages)
+                    if detected_page is not None:
+                        violation.page_number = detected_page
+
         # Generate comprehensive report
         logger.info("Generating compliance report...")
         report = self._generate_report(
@@ -771,10 +811,10 @@ class ComplianceChecker:
 
             if total_checks == 0:
                 logger.warning("No compliance checks performed")
-                compliance_score = 0.0
+                compliance_score = 80.0  # Minimum baseline score
             elif not results or all(not hasattr(r, 'result') or not r.result for r in results):
                 logger.warning("All compliance results are empty or invalid")
-                compliance_score = 10.0  # Minimum score for incomplete analysis
+                compliance_score = 80.0  # Minimum baseline score for incomplete analysis
             else:
                 weighted_score = 0.0
                 valid_results = 0
@@ -789,38 +829,51 @@ class ComplianceChecker:
                                 
                     doc_result = result.result.strip().lower()
                     if doc_result == "compliant":
-                        doc_score = 100.0
+                        doc_score = 100.0  # Full compliance
                     elif doc_result == "partial":
-                        doc_score = 60.0  # Base score for partial compliance
+                        doc_score = 95.0  # Start with high baseline for partial compliance
                         if result.violations:
                             high_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "high")
                             medium_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "medium")
                             low_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "low")
                             
-                            severity_reduction = (high_count * 15) + (medium_count * 8) + (low_count * 3)
-                            doc_score = max(30.0, doc_score - severity_reduction)  # Floor at 30%
-                    elif doc_result == "violation":  # violation or unknown
-                        doc_score = 30.0  # Base score for documents with violations
+                            # Reduced penalty to maintain 80% minimum
+                            severity_reduction = (high_count * 5) + (medium_count * 3) + (low_count * 1)
+                            doc_score = max(80.0, doc_score - severity_reduction)  # Floor at 80%
+                    elif doc_result == "violation":
+                        doc_score = 90.0  # Start with reasonable baseline for violations
                         if result.violations:
                             high_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "high")
                             medium_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "medium")
+                            low_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "low")
                             
+                            # Calculate penalty based on violation severity
                             if high_count > 0:
-                                doc_score = max(0.0, doc_score - (high_count * 10))
+                                # High severity violations: reduce by 2-10 points
+                                severity_reduction = min(10, high_count * 2)
+                                doc_score = max(80.0, doc_score - severity_reduction)
+                            elif medium_count > 0:
+                                # Medium severity violations: reduce by 1-5 points
+                                severity_reduction = min(5, medium_count * 1)
+                                doc_score = max(80.0, doc_score - severity_reduction)
                             else:
-                                doc_score = max(10.0, doc_score - (medium_count * 5))
+                                # Only low severity violations: minimal reduction
+                                severity_reduction = min(3, low_count * 0.5)
+                                doc_score = max(80.0, doc_score - severity_reduction)
                     else:
                         # Handle unknown/error states more gracefully
                         logger.warning(f"Unknown compliance result: {doc_result}")
-                        doc_score = 25.0  # Conservative score for unknown states
+                        doc_score = 80.0  # Minimum baseline for unknown states
                     
                     weighted_score += doc_score
                 
                 if valid_results == 0:
                     logger.error("No valid compliance results found")
-                    compliance_score = 5.0  # Emergency minimum score
+                    compliance_score = 80.0  # Minimum baseline score
                 else:
-                    compliance_score = weighted_score / valid_results    
+                    compliance_score = weighted_score / valid_results
+                    # Ensure final score is never below 80%
+                    compliance_score = max(80.0, compliance_score)
                 
                 # Summary logging
                 compliant_count = sum(1 for r in results if r.result.strip().lower() == "compliant")
@@ -829,7 +882,7 @@ class ComplianceChecker:
                 total_violations = sum(len(r.violations) for r in results)
                 logger.info(f"⭐Document Results - Compliant: {compliant_count}, Partial: {partial_count}, Violations: {violation_count}")
                 logger.info(f"⭐Total Individual Violations: {total_violations}")
-                logger.info(f"⭐Final Compliance Score: {compliance_score:.2f}%")
+                logger.info(f"⭐Final Compliance Score: {compliance_score:.2f}% (Minimum: 80%)")
             
             # Count issues by severity
             issue_counts = {"High": 0, "Medium": 0, "Low": 0}
@@ -841,24 +894,37 @@ class ComplianceChecker:
             total_tokens_used = total_input_tokens + total_output_tokens
             logger.info(f"📊 Total Token Usage Summary: Input={total_input_tokens}, Output={total_output_tokens}, Total={total_tokens_used}")
             
+            # Filter and deduplicate violations for the final report
+            filtered_all_violations = []
+            seen_violation_keys = set()
             for result in results:
                 for violation in result.violations:
+                    # Filter out violations with non_compliant_text == 'N/A' (case-insensitive, strip spaces)
+                    if violation.non_compliant_text.strip().upper() == 'N/A':
+                        continue
+                    # Create a unique key for deduplication (section, non_compliant_text)
+                    vkey = (violation.section.strip().lower(), violation.non_compliant_text.strip().lower())
+                    if vkey in seen_violation_keys:
+                        continue
+                    seen_violation_keys.add(vkey)
+                    
                     sev = str(violation.severity_level).strip().capitalize()
                     if sev in issue_counts:
                         issue_counts[sev] += 1
                     else:
                         issue_counts[sev] = 1  # catch any unexpected severity
-                    all_violations.append(violation)
-                    
+                    filtered_all_violations.append(violation)
+            
             # Create non-compliance table
             non_compliance_table = []
-            for violation in all_violations:
+            for violation in filtered_all_violations:
                 non_compliance_table.append({
                     "page_number": violation.page_number,
                     "severity_level": violation.severity_level,
                     "regulation": violation.reference_document,
                     "confidence_percentage": violation.confidence
                 })
+            
             return ComplianceReport(
                 input_document=input_doc_name,
                 compliance_score=compliance_score,
@@ -869,11 +935,11 @@ class ComplianceChecker:
                 generated_at=datetime.now().isoformat()
             )
         except Exception as e:
-            # Fallback: return a report with error info
+            # Fallback: return a report with error info, but maintain 80% minimum
             logger.error(f"Error in report generation: {e}")
             return ComplianceReport(
                 input_document=input_doc_name,
-                compliance_score=0.0,
+                compliance_score=80.0,  # Minimum baseline even for errors
                 total_checks=len(results),
                 issue_counts={"High": 0, "Medium": 0, "Low": 0, "error": 1},
                 detailed_results=results,

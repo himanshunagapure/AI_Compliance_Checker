@@ -2,7 +2,7 @@
   position: fixed;
   top: 72px;
   left: 0;
-  width: 70px; /* Standard for icon sidebar */
+  width: 82px; /* Standard for icon sidebar */
   height: calc(100vh - 72px);
   background: var(--sidebar-dark, #0e2342);
   color: #fff;

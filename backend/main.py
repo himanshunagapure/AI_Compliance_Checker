@@ -516,7 +516,6 @@ class ComplianceDocumentManager:
             self.compliance_docs_path = Path(compliance_docs_path).resolve()
 
         self.compliance_docs_path.mkdir(parents=True, exist_ok=True)
-
         self.document_processor = DocumentProcessor()
         self.doc_cache: Dict[str, Tuple[datetime, str]] = {}
         self.available_docs: List[str] = []
@@ -765,9 +764,9 @@ class ComplianceChecker:
         results = await asyncio.gather(*tasks)
 
         # --- PAGE NUMBER CORRECTION STEP ---
-        # For each violation, update its page_number based on where non_compliant_text is found in input_pages
+        import difflib
+
         def find_page_for_text(non_compliant_text, input_pages):
-            import difflib
             text = non_compliant_text.strip()
             if not text:
                 return None
@@ -777,21 +776,32 @@ class ComplianceChecker:
                     return page_num
             # Fuzzy match: look for high similarity
             for page_num, page_text in input_pages.items():
-                # Use difflib to find close matches in the page text
                 lines = page_text.splitlines()
                 for line in lines:
                     if len(text) > 20 and difflib.SequenceMatcher(None, text, line).ratio() > 0.85:
                         return page_num
             return None
 
-        for result in results:
-            for violation in result.violations:
-                # Only update if non_compliant_text is not empty or N/A
+        # Only perform page number correction if input document is PDF
+        input_ext = os.path.splitext(input_file_path)[1].lower()
+        if input_ext == '.pdf':
+            # For each violation, update its page_number based on where non_compliant_text is found in input_pages
+            # Parallelize this step for speed
+            async def update_violation_page(violation):
                 nct = violation.non_compliant_text.strip()
                 if nct and nct.upper() != 'N/A':
-                    detected_page = find_page_for_text(nct, input_pages)
+                    detected_page = await asyncio.to_thread(find_page_for_text, nct, input_pages)
                     if detected_page is not None:
                         violation.page_number = detected_page
+                return violation
+
+            # Gather all update tasks in parallel
+            update_tasks = []
+            for result in results:
+                for violation in result.violations:
+                    update_tasks.append(update_violation_page(violation))
+            await asyncio.gather(*update_tasks)
+        # For DOCX and TXT, keep the page number as is (estimated or 1)
 
         # Generate comprehensive report
         logger.info("Generating compliance report...")
@@ -953,22 +963,12 @@ app = FastAPI(title="AI Document Compliance Checker", version="1.0.0")
 #change this once deployed to vercel
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://tcg-five.vercel.app"],  # your frontend
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-''' 
-#uncomment this
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["https://your-frontend-name.vercel.app"],  # ✅ 
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-'''
 # Global compliance checker instance
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -1103,4 +1103,4 @@ if __name__ == "__main__":
         main()
     else:
         # Start web server
-        uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+        uvicorn.run("main3:app", host="0.0.0.0", port=8000, reload=True)

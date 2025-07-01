@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./mas-history.css']
 })
 export class MasHistoryComponent implements OnInit {
-  transactions = []; // Replace with your service call
+  transactions = []; // Replace with service call
 
   constructor(private router: Router) {}
 

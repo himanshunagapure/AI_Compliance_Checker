@@ -35,7 +35,7 @@ export class Login implements OnInit {
       this.password === this.ADMIN_PASSWORD
     ) {
       localStorage.setItem('isLoggedIn', 'true');
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/mas-policy-watch']);
     } else {
       this.errorMessage = 'Invalid username or password';
     }

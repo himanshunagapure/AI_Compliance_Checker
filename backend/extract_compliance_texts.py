@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from main3 import DocumentProcessor
+from main import DocumentProcessor
 
 pdf_dir = Path("compliance_documents")
 cache_dir = Path("compliance_text_cache")

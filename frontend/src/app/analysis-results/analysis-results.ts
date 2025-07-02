@@ -1,4 +1,10 @@
-import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  ViewChild,
+  Renderer2,
+  inject,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComplianceOverview } from '../compliance-overview/compliance-overview';
 import { Results } from '../results/results';
@@ -6,6 +12,7 @@ import { Analytics } from '../analytics/analytics';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { SecurityService } from '../security.service';
 
 @Component({
   selector: 'app-analysis-results',
@@ -39,6 +46,14 @@ export class AnalysisResultsComponent {
     if (this.resultData) {
       this.updateComplianceStats(this.resultData);
     }
+  }
+
+  private security = inject(SecurityService);
+
+  ngOnInit(): void {
+    this.security.currentRoute$.subscribe((route) => {
+      console.log('🔐 Home route:', route);
+    });
   }
 
   private updateComplianceStats(data: any): void {

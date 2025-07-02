@@ -280,8 +280,8 @@ class AIComplianceChecker:
         1. Identify ALL compliance violations, partial compliance, and compliant sections
         2. For each issue found, provide:
            - Specific page number
-           - Section reference on that page number from input document (ONE section/rule per violation entry)
-           - Exact non-compliant text excerpt
+           - Section reference on that page number (ONE section/rule per violation entry)
+           - Exact non-compliant text excerpt. 
            - Clear explanation of the violation
            - Specific remedy recommendation
            - Severity level (High/Medium/Low)
@@ -669,7 +669,7 @@ class ComplianceDocumentManager:
 class ComplianceChecker:
     """Main compliance checker orchestrator"""
     
-    TOP_N_RELEVANT_PAGES = 3
+    TOP_N_RELEVANT_PAGES = 5
     EMBEDDING_CACHE_DIR = 'compliance_embeddings'
 
     def __init__(self, gemini_api_key: str):
@@ -875,7 +875,6 @@ class ComplianceChecker:
             
             # Filter and deduplicate violations for the final report
             filtered_all_violations = []
-            section_threshold = 85
             text_threshold = 85
             severity_rank = {'high': 3, 'medium': 2, 'low': 1}
             grouped = {}
@@ -894,15 +893,14 @@ class ComplianceChecker:
                     if page not in grouped:
                         grouped[page] = []
                     grouped[page].append(violation)
-            # For each page, deduplicate by fuzzy section/text
+            # For each page, deduplicate by non_compliant_text only
             for page, violations in grouped.items():
                 kept = []
                 for v in violations:
                     found_similar = False
                     for i, existing in enumerate(kept):
-                        sec_sim = fuzz.token_set_ratio(v.section.strip().lower(), existing.section.strip().lower())
                         nct_sim = fuzz.token_set_ratio(v.non_compliant_text.strip().lower(), existing.non_compliant_text.strip().lower())
-                        if sec_sim >= section_threshold and nct_sim >= text_threshold:
+                        if nct_sim >= text_threshold:
                             # Choose the better one (higher severity, then confidence)
                             v_sev = severity_rank.get(str(v.severity_level).strip().lower(), 0)
                             e_sev = severity_rank.get(str(existing.severity_level).strip().lower(), 0)
@@ -984,11 +982,10 @@ compliance_checker = ComplianceChecker(GEMINI_API_KEY)
 @app.post("/upload-document")
 async def upload_document(file: UploadFile = File(...)):
     """Upload and store input document"""
-    #allowed_exts = ['.pdf', '.docx', '.txt']
-    allowed_exts = ['.pdf']
+    allowed_exts = ['.pdf', '.docx', '.txt']
     ext = os.path.splitext(file.filename)[1].lower()
     if ext not in allowed_exts:
-        raise HTTPException(status_code=400, detail="Only PDF are supported")
+        raise HTTPException(status_code=400, detail="Only PDF, DOCX, and TXT files are supported")
     
     # Create temporary file
     temp_dir = tempfile.mkdtemp()
@@ -1013,10 +1010,10 @@ async def check_compliance(
     query: str = Form(..., description="Compliance check query")
 ):
     """Perform compliance check on uploaded document"""
-    allowed_exts = ['.pdf']
+    allowed_exts = ['.pdf', '.docx', '.txt']
     ext = os.path.splitext(file.filename)[1].lower()
     if ext not in allowed_exts:
-        raise HTTPException(status_code=400, detail="Only PDF files are supported")
+        raise HTTPException(status_code=400, detail="Only PDF, DOCX, and TXT files are supported")
     
     # Create temporary file
     temp_dir = tempfile.mkdtemp()
@@ -1107,4 +1104,4 @@ if __name__ == "__main__":
         main()
     else:
         # Start web server
-        uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+        uvicorn.run("main3:app", host="0.0.0.0", port=8000, reload=True)

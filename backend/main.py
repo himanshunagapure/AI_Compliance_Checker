@@ -539,7 +539,7 @@ class ComplianceDocumentManager:
         """Select compliance documents based on user query by matching file names or keywords"""
         query_lower = query.lower()
         available_docs = self.get_available_documents()
-        
+        print("\n⭐Available Doc⭐", available_docs)
         if not available_docs:
             logger.warning("Compliance Documents are not available")
             return []
@@ -1104,4 +1104,4 @@ if __name__ == "__main__":
         main()
     else:
         # Start web server
-        uvicorn.run("main3:app", host="0.0.0.0", port=8000, reload=True)
+        uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

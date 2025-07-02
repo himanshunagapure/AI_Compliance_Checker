@@ -1,4 +1,4 @@
-from main3 import ComplianceChecker
+from main import ComplianceChecker
 import os
 from dotenv import load_dotenv
 

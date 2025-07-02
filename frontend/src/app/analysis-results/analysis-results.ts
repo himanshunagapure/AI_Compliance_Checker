@@ -2,16 +2,17 @@ import {
   Component,
   ElementRef,
   ViewChild,
-  Renderer2,
+  OnDestroy,
   inject,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComplianceOverview } from '../compliance-overview/compliance-overview';
 import { Results } from '../results/results';
 import { Analytics } from '../analytics/analytics';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Subject, takeUntil } from 'rxjs';
 import { SecurityService } from '../security.service';
 
 @Component({
@@ -19,112 +20,153 @@ import { SecurityService } from '../security.service';
   standalone: true,
   imports: [CommonModule, ComplianceOverview, Results, Analytics, RouterModule],
   templateUrl: './analysis-results.html',
-  styleUrl: './analysis-results.css',
+  styleUrls: ['./analysis-results.css'],
 })
-export class AnalysisResultsComponent {
-  documentName = 'Expanded_Loan_Approval_Dossier_300pg1.docx';
-  complianceScore = 92;
-  highSeverity = 1;
-  mediumSeverity = 1;
-  lowSeverity = 1;
+export class AnalysisResultsComponent implements OnDestroy {
+  private destroy$ = new Subject<void>();
+  private pendingRequest: any = null;
+
+  backRoute: string = '/mas-policy-watch'; // default
+
+  documentName = '';
+  complianceScore = 0;
+  highSeverity = 0;
+  mediumSeverity = 0;
+  lowSeverity = 0;
 
   activeTab = 'results';
   selectedFileName: string | null = null;
   @ViewChild('fileInput') fileInputRef!: ElementRef<HTMLInputElement>;
-  @ViewChild('chatContainer') chatContainerRef!: ElementRef<HTMLDivElement>;
   @ViewChild('myInput') myInputRef!: ElementRef<HTMLInputElement>;
 
   resultData: any;
 
   constructor(
-    private renderer: Renderer2,
     private router: Router,
-    private http: HttpClient
+    private http: HttpClient,
+    private route: ActivatedRoute
   ) {
-    const nav = this.router.getCurrentNavigation();
-    this.resultData = nav?.extras.state?.['resultData'];
-    if (this.resultData) {
-      this.updateComplianceStats(this.resultData);
-    }
+    // Listen for route changes and navigation state
+    this.route.paramMap.pipe(takeUntil(this.destroy$)).subscribe((params) => {
+      const analysisId = params.get('id');
+      if (analysisId) {
+        // If navigated with /analysis-results/:id, fetch from backend
+        this.loadAnalysisData(analysisId);
+      } else {
+        // If navigated with state (from MAS History or upload), use state data
+        const nav = this.router.getCurrentNavigation();
+        const stateData = nav?.extras.state?.['resultData'];
+        const from = nav?.extras.state?.['from'];
+        if (from === 'mas-history') {
+          this.backRoute = '/mas-history';
+        } else {
+          this.backRoute = '/mas-policy-watch';
+        }
+        if (stateData) {
+          this.updateComplianceStats(stateData);
+        }
+      }
+    });
   }
-
   private security = inject(SecurityService);
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.security.currentRoute$.subscribe((route) => {
       console.log('🔐 Home route:', route);
     });
-  }
-
-  private updateComplianceStats(data: any): void {
-    this.documentName = data.input_document ?? 'Unnamed_Document.docx';
-    this.complianceScore = data.compliance_score ?? 0 + '%';
-    this.highSeverity = data.issue_counts?.High ?? 0;
-    this.mediumSeverity = data.issue_counts?.Medium ?? 0;
-    this.lowSeverity = data.issue_counts?.Low ?? 0;
   }
 
   setActiveTab(tab: string): void {
     this.activeTab = tab;
   }
 
+  removeFile(): void {
+    this.selectedFileName = null;
+    if (this.fileInputRef) {
+      this.fileInputRef.nativeElement.value = '';
+    }
+  }
+
   triggerFileInput(): void {
-    this.fileInputRef.nativeElement.click();
+    if (this.fileInputRef) {
+      this.fileInputRef.nativeElement.click();
+    }
   }
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
-    const file = input.files?.[0];
-
-    if (this.selectedFileName) {
-      console.warn('Only one file can be selected at a time.');
-      input.value = '';
-      return;
-    }
-
-    if (file) {
-      this.selectedFileName = file.name;
+    if (input.files && input.files.length > 0) {
+      this.selectedFileName = input.files[0].name;
+      // Store the file for upload if needed
     }
   }
 
-  removeFile(): void {
-    this.selectedFileName = null;
-    this.fileInputRef.nativeElement.value = '';
+  private loadAnalysisData(analysisId: string): void {
+    this.cancelPendingRequest();
+    this.resultData = null;
+    if (analysisId) {
+      this.fetchHistoricalAnalysis(analysisId);
+    }
+  }
+
+  private fetchHistoricalAnalysis(analysisId: string): void {
+    const headers = new HttpHeaders({
+      'Cache-Control': 'no-cache',
+      Pragma: 'no-cache',
+    });
+
+    this.pendingRequest = this.http
+      .get(`/api/historical-analyses/${analysisId}`, { headers })
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
+        next: (data: any) => {
+          this.updateComplianceStats(data);
+          this.pendingRequest = null;
+        },
+        error: (error) => {
+          console.error('Error fetching historical analysis:', error);
+          this.pendingRequest = null;
+        },
+      });
+  }
+
+  private cancelPendingRequest(): void {
+    if (this.pendingRequest) {
+      this.pendingRequest.unsubscribe();
+      this.pendingRequest = null;
+    }
+  }
+
+  private updateComplianceStats(data: any): void {
+    this.documentName = data.input_document || '';
+    this.complianceScore = data.compliance_score || 0;
+    this.highSeverity = data.issue_counts?.High || 0;
+    this.mediumSeverity = data.issue_counts?.Medium || 0;
+    this.lowSeverity = data.issue_counts?.Low || 0;
+    this.resultData = data;
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+    this.cancelPendingRequest();
   }
 
   sendFileMessage(): void {
-    const inputText = this.myInputRef.nativeElement.value.trim();
-
-    if (!this.selectedFileName || !inputText) {
-      console.warn('Please upload a file and enter a query.');
-      return;
-    }
-
-    const file = this.fileInputRef.nativeElement.files?.[0];
-    if (!file) {
-      console.warn('No file found.');
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('query', inputText);
-
+    // ... your upload logic ...
+    // After successful upload:
     this.http
-      .post('https://tcg-45s9.onrender.com/check-compliance', formData)
+      .post('/api/check-compliance', FormData)
+      .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: (response) => {
-          this.resultData = response;
-          this.updateComplianceStats(response);
+          this.router.navigate(['/analysis-results'], {
+            state: { resultData: response },
+          });
         },
         error: (error) => {
           console.error('Error from backend:', error);
         },
       });
-
-    // Clear input and file
-    this.myInputRef.nativeElement.value = '';
-    this.selectedFileName = null;
-    this.fileInputRef.nativeElement.value = '';
   }
 }

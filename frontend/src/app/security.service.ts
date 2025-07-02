@@ -18,9 +18,6 @@ export class SecurityService {
         this.currentRouteSubject.next(event.urlAfterRedirects);
         console.log('🔐 Navigated to:', event.urlAfterRedirects);
       });
-    this.router.events.subscribe((event) => {
-      console.log('📦 Router event received:', event);
-    });
   }
 
   getCurrentRoute(): string {

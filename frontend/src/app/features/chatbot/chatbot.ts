@@ -6,8 +6,10 @@ import {
   ElementRef,
   AfterViewInit,
   Renderer2,
+  inject,
 } from '@angular/core';
 import { Router } from '@angular/router';
+import { SecurityService } from '../../security.service';
 
 @Component({
   selector: 'app-chatbot',
@@ -24,7 +26,7 @@ export class Chatbot implements AfterViewInit {
   selectedFileName: string | null = null;
   selectedFocus: string | null = null;
   loading = false;
-  
+
   private focusQueryMap: { [key: string]: string } = {
     'All Applicable Regulations': 'check all compliance documents',
     'AML Compliance': 'check for AML compliance',
@@ -76,6 +78,9 @@ export class Chatbot implements AfterViewInit {
     this.myInputRef.nativeElement.value = clickedText;
   }
 
+  private security = inject(SecurityService);
+
+  analysisPending = false;
   sendFileMessage(): void {
     console.log(this.selectedFileName);
 
@@ -104,13 +109,49 @@ export class Chatbot implements AfterViewInit {
     this.loading = true;
 
     this.http
-      .post('https://tcg-45s9.onrender.com/check-compliance', formData)
+      .post<any>('https://tcg-45s9.onrender.com/check-compliance', formData)
       .subscribe({
         next: (response) => {
           this.loading = false;
-          this.router.navigate(['/analysis-results'], {
-            state: { resultData: response, from : 'mas-policy-watch' },
-          });
+
+          // Append user_name from localStorage
+          const user_name = localStorage.getItem('user_name');
+          const resultWithUser = { ...response, user_name };
+
+          // 🔁 Save MAS history to Node backend
+          this.http
+            .post('http://localhost:8080/api/mas-history/save', resultWithUser)
+            .subscribe({
+              next: () => console.log('✅ MAS history saved to DB'),
+              error: (err) =>
+                console.error('❌ Failed to save MAS history:', err),
+            });
+
+          // 🧭 Navigation Logic
+          const currentRoute = this.security.getCurrentRoute();
+          if (currentRoute === '/mas-policy-watch') {
+            this.router.navigate(['/analysis-results'], {
+              state: { resultData: response },
+            });
+          } else {
+            // ✅ Alert instead of prompt, and delay to ensure visibility
+            setTimeout(() => {
+              alert(
+                '✅ Data loaded successfully! Visit MAS Policy Watch to view results.'
+              );
+
+              this.analysisPending = true;
+              const sub = this.security.currentRoute$.subscribe((route) => {
+                if (this.analysisPending && route === '/mas-policy-watch') {
+                  this.router.navigate(['/analysis-results'], {
+                    state: { resultData: response },
+                  });
+                  this.analysisPending = false;
+                  sub.unsubscribe();
+                }
+              });
+            }, 10);
+          }
         },
         error: (error) => {
           this.loading = false;
@@ -118,6 +159,7 @@ export class Chatbot implements AfterViewInit {
         },
       });
 
+    // Reset inputs
     this.myInputRef.nativeElement.value = '';
     this.selectedFileName = null;
     this.fileInputRef.nativeElement.value = '';

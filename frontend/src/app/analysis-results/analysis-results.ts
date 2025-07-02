@@ -1,4 +1,10 @@
-import { Component, ElementRef, ViewChild, OnDestroy } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  ViewChild,
+  OnDestroy,
+  inject,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComplianceOverview } from '../compliance-overview/compliance-overview';
 import { Results } from '../results/results';
@@ -7,6 +13,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Subject, takeUntil } from 'rxjs';
+import { SecurityService } from '../security.service';
 
 @Component({
   selector: 'app-analysis-results',
@@ -49,7 +56,7 @@ export class AnalysisResultsComponent implements OnDestroy {
         // If navigated with state (from MAS History or upload), use state data
         const nav = this.router.getCurrentNavigation();
         const stateData = nav?.extras.state?.['resultData'];
-        const from = nav?.extras.state?.['from']; 
+        const from = nav?.extras.state?.['from'];
         if (from === 'mas-history') {
           this.backRoute = '/mas-history';
         } else {
@@ -59,6 +66,13 @@ export class AnalysisResultsComponent implements OnDestroy {
           this.updateComplianceStats(stateData);
         }
       }
+    });
+  }
+  private security = inject(SecurityService);
+
+  ngOnInit() {
+    this.security.currentRoute$.subscribe((route) => {
+      console.log('🔐 Home route:', route);
     });
   }
 

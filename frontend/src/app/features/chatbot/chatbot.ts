@@ -109,7 +109,7 @@ export class Chatbot implements AfterViewInit {
         next: (response) => {
           this.loading = false;
           this.router.navigate(['/analysis-results'], {
-            state: { resultData: response },
+            state: { resultData: response, from : 'mas-policy-watch' },
           });
         },
         error: (error) => {

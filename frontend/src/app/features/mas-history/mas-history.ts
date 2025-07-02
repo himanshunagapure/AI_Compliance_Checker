@@ -40,6 +40,7 @@ export class MasHistoryComponent implements OnInit {
     );
   }
   viewDetails(tx: any) {
-    this.router.navigate(['/analysis-results', tx._id]); //fromchatbot+data
+      this.router.navigate(['/analysis-results'], { state: { resultData: tx, from : 'mas-history' } });
+     //fromchatbot+data
   }
 }

@@ -19,6 +19,8 @@ export class AnalysisResultsComponent implements OnDestroy {
   private destroy$ = new Subject<void>();
   private pendingRequest: any = null;
 
+  backRoute: string = '/mas-policy-watch'; // default
+
   documentName = '';
   complianceScore = 0;
   highSeverity = 0;
@@ -37,15 +39,22 @@ export class AnalysisResultsComponent implements OnDestroy {
     private http: HttpClient,
     private route: ActivatedRoute
   ) {
-    // Listen for route changes
-    this.route.paramMap.pipe(takeUntil(this.destroy$)).subscribe(params => {
+    // Listen for route changes and navigation state
+    this.route.paramMap.pipe(takeUntil(this.destroy$)).subscribe((params) => {
       const analysisId = params.get('id');
       if (analysisId) {
+        // If navigated with /analysis-results/:id, fetch from backend
         this.loadAnalysisData(analysisId);
       } else {
+        // If navigated with state (from MAS History or upload), use state data
         const nav = this.router.getCurrentNavigation();
-        const stateData = nav?.extras.state?.['resultData']; 
-        //const sourceUrl = nav?.extras.state?.['fromChatbot']; 
+        const stateData = nav?.extras.state?.['resultData'];
+        const from = nav?.extras.state?.['from']; 
+        if (from === 'mas-history') {
+          this.backRoute = '/mas-history';
+        } else {
+          this.backRoute = '/mas-policy-watch';
+        }
         if (stateData) {
           this.updateComplianceStats(stateData);
         }
@@ -89,10 +98,11 @@ export class AnalysisResultsComponent implements OnDestroy {
   private fetchHistoricalAnalysis(analysisId: string): void {
     const headers = new HttpHeaders({
       'Cache-Control': 'no-cache',
-      'Pragma': 'no-cache'
+      Pragma: 'no-cache',
     });
 
-    this.pendingRequest = this.http.get(`https://your-api/historical-analyses/${analysisId}`, { headers })
+    this.pendingRequest = this.http
+      .get(`/api/historical-analyses/${analysisId}`, { headers })
       .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: (data: any) => {
@@ -102,7 +112,7 @@ export class AnalysisResultsComponent implements OnDestroy {
         error: (error) => {
           console.error('Error fetching historical analysis:', error);
           this.pendingRequest = null;
-        }
+        },
       });
   }
 
@@ -131,12 +141,13 @@ export class AnalysisResultsComponent implements OnDestroy {
   sendFileMessage(): void {
     // ... your upload logic ...
     // After successful upload:
-    this.http.post('https://tcg-45s9.onrender.com/check-compliance', FormData)
+    this.http
+      .post('/api/check-compliance', FormData)
       .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: (response) => {
           this.router.navigate(['/analysis-results'], {
-            state: { resultData: response }
+            state: { resultData: response },
           });
         },
         error: (error) => {

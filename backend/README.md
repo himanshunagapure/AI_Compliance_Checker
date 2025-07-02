@@ -4,10 +4,106 @@ A powerful AI-powered document compliance checking system that analyzes document
 The system identifies violations, explains them clearly, and creates full compliance reports.
 
 ---
+# 📄 About `main.py` (Technical Overview)
+
+`main.py` is the core backend engine for the AI Document Compliance Checker. It is a robust, modular FastAPI application that leverages Google Gemini AI, semantic embeddings, and advanced document processing to automate compliance analysis of uploaded documents against regulatory requirements.
+
+---
+
+# 📊 Compliance Score Calculation
+
+The compliance score reflects how well a document meets regulatory requirements, using a transparent, severity-weighted system. **All scores are between 80% and 100%.**
+
+## Score Ranges
+| Score Range | Meaning                       | Action/Status                |
+|-------------|-------------------------------|------------------------------|
+| 95-100%     | Fully compliant               | ✅ Approve                   |
+| 90-94%      | Good compliance               | 📝 Minor review              |
+| 85-89%      | Acceptable, some violations   | 🔍 Detailed review           |
+| 80-84%      | Minimum compliance threshold  | ⚠️ Mandatory review          |
+
+## Base Scores
+- **Fully Compliant:** 100% (no violations)
+- **Partially Compliant:** 95% (minor gaps)
+- **With Violations:** 90% (regulatory issues found)
+- **Minimum Score:** 80% (floor, never goes lower)
+
+## Penalty Matrix
+| Severity   | Deduction per Violation | Max Deduction | Color   |
+|------------|------------------------|--------------|---------|
+| High       | -2 points              | -10 points   | 🔴      |
+| Medium     | -1 point               | -5 points    | 🟡      |
+| Low        | -0.5 points            | -3 points    | 🟢      |
+
+## Calculation Rules
+- **Penalties** are subtracted from the base score according to violation severity.
+- **Floor Protection:** Score never drops below 80%.
+- **Severity Priority:** High-severity violations are penalized first.
+- **Error Handling:** If errors occur, score defaults to 80% with an error flag.
+
+### Example Calculation
+```
+Base Score: 95%
+Violations: 2 High, 1 Medium, 3 Low
+Calculation: 95% - (2×2) - (1×1) - (3×0.5) = 95% - 6.5% = 88.5%
+Final Score: 88.5%
+```
+
+---
+## 🏗️ Architecture & Main Components
+
+### 1. **Data Models (Dataclasses)**
+- **ViolationDetail**: Represents a single compliance violation, including page, section, explanation, severity, and confidence.
+- **ComplianceResult**: Holds the result of checking one compliance document, including all violations and token usage.
+- **ComplianceReport**: Aggregates results for a user-uploaded document, with overall score, issue counts, and a non-compliance summary table.
+
+### 2. **Document Processing**
+- **DocumentProcessor**: Static methods to extract text from PDF (using PyMuPDF and PyPDF2), DOCX, and TXT files. Also includes section extraction logic for structured analysis.
+
+### 3. **AI Compliance Analysis**
+- **AIComplianceChecker**: Wraps Gemini API calls. Builds detailed prompts, parses/cleans AI JSON responses, deduplicates violations, and handles error fallback. Supports async operation for scalable API use.
+
+### 4. **Compliance Document Management**
+- **ComplianceDocumentManager**: Handles caching and retrieval of compliance documents (as text), and implements smart document selection based on user queries (explicit, keyword, fuzzy, or fallback to all).
+
+### 5. **Semantic Relevance & Embeddings**
+- **ComplianceChecker**: Orchestrates the full compliance check. Uses SentenceTransformers to compute semantic similarity between input document pages and compliance documents, selecting the most relevant content for AI analysis. Handles parallel processing for multiple compliance docs.
+- Embeddings for compliance docs are precomputed and cached for efficiency.
+
+### 6. **API & CLI**
+- **FastAPI Endpoints**:
+  - `POST /upload-document`: Upload a document (PDF, DOCX, TXT) for analysis.
+  - `POST /check-compliance`: Main endpoint. Upload a document and query; returns a detailed compliance report.
+  - `GET /available-documents`: Lists all compliance documents available for checking.
+  - `GET /health`: Health check endpoint.
+- **CLI Interface**: Run compliance checks from the command line for local testing or batch jobs.
+
+---
+
+## 🔄 Flow Overview
+1. **User uploads a document** (via API or CLI).
+2. **Text is extracted** page-wise (PDF) or as a whole (DOCX/TXT).
+3. **Relevant compliance documents are selected** based on the query (explicit, keyword, fuzzy, or fallback).
+4. **Semantic similarity** is computed between input pages and compliance docs to select the most relevant content for each check.
+5. **AI (Gemini) is prompted** with both the input and compliance text, returning a structured JSON of violations, explanations, and remedies.
+6. **Results are aggregated** into a comprehensive report, with severity-weighted scoring, deduplication, and a summary table.
+7. **API returns the report** (or CLI prints/saves it).
+
+---
+
+## ⚙️ Extensibility & Design Notes
+- **Async/Parallel**: All heavy operations (AI calls, embedding similarity) are async/threaded for scalability.
+- **Pluggable Models**: Easy to swap out Gemini for another LLM or add more embedding models.
+- **Smart Document Selection**: Query parsing supports explicit, keyword, and fuzzy matching for robust user experience.
+- **Error Handling**: Graceful fallback for extraction, AI, and JSON parsing errors; always returns a valid report.
+- **Token Usage Tracking**: Tracks and logs token usage for each AI call for cost/usage monitoring.
+- **Security**: Validates uploads, cleans up temp files, and supports CORS.
+
+---
 
 ## 🚀 Features
 
-- **Multi-format Document Support:** PDF, DOCX, and TXT files  
+- **PDF Document Support:** PDF files  
 - **AI-Powered Analysis:** Uses Google Gemini 2.5 Flash  
 - **Automatic Document Selection:** Picks the right compliance docs based on the query  
 - **Detailed Reporting:** Shows violations, severity, and suggested fixes  
@@ -23,7 +119,6 @@ The system identifies violations, explains them clearly, and creates full compli
 
 - Python 3.8+  
 - Google Gemini API key  
-- Tesseract OCR (for image-based PDFs)
 
 ### Environment Setup
 
@@ -212,7 +307,7 @@ app.add_middleware(
 - **Explicit Name Match:** Detects file names in query  
 - **Keyword Match:** Based on content  
 - **Fuzzy Matching:** Handles small name differences  
-- **Pattern Recognition:** Detects phrases like “check all”  
+- **Pattern Recognition:** Detects phrases like "check all"  
 - **Fallback:** Uses all documents when unsure
 
 ### Violation Detection

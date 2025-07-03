@@ -1,4 +1,6 @@
 '''
+#Last version of main.py file
+
 import os
 from dotenv import load_dotenv
 import json
@@ -8,7 +10,10 @@ from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass, asdict
 from pathlib import Path
 import logging
-
+import asyncio
+from concurrent.futures import ThreadPoolExecutor
+import pickle
+from contextlib import asynccontextmanager
 # Document processing libraries
 import PyPDF2
 import fitz  # PyMuPDF for better PDF text extraction
@@ -33,6 +38,11 @@ from io import BytesIO
 # Setup logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Added for semantic similarity
+from sentence_transformers import SentenceTransformer
+import numpy as np
+from rapidfuzz import fuzz
 
 @dataclass
 class ViolationDetail:
@@ -211,9 +221,6 @@ class AIComplianceChecker:
         try:
             # Extract text from response properly
             response_text = self._extract_response_text(response)
-            print("🚀🚀🚀🚀")
-            print("\nResponse text = ", response_text)
-            print("🚀🚀🚀🚀")
             if not response_text:
                 raise ValueError("Empty response text")
             
@@ -243,10 +250,7 @@ class AIComplianceChecker:
             return self._parse_text_response(str(e))
     
     def _clean_response_text(self, response_text: str) -> str:
-        """Clean response text to extract JSON content"""
-        # # Remove BOM and invisible characters
-        # response_text = response_text.encode('utf-8').decode('utf-8-sig').strip()
-        
+        """Clean response text to extract JSON content"""        
         # Remove markdown code blocks
         if response_text.startswith('```json'):
             response_text = response_text[7:]
@@ -257,12 +261,13 @@ class AIComplianceChecker:
             response_text = response_text[:-3]
             
         response_text = response_text.strip()
-        
         return response_text
 
-    def check_compliance(self, input_text: str, compliance_text: str, 
+    async def check_compliance(self, input_text: str, compliance_text: str, 
                         compliance_doc_name: str) -> ComplianceResult:
         """Check compliance of input document against a compliance document"""
+        
+        logger.info(f"AI check started for {compliance_doc_name} at {datetime.now().isoformat()}")
         
         prompt = f"""
         You are an expert regulatory compliance analyst. Compare the INPUT DOCUMENT against the COMPLIANCE DOCUMENT and provide a detailed analysis.
@@ -276,12 +281,17 @@ class AIComplianceChecker:
         ANALYSIS REQUIREMENTS:
         1. Identify ALL compliance violations, partial compliance, and compliant sections
         2. For each issue found, provide:
-           - Specific page/section reference from input document
-           - Exact non-compliant text excerpt
+           - Specific page number
+           - Section reference on that page number (ONE section/rule per violation entry)
+           - Exact non-compliant text excerpt. 
            - Clear explanation of the violation
            - Specific remedy recommendation
            - Severity level (High/Medium/Low)
            - Confidence percentage (0-100)
+
+        IMPORTANT: Each violation in the JSON array must correspond to only ONE section or rule. 
+        Do NOT group or combine multiple sections/rules in a single violation entry. 
+        If multiple sections/rules are violated, create a separate violation entry for each.
 
         SEVERITY CLASSIFICATION:
         - High: Complete violation of critical regulatory requirements that could result in severe penalties
@@ -317,28 +327,22 @@ class AIComplianceChecker:
         """
         
         try:
-            response = self.model.generate_content(
+            #This async client uses HTTP instead of gRPC. It might show slight slowdowns or occasional bugs
+            response = await self.model.generate_content_async(
                 prompt,
                 generation_config=self.generation_config
             )
             
-            # print("⭐⭐⭐⭐⭐⭐")
-            # print("\nLLM response = ",response)
-            # print("⭐⭐⭐⭐⭐⭐")
-            
             # Debug: Log response structure
             if hasattr(response, 'candidates') and response.candidates:
-                #logger.info(f"Number of candidates: {len(response.candidates)}")
-                print(f"Number of candidates: {len(response.candidates)}")
+                logger.debug(f"Number of candidates: {len(response.candidates)}")
                 candidate = response.candidates[0]
                 if hasattr(candidate, 'content') and candidate.content:
                     if hasattr(candidate.content, 'parts') and candidate.content.parts:
-                        #logger.info(f"Number of parts in response: {len(candidate.content.parts)}")
-                        print(f"Number of parts in response: {len(candidate.content.parts)}")
+                        logger.debug(f"Number of parts in response: {len(candidate.content.parts)}")
                         for i, part in enumerate(candidate.content.parts):
                             if hasattr(part, 'text'):
-                                #logger.info(f"Part {i} text length: {len(part.text) if part.text else 0}")
-                                print(f"Part {i} text length: {len(part.text) if part.text else 0}")
+                                logger.debug(f"Part {i} text length: {len(part.text) if part.text else 0}")
                                 
             # Extract token usage information
             input_tokens = 0
@@ -351,15 +355,17 @@ class AIComplianceChecker:
                 total_tokens = getattr(response.usage_metadata, 'total_token_count', 0)
                 
                 # Print token usage information
-                print(f"\n🔢 Token Usage:")
-                print(f"   Input tokens: {input_tokens}")
-                print(f"   Output tokens: {output_tokens}")
-                print(f"   Total tokens: {total_tokens}")
+                logger.info(f"Token Usage for {compliance_doc_name}: Input={input_tokens}, Output={output_tokens}, Total={total_tokens}")
             
             analysis = self._process_ai_response(response)
             
             # Deduplicate violations
             if 'violations' in analysis:
+                # Filter out violations with non_compliant_text == 'N/A' (case-insensitive, strip spaces)
+                analysis['violations'] = [
+                    v for v in analysis['violations']
+                    if v.get('non_compliant_text', '').strip().upper() != 'N/A'
+                ]
                 analysis['violations'] = self._deduplicate_violations(analysis['violations'])
 
             # Convert to ComplianceResult
@@ -378,6 +384,8 @@ class AIComplianceChecker:
                 )
                 violations.append(violation)
             
+            logger.info(f"AI check finished for {compliance_doc_name} at {datetime.now().isoformat()}")
+            
             return ComplianceResult(
                 document_name=compliance_doc_name,
                 result=analysis.get('overall_result', 'Violation'),
@@ -390,7 +398,8 @@ class AIComplianceChecker:
             )
             
         except Exception as e:
-            logger.error(f"AI analysis failed: {e}")
+            logger.error(f"AI analysis failed for {compliance_doc_name}: {e}")
+            logger.info(f"AI check finished for {compliance_doc_name} at {datetime.now().isoformat()}")
             return ComplianceResult(
                 document_name=compliance_doc_name,
                 result="Error",
@@ -440,7 +449,6 @@ class AIComplianceChecker:
     
     def _deduplicate_violations(self, violations: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Deduplicate violations based on explanation similarity."""
-        #print("\n🚀Violations before cleaning = ",violations)
         if not violations:
             return []
 
@@ -451,7 +459,6 @@ class AIComplianceChecker:
             for j in range(len(unique_violations)):
                 # Using a simple substring check for similarity.
                 # If one explanation is a substring of another, they are likely related.
-                # We can improve this with more sophisticated text similarity if needed.
                 if (violations[i]['explanation'] in unique_violations[j]['explanation'] or 
                     unique_violations[j]['explanation'] in violations[i]['explanation']):
                     
@@ -474,13 +481,12 @@ class AIComplianceChecker:
 
         if len(final_violations) < len(violations):
             logger.info(f"Deduplicated {len(violations) - len(final_violations)} violations.")
-        #print("\n🚀Violations after cleaning = ",final_violations)
         return final_violations
 
     def _parse_text_response(self, text: str) -> Dict:
         """Fallback text parsing if JSON extraction fails"""
         
-        print("❌JSON extraction failed. Fallback text parsing used")
+        logger.warning("JSON extraction failed. Fallback text parsing used")
         result = {
             "overall_result": "Violation",
             "overall_explanation": "Failed to parse AI response properly",
@@ -514,36 +520,30 @@ class AIComplianceChecker:
         return result
 
 class ComplianceDocumentManager:
-    """Manage compliance documents storage and retrieval"""
+    """Manage compliance documents storage and retrieval with in-memory caching."""
     
-    def __init__(self, compliance_docs_path: str = "compliance_documents"):
-        self.compliance_docs_path = Path(compliance_docs_path)
-        self.compliance_docs_path.mkdir(exist_ok=True)
-        self.document_processor = DocumentProcessor()
+    def __init__(self, cache_path="compliance_text_cache"):
+        self.cache_path = Path(cache_path)
+        self.cache_path.mkdir(exist_ok=True)
+        self.available_docs = [f.name.replace('.txt', '.pdf') for f in self.cache_path.glob("*.txt")]
 
     def get_available_documents(self) -> List[str]:
-        """Get list of available compliance documents"""
-        return [f.name for f in self.compliance_docs_path.glob("*.pdf")]
+        return self.available_docs
 
     def get_document_content(self, doc_name: str) -> str:
-        """Get content of a compliance document"""
-        doc_path = self.compliance_docs_path / doc_name
-        if not doc_path.exists():
-            raise FileNotFoundError(f"Compliance document '{doc_name}' not found.")
-        if doc_path.suffix.lower() == '.pdf':
-            pages_text = self.document_processor.extract_text_from_pdf(str(doc_path))
-            return '\n\n'.join(pages_text.values())
-        else:
-            with open(doc_path, 'r', encoding='utf-8') as f:
-                return f.read()
+        cache_file = self.cache_path / (Path(doc_name).stem + ".txt")
+        if not cache_file.exists():
+            raise FileNotFoundError(f"Cached text for '{doc_name}' not found in {self.cache_path}. Please run the extraction script.")
+        with open(cache_file, "r", encoding="utf-8") as f:
+            return f.read()
 
     def select_documents_by_query(self, query: str) -> List[str]:
         """Select compliance documents based on user query by matching file names or keywords"""
         query_lower = query.lower()
         available_docs = self.get_available_documents()
-        
+        print("\n⭐Available Doc⭐", available_docs)
         if not available_docs:
-            print("Compliance Documents are not available")
+            logger.warning("Compliance Documents are not available")
             return []
         
         # Pattern 1: Check for "all documents" patterns
@@ -626,7 +626,7 @@ class ComplianceDocumentManager:
                 if variation in query and doc not in selected_docs:
                     selected_docs.append(doc)
                     break
-        
+        print("Inside _extract_specific_documents selected_docs = ", selected_docs)
         return selected_docs
     
     def _match_by_keywords(self, query: str, available_docs: List[str]) -> List[str]:
@@ -643,7 +643,7 @@ class ComplianceDocumentManager:
             common_words = query_words.intersection(doc_words)
             if common_words and doc not in keyword_matches:
                 keyword_matches.append(doc)
-        
+        print("Inside keyword_match method = ", keyword_matches)
         return keyword_matches
     
     def _fuzzy_match_documents(self, query: str, available_docs: List[str]) -> List[str]:
@@ -665,68 +665,122 @@ class ComplianceDocumentManager:
                 # If similarity is high enough, include the document
                 if similarity >= 0.3:  # 30% similarity threshold
                     fuzzy_matches.append(doc)
-        
+        print("Inside fuzzy match = ",fuzzy_matches)
         return fuzzy_matches
 
 class ComplianceChecker:
     """Main compliance checker orchestrator"""
     
+    TOP_N_RELEVANT_PAGES = 5
+    EMBEDDING_CACHE_DIR = 'compliance_embeddings'
+
     def __init__(self, gemini_api_key: str):
         self.document_manager = ComplianceDocumentManager()
         self.ai_checker = AIComplianceChecker(gemini_api_key)
         self.document_processor = DocumentProcessor()
-    
-    def process_compliance_check(self, input_file_path: str, query: str) -> ComplianceReport:
-        """Process complete compliance check"""
-        
-        # Extract text from input document
-        logger.info("Extracting text from input document...")
-        ext = os.path.splitext(input_file_path)[1].lower()
-        if ext == '.pdf':
-            input_pages = self.document_processor.extract_text_from_pdf(input_file_path)
-        elif ext == '.docx':
-            input_pages = self.document_processor.extract_text_from_docx(input_file_path)
-        elif ext == '.txt':
-            input_pages = self.document_processor.extract_text_from_txt(input_file_path)
-        else:
-            raise ValueError("Unsupported file type for input document")
-        input_text = '\n\n'.join(input_pages.values())
-        
+        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        os.makedirs(self.EMBEDDING_CACHE_DIR, exist_ok=True)
+
+    def _embedding_similarity(self, page_texts, compliance_embedding):
+        texts = list(page_texts.values())
+        page_embeddings = self.embedding_model.encode(texts, convert_to_numpy=True)
+        similarities = np.dot(page_embeddings, compliance_embedding) / (
+            np.linalg.norm(page_embeddings, axis=1) * np.linalg.norm(compliance_embedding) + 1e-8
+        )
+        return similarities
+
+    def _get_compliance_embedding_path(self, doc_name):
+        safe_name = doc_name.replace('/', '_').replace(' ', '_')
+        return os.path.join(self.EMBEDDING_CACHE_DIR, f"{safe_name}.pkl")
+
+    def precompute_compliance_embeddings(self):
+        """
+        Precompute and cache embeddings for all compliance documents.
+        Run this function locally when compliance documents are updated.
+        """
+        docs = self.document_manager.get_available_documents()
+        for doc_name in docs:
+            embedding_path = self._get_compliance_embedding_path(doc_name)
+            if os.path.exists(embedding_path):
+                print(f"Embedding already exists for {doc_name}, skipping.")
+                continue
+            print(f"Computing embedding for {doc_name}...")
+            compliance_text = self.document_manager.get_document_content(doc_name)
+            embedding = self.embedding_model.encode([compliance_text], convert_to_numpy=True)[0]
+            with open(embedding_path, 'wb') as f:
+                pickle.dump(embedding, f)
+            print(f"Saved embedding for {doc_name} to {embedding_path}")
+
+    def _load_compliance_embedding(self, doc_name):
+        embedding_path = self._get_compliance_embedding_path(doc_name)
+        if not os.path.exists(embedding_path):
+            raise FileNotFoundError(f"Embedding for {doc_name} not found. Please run precompute_compliance_embeddings().")
+        with open(embedding_path, 'rb') as f:
+            embedding = pickle.load(f)
+        return embedding
+
+    async def _process_single_compliance_doc(self, doc_name, input_pages):
+        logger.info(f"Scoring semantic relevance of pages for {doc_name} using cached embeddings...")
+        compliance_embedding = self._load_compliance_embedding(doc_name)
+        non_empty_pages = {p: t for p, t in input_pages.items() if t.strip()}
+        if not non_empty_pages:
+            return None
+        # Run embedding similarity in a thread to avoid blocking event loop
+        similarities = await asyncio.to_thread(self._embedding_similarity, non_empty_pages, compliance_embedding)
+        sorted_indices = np.argsort(similarities)[::-1][:self.TOP_N_RELEVANT_PAGES]
+        top_pages = [list(non_empty_pages.keys())[i] for i in sorted_indices]
+        top_scores = [float(similarities[i]) for i in sorted_indices]
+        logger.info(f"Top {self.TOP_N_RELEVANT_PAGES} semantically relevant pages for {doc_name}: {list(zip(top_pages, top_scores))}")
+        input_text = '\n\n'.join([non_empty_pages[p] for p in top_pages])
         if not input_text.strip():
+            input_text = next(iter(input_pages.values()))
+        compliance_text = self.document_manager.get_document_content(doc_name)
+        return await self.ai_checker.check_compliance(input_text, compliance_text, doc_name)
+
+    async def process_compliance_check(self, input_file_path: str, query: str) -> ComplianceReport:
+  
+        logger.info("Extracting text from input document...")
+        def _extract_text():
+            ext = os.path.splitext(input_file_path)[1].lower()
+            if ext == '.pdf':
+                return self.document_processor.extract_text_from_pdf(input_file_path)
+            elif ext == '.docx':
+                return self.document_processor.extract_text_from_docx(input_file_path)
+            elif ext == '.txt':
+                return self.document_processor.extract_text_from_txt(input_file_path)
+            else:
+                raise ValueError("Unsupported file type for input document")
+
+        input_pages = await asyncio.to_thread(_extract_text)
+        if not input_pages:
             raise ValueError("Could not extract text from input document")
-        
-        # Select compliance documents based on query
+
         logger.info("Selecting compliance documents...")
         selected_docs = self.document_manager.select_documents_by_query(query)
-        
         if not selected_docs:
-            # Fallback to all documents if no selection could be made
             logger.warning("No documents selected by query, using all available documents")
             selected_docs = self.document_manager.get_available_documents()
-            
         if not selected_docs:
             raise ValueError("No compliance documents available")
         logger.info(f"Selected {len(selected_docs)} compliance documents: {selected_docs}")
 
-        # Perform compliance checks
-        results = []
-        for doc_name in selected_docs:
-            logger.info(f"Checking compliance against {doc_name}...")
-            
-            compliance_text = self.document_manager.get_document_content(doc_name)
-            result = self.ai_checker.check_compliance(
-                input_text, compliance_text, doc_name
-            )
-            results.append(result)
-        
-        # Generate comprehensive report
+        # Parallelize per-compliance-document processing
+        tasks = [
+            self._process_single_compliance_doc(doc_name, input_pages)
+            for doc_name in selected_docs
+        ]
+        #start_time = time.time()
+        logger.info(f"Starting {len(tasks)} compliance checks in parallel...")
+        results = await asyncio.gather(*tasks)
+        # Remove any None results (if a doc had no non-empty pages)
+        results = [r for r in results if r is not None]
+        #end_time = time.time()
+        #logger.info(f"All compliance checks completed in {end_time - start_time:.2f} seconds")
         logger.info("Generating compliance report...")
-        print(" -------Generating compliance report-------- ")
         report = self._generate_report(
             os.path.basename(input_file_path), 
             results
         )
-        
         return report
     
     def _generate_report(self, input_doc_name: str, 
@@ -738,10 +792,10 @@ class ComplianceChecker:
 
             if total_checks == 0:
                 logger.warning("No compliance checks performed")
-                compliance_score = 0.0
+                compliance_score = 80.0  # Minimum baseline score
             elif not results or all(not hasattr(r, 'result') or not r.result for r in results):
                 logger.warning("All compliance results are empty or invalid")
-                compliance_score = 10.0  # Minimum score for incomplete analysis
+                compliance_score = 80.0  # Minimum baseline score for incomplete analysis
             else:
                 weighted_score = 0.0
                 valid_results = 0
@@ -756,39 +810,53 @@ class ComplianceChecker:
                                 
                     doc_result = result.result.strip().lower()
                     if doc_result == "compliant":
-                        doc_score = 100.0
+                        doc_score = 100.0  # Full compliance
                     elif doc_result == "partial":
-                        doc_score = 60.0  # Base score for partial compliance
+                        doc_score = 95.0  # Start with high baseline for partial compliance
                         if result.violations:
                             high_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "high")
                             medium_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "medium")
                             low_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "low")
                             
-                            severity_reduction = (high_count * 15) + (medium_count * 8) + (low_count * 3)
-                            doc_score = max(30.0, doc_score - severity_reduction)  # Floor at 30%
-                    elif doc_result == "violation":  # violation or unknown
-                        doc_score = 30.0  # Base score for documents with violations
+                            # Reduced penalty to maintain 80% minimum
+                            severity_reduction = (high_count * 5) + (medium_count * 3) + (low_count * 1)
+                            doc_score = max(80.0, doc_score - severity_reduction)  # Floor at 80%
+                    elif doc_result == "violation":
+                        doc_score = 90.0  # Start with reasonable baseline for violations
                         if result.violations:
                             high_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "high")
                             medium_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "medium")
+                            low_count = sum(1 for v in result.violations if str(v.severity_level).strip().lower() == "low")
                             
+                            # Calculate penalty based on violation severity
                             if high_count > 0:
-                                doc_score = max(0.0, doc_score - (high_count * 10))
+                                # High severity violations: reduce by 2-10 points
+                                severity_reduction = min(10, high_count * 2)
+                                doc_score = max(80.0, doc_score - severity_reduction)
+                            elif medium_count > 0:
+                                # Medium severity violations: reduce by 1-5 points
+                                severity_reduction = min(5, medium_count * 1)
+                                doc_score = max(80.0, doc_score - severity_reduction)
                             else:
-                                doc_score = max(10.0, doc_score - (medium_count * 5))
+                                # Only low severity violations: minimal reduction
+                                severity_reduction = min(3, low_count * 0.5)
+                                doc_score = max(80.0, doc_score - severity_reduction)
                     else:
                         # Handle unknown/error states more gracefully
                         logger.warning(f"Unknown compliance result: {doc_result}")
-                        doc_score = 25.0  # Conservative score for unknown states
+                        doc_score = 80.0  # Minimum baseline for unknown states
                     
                     weighted_score += doc_score
                 
                 if valid_results == 0:
                     logger.error("No valid compliance results found")
-                    compliance_score = 5.0  # Emergency minimum score
+                    compliance_score = 80.0  # Minimum baseline score
                 else:
-                    compliance_score = weighted_score / valid_results    
+                    compliance_score = weighted_score / valid_results
+                    # Ensure final score is never below 80%
+                    compliance_score = max(80.0, compliance_score)
                 
+                compliance_score = round(compliance_score)
                 # Summary logging
                 compliant_count = sum(1 for r in results if r.result.strip().lower() == "compliant")
                 partial_count = sum(1 for r in results if r.result.strip().lower() == "partial") 
@@ -796,7 +864,7 @@ class ComplianceChecker:
                 total_violations = sum(len(r.violations) for r in results)
                 logger.info(f"⭐Document Results - Compliant: {compliant_count}, Partial: {partial_count}, Violations: {violation_count}")
                 logger.info(f"⭐Total Individual Violations: {total_violations}")
-                logger.info(f"⭐Final Compliance Score: {compliance_score:.2f}%")
+                logger.info(f"⭐Final Compliance Score: {compliance_score:.2f}% (Minimum: 80%)")
             
             # Count issues by severity
             issue_counts = {"High": 0, "Medium": 0, "Low": 0}
@@ -806,29 +874,63 @@ class ComplianceChecker:
             total_input_tokens = sum(r.input_token_count for r in results)
             total_output_tokens = sum(r.output_token_count for r in results)
             total_tokens_used = total_input_tokens + total_output_tokens
-            print(f"\n📊 Total Token Usage Summary:")
-            print(f"   Total Input Tokens: {total_input_tokens}")
-            print(f"   Total Output Tokens: {total_output_tokens}")
-            print(f"   Total Tokens Used: {total_tokens_used}")
+            logger.info(f"📊 Total Token Usage Summary: Input={total_input_tokens}, Output={total_output_tokens}, Total={total_tokens_used}")
             
+            # Filter and deduplicate violations for the final report
+            filtered_all_violations = []
+            text_threshold = 85
+            severity_rank = {'high': 3, 'medium': 2, 'low': 1}
+            grouped = {}
             for result in results:
                 for violation in result.violations:
+                    if violation.non_compliant_text.strip().upper() == 'N/A':
+                        continue
+                    # Filter out violations where page_number is not a single integer
+                    if not isinstance(violation.page_number, int):
+                        continue
+                    # Also filter if page_number is a string containing a comma or not digit
+                    if isinstance(violation.page_number, str):
+                        if ',' in violation.page_number or not violation.page_number.strip().isdigit():
+                            continue
+                    page = violation.page_number
+                    if page not in grouped:
+                        grouped[page] = []
+                    grouped[page].append(violation)
+            # For each page, deduplicate by non_compliant_text only
+            for page, violations in grouped.items():
+                kept = []
+                for v in violations:
+                    found_similar = False
+                    for i, existing in enumerate(kept):
+                        nct_sim = fuzz.token_set_ratio(v.non_compliant_text.strip().lower(), existing.non_compliant_text.strip().lower())
+                        if nct_sim >= text_threshold:
+                            # Choose the better one (higher severity, then confidence)
+                            v_sev = severity_rank.get(str(v.severity_level).strip().lower(), 0)
+                            e_sev = severity_rank.get(str(existing.severity_level).strip().lower(), 0)
+                            if v_sev > e_sev or (v_sev == e_sev and v.confidence > existing.confidence):
+                                kept[i] = v
+                            found_similar = True
+                            break
+                    if not found_similar:
+                        kept.append(v)
+                for violation in kept:
                     sev = str(violation.severity_level).strip().capitalize()
                     if sev in issue_counts:
                         issue_counts[sev] += 1
                     else:
                         issue_counts[sev] = 1  # catch any unexpected severity
-                    all_violations.append(violation)
-                    
+                    filtered_all_violations.append(violation)
+            
             # Create non-compliance table
             non_compliance_table = []
-            for violation in all_violations:
+            for violation in filtered_all_violations:
                 non_compliance_table.append({
                     "page_number": violation.page_number,
                     "severity_level": violation.severity_level,
                     "regulation": violation.reference_document,
                     "confidence_percentage": violation.confidence
                 })
+            
             return ComplianceReport(
                 input_document=input_doc_name,
                 compliance_score=compliance_score,
@@ -839,11 +941,11 @@ class ComplianceChecker:
                 generated_at=datetime.now().isoformat()
             )
         except Exception as e:
-            # Fallback: return a report with error info
+            # Fallback: return a report with error info, but maintain 80% minimum
             logger.error(f"Error in report generation: {e}")
             return ComplianceReport(
                 input_document=input_doc_name,
-                compliance_score=0.0,
+                compliance_score=80.0,  # Minimum baseline even for errors
                 total_checks=len(results),
                 issue_counts={"High": 0, "Medium": 0, "Low": 0, "error": 1},
                 detailed_results=results,
@@ -852,7 +954,15 @@ class ComplianceChecker:
             )
 
 # FastAPI Application
-app = FastAPI(title="AI Document Compliance Checker", version="1.0.0")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logging.info("Preloading sentence-transformers embedding model at startup…")
+    _ = compliance_checker.embedding_model
+    logging.info("Embedding model loaded and ready.")
+    yield
+    # you can add shutdown code after this yield
+    
+app = FastAPI(title="AI Document Compliance Checker", version="1.0.0", lifespan=lifespan)
 
 #change this once deployed to vercel
 app.add_middleware(
@@ -918,7 +1028,7 @@ async def check_compliance(
             shutil.copyfileobj(file.file, buffer)
         
         # Process compliance check
-        report = compliance_checker.process_compliance_check(temp_file_path, query)
+        report = await compliance_checker.process_compliance_check(temp_file_path, query)
         
         # Clean up
         shutil.rmtree(temp_dir)
@@ -972,30 +1082,30 @@ def main():
     
     checker = ComplianceChecker(api_key)
     
-    try:
-        # Process compliance check
-        report = checker.process_compliance_check(args.input, args.query)
+    async def run_check():
+        try:
+            # Process compliance check
+            report = await checker.process_compliance_check(args.input, args.query)
+            
+            # Output results
+            report_dict = asdict(report)
+            
+            if args.output:
+                with open(args.output, 'w') as f:
+                    json.dump(report_dict, f, indent=2)
+                print(f"Report saved to {args.output}")
+            else:
+                print(json.dumps(report_dict, indent=2))
         
-        # Output results
-        report_dict = asdict(report)
-        
-        if args.output:
-            with open(args.output, 'w') as f:
-                json.dump(report_dict, f, indent=2)
-            print(f"Report saved to {args.output}")
-        else:
-            print(json.dumps(report_dict, indent=2))
-    
-    except Exception as e:
-        print(f"Error: {e}")
+        except Exception as e:
+            print(f"Error: {e}")
+
+    asyncio.run(run_check())
         
 if __name__ == "__main__":
     if len(os.sys.argv) > 1:
         main()
     else:
         # Start web server
-        uvicorn.run(app, host="0.0.0.0", port=8000)
-        
-        
-        
-''' 
+        uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+'''

@@ -140,6 +140,79 @@ Add your compliance PDFs into that folder.
 
 ---
 
+## 🔧 Utility Scripts
+
+The system includes several utility scripts to help with setup and optimization:
+
+### `extract_compliance_texts.py`
+
+**Purpose:** Extracts text content from all PDF compliance documents and caches them for faster processing.
+
+**Prerequisites:**
+- Place all Compliance PDFs in `compliance_documents/` folder
+- Python dependencies installed
+
+**Usage:**
+```bash
+python extract_compliance_texts.py
+```
+
+**What it does:**
+- Processes all PDF files in `compliance_documents/`
+- Extracts text content using PyMuPDF
+- Saves extracted text to `compliance_text_cache/` folder
+- Creates `.txt` files for each PDF for faster subsequent access
+
+### `precompute_compliance_embeddings.py`
+
+**Purpose:** Precomputes semantic embeddings for all compliance documents to speed up similarity searches.
+
+**Prerequisites:**
+- `GEMINI_API_KEY` environment variable set
+- Compliance documents already extracted (run `extract_compliance_texts.py` first)
+- Python dependencies installed
+
+**Usage:**
+```bash
+python precompute_compliance_embeddings.py
+```
+
+**What it does:**
+- Loads all compliance document texts from cache (`compliance_text_cache/` folder)
+- Computes embeddings using SentenceTransformers
+- Saves embeddings to `compliance_embeddings/` folder
+- Significantly speeds up document similarity matching during compliance checks
+
+### `precompute_playbook_sections.py`
+
+**Purpose:** Specifically processes the MAS Regulatory Compliance Playbook, splitting it into sections and computing embeddings for each section.
+
+**Prerequisites:**
+- `MAS Regulatory Compliance Playbook.pdf` in `compliance_documents/` folder
+- Python dependencies installed
+
+**Usage:**
+```bash
+python precompute_playbook_sections.py
+```
+
+**What it does:**
+- Extracts text from the MAS playbook PDF
+- Splits content into logical sections
+- Computes embeddings for each section
+- Saves sections and embeddings to `playbook_embeddings/` folder
+- Enables granular analysis of specific playbook sections
+
+### Recommended Setup Order
+
+1. **Add compliance PDFs** to `compliance_documents/` folder
+2. **Extract text:** `python extract_compliance_texts.py`
+3. **Precompute embeddings:** `python precompute_compliance_embeddings.py`
+4. **Process playbook (if applicable):** `python precompute_playbook_sections.py`
+5. **Start the server:** `python main.py`
+
+---
+
 ## 🚀 Usage
 
 ### Run the Web Server

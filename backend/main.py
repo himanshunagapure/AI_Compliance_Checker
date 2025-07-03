@@ -9,7 +9,6 @@ from pathlib import Path
 import logging
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
-import time
 import pickle
 from contextlib import asynccontextmanager
 # Document processing libraries
@@ -262,17 +261,16 @@ class AIComplianceChecker:
         return response_text
 
     async def check_compliance(self, input_text: str, compliance_text: str, 
-                        compliance_doc_name: str) -> ComplianceResult:
-        """Check compliance of input document against a compliance document"""
-        
+                        compliance_doc_name: str, playbook_section: str = None) -> ComplianceResult:
+        """Check compliance of input document against a compliance document, with optional playbook guidance."""
         logger.info(f"AI check started for {compliance_doc_name} at {datetime.now().isoformat()}")
-        
+        playbook_prompt = f"\n\nPLAYBOOK GUIDANCE (for validation reference):\n{playbook_section}\n" if playbook_section else ""
         prompt = f"""
-        You are an expert regulatory compliance analyst. Compare the INPUT DOCUMENT against the COMPLIANCE DOCUMENT and provide a detailed analysis.
+        You are an expert regulatory compliance analyst. Your main task is to compare the INPUT DOCUMENT against the COMPLIANCE DOCUMENT and provide a detailed analysis.
 
         COMPLIANCE DOCUMENT ({compliance_doc_name}):
         {compliance_text}
-
+        {playbook_prompt}
         INPUT DOCUMENT:
         {input_text}
 
@@ -282,8 +280,8 @@ class AIComplianceChecker:
            - Specific page number
            - Section reference on that page number (ONE section/rule per violation entry)
            - Exact non-compliant text excerpt. 
-           - Clear explanation of the violation
-           - Specific remedy recommendation
+           - Clear explanation of the violation  (use PLAYBOOK GUIDANCE to explain the intent if helpful)
+           - Specific remedy recommendation  (use PLAYBOOK GUIDANCE for best practices or fallback steps)
            - Severity level (High/Medium/Low)
            - Confidence percentage (0-100)
 
@@ -297,7 +295,6 @@ class AIComplianceChecker:
         - Low: Best practice issues or minor procedural gaps
 
         Analyze thoroughly and provide detailed, actionable insights.
-        
         RESPONSE FORMAT (MUST BE VALID JSON):
         {{
             "overall_result": "Compliant|Partial|Violation",
@@ -316,7 +313,6 @@ class AIComplianceChecker:
                 }}
             ]
         }}
-        
         CRITICAL INSTRUCTIONS: 
         - Return ONLY valid JSON. 
         - Do not include any text before or after the JSON. 
@@ -539,7 +535,7 @@ class ComplianceDocumentManager:
         """Select compliance documents based on user query by matching file names or keywords"""
         query_lower = query.lower()
         available_docs = self.get_available_documents()
-        print("\n⭐Available Doc⭐", available_docs)
+        
         if not available_docs:
             logger.warning("Compliance Documents are not available")
             return []
@@ -671,6 +667,9 @@ class ComplianceChecker:
     
     TOP_N_RELEVANT_PAGES = 5
     EMBEDDING_CACHE_DIR = 'compliance_embeddings'
+    PLAYBOOK_DOC_NAME = 'MAS Regulatory Compliance Playbook.pdf'
+    PLAYBOOK_SECTION_COUNT = 10  # Number of top playbook sections to retrieve
+    PLAYBOOK_CACHE_FILE = 'playbook_embeddings/playbook_sections_and_embeddings.pkl'
 
     def __init__(self, gemini_api_key: str):
         self.document_manager = ComplianceDocumentManager()
@@ -678,6 +677,42 @@ class ComplianceChecker:
         self.document_processor = DocumentProcessor()
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         os.makedirs(self.EMBEDDING_CACHE_DIR, exist_ok=True)
+        # Load playbook sections and embeddings from cache if available
+        self.playbook_sections, self.playbook_section_embeddings = self._load_playbook_sections_and_embeddings()
+
+    def _load_playbook_sections_and_embeddings(self):
+        """Load playbook sections and embeddings from cache, or recompute if missing."""
+        import pickle
+        cache_file = self.PLAYBOOK_CACHE_FILE
+        if os.path.exists(cache_file):
+            with open(cache_file, 'rb') as f:
+                data = pickle.load(f)
+            return data.get('sections', []), data.get('embeddings', None)
+        # Fallback: recompute (should not happen in normal use)
+        playbook_path = os.path.join('playbook_text_cache', self.PLAYBOOK_DOC_NAME.replace('.pdf', '.txt'))
+        if not os.path.exists(playbook_path):
+            return [], None
+        with open(playbook_path, 'r', encoding='utf-8') as f:
+            playbook_text = f.read()
+        sections = DocumentProcessor.extract_sections(playbook_text)
+        section_texts = list(sections.values())
+        if not section_texts:
+            return [], None
+        section_embeddings = self.embedding_model.encode(section_texts, convert_to_numpy=True)
+        return section_texts, section_embeddings
+
+    def _retrieve_relevant_playbook_sections(self, compliance_text, top_n=None):
+        """Retrieve the most relevant playbook sections for a given compliance document text."""
+        if not self.playbook_sections or self.playbook_section_embeddings is None:
+            return ""
+        top_n = top_n or self.PLAYBOOK_SECTION_COUNT
+        compliance_embedding = self.embedding_model.encode([compliance_text], convert_to_numpy=True)[0]
+        similarities = np.dot(self.playbook_section_embeddings, compliance_embedding) / (
+            np.linalg.norm(self.playbook_section_embeddings, axis=1) * np.linalg.norm(compliance_embedding) + 1e-8
+        )
+        top_indices = np.argsort(similarities)[::-1][:top_n]
+        relevant_sections = [self.playbook_sections[i] for i in top_indices]
+        return '\n\n'.join(relevant_sections)
 
     def _embedding_similarity(self, page_texts, compliance_embedding):
         texts = list(page_texts.values())
@@ -723,17 +758,16 @@ class ComplianceChecker:
         non_empty_pages = {p: t for p, t in input_pages.items() if t.strip()}
         if not non_empty_pages:
             return None
-        # Run embedding similarity in a thread to avoid blocking event loop
         similarities = await asyncio.to_thread(self._embedding_similarity, non_empty_pages, compliance_embedding)
         sorted_indices = np.argsort(similarities)[::-1][:self.TOP_N_RELEVANT_PAGES]
         top_pages = [list(non_empty_pages.keys())[i] for i in sorted_indices]
-        top_scores = [float(similarities[i]) for i in sorted_indices]
-        logger.info(f"Top {self.TOP_N_RELEVANT_PAGES} semantically relevant pages for {doc_name}: {list(zip(top_pages, top_scores))}")
         input_text = '\n\n'.join([non_empty_pages[p] for p in top_pages])
         if not input_text.strip():
             input_text = next(iter(input_pages.values()))
         compliance_text = self.document_manager.get_document_content(doc_name)
-        return await self.ai_checker.check_compliance(input_text, compliance_text, doc_name)
+        # Retrieve relevant playbook sections
+        playbook_section = self._retrieve_relevant_playbook_sections(compliance_text)
+        return await self.ai_checker.check_compliance(input_text, compliance_text, doc_name, playbook_section)
 
     async def process_compliance_check(self, input_file_path: str, query: str) -> ComplianceReport:
   
@@ -779,6 +813,11 @@ class ComplianceChecker:
             os.path.basename(input_file_path), 
             results
         )
+        ''' 
+        #For dev to check the report, uncomment the following lines
+        with open("compliance_report.json", "w", encoding="utf-8") as f:
+            json.dump(asdict(report), f, indent=2, ensure_ascii=False)
+        '''    
         return report
     
     def _generate_report(self, input_doc_name: str, 
@@ -854,6 +893,7 @@ class ComplianceChecker:
                     # Ensure final score is never below 80%
                     compliance_score = max(80.0, compliance_score)
                 
+                compliance_score = round(compliance_score)
                 # Summary logging
                 compliant_count = sum(1 for r in results if r.result.strip().lower() == "compliant")
                 partial_count = sum(1 for r in results if r.result.strip().lower() == "partial") 
@@ -889,6 +929,9 @@ class ComplianceChecker:
                     if isinstance(violation.page_number, str):
                         if ',' in violation.page_number or not violation.page_number.strip().isdigit():
                             continue
+                    # Filter out violations where page_number is -1
+                    if violation.page_number == -1:
+                        continue
                     page = violation.page_number
                     if page not in grouped:
                         grouped[page] = []
